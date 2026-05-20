@@ -30,7 +30,7 @@ jobs:
         run: make all
 
       - name: Deploy documentation
-        uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e
+        uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453
         with:
           # personal token is needed here because it's pushing to an external repository.
           # personal token can be generated at https://github.com/settings/tokens,
