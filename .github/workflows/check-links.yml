@@ -33,4 +33,4 @@ jobs:
         if: steps.lychee.outputs.exit_code != 0
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh issue create --title "Broken links report" --body-file ./lychee/out.md
+        run: gh issue create --title "Broken links report ($(date -u +%Y-%m-%d))" --body-file ./lychee/out.md
