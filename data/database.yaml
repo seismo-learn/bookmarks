@@ -1,0 +1,636 @@
+sections:
+- title: Earthquake Catalog
+  groups:
+  - title: Global Earthquake Catalog
+    resources:
+    - name: ISC Bulletin
+      url: http://www.isc.ac.uk/iscbulletin
+      links:
+      - name: Catalog Search
+        url: http://www.isc.ac.uk/iscbulletin/search/
+      - name: FDSN Event Web Service
+        url: http://www.isc.ac.uk/fdsnws/event/1/
+    - name: ISC-EHB Bulletin
+      url: http://www.isc.ac.uk/isc-ehb/
+      links:
+      - name: Catalog Search
+        url: http://www.isc.ac.uk/isc-ehb/search/
+    - name: ISC-GEM Earthquake Catalog
+      url: http://www.isc.ac.uk/iscgem/
+      links:
+      - name: Brief Introduction
+        url: https://storage.globalquakemodel.org/what/seismic-hazard/instrumental-catalogue
+    - name: 中国台网正式地震目录
+      url: https://data.earthquake.cn/datashare/report.shtml?PAGEID=earthquake_zhengshi
+    - name: European-Mediterranean Seismological Centre Earthquake Catalog
+      url: https://www.emsc-csem.org/Earthquake/?filter=yes
+    - name: USGS ANSS Comprehensive Earthquake Catalog
+      url: https://earthquake.usgs.gov/data/comcat/
+      links:
+      - name: Catalog Search
+        url: https://earthquake.usgs.gov/earthquakes/search/
+      - name: FDSN Event Web Service
+        url: https://earthquake.usgs.gov/fdsnws/event/1/
+      - name: Wrapper Libraries
+        url: https://www.usgs.gov/software/comcat-wrapper-libraries
+      - name: Historic ANSS Composite Catalog
+        url: https://ncedc.org/anss/catalog-search.html
+    - name: USGS PDE
+      url: https://earthquake.usgs.gov/data/comcat/catalog/us/
+    - name: Global Historical Earthquake Archive (1000-1903)
+      url: https://emidius.eu/GEH/
+      links:
+      - name: Brief Introduction
+        url: https://storage.globalquakemodel.org/what/seismic-hazard/historical-catalogue
+    - name: Global Waveform Catalog
+      url: https://github.com/samwimpenny/Global-Waveform-Catalogue
+      description: A database of point-source fault-plane solutions and focal depths
+        for moderate-magnitude earthquakes
+    - name: The Human-Induced Earthquake Database
+      url: http://inducedearthquakes.org/
+  - title: Regional Earthquake Catalog
+    resources:
+    - name: 中国历史地震目录
+      url: https://data.earthquake.cn/datashare/report.shtml?PAGEID=earthquake_lsdz
+      description: 公元前 1831 年至公元 1969 年间发生在中国的破坏性地震（M>=4.0）
+    - name: Japan Meteorological Agency (JMA) Unified Hypocenter Catalog
+      url: https://www.data.jma.go.jp/svd/eqev/data/bulletin/hypo_e.html
+    - name: JMA Unified Hypocenter Catalog (Preliminary)
+      url: https://hinetwww11.bosai.go.jp/auth/JMA/jmalist.php
+      description: The hypocenters are preliminary results and JMA may revise them
+    - name: Canada Catalog
+      url: https://www.earthquakescanada.nrcan.gc.ca/stndon/NEDB-BNDS/index-en.php
+      links:
+      - name: Catalog Search
+        url: https://www.earthquakescanada.nrcan.gc.ca/stndon/NEDB-BNDS/bulletin-en.php
+    - name: Northern California Earthquake Catalog
+      url: http://www.ncedc.org/ncedc/catalog-search.html
+      links:
+      - name: FDSN Event Web Service
+        url: http://service.ncedc.org/fdsnws/event/1/
+    - name: Southern California Earthquake Catalog
+      url: https://scedc.caltech.edu/data/eq-catalogs.html
+      links:
+      - name: Catalog Search
+        url: https://service.scedc.caltech.edu/eq-catalogs/date_mag_loc.php
+      - name: FDSN Event Web Service
+        url: https://service.scedc.caltech.edu/fdsnws/event/1/
+    - name: Southern California Waveform Relocated Earthquake Catalog
+      url: https://scedc.caltech.edu/data/alt-2011-dd-hauksson-yang-shearer.html
+    - name: European-Mediterranean Catalog
+      url: https://www.emsc-csem.org/Bulletin/
+      links:
+      - name: Catalog Search
+        url: https://www.emsc-csem.org/Bulletin/search.php?filter=yes
+    - name: European Archive of Historical Earthquake Data
+      url: https://www.emidius.eu/AHEAD/
+    - name: SHARE European Earthquake Catalog
+      url: https://www.emidius.eu/SHEEC/
+      links:
+      - name: 1000-1899
+        url: https://www.emidius.eu/SHEEC/sheec_1000_1899.html
+      - name: 1900-2006
+        url: https://www.gfz-potsdam.de/en/section/seismic-hazard-and-risk-dynamics/data-products-services/sheec-earthquake-catalogue/
+    - name: Australian Catalog
+      url: https://earthquakes.ga.gov.au/
+  - title: Slow Earthquake Catalog
+    resources:
+    - name: World Tremor Database
+      url: http://www-solid.eps.s.u-tokyo.ac.jp/~idehara/wtd0/Welcome.html
+    - name: Slow Earthquake Database
+      url: http://www-solid.eps.s.u-tokyo.ac.jp/~sloweq/
+  - title: Focal Mechanism Catalog
+    resources:
+    - name: Global Centroid-Moment-Tensor (CMT)
+      url: https://www.globalcmt.org/
+      links:
+      - name: Catalog Search
+        url: https://www.globalcmt.org/CMTsearch.html
+      - name: Catalog Files
+        url: https://www.globalcmt.org/CMTfiles.html
+    - name: ISC Focal Mechanism
+      url: http://www.isc.ac.uk/iscbulletin/search/fmechanisms/
+    - name: Saint Louis University Moment Tensor Determinations
+      url: http://www.eas.slu.edu/eqc/eqcmt.html
+    - name: Broadband Array in Taiwan for Seismology CMTs
+      url: https://bats.earth.sinica.edu.tw/
+      links:
+      - name: Catalog Search
+        url: http://tecws.earth.sinica.edu.tw/BATS/cmtbyform.php
+    - name: Hi-net AUQA Focal Mechanism Catalog
+      url: http://www.hinet.bosai.go.jp/AQUA/aqua_catalogue.php?LANG=en
+    - name: JMA Seismological Bulletin of Japan
+      url: https://www.data.jma.go.jp/svd/eqev/data/bulletin/index_e.html
+      links:
+      - name: CMT Solution
+        url: https://www.data.jma.go.jp/svd/eqev/data/bulletin/cmt_e.html
+      - name: Nodal Plane Solution
+        url: https://www.data.jma.go.jp/svd/eqev/data/bulletin/mech_e.html
+    - name: JMA Focal Mechanism Catalog
+      url: https://hinetwww11.bosai.go.jp/auth/JMA/?LANG=en
+      description: Focal mechanism based on JMA Unified Hypocenter Catalog (Preliminary)
+    - name: NIED Moment Tensors
+      url: https://www.fnet.bosai.go.jp/event/joho.php?LANG=en
+      links:
+      - name: Catalog Search
+        url: https://www.fnet.bosai.go.jp/event/joho.php?LANG=en
+    - name: Northern California Mechanism Catalog
+      url: http://www.ncedc.org/ncedc/catalog-search.html
+    - name: Southern California Moment Tensor Catalog
+      url: https://service.scedc.caltech.edu/eq-catalogs/CMTsearch.php
+    - name: European-Mediterranean Seismological Centre Moment Tensors Solutions
+      url: https://www.emsc-csem.org/Earthquake/index_tensors.php
+    - name: Italy Moment Tensor Catalog
+      url: http://cnt.rm.ingv.it/en/tdmt
+  - title: Earthquake Arrival Time/Phase Data
+    resources:
+    - name: ISC Arrival Time Data
+      url: http://www.isc.ac.uk/iscbulletin/search/arrivals/
+    - name: 中国台网震相数据
+      url: https://data.earthquake.cn/datashare/report.shtml?PAGEID=earthquake_zgtwzx
+    - name: 中国国家台网震相数据
+      url: https://data.earthquake.cn/datashare/report.shtml?PAGEID=earthquake_gjtwzx
+    - name: JMA Arrival Time Data
+      url: https://www.data.jma.go.jp/svd/eqev/data/bulletin/deck_e.html
+- title: Seismic Data Centers/Networks
+  groups:
+  - title: Global Data Centers/Networks
+    resources:
+    - name: FDSN Network Codes
+      url: https://www.fdsn.org/networks/
+      description: Network codes assigned by the FDSN to facilitate unique identifiers
+        for seismological data streams
+    - name: 'FDSN Web Services: Supporting Data Centers'
+      url: https://www.fdsn.org/webservices/datacenters/
+    - name: IRIS DMC
+      url: https://ds.iris.edu/ds/nodes/dmc/
+      description: IRIS **D**ata **M**anagement **C**enter
+    - name: IRIS GMap
+      url: https://ds.iris.edu/gmap/
+      description: Displays networks and stations on an interactive Google Map
+    - name: IRIS MDA
+      url: https://ds.iris.edu/mda
+      description: "**M**eta**D**ata **A**ggregator provides a browsable list of all
+        networks and stations archived at the IRIS DMC"
+      links:
+      - name: manual
+        url: https://ds.iris.edu/ds/nodes/dmc/manuals/mda/
+    - name: ORFEUS
+      url: http://www.orfeus-eu.org/
+      description: "**O**bservatories & **R**esearch **F**acilities for **Eu**ropean
+        **S**eismology"
+    - name: CTBTO
+      url: https://www.ctbto.org/
+      description: "**C**omprehensive Nuclear-**T**est-**B**an **T**reaty **O**rganization"
+      links:
+      - name: Web Portal
+        url: https://access.ctbto.org/portal/index.html
+    - name: CTBTO virtual Data Exploitation Centre (vDEC)
+      url: https://www.ctbto.org/specials/vdec/
+      description: The vDEC provides access to seismic, hydroacoustic, infrasound
+        and radionuclide data recorded by International Monitoring System (IMS)
+      links:
+      - name: Request For Access
+        url: https://www.ctbto.org/specials/vdec/vdec-request-for-access/
+  - title: Asian Data Centers/Networks
+    resources:
+    - name: 地震科学数据中心
+      url: http://www.esdc.ac.cn/
+      description: Previous data centers do not work now.
+      links:
+      - name: 中国地震学科数据中心：国家测震台网数据备份中心
+        url: http://www.seisdmc.ac.cn/
+      - name: 中国地震科学探测台站数据中心
+        url: http://www.chinarraydmc.cn/
+    - name: 中国地震科学实验场
+      url: http://www.cses.ac.cn
+    - name: 台灣地震科學中心
+      url: https://tec.earth.sinica.edu.tw/index.php
+      links:
+      - name: 資料中心
+        url: http://tecdc.earth.sinica.edu.tw/tecdc/
+    - name: 台灣中央研究院地球科學研究所：强震和移动地震台网
+      url: https://www.earth.sinica.edu.tw/content/labs/slab/smdmc/index.htm
+    - name: Hi-net
+      url: http://www.hinet.bosai.go.jp/
+      description: National Research Institute for Earth Science and Disaster Resilience
+        (NIED) networks
+      links:
+      - name: F-net
+        url: https://www.fnet.bosai.go.jp/
+      - name: K-net, KiK-net
+        url: http://www.kyoshin.bosai.go.jp/
+    - name: OHP DMC
+      url: http://ohpdmc.eri.u-tokyo.ac.jp/
+      description: "**O**cean **H**emisphere **P**roject **D**ata **M**anagement **C**enter"
+  - title: North America Data Centers/Networks
+    resources:
+    - name: Alaska Earthquake Center
+      url: http://earthquake.alaska.edu/
+    - name: Northern California Earthquake Data Center
+      url: http://www.ncedc.org/
+    - name: Southern California Seismic Network
+      url: http://www.scsn.org
+      links:
+      - name: Southern California Earthquake Data Center
+        url: https://scedc.caltech.edu/
+    - name: Pacific Northwest Seismic Network
+      url: http://pnsn.org/
+    - name: Canadian Seismic Stations and Data
+      url: https://www.earthquakescanada.nrcan.gc.ca/stndon/index-en.php
+  - title: European Data Centers/Networks
+    resources:
+    - name: AlpArray
+      url: http://www.alparray.ethz.ch/en/home/
+    - name: European Plate Observing System (Norway)
+      url: https://epos-no.uib.no/
+      links:
+      - name: Seismological Data Services
+        url: https://epos-no.uib.no/#/data-services/seismology
+  - title: Oceanian Data Centers/Networks
+    resources:
+    - name: AusPass
+      url: http://auspass.edu.au/index.html
+      description: the **Aus**tralian **Pass**ive Seismic Server
+      links:
+      - name: Data Portal
+        url: http://auspass.edu.au/data.html
+    - name: GeoNet
+      url: https://www.geonet.org.nz/
+      description: Geological hazard information for New Zealand
+  - title: Analog Seismograms
+    resources:
+    - name: Borovoye Archive Data from Underground Nuclear Tests
+      url: https://www.ldeo.columbia.edu/res/pi/Monitoring/Arch/BRV_arch_deglitched.html
+    - name: Seismo Archives
+      url: https://ds.iris.edu/seismo-archives
+      description: Scanned Seismograms from Historical Earthquakes
+- title: Seismological Database
+  groups:
+  - title: Receiver Function
+    resources:
+    - name: 'IRIS Products: EARS'
+      url: https://ds.iris.edu/ds/products/ears/
+      description: "**E**arthScope **A**utomated **R**eceiver **S**urvey"
+    - name: GLImER
+      url: https://www.stephanerondenay.com/glimer-map/map.html
+      description: "**G**lobal **L**ithospheric **Im**aging using **E**arthquake **R**ecordings
+        (teleseismic receiver functions)"
+  - title: Shear-wave Splitting
+    resources:
+    - name: 'IRIS Products: SWS-DBs'
+      url: https://ds.iris.edu/ds/products/sws-dbs
+      description: "**S**hear-**w**ave **s**plitting **d**ata**b**ase**s**"
+    - name: Automated Splitting Project
+      url: http://www.isc.ac.uk/SKS
+      description: ISC shear-wave splitting database
+  - title: Surface wave Dispersion
+    resources:
+    - name: Dispersion Maps
+      url: http://ciei.colorado.edu/DispMaps
+      description: by University of Colorado, Boulder
+    - name: Global Dispersion Model GDM52
+      url: https://www.ldeo.columbia.edu/~ekstrom/Projects/SWP
+    - name: 'IRIS Products: ANCC-CIEI'
+      url: https://ds.iris.edu/ds/products/ancc-ciei/
+      description: An ambient noise cross-correlation based database of empirical
+        Green's functions (EGFs) of the Western US using USArray Transportable Array
+        (TA) data
+    - name: 'IRIS Products: Automated Surface Wave Phase Velocity Measuring System
+        (ASWMS)'
+      url: https://ds.iris.edu/ds/products/aswms
+      description: USArray and Alaska surface wave tomography maps using ASWMS
+    - name: USArray Phase-Velocity Maps USANT12
+      url: https://www.ldeo.columbia.edu/~ekstrom/Projects/ANT/USANT12.html
+  - title: Seismic Source Database
+    resources:
+    - name: 'IRIS Products: Source Time Function'
+      url: https://ds.iris.edu/ds/products/sourcetimefunction/
+      description: Short-arc Rayleigh wave source-time functions
+  - title: Seismic Data Products
+    resources:
+    - name: 'IRIS Products: globalstacks'
+      url: https://ds.iris.edu/ds/products/globalstacks
+      description: Global stacks of millions of seismograms
+    - name: 'IRIS Products: SeisSound'
+      url: https://ds.iris.edu/ds/products/seissound
+      description: The Audio/Video Seismic Waveform Visualization
+    - name: 'IRIS Products: ShakeMovieSynthetics'
+      url: https://ds.iris.edu/ds/products/shakemoviesynthetics
+      description: 1D & 3D synthetic seismograms from the Global ShakeMovie project
+    - name: 'European Facilities for Earthquake Hazard and Risk (EFEHR): Services
+        and Partners'
+      url: http://www.efehr.org/en/efehr/Services-and-Partners
+- title: Seismological Models
+  groups:
+  - title: Global and Regional Reference Seismological Models
+    resources:
+    - name: IRIS Earth Model Collaboration (EMC)
+      url: https://ds.iris.edu/ds/products/emc/
+      links:
+      - name: Web Service
+        url: https://service.iris.edu/irisws/earth-model/1/
+    - name: The Reference Earth Model
+      url: https://igppweb.ucsd.edu/~gabi/rem.html
+    - name: Crust1.0
+      url: https://igppweb.ucsd.edu/~gabi/crust1.html
+      description: A New Global Crustal Model at 1x1 Degrees
+      links:
+      - name: Chinese Introduction
+        url: https://blog.seisman.info/crust1
+    - name: LITHO1.0
+      url: https://igppweb.ucsd.edu/~gabi/litho1.0.html
+      description: An updated crust and lithospheric model of the Earth
+    - name: LithoRef18
+      url: https://www.juanafonso.com/software
+      description: A global reference model of the lithosphere and upper mantle
+    - name: Some regional Crustal Models
+      url: http://www.lithosphere.info/downloads.html
+      description: by Irina M. Artemieva
+    - name: Shear-wave Velocity Models
+      url: http://ciei.colorado.edu/Models
+      description: by University of Colorado, Boulder
+    - name: 中国区域地震学参考模型
+      url: http://chinageorefmodel.org
+    - name: EPcrust model
+      url: http://eurorem.bo.ingv.it/EPcrust_solar
+      description: A new European crustal model
+    - name: AuSREM
+      url: http://rses.anu.edu.au/seismology/AuSREM/index.php
+      description: "**Au**stralian **S**eismological **Re**ference **M**odel"
+    - name: AusPass
+      url: http://auspass.edu.au/research.html
+      description: Australian Passive Seismic Server Research Data Products
+  - title: 1D Reference Seismological Models
+    resources:
+    - name: 'IRIS EMC: Reference Earth Models'
+      url: https://ds.iris.edu/ds/products/emc-referencemodels
+    - name: 'TauP: Standard Models'
+      url: https://www.seis.sc.edu/taup
+      description: The **StdModels** folder in the source contain a few 1D models
+        (e.g., PREM, AK135, iasp91)
+    - name: 'AK135: model, traveltime tables, plots and software'
+      url: http://rses.anu.edu.au/seismology/ak135/intro.html
+      description: with the ellipticity correction method for iasp91
+      links:
+      - name: Traveltime tables and ellipticity corrections
+        url: http://rses.anu.edu.au/seismology/AK135tables.pdf
+  - title: 3D Body Wave Tomographic Models
+    resources:
+    - name: 'Lawrence Livermore National Laboratory: Global 3-D Seismic Tomography'
+      url: https://www-gs.llnl.gov/nuclear-threat-reduction/nuclear-explosion-monitoring/global-3d-seismic-tomography
+    - name: GAP_P4
+      url: http://www.jamstec.go.jp/pacific21/google_earth/en/kmlgenerator/tomography.html
+    - name: UU-P07
+      url: http://www.atlas-of-the-underworld.org/uu-p07-model/
+  - title: Subduction Zone Models
+    resources:
+    - name: Slab2
+      url: https://cmerwebmap.cr.usgs.gov/catalog/item/5aa1b00ee4b0b1c392e86467
+      description: A Comprehensive Subduction Zone Geometry Model
+      links:
+      - name: Interactive Map
+        url: https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=de81616029224bf699813ef7941a2ee0
+      - name: Codes
+        url: https://github.com/usgs/slab2
+- title: Geoscience Database/Models
+  resources:
+  - name: 国家青藏高原科学数据中心
+    url: https://data.tpdc.ac.cn/zh-hans/
+  - name: 地震地质与地震动力学数据共享分中心
+    url: http://datashare.igl.earthquake.cn/datashare
+  - name: 'USGS: Earthquake Hazards'
+    url: https://www.usgs.gov/natural-hazards/earthquake-hazards
+    links:
+    - name: Earthquakes
+      url: https://www.usgs.gov/natural-hazards/earthquake-hazards/earthquakes
+    - name: Hazards
+      url: https://www.usgs.gov/natural-hazards/earthquake-hazards/hazards
+    - name: Data and Tools
+      url: https://www.usgs.gov/natural-hazards/earthquake-hazards/data-tools
+  - name: National Geophysical Data Center (NGDC)
+    url: https://www.ngdc.noaa.gov
+    description: NGDC and its sister data centers are merged into the NCEI
+    links:
+    - name: Data and Products
+      url: https://www.ngdc.noaa.gov/ngdcinfo/onlineaccess.html
+  - name: National Centers for Environmental Information (NCEI)
+    url: https://www.ncei.noaa.gov
+    links:
+    - name: Data
+      url: https://www.ncei.noaa.gov/access
+  - name: 'EarthByte: Data and Models'
+    url: https://www.earthbyte.org/category/resources/data-models/
+    links:
+    - name: Seafloor Age
+      url: https://www.earthbyte.org/category/resources/data-models/seafloor-age/
+    - name: Chinese Introduction
+      url: https://blog.seisman.info/ocean-floor-crustal-age
+    - name: GMT
+      url: https://docs.generic-mapping-tools.org/latest/datasets/remote-data.html#global-earth-seafloor-crustal-age-grids
+    - name: GMT-China
+      url: https://docs.gmt-china.org/latest/dataset/earth-age/
+  - name: Earth Models
+    url: http://www.earthmodels.org/
+    description: A platform to store and exchange modeling tools and data sets related
+      to the Earth
+  - name: Global Earthquake Model Foundation
+    url: https://www.globalquakemodel.org/
+    links:
+    - name: Products
+      url: https://www.globalquakemodel.org/products
+    - name: Global earthquake maps
+      url: https://www.globalquakemodel.org/gem
+  - name: Subduction Zone Initiation Database
+    url: https://www.szidatabase.org/data
+- title: Geological Database
+  groups:
+  - title: General Database
+    resources:
+    - name: 全国地质资料馆
+      url: http://www.ngac.org.cn/
+      description: 手机应用：第四纪
+      links:
+      - name: 数据分布列表
+        url: http://www.ngac.org.cn/Distribute/List
+    - name: 地质专业知识服务系统
+      url: http://geol.ckcest.cn/index.html
+      links:
+      - name: 3.0 版本介绍
+        url: http://www.cgl.cgs.gov.cn/gzdt_4169/dwdt_4172/202103/t20210330_666996.html
+    - name: OneGeology Portal
+      url: https://portal.onegeology.org/OnegeologyGlobal/
+      description: Global geoscience data
+    - name: 'GMT-China: 中国及邻区地质图数据'
+      url: https://docs.gmt-china.org/latest/dataset-CN/geo3al/
+  - title: Fault Database
+    resources:
+    - name: GEM GAF-DB
+      url: https://github.com/GEMScienceTools/gem-global-active-faults
+      description: "**G**lobal **A**ctive **F**aults **D**ata**b**ase maintained by
+        the **G**lobal **E**arthquake **M**odel Foundation"
+      links:
+      - name: Brief Introduction
+        url: http://rocksandwater.net/blog/2018/10/the-gem-global-active-faults-database-and-webmap
+      - name: "**G**lobal **E**arthquake **M**odel Foundation"
+        url: https://www.globalquakemodel.org/
+    - name: HimaTibetMap
+      url: https://github.com/HimaTibetMap/HimaTibetMap
+      description: Database of active faults and associated features (suture zones,
+        Cenozoic volcanic rocks) in the Indo-Asian collision zone, and Constituent
+        Dataset of GEM GAF-DB
+      links:
+      - name: Brief Introduction
+        url: http://rocksandwater.net/blog/2011/07/himatibetmap-1-1
+    - name: 中国地震局地质研究所：全国活动断层展示系统
+      url: http://www.neotectonics.cn/arcgis/apps/webappviewer/index.html?id=3c0d8234c1dc43eaa0bec3ea03bb00bc
+      description: 手机应用：第四纪
+      links:
+      - name: 说明
+        url: https://www.eq-igl.ac.cn/tzgg/info/2020/21942.html
+    - name: 中国地震灾害防御中心：地震活动断层探察数据中心
+      url: http://www.activefault-datacenter.cn/
+      description: 手机应用：第四纪
+    - name: 'GMT-China: 中国断层数据'
+      url: https://docs.gmt-china.org/latest/dataset-CN/CN-faults/
+    - name: Central Asia Fault Database
+      url: https://esdynamics.geo.uni-tuebingen.de/faults/
+    - name: Active faults and folds in the United States
+      url: https://www.usgs.gov/natural-hazards/earthquake-hazards/faults
+    - name: Active Tectonics of the Andes
+      url: https://github.com/ActiveTectonicsAndes/ATA
+      description: Constituent Dataset of GEM GAF-DB
+      links:
+      - name: Brief Introduction
+        url: http://rocksandwater.net/blog/2012/10/ata-announcement
+    - name: European Database of Seismogenic Faults
+      url: https://www.seismofaults.eu
+  - title: Sediment Database
+    resources:
+    - name: A Global Digital map of Sediment Thickness
+      url: https://igppweb.ucsd.edu/~gabi/sediment.html
+    - name: Sediment Thickness of the World's Oceans and Marginal Seas
+      url: https://www.ngdc.noaa.gov/mgg/sedthick
+  - title: Volcano Database
+    resources:
+    - name: Global Volcanism Program
+      url: https://volcano.si.edu
+    - name: NOAA Volcanic Data and Information
+      url: https://www.ngdc.noaa.gov/hazard/volcano.shtml
+    - name: Volcano Discovery
+      url: https://www.volcanodiscovery.com
+- title: Geodesy Database
+  groups:
+  - title: Gravity Database
+    resources:
+    - name: International Gravity Field Service (IGFS)
+      url: http://igfs.topo.auth.gr
+    - name: International Gravimetric Bureau (BGI)
+      url: https://bgi.obs-mip.fr/
+      description: Gravity grids and models including WGM2012 and EGM2008.
+      links:
+      - name: WGM2012
+        url: https://bgi.obs-mip.fr/data-products/grids-and-models/wgm2012-global-model/
+      - name: EGM2008
+        url: https://bgi.obs-mip.fr/data-products/grids-and-models/egm2008-global-model/
+    - name: International Service for the Geoid (ISG)
+      url: http://www.isgeoid.polimi.it
+    - name: International Geodynamics and Earth Tide Service (IGETS)
+      url: http://igets.u-strasbg.fr
+    - name: International Centre for Global Earth Models (ICGEM)
+      url: http://icgem.gfz-potsdam.de/home
+    - name: International Digital Elevation Model Service (IDEMS)
+      url: https://idems.maps.arcgis.com/home/index.html
+    - name: National Geospatial-Intelligence Agency (NGA)
+      url: https://earth-info.nga.mil/
+    - name: 'NGA: World Geodetic System 1984 Data'
+      url: https://earth-info.nga.mil/index.php?dir=wgs84&action=wgs84
+      description: Earth Gravitational Model (1984, 1996, 2008)
+  - title: Earth Relief Database
+    resources:
+    - name: 'GMT: Global Earth Relief Grids'
+      url: https://docs.generic-mapping-tools.org/latest/datasets/remote-data.html#global-earth-relief-grids
+      links:
+      - name: 'GMT-China: 全球地形起伏数据'
+        url: https://docs.gmt-china.org/latest/dataset/earth-relief/
+    - name: 'Google Maps: Elevation API'
+      url: https://developers.google.com/maps/documentation/elevation/start?hl=zh-cn
+      links:
+      - name: 利用 Google Maps 获取超高精度高程数据
+        url: https://gmt-china.org/blog/google-maps-elevation-api
+  - title: Plate Boundary Models
+    resources:
+    - name: NUVEL
+      url: http://jules.unavco.org/GMT
+      links:
+      - name: Chinese Introduction
+        url: https://blog.seisman.info/plate-boundary-datasets
+    - name: NNR-MORVEL56
+      url: http://geoscience.wisc.edu/~chuck/MORVEL/PltBoundaries.html
+    - name: PB2002
+      url: http://peterbird.name/publications/2003_PB2002/2003_PB2002.htm
+      links:
+      - name: 'GMT-China: PB2002'
+        url: https://docs.gmt-china.org/latest/dataset/PB2002/
+    - name: 'GMT-China: 中国大陆及周边活动地块数据'
+      url: https://docs.gmt-china.org/latest/dataset-CN/CN-block/
+  - title: Stress/Strain Database
+    resources:
+    - name: Earth Global Stress Change Database
+      url: http://geophysics.geo.sunysb.edu/wen/resource/index.html
+      description: by Lianxing Wen
+    - name: 'Global Earthquake Model: Strain Rate Model'
+      url: https://gsrm2.unavco.org/intro/intro.html
+      links:
+      - name: Introdution
+        url: https://storage.globalquakemodel.org/what/seismic-hazard/strain-rate-model
+- title: Geographical Database
+  resources:
+  - name: GSHHG
+    url: https://github.com/genericMappingTools/gshhg-gmt
+    description: "**G**lobal **S**elf-consistent, **H**ierarchical, **H**igh-resolution
+      **G**eography Database"
+    links:
+    - name: 'GMT-China: 全球高分辨率海岸线数据'
+      url: https://docs.gmt-china.org/latest/dataset/gshhg/
+  - name: DCW
+    url: https://github.com/genericMappingTools/dcw-gmt
+    description: The **D**igital **C**hart of the **W**orld **D**ata
+    links:
+    - name: 'GMT-China: 世界数字图表'
+      url: https://docs.gmt-china.org/latest/dataset/dcw/
+  - name: GADM
+    url: https://gadm.org
+    description: Database of Global Administrative Areas
+    links:
+    - name: 'GMT-China: 全球行政区划数据库'
+      url: https://docs.gmt-china.org/latest/dataset/gadm/
+  - name: 全国地理信息资源目录服务系统
+    url: http://www.webmap.cn/main.do?method=index
+    links:
+    - name: 'GMT-China: 1:100 万全国标准基础地理数据'
+      url: https://gmt-china.org/blog/national-geographic-database
+  - name: 'GMT-China: 中国国界省界数据'
+    url: https://docs.gmt-china.org/latest/dataset-CN/CN-border/
+- title: Geotherm Database
+  resources:
+  - name: Global Heat Flow Database
+    url: https://ihfc-iugg.org/products/global-heat-flow-database
+    description: provided by the University of North Dakota Global Surface Heat Flow
+      Database (version of 2012) maintained by Irina M. Artemieva
+    links:
+    - name: Global Heat Flow Database
+      url: https://engineering.und.edu/research/global-heat-flow-database/
+    - name: Global Surface Heat Flow Database (version of 2012)
+      url: http://www.lithosphere.info/downloads.html
+  - name: Global Borehole Temperature Database
+    url: https://ihfc-iugg.org/products/global-borehole-temperature-database
+  - name: Global Continental Lithosphere Age and Temperatures
+    url: http://www.lithosphere.info/TC1-age-and-temperature.html
+    description: "& Regional Lithosphere Thermal Models and LAB (Greenland and Europe)
+      maintained by Irina M. Artemieva"
+    links:
+    - name: Regional Lithosphere Thermal Models and LAB (Greenland and Europe)
+      url: http://www.lithosphere.info/Thermal_isostasy.html
+  - name: Global Temperature Data
+    url: https://www.nodc.noaa.gov/General/temperature.html
