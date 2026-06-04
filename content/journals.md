@@ -36,18 +36,18 @@ toc: true
     [Current Issue](https://agupubs.onlinelibrary.wiley.com/toc/2576604x/current) |
     [Archive](https://agupubs.onlinelibrary.wiley.com/loi/2576604x)
 - **Annual Review of Earth and Planetary Sciences**:
-    [Homepage](http://www.annualreviews.org/journal/earth) |
+    [Homepage](https://www.annualreviews.org/journal/earth) |
     [Current Issue](https://www.annualreviews.org/toc/earth/current) |
     [Archive](https://www.annualreviews.org/loi/earth)
 - **Earth and Planetary Science Letters**:
     [Homepage](https://www.sciencedirect.com/journal/earth-and-planetary-science-letters) |
     [Archive](https://www.sciencedirect.com/journal/earth-and-planetary-science-letters/issues)
 - **Geochemistry, Geophysics, Geosystems**:
-    [Homepage](http://agupubs.onlinelibrary.wiley.com/hub/journal/10.1002/(ISSN)1525-2027/) |
+    [Homepage](https://agupubs.onlinelibrary.wiley.com/hub/journal/10.1002/(ISSN)1525-2027/) |
     [Current Issue](https://agupubs.onlinelibrary.wiley.com/toc/15252027/current) |
     [Archive](https://agupubs.onlinelibrary.wiley.com/loi/15252027)
 - **Nature GeoScience**:
-    [Homepage](http://www.nature.com/ngeo/index.html) |
+    [Homepage](https://www.nature.com/ngeo/index.html) |
     [Current Issue](https://www.nature.com/ngeo/current-issue) |
     [Archive](https://www.nature.com/ngeo/volumes)
 - **Nature Reviews Earth & Environment**:
@@ -55,7 +55,7 @@ toc: true
     [Current Issue](https://www.nature.com/natrevearthenviron/current-issue) |
     [Archive](https://www.nature.com/natrevearthenviron/volumes/)
 - **Physics of the Earth and Planetary Interiors**:
-    [Homepage](http://www.sciencedirect.com/science/journal/00319201/) |
+    [Homepage](https://www.sciencedirect.com/science/journal/00319201/) |
     [Archive](https://www.sciencedirect.com/journal/physics-of-the-earth-and-planetary-interiors/issues)
 - **Science China Earth Sciences**:
     [Homepage](https://www.springer.com/journal/11430) |
@@ -65,7 +65,7 @@ toc: true
 ## Geophysics Journals
 
 - **Geophysical Journal International**:
-    [Homepage](http://academic.oup.com/gji) |
+    [Homepage](https://academic.oup.com/gji) |
     [Old Archive (1922-1957)](https://academic.oup.com/gsmnras)
 - **Geophysical Research Letters**:
     [Homepage](https://agupubs.onlinelibrary.wiley.com/journal/19448007) |
