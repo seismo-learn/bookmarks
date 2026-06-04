@@ -11,9 +11,17 @@
 				{{ .Name | safeHTML }}
 			</a>
 			{{ end }}
-			{{ with .File }}
+			{{ $editPath := "" }}
+			{{ with .Params.edit_path }}
+				{{ $editPath = . }}
+			{{ else }}
+				{{ with .File }}
+					{{ $editPath = printf "%s/%s" $.Site.Params.edit_page.repo_dir (replace .Path "\\" "/") }}
+				{{ end }}
+			{{ end }}
+			{{ with $editPath }}
 			<a class="nav-item nav-link active"
-				href="{{ $.Site.Params.edit_page.repo_url }}/{{ $.Site.Params.edit_page.edit_mode }}/{{ $.Site.Params.edit_page.branch }}/{{ $.Site.Params.edit_page.repo_dir }}/{{ replace .Path "\\" "/" }}">
+				href="{{ $.Site.Params.edit_page.repo_url }}/{{ $.Site.Params.edit_page.edit_mode }}/{{ $.Site.Params.edit_page.branch }}/{{ . }}">
 				<i class="fas fa-edit"></i> {{ $.Site.Params.edit_page.edit_text }}
 			</a>
 			{{ end }}
