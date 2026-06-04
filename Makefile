@@ -5,7 +5,7 @@ build:
 	@hugo
 
 serve:
-	hugo server
+	hugo server --baseURL http://localhost:1313/links/ --appendPort=false
 
 clean:
 	rm -rf public resources

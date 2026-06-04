@@ -30,7 +30,7 @@ To build it locally, you need to follow the steps below:
     http://localhost:1313/links/ in your local web browser.
 
     ```
-    $ hugo server
+    $ make serve
     ```
 
 ## Contributing
