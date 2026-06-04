@@ -35,7 +35,7 @@ toc: true
   [Recipes](https://github.com/seismo-learn/SOD-recipes):
   The best seismic data request tool
 - [ObsPy](https://github.com/obspy/obspy/wiki):
-  Data download, processing and visulization software written in Python
+  Data download, processing and visualization software written in Python
 - [SAC](http://www.iris.edu/ds/nodes/dmc/forms/sac/) |
   [Chinese Manual](https://seisman.github.io/SAC_Docs_zh/) |
   [English Manual](https://ds.iris.edu/files/sac-manual/) |
@@ -58,7 +58,7 @@ toc: true
 - [ObsPy](https://github.com/obspy/obspy) |
   [Waveform Import/Export Plug-ins](https://docs.obspy.org/packages/index.html) |
   [Supported Formats](https://docs.obspy.org/packages/autogen/obspy.core.stream.read.html#obspy.core.stream.read):
-  Data download, processing and visulization software written in Python
+  Data download, processing and visualization software written in Python
 - [SAC](http://www.iris.edu/ds/nodes/dmc/forms/sac/) |
   [Chinese Manual](https://seisman.github.io/SAC_Docs_zh/) |
   [English Manual](https://ds.iris.edu/files/sac-manual/) |
@@ -95,7 +95,7 @@ toc: true
   [notes in Chinese](https://blog.seisman.info/conversion-of-different-sac-formats):
   The most commonly used seismic data processing and plotting software
 - [ObsPy](https://github.com/obspy/obspy/wiki):
-  Data download, processing and visulization software written in Python
+  Data download, processing and visualization software written in Python
 - [CPS330](http://www.eas.slu.edu/eqc/eqccps.html) |
   [A tutorial (in Chinese)](https://seismo-learn.org/software/cps/):
   Collection of programs for calculating theorectical seismogram, receiver function,
@@ -103,7 +103,7 @@ toc: true
 - [Geopsy](http://www.geopsy.org/download.php): An open source software for geophysical
   research and application written in C++
 - [GISMO](http://geoscience-community-codes.github.io/GISMO/):
-  Data download, processing and visulization software written in Matlab
+  Data download, processing and visualization software written in Matlab
 - [hinet_decon](https://github.com/tktmyd/hinet_decon): Deconvolve Hi-net velocity
   record by its seismometer response by using inverse filtering technique
 - [SeisIO.jl](https://github.com/jpjones76/SeisIO.jl):
@@ -129,7 +129,7 @@ toc: true
 - [matplotlib](https://matplotlib.org/): A comprehensive library for creating
   static, animated, and interactive visualizations in Python
 - [ObsPy](https://github.com/obspy/obspy): Data download, processing and
-  visulization software written in Python
+  visualization software written in Python
 - [obspy.imaging.scripts.mopad](https://docs.obspy.org/packages/autogen/obspy.imaging.scripts.mopad.html):
   MoPaD command line utility
 - [MoPad](http://www.larskrieger.de/mopad/) |
@@ -705,7 +705,7 @@ Resources
 - [MCDisp](https://github.com/xin2zhang/MCDisp): Surface wave dispersion inversion
   using Monte Carlo methohd written in Python
 
-### Surfave-wave Tomography Workflow
+### Surface-wave Tomography Workflow
 
 - [seismic-noise-tomography](https://github.com/bgoutorbe/seismic-noise-tomography):
   Python framework for seismic noise tomography
@@ -895,7 +895,7 @@ Resources
 
 - [Fault zone travel time and waveform modelling](https://www.linkresearcher.com/trainings/d65fe2ef-3cc8-4eef-9821-261e3d49a9ae) |
   [bilibili](https://www.bilibili.com/video/av841708479?p=6)
-- [MC3deconv](https://github.com/akuhara/MC3deconv): Bayeisan inversion to recover
+- [MC3deconv](https://github.com/akuhara/MC3deconv): Bayesian inversion to recover
   Green's functions of receiver-side structures from teleseismic waveforms
 
 ### Full Waveform Inversion
@@ -1079,7 +1079,7 @@ Resources
 
 ### Array seismology
 
-- [ObsPy](https://github.com/obspy/obspy): Data download, processing and visulization software written in Python
+- [ObsPy](https://github.com/obspy/obspy): Data download, processing and visualization software written in Python
 - [array_processing](https://github.com/uafgeotools/array_processing):
   Various array processing tools for infrasound and seismic data written in Python
 - [Geopsy](http://www.geopsy.org/download.php): An open source software for geophysical
@@ -1206,7 +1206,7 @@ Resources
 - [distaz](http://www.seis.sc.edu/software/distaz) |
   [A tutorial (in Chinese)](https://seismo-learn.org/software/utilities/distaz/):
   Calculate distance, azimuth and back-azimuth of any two points at the Earth's surface
-- [PlateFlex](https://paudetseis.github.io/PlateFlex/): Estimate lithosphere elstatic
+- [PlateFlex](https://paudetseis.github.io/PlateFlex/): Estimate lithosphere elastic
   thickness written in Python and Fortran
 
 ### Tectonics
@@ -1318,7 +1318,7 @@ Resources
 - [SW3D](http://seis.karlov.mff.cuni.cz/): **S**eismic **W**aves in complex **3D** structures
 - [University of South Carolina Lithospheric Seismology Program](http://www.seis.sc.edu/) |
   [Software](http://www.seis.sc.edu/software.html)
-- [University of Ottawau Geophysics Group](https://www.uogeophysics.com/) |
+- [University of Ottawa Geophysics Group](https://www.uogeophysics.com/) |
   [Software](https://www.uogeophysics.com/#software)
 - [USGS Earthquake Hazards Program](https://www.usgs.gov/natural-hazards/earthquake-hazards) |
   [Software](https://www.usgs.gov/natural-hazards/earthquake-hazards/software)

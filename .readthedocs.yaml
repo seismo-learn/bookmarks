@@ -10,7 +10,7 @@ build:
   tools:
     golang: "1.19"  # needed by hugo
   commands:
-    # Full cusotmized build process
+    # Full customized build process
     # https://docs.readthedocs.io/en/stable/build-customization.html#override-the-build-process
     - curl -sSL https://github.com/gohugoio/hugo/releases/download/v0.117.0/hugo_extended_0.117.0_Linux-64bit.tar.gz | tar zxvf - hugo
     - sed -i "s#https://seismo-learn.org/links/#${READTHEDOCS_CANONICAL_URL}#" config.toml

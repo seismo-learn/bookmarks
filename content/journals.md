@@ -22,7 +22,7 @@ toc: true
     [Archive](https://advances.sciencemag.org/content/by/year)
 - **Proceedings of the National Academy of Sciences (PNAS)**:
     [Homepage](https://www.pnas.org) |
-    [Currnet Issue](https://www.pnas.org/content/current) |
+    [Current Issue](https://www.pnas.org/content/current) |
     [Archive](https://www.pnas.org/content/by/year) |
     [Earth Sciences](https://www.pnas.org/content/by/section/Earth,%20Atmospheric,%20and%20Planetary%20Sciences)
 - **Scientific Reports**:
@@ -108,7 +108,7 @@ toc: true
     [Homepage](https://arxiv.org/) |
     [Geophysics](https://arxiv.org/list/physics.geo-ph/recent)
 
-## Researchers's Academic Profile
+## Researchers' Academic Profile
 
 - [ORCID](https://orcid.org/): A persistent digital identifier for researchers
 - [Google Scholar](https://scholar.google.com/)
