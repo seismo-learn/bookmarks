@@ -1,7 +1,7 @@
 #
 # Build and deploy the documentation
 #
-name: Deploy
+name: Build and Deploy
 
 on:
   pull_request:
