@@ -45,7 +45,7 @@ Everyone is welcome to contribute to this site. Contributions include but not li
 For any contributions, please open an [issue](https://github.com/seismo-learn/links/issues)
 or submit a [Pull Request](https://github.com/seismo-learn/links/pulls).
 You could also refer to the [contributing guides](https://seismo-learn.org/contributing/) (in Chinese)
-if you are unfamilar with git, GitHub, Markdown and so on.
+if you are unfamiliar with git, GitHub, Markdown and so on.
 
 
 ## License

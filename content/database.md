@@ -73,7 +73,7 @@ toc: true
   Focal mechanism based on JMA Unified Hypocenter Catalog (Preliminary)
 - [NIED Moment Tensors](http://www.fnet.bosai.go.jp/event/joho.php?LANG=en) |
   [Catalog Search](https://www.fnet.bosai.go.jp/event/joho.php?LANG=en)
-- [Northern California Mechanim Catalog](http://www.ncedc.org/ncedc/catalog-search.html)
+- [Northern California Mechanism Catalog](http://www.ncedc.org/ncedc/catalog-search.html)
 - [Southern California Moment Tensor Catalog](http://service.scedc.caltech.edu/eq-catalogs/CMTsearch.php)
 - [European-Mediterranean Seismological Centre Moment Tensors Solutions](https://www.emsc-csem.org/Earthquake/index_tensors.php)
 - [Italy Moment Tensor Catalog](http://cnt.rm.ingv.it/en/tdmt)
@@ -192,7 +192,7 @@ toc: true
 
 ## Seismological Models
 
-### Global and Reginal Reference Seismological Models
+### Global and Regional Reference Seismological Models
 
 - [IRIS Earth Model Collaboration (EMC)](http://ds.iris.edu/ds/products/emc/) |
   [Web Service](http://service.iris.edu/irisws/earth-model/1/)
@@ -218,7 +218,7 @@ toc: true
 - [IRIS EMC: Reference Earth Models](http://ds.iris.edu/ds/products/emc-referencemodels)
 - [TauP: Standard Models](https://www.seis.sc.edu/taup): The **StdModels**
   folder in the source contain a few 1D models (e.g., PREM, AK135, iasp91)
-- [AK135: model, travletime tables, plots and software](http://rses.anu.edu.au/seismology/ak135/intro.html) |
+- [AK135: model, traveltime tables, plots and software](http://rses.anu.edu.au/seismology/ak135/intro.html) |
   [Traveltime tables and ellipticity corrections](http://rses.anu.edu.au/seismology/AK135tables.pdf) with the ellipticity correction method for iasp91
 
 ### 3D Body Wave Tomographic Models
