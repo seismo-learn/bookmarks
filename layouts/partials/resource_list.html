@@ -1,0 +1,9 @@
+{{ with . }}
+<ul>
+{{ range . }}
+  <li>
+    <a href="{{ .url }}">{{ .name }}</a>{{ with .description }}: {{ . | markdownify }}{{ end }}
+  </li>
+{{ end }}
+</ul>
+{{ end }}

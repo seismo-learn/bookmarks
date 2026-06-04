@@ -1,0 +1,31 @@
+{{ define "main" }}
+{{ $data := index .Site.Data .Params.resource_data }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+
+{{ range $data.sections }}
+<h2 id="{{ anchorize .title }}">{{ .title }}</h2>
+  {{ partial "resource_list.html" .resources }}
+  {{ $section := .title }}
+  {{ range .groups }}
+<h3 id="{{ anchorize (printf "%s-%s" $section .title) }}">{{ .title }}</h3>
+    {{ partial "resource_list.html" .resources }}
+  {{ end }}
+{{ end }}
+{{ end }}
+
+{{ define "toc" }}
+{{ $data := index .Site.Data .Params.resource_data }}
+{{ if and .Params.toc $data }}
+<aside>
+  <h2>Table of Contents</h2>
+  <nav id="TableOfContents">
+    <ul>
+    {{ range $data.sections }}
+      <li><a href="#{{ anchorize .title }}">{{ .title }}</a></li>
+    {{ end }}
+    </ul>
+  </nav>
+</aside>
+{{ end }}
+{{ end }}
