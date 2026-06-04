@@ -7,7 +7,7 @@ on:
 
 jobs:
   check-links:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     permissions:
       contents: read
       issues: write
@@ -31,8 +31,6 @@ jobs:
 
       - name: Create issue
         if: steps.lychee.outputs.exit_code != 0
-        uses: peter-evans/create-issue-from-file@v5
-        with:
-          title: Broken links report
-          content-filepath: ./lychee/out.md
-          labels: report, broken links
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue create --title "Broken links report" --body-file ./lychee/out.md
