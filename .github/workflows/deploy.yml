@@ -3,8 +3,9 @@
 #
 name: Deploy
 
-# Run on main branch only
 on:
+  pull_request:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -30,6 +31,7 @@ jobs:
         run: make all
 
       - name: Deploy documentation
+        if: github.event_name == 'push'
         uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453
         with:
           # personal token is needed here because it's pushing to an external repository.
