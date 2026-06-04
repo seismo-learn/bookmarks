@@ -1,0 +1,238 @@
+sections:
+  - title: Multidisciplinary Journals
+    resources:
+      - name: Science
+        links:
+          - name: Homepage
+            url: https://science.sciencemag.org/
+          - name: Current Issue
+            url: https://science.sciencemag.org/content/current
+          - name: Archive
+            url: https://science.sciencemag.org/content/by/year
+      - name: Nature
+        links:
+          - name: Homepage
+            url: https://www.nature.com/nature/
+          - name: Current Issue
+            url: https://www.nature.com/nature/current-issue
+          - name: Archive
+            url: https://www.nature.com/nature/volumes
+          - name: Earth Sciences
+            url: https://www.nature.com/subjects/earth-and-environmental-sciences/nature
+      - name: Nature Communications
+        links:
+          - name: Homepage
+            url: https://www.nature.com/ncomms/
+          - name: Earth Sciences
+            url: https://www.nature.com/subjects/earth-and-environmental-sciences/ncomms
+      - name: Science Advances
+        links:
+          - name: Homepage
+            url: https://advances.sciencemag.org/
+          - name: Archive
+            url: https://advances.sciencemag.org/content/by/year
+      - name: Proceedings of the National Academy of Sciences (PNAS)
+        links:
+          - name: Homepage
+            url: https://www.pnas.org
+          - name: Current Issue
+            url: https://www.pnas.org/content/current
+          - name: Archive
+            url: https://www.pnas.org/content/by/year
+          - name: Earth Sciences
+            url: https://www.pnas.org/content/by/section/Earth,%20Atmospheric,%20and%20Planetary%20Sciences
+      - name: Scientific Reports
+        links:
+          - name: Homepage
+            url: https://www.nature.com/srep/
+          - name: Earth Sciences
+            url: https://www.nature.com/subjects/earth-and-environmental-sciences/srep
+
+  - title: Earth Sciences Journals
+    resources:
+      - name: AGU Advances
+        links:
+          - name: Homepage
+            url: https://agupubs.onlinelibrary.wiley.com/journal/2576604x
+          - name: Current Issue
+            url: https://agupubs.onlinelibrary.wiley.com/toc/2576604x/current
+          - name: Archive
+            url: https://agupubs.onlinelibrary.wiley.com/loi/2576604x
+      - name: Annual Review of Earth and Planetary Sciences
+        links:
+          - name: Homepage
+            url: https://www.annualreviews.org/journal/earth
+          - name: Current Issue
+            url: https://www.annualreviews.org/toc/earth/current
+          - name: Archive
+            url: https://www.annualreviews.org/loi/earth
+      - name: Earth and Planetary Science Letters
+        links:
+          - name: Homepage
+            url: https://www.sciencedirect.com/journal/earth-and-planetary-science-letters
+          - name: Archive
+            url: https://www.sciencedirect.com/journal/earth-and-planetary-science-letters/issues
+      - name: Geochemistry, Geophysics, Geosystems
+        links:
+          - name: Homepage
+            url: https://agupubs.onlinelibrary.wiley.com/hub/journal/10.1002/(ISSN)1525-2027/
+          - name: Current Issue
+            url: https://agupubs.onlinelibrary.wiley.com/toc/15252027/current
+          - name: Archive
+            url: https://agupubs.onlinelibrary.wiley.com/loi/15252027
+      - name: Nature GeoScience
+        links:
+          - name: Homepage
+            url: https://www.nature.com/ngeo/index.html
+          - name: Current Issue
+            url: https://www.nature.com/ngeo/current-issue
+          - name: Archive
+            url: https://www.nature.com/ngeo/volumes
+      - name: Nature Reviews Earth & Environment
+        links:
+          - name: Homepage
+            url: https://www.nature.com/natrevearthenviron
+          - name: Current Issue
+            url: https://www.nature.com/natrevearthenviron/current-issue
+          - name: Archive
+            url: https://www.nature.com/natrevearthenviron/volumes/
+      - name: Physics of the Earth and Planetary Interiors
+        links:
+          - name: Homepage
+            url: https://www.sciencedirect.com/science/journal/00319201/
+          - name: Archive
+            url: https://www.sciencedirect.com/journal/physics-of-the-earth-and-planetary-interiors/issues
+      - name: Science China Earth Sciences
+        links:
+          - name: Homepage
+            url: https://www.springer.com/journal/11430
+          - name: Archive
+            url: https://link.springer.com/journal/11430/volumes-and-issues
+      - name: Eos
+        url: https://eos.org
+        description: Earth & Space Science news distributed by [AGU](https://agupubs.onlinelibrary.wiley.com)
+
+  - title: Geophysics Journals
+    resources:
+      - name: Geophysical Journal International
+        links:
+          - name: Homepage
+            url: https://academic.oup.com/gji
+          - name: Old Archive (1922-1957)
+            url: https://academic.oup.com/gsmnras
+      - name: Geophysical Research Letters
+        links:
+          - name: Homepage
+            url: https://agupubs.onlinelibrary.wiley.com/journal/19448007
+          - name: Current Issue
+            url: https://agupubs.onlinelibrary.wiley.com/toc/19448007/current
+          - name: Archive
+            url: https://agupubs.onlinelibrary.wiley.com/loi/19448007
+      - name: "Journal of Geophysical Research: Solid Earth"
+        links:
+          - name: Homepage
+            url: https://agupubs.onlinelibrary.wiley.com/journal/21699356
+          - name: Current Issue
+            url: https://agupubs.onlinelibrary.wiley.com/toc/21699356/current
+          - name: Archive
+            url: https://agupubs.onlinelibrary.wiley.com/loi/21699356
+      - name: Reviews of Geophysics
+        links:
+          - name: Homepage
+            url: https://agupubs.onlinelibrary.wiley.com/journal/19449208
+          - name: Current Issue
+            url: https://agupubs.onlinelibrary.wiley.com/toc/19449208/current
+          - name: Archive
+            url: https://agupubs.onlinelibrary.wiley.com/loi/19449208
+      - name: Tectonics
+        links:
+          - name: Homepage
+            url: https://agupubs.onlinelibrary.wiley.com/journal/19449194
+          - name: Current Issue
+            url: https://agupubs.onlinelibrary.wiley.com/toc/19449194/current
+          - name: Archive
+            url: https://agupubs.onlinelibrary.wiley.com/loi/19449194
+
+  - title: Seismology Journals
+    resources:
+      - name: Bulletin of the Seismological Society of America
+        links:
+          - name: Homepage
+            url: https://pubs.geoscienceworld.org/bssa
+          - name: Current Issue
+            url: https://pubs.geoscienceworld.org/bssa/issue
+          - name: Archive
+            url: https://pubs.geoscienceworld.org/bssa/list-of-years
+      - name: Seismological Research Letters
+        links:
+          - name: Homepage
+            url: https://pubs.geoscienceworld.org/srl
+          - name: Current Issue
+            url: https://pubs.geoscienceworld.org/srl/issue
+          - name: Early Publication
+            url: https://pubs.geoscienceworld.org/srl/early-publication
+          - name: Archive
+            url: https://pubs.geoscienceworld.org/srl/list-of-years
+
+  - title: Preprint Archives
+    resources:
+      - name: Earth and Space Science Open Archive (ESSOAr)
+        links:
+          - name: Homepage
+            url: https://www.essoar.org/
+          - name: Geophysics
+            url: https://www.essoar.org/topic/agu-ed/1200
+      - name: EarthArXiv
+        links:
+          - name: Homepage
+            url: https://eartharxiv.org/
+          - name: Geophysics and Seismology
+            url: https://eartharxiv.org/repository/list/geophysics-and-seismology/
+      - name: arXiv
+        links:
+          - name: Homepage
+            url: https://arxiv.org/
+          - name: Geophysics
+            url: https://arxiv.org/list/physics.geo-ph/recent
+
+  - title: Researchers' Academic Profile
+    resources:
+      - name: ORCID
+        url: https://orcid.org/
+        description: A persistent digital identifier for researchers
+      - name: Google Scholar
+        url: https://scholar.google.com/
+      - name: Publons
+        url: https://publons.com/
+        description: Your publications, citation metrics, peer reviews and journal editing work, in one place
+      - name: ResearchGate
+        url: https://www.researchgate.net
+        description: Social networking site for scientists and researchers
+
+  - title: Related Resources
+    resources:
+      - name: "Journal Citation Reports (Chinese Academy of Sciences: Geosciences)"
+        url: http://www.gaokeyan.com/journal/index.php?t=subject&sid=8&p=1&jcr=0
+        description: in Chinese
+      - name: Nature Index journals
+        url: https://www.natureindex.com/faq#journals
+      - name: Journal Abbreviations
+        url: https://woodward.library.ubc.ca/research-help/journal-abbreviations/
+        description: Search Science and Engineering Journal Abbreviations
+      - name: Scopus
+        url: https://www.scopus.com/home.uri
+        description: Abstract and citation database
+      - name: Web of Science
+        url: https://www.webofknowledge.com
+        description: Abstract and citation database
+      - name: Sci-Hub
+        url: http://sci-hub.tw/
+        description: Free access to millions of research papers and books
+        links:
+          - name: A tutorial in Chinese
+            url: https://gmt-china.org/blog/sci-hub/
+          - name: Where is Sci-Hub now?
+            url: https://whereisscihub.now.sh/
+      - name: SHERPA RoMEO
+        url: http://www.sherpa.ac.uk/romeo/index.php
+        description: Publisher copyright policies & self-archiving

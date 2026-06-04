@@ -32,6 +32,9 @@ sections:
       - name: Example Resource
         url: https://example.com
         description: Optional short description
+        links:
+          - name: Documentation
+            url: https://example.com/docs
     groups:
       - title: Subcategory
         resources:
@@ -44,3 +47,4 @@ Resource fields:
 - `name`: Display name.
 - `url`: Primary link.
 - `description`: Optional short description.
+- `links`: Optional related links, each with `name` and `url`.
