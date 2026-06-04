@@ -1,0 +1,56 @@
+{{ define "main" }}
+{{ $data := partial "resource_data.html" . }}
+<div class="tools-page">
+  <header class="tools-header">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+  </header>
+
+  <div class="tools-grid">
+    {{ range $data.sections }}
+    {{ $sectionCount := len (default (slice) .resources) }}
+    {{ range .groups }}
+      {{ $sectionCount = add $sectionCount (len (default (slice) .resources)) }}
+    {{ end }}
+    <section class="tools-section" aria-labelledby="{{ anchorize .title }}">
+      <div class="tools-section-heading">
+        <h2 id="{{ anchorize .title }}">{{ .title }}</h2>
+        <span>{{ $sectionCount }} {{ cond (eq $sectionCount 1) "tool" "tools" }}</span>
+      </div>
+
+      {{ partial "tools_resource_cards.html" .resources }}
+
+      {{ $section := .title }}
+      {{ range .groups }}
+      <div class="tools-group">
+        <h3 id="{{ anchorize (printf "%s-%s" $section .title) }}">{{ .title }}</h3>
+        {{ partial "tools_resource_cards.html" .resources }}
+      </div>
+      {{ end }}
+    </section>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
+
+{{ define "toc" }}
+{{ $data := partial "resource_data.html" . }}
+{{ if and .Params.toc $data }}
+<aside class="tools-toc">
+  <h2>Categories</h2>
+  <nav id="TableOfContents">
+    <ul>
+    {{ range $data.sections }}
+      {{ $sectionCount := len (default (slice) .resources) }}
+      {{ range .groups }}
+        {{ $sectionCount = add $sectionCount (len (default (slice) .resources)) }}
+      {{ end }}
+      <li>
+        <a href="#{{ anchorize .title }}">{{ .title }} <span>{{ $sectionCount }}</span></a>
+      </li>
+    {{ end }}
+    </ul>
+  </nav>
+</aside>
+{{ end }}
+{{ end }}

@@ -1,0 +1,21 @@
+{{ with . }}
+<div class="tools-cards">
+{{ range . }}
+  <article class="tool-card">
+    <div class="tool-card-title">
+      {{ if .url }}
+      <a href="{{ .url }}">{{ .name }}</a>
+      {{ else }}
+      <strong>{{ .name }}</strong>
+      {{ end }}
+    </div>
+    {{ with .description }}<p>{{ . | markdownify }}</p>{{ end }}
+    {{ with .links }}
+    <div class="tool-card-links" aria-label="Related links">
+      {{ range . }}<a href="{{ .url }}">{{ .name }}</a>{{ end }}
+    </div>
+    {{ end }}
+  </article>
+{{ end }}
+</div>
+{{ end }}
