@@ -50,3 +50,12 @@ aside {
     padding: 20px;
     width: auto;
 }
+
+@media (max-width: 48em) {
+    aside {
+        clear: both;
+        display: block;
+        float: none;
+        width: 100%;
+    }
+}
