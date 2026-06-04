@@ -1,0 +1,7 @@
+<h2 id="{{ anchorize .title }}">{{ .title }}</h2>
+{{ partial "resource_list.html" .resources }}
+{{ $section := .title }}
+{{ range .groups }}
+<h3 id="{{ anchorize (printf "%s-%s" $section .title) }}">{{ .title }}</h3>
+  {{ partial "resource_list.html" .resources }}
+{{ end }}
