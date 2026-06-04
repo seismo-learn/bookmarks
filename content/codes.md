@@ -7,27 +7,27 @@ toc: true
 
 ### Data Request Tools
 
-- [FDSN Web Services](http://www.fdsn.org/webservices) |
+- [FDSN Web Services](https://www.fdsn.org/webservices) |
   [A note in Chinese](https://blog.seisman.info/web-service-clients)
 - [IRIS Data Management Center (DMC)](https://ds.iris.edu/ds/nodes/dmc/)
     - [ROVER](https://EarthScope.github.io/rover): A command line tool to robustly
       retrieve geophysical timeseries data from data centers
-    - [BREQ_FAST](http://ds.iris.edu/ds/nodes/dmc/manuals/breq_fast) |
+    - [BREQ_FAST](https://ds.iris.edu/ds/nodes/dmc/manuals/breq_fast) |
       [notes in Chinese](https://blog.seisman.info/tags/breq_fast):
       Seismic data request by sending email
-    - [IRIS Wilber 3](http://ds.iris.edu/wilber3/find_event) |
+    - [IRIS Wilber 3](https://ds.iris.edu/wilber3/find_event) |
       [A note in Chinese](https://blog.seisman.info/wilber3):
       A web GUI to request waveform data of individual seismic events
-    - [jweed](http://ds.iris.edu/ds/nodes/dmc/software/downloads/jweed):
+    - [jweed](https://ds.iris.edu/ds/nodes/dmc/software/downloads/jweed):
       Data request client written in Java
-- [IRIS-DMC: Web Services](http://service.iris.edu):
-  - [clients](http://service.iris.edu/clients/)
+- [IRIS-DMC: Web Services](https://service.iris.edu):
+  - [clients](https://service.iris.edu/clients/)
     - [Web Service Fetch scripts](https://github.com/EarthScope/fetch-scripts)
       [A note in Chinese](https://blog.seisman.info/web-service-fetch-scripts)
-    - [MATLAB data access](http://ds.iris.edu/ds/nodes/dmc/software/downloads/irisFetch.m/)
-  - [FDSNWS](http://service.iris.edu/fdsnws/)
-  - [IRISWS](http://service.iris.edu/irisws/)
-  - [PH5WS](http://service.iris.edu/ph5ws/) |
+    - [MATLAB data access](https://ds.iris.edu/ds/nodes/dmc/software/downloads/irisFetch.m/)
+  - [FDSNWS](https://service.iris.edu/fdsnws/)
+  - [IRISWS](https://service.iris.edu/irisws/)
+  - [PH5WS](https://service.iris.edu/ph5ws/) |
     [Tutorials](https://ds.iris.edu/ds/nodes/dmc/tutorials/accessing-ph5-archive-with-fetchdata/) |
     [wiki](https://github.com/PIC-IRIS/PH5/wiki)
 - [SOD](http://www.seis.sc.edu/sod) |
@@ -36,7 +36,7 @@ toc: true
   The best seismic data request tool
 - [ObsPy](https://github.com/obspy/obspy/wiki):
   Data download, processing and visualization software written in Python
-- [SAC](http://www.iris.edu/ds/nodes/dmc/forms/sac/) |
+- [SAC](https://www.iris.edu/ds/nodes/dmc/forms/sac/) |
   [Chinese Manual](https://seisman.github.io/SAC_Docs_zh/) |
   [English Manual](https://ds.iris.edu/files/sac-manual/) |
   [youtube](https://www.youtube.com/watch?v=zZeUvHkOOAM&list=PLD4D607C2FA317E6D&index=147) |
@@ -59,7 +59,7 @@ toc: true
   [Waveform Import/Export Plug-ins](https://docs.obspy.org/packages/index.html) |
   [Supported Formats](https://docs.obspy.org/packages/autogen/obspy.core.stream.read.html#obspy.core.stream.read):
   Data download, processing and visualization software written in Python
-- [SAC](http://www.iris.edu/ds/nodes/dmc/forms/sac/) |
+- [SAC](https://www.iris.edu/ds/nodes/dmc/forms/sac/) |
   [Chinese Manual](https://seisman.github.io/SAC_Docs_zh/) |
   [English Manual](https://ds.iris.edu/files/sac-manual/) |
   [youtube](https://www.youtube.com/watch?v=zZeUvHkOOAM&list=PLD4D607C2FA317E6D&index=147) |
@@ -82,13 +82,13 @@ toc: true
 - [win32tools](http://www.hinet.bosai.go.jp/REGS/manual/dlDialogue.php?r=win32tools):
   Convert WIN32 format used by Hi-net, to SAC format
 - [rdseed](https://github.com/EarthScope-legacy/rdseed) |
-  [IRIS](http://ds.iris.edu/pub/programs) |
+  [IRIS](https://ds.iris.edu/pub/programs) |
   [notes in Chinese](https://blog.seisman.info/tags/SEED):
   Convert seismic data from SEED format and other formats
 
 ### Seismic Data Processing
 
-- [SAC](http://www.iris.edu/ds/nodes/dmc/forms/sac/) |
+- [SAC](https://www.iris.edu/ds/nodes/dmc/forms/sac/) |
   [Chinese Manual](https://seisman.github.io/SAC_Docs_zh/) |
   [English Manual](https://ds.iris.edu/files/sac-manual/) |
   [youtube](https://www.youtube.com/watch?v=zZeUvHkOOAM&list=PLD4D607C2FA317E6D&index=147) |
@@ -137,12 +137,12 @@ toc: true
   Moment tensor Plotting and Decomposition
 - [3D Focal Mechanisms](https://www.usgs.gov/node/279384):
   View earthquake focal mechanism symbols three dimensionally
-- [EMC-DesktopTools](http://ds.iris.edu/ds/products/emc-desktoptools/)
+- [EMC-DesktopTools](https://ds.iris.edu/ds/products/emc-desktoptools/)
   - [EMC-ParaView](https://github.com/EarthScope/EMC-ParaView): A set of Python
     programmable filters/sources to allow ParaView open-source, multi-platform
     data analysis and visualization application to display EMC netCDF/GeoCSV models
     along with other auxiliary Earth data
-- [EMC visualization tools](http://ds.iris.edu/dms/products/emc/horizontalSlice.html)
+- [EMC visualization tools](https://ds.iris.edu/dms/products/emc/horizontalSlice.html)
 - [SeisTomoPy](https://github.com/stephaniedurand/SeisTomoPy):
   Visulization of 3D tomography models and calculate traveltime in 3D model
 - [SubMachine](https://www.earth.ox.ac.uk/~smachine/cgi/index.php):

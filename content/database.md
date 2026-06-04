@@ -17,8 +17,8 @@ toc: true
 - [中国台网正式地震目录](https://data.earthquake.cn/datashare/report.shtml?PAGEID=earthquake_zhengshi)
 - [European-Mediterranean Seismological Centre Earthquake Catalog](https://www.emsc-csem.org/Earthquake/?filter=yes)
 - [USGS ANSS Comprehensive Earthquake Catalog](https://earthquake.usgs.gov/data/comcat/) |
-  [Catalog Search](http://earthquake.usgs.gov/earthquakes/search/) |
-  [FDSN Event Web Service](http://earthquake.usgs.gov/fdsnws/event/1/) |
+  [Catalog Search](https://earthquake.usgs.gov/earthquakes/search/) |
+  [FDSN Event Web Service](https://earthquake.usgs.gov/fdsnws/event/1/) |
   [Wrapper Libraries](https://www.usgs.gov/software/comcat-wrapper-libraries) |
   [Historic ANSS Composite Catalog](https://ncedc.org/anss/catalog-search.html)
 - [USGS PDE](https://earthquake.usgs.gov/data/comcat/catalog/us/)
@@ -89,14 +89,14 @@ toc: true
 
 ### Global Data Centers/Networks
 
-- [FDSN Network Codes](http://www.fdsn.org/networks/): Network codes assigned by
+- [FDSN Network Codes](https://www.fdsn.org/networks/): Network codes assigned by
   the FDSN to facilitate unique identifiers for seismological data streams
-- [FDSN Web Services: Supporting Data Centers](http://www.fdsn.org/webservices/datacenters/)
+- [FDSN Web Services: Supporting Data Centers](https://www.fdsn.org/webservices/datacenters/)
 - [IRIS DMC](https://ds.iris.edu/ds/nodes/dmc/): IRIS **D**ata **M**anagement **C**enter
-- [IRIS GMap](http://ds.iris.edu/gmap/): Displays networks and stations on an
+- [IRIS GMap](https://ds.iris.edu/gmap/): Displays networks and stations on an
   interactive Google Map
-- [IRIS MDA](http://ds.iris.edu/mda) |
-  [manual](http://ds.iris.edu/ds/nodes/dmc/manuals/mda/):
+- [IRIS MDA](https://ds.iris.edu/mda) |
+  [manual](https://ds.iris.edu/ds/nodes/dmc/manuals/mda/):
   **M**eta**D**ata **A**ggregator provides a browsable list of all networks and stations archived at the IRIS DMC
 - [ORFEUS](http://www.orfeus-eu.org/): **O**bservatories & **R**esearch **F**acilities for **Eu**ropean **S**eismology
 - [CTBTO](https://www.ctbto.org/) | [Web Portal](https://access.ctbto.org/portal/index.html): **C**omprehensive Nuclear-**T**est-**B**an
@@ -144,14 +144,14 @@ toc: true
 ### Analog Seismograms
 
 - [Borovoye Archive Data from Underground Nuclear Tests](https://www.ldeo.columbia.edu/res/pi/Monitoring/Arch/BRV_arch_deglitched.html)
-- [Seismo Archives](http://ds.iris.edu/seismo-archives): Scanned Seismograms
+- [Seismo Archives](https://ds.iris.edu/seismo-archives): Scanned Seismograms
   from Historical Earthquakes
 
 ## Seismological Database
 
 ### Receiver Function
 
-- [IRIS Products: EARS](http://ds.iris.edu/ds/products/ears/):
+- [IRIS Products: EARS](https://ds.iris.edu/ds/products/ears/):
   **E**arthScope **A**utomated **R**eceiver **S**urvey
 - [GLImER](https://www.stephanerondenay.com/glimer-map/map.html): **G**lobal
   **L**ithospheric **Im**aging using **E**arthquake **R**ecordings
@@ -159,7 +159,7 @@ toc: true
 
 ### Shear-wave Splitting
 
-- [IRIS Products: SWS-DBs](http://ds.iris.edu/ds/products/sws-dbs):
+- [IRIS Products: SWS-DBs](https://ds.iris.edu/ds/products/sws-dbs):
   **S**hear-**w**ave **s**plitting **d**ata**b**ase**s**
 - [Automated Splitting Project](http://www.isc.ac.uk/SKS): ISC shear-wave
   splitting database
@@ -168,25 +168,25 @@ toc: true
 
 - [Dispersion Maps](http://ciei.colorado.edu/DispMaps) by University of Colorado, Boulder
 - [Global Dispersion Model GDM52](https://www.ldeo.columbia.edu/~ekstrom/Projects/SWP)
-- [IRIS Products: ANCC-CIEI](http://ds.iris.edu/ds/products/ancc-ciei/):
+- [IRIS Products: ANCC-CIEI](https://ds.iris.edu/ds/products/ancc-ciei/):
   An ambient noise cross-correlation based database of empirical Green's functions
   (EGFs) of the Western US using USArray Transportable Array (TA) data
-- [IRIS Products: Automated Surface Wave Phase Velocity Measuring System (ASWMS)](http://ds.iris.edu/ds/products/aswms):
+- [IRIS Products: Automated Surface Wave Phase Velocity Measuring System (ASWMS)](https://ds.iris.edu/ds/products/aswms):
   USArray and Alaska surface wave tomography maps using ASWMS
 - [USArray Phase-Velocity Maps USANT12](https://www.ldeo.columbia.edu/~ekstrom/Projects/ANT/USANT12.html)
 
 ### Seismic Source Database
 
-- [IRIS Products: Source Time Function](http://ds.iris.edu/ds/products/sourcetimefunction/):
+- [IRIS Products: Source Time Function](https://ds.iris.edu/ds/products/sourcetimefunction/):
   Short-arc Rayleigh wave source-time functions
 
 ### Seismic Data Products
 
-- [IRIS Products: globalstacks](http://ds.iris.edu/ds/products/globalstacks):
+- [IRIS Products: globalstacks](https://ds.iris.edu/ds/products/globalstacks):
   Global stacks of millions of seismograms
-- [IRIS Products: SeisSound](http://ds.iris.edu/ds/products/seissound):
+- [IRIS Products: SeisSound](https://ds.iris.edu/ds/products/seissound):
   The Audio/Video Seismic Waveform Visualization
-- [IRIS Products: ShakeMovieSynthetics](http://ds.iris.edu/ds/products/shakemoviesynthetics):
+- [IRIS Products: ShakeMovieSynthetics](https://ds.iris.edu/ds/products/shakemoviesynthetics):
   1D & 3D synthetic seismograms from the Global ShakeMovie project
 - [European Facilities for Earthquake Hazard and Risk (EFEHR): Services and Partners](http://www.efehr.org/en/efehr/Services-and-Partners)
 
@@ -194,8 +194,8 @@ toc: true
 
 ### Global and Regional Reference Seismological Models
 
-- [IRIS Earth Model Collaboration (EMC)](http://ds.iris.edu/ds/products/emc/) |
-  [Web Service](http://service.iris.edu/irisws/earth-model/1/)
+- [IRIS Earth Model Collaboration (EMC)](https://ds.iris.edu/ds/products/emc/) |
+  [Web Service](https://service.iris.edu/irisws/earth-model/1/)
 - [The Reference Earth Model](https://igppweb.ucsd.edu/~gabi/rem.html)
 - [Crust1.0](https://igppweb.ucsd.edu/~gabi/crust1.html) |
   [Chinese Introduction](https://blog.seisman.info/crust1):
@@ -215,7 +215,7 @@ toc: true
 
 ### 1D Reference Seismological Models
 
-- [IRIS EMC: Reference Earth Models](http://ds.iris.edu/ds/products/emc-referencemodels)
+- [IRIS EMC: Reference Earth Models](https://ds.iris.edu/ds/products/emc-referencemodels)
 - [TauP: Standard Models](https://www.seis.sc.edu/taup): The **StdModels**
   folder in the source contain a few 1D models (e.g., PREM, AK135, iasp91)
 - [AK135: model, traveltime tables, plots and software](http://rses.anu.edu.au/seismology/ak135/intro.html) |
