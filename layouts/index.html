@@ -3,13 +3,11 @@
 <div class="card-columns mt-4">
 {{ range .Params.cards }}
 	<div class="card text-center">
-		<div class="card-body" onclick="location.href = '{{ .link }}'">
-			<p class="card-text">
-				<a href="{{ .link | absURL }}" target="_self" class="iconLink">
-					<i class="fas {{ .icon }} fa-5x"></i>
-					<h5 class='card-title'>{{ .name }}</h5>
-				</a>
-			</p>
+		<div class="card-body">
+			<i class="fas {{ .icon }} fa-5x"></i>
+			<h5 class="card-title">
+				<a href="{{ .link | relURL }}" class="iconLink stretched-link">{{ .name }}</a>
+			</h5>
 		</div>
 	</div>
 {{ end }}
