@@ -44,3 +44,5 @@ Resource fields:
 - `name`: Display name.
 - `url`: Primary link.
 - `description`: Optional short description.
+
+Run `make validate` before submitting changes to structured data files.
