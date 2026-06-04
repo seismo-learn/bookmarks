@@ -22,7 +22,17 @@
   <nav id="TableOfContents">
     <ul>
     {{ range $data.sections }}
-      <li><a href="#{{ anchorize .title }}">{{ .title }}</a></li>
+      <li>
+        <a href="#{{ anchorize .title }}">{{ .title }}</a>
+        {{ $section := .title }}
+        {{ with .groups }}
+        <ul>
+          {{ range . }}
+          <li><a href="#{{ anchorize (printf "%s-%s" $section .title) }}">{{ .title }}</a></li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      </li>
     {{ end }}
     </ul>
   </nav>
