@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ $data := index .Site.Data .Params.resource_data }}
+{{ $data := partial "resource_data.html" . }}
 <h1>{{ .Title }}</h1>
 {{ .Content }}
 
@@ -15,7 +15,7 @@
 {{ end }}
 
 {{ define "toc" }}
-{{ $data := index .Site.Data .Params.resource_data }}
+{{ $data := partial "resource_data.html" . }}
 {{ if and .Params.toc $data }}
 <aside>
   <h2>Table of Contents</h2>
