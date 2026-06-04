@@ -1,6 +1,6 @@
 # Structured Resource Data
 
-This directory stores structured resource lists rendered by the reusable
+This document describes structured resource lists rendered by the reusable
 `resources` page layout.
 
 ## Page front matter
@@ -22,8 +22,8 @@ thin content page.
 
 ## Data shape
 
-Each data file has top-level `sections`. A section may contain `resources`,
-`groups`, or both.
+Data files live in `data/`. Each data file has top-level `sections`. A section
+may contain `resources`, `groups`, or both.
 
 ```yaml
 sections:
