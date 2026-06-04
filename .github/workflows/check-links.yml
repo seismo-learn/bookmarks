@@ -1,0 +1,27 @@
+name: Check Links
+
+on:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "00 18 * * 0"
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Check links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --root-dir "${{ github.workspace }}"
+            --verbose
+            --no-progress
+            './**/*.md'
+            './**/*.html'
+            './config.toml'
+          fail: false
+          jobSummary: true
