@@ -2,7 +2,15 @@
 <ul>
 {{ range . }}
   <li>
-    <a href="{{ .url }}">{{ .name }}</a>{{ with .description }}: {{ . | markdownify }}{{ end }}
+    {{ if .url }}
+    <a href="{{ .url }}">{{ .name }}</a>
+    {{ else }}
+    <strong>{{ .name }}</strong>
+    {{ end }}
+    {{ with .description }}: {{ . | markdownify }}{{ end }}
+    {{ with .links }}:
+      {{ range $index, $link := . }}{{ if $index }} | {{ end }}<a href="{{ $link.url }}">{{ $link.name }}</a>{{ end }}
+    {{ end }}
   </li>
 {{ end }}
 </ul>
