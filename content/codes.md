@@ -30,7 +30,7 @@ toc: true
   - [PH5WS](https://service.iris.edu/ph5ws/) |
     [Tutorials](https://ds.iris.edu/ds/nodes/dmc/tutorials/accessing-ph5-archive-with-fetchdata/) |
     [wiki](https://github.com/PIC-IRIS/PH5/wiki)
-- [SOD](http://www.seis.sc.edu/sod) |
+- [SOD](https://www.seis.sc.edu/sod) |
   [Tutorial (in Chinese)](https://seismo-learn.org/software/sod/) |
   [Recipes](https://github.com/seismo-learn/SOD-recipes):
   The best seismic data request tool
@@ -162,7 +162,7 @@ toc: true
 
 ## Traveltime and Ray Tracing
 
-- [TauP](http://www.seis.sc.edu/taup/) |
+- [TauP](https://www.seis.sc.edu/taup/) |
   [Tutorials (in Chinese)](https://seismo-learn.org/software/taup/):
   Calculate traveltimes, ray parameters, ray paths, reflection points,
   piercing points of seismic phases, supporting custom Earth models
@@ -1203,7 +1203,7 @@ Resources
 
 ### Geophysics
 
-- [distaz](http://www.seis.sc.edu/software/distaz) |
+- [distaz](https://www.seis.sc.edu/software/distaz) |
   [A tutorial (in Chinese)](https://seismo-learn.org/software/utilities/distaz/):
   Calculate distance, azimuth and back-azimuth of any two points at the Earth's surface
 - [PlateFlex](https://paudetseis.github.io/PlateFlex/): Estimate lithosphere elastic
@@ -1316,8 +1316,8 @@ Resources
   Live Jupyter Notebooks for Seismology
 - [Seismic wave Propagation and Imaging in Complex media: a European network software](http://www.spice-rtn.org/library/software/softwarefolder_view.html)
 - [SW3D](http://seis.karlov.mff.cuni.cz/): **S**eismic **W**aves in complex **3D** structures
-- [University of South Carolina Lithospheric Seismology Program](http://www.seis.sc.edu/) |
-  [Software](http://www.seis.sc.edu/software.html)
+- [University of South Carolina Lithospheric Seismology Program](https://www.seis.sc.edu/) |
+  [Software](https://www.seis.sc.edu/software.html)
 - [University of Ottawa Geophysics Group](https://www.uogeophysics.com/) |
   [Software](https://www.uogeophysics.com/#software)
 - [USGS Earthquake Hazards Program](https://www.usgs.gov/natural-hazards/earthquake-hazards) |
