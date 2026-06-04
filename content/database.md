@@ -32,7 +32,7 @@ toc: true
 
 - [中国历史地震目录](https://data.earthquake.cn/datashare/report.shtml?PAGEID=earthquake_lsdz):
   公元前 1831 年至公元 1969 年间发生在中国的破坏性地震（M>=4.0）
-- [Japan Meteorological Agency (JMA) Unified Hypocenter Catalog](http://www.data.jma.go.jp/svd/eqev/data/bulletin/hypo_e.html)
+- [Japan Meteorological Agency (JMA) Unified Hypocenter Catalog](https://www.data.jma.go.jp/svd/eqev/data/bulletin/hypo_e.html)
 - [JMA Unified Hypocenter Catalog (Preliminary)](https://hinetwww11.bosai.go.jp/auth/JMA/jmalist.php):
   The hypocenters are preliminary results and JMA may revise them
 - [Canada Catalog](https://www.earthquakescanada.nrcan.gc.ca/stndon/NEDB-BNDS/index-en.php) |
@@ -58,7 +58,7 @@ toc: true
 
 ### Focal Mechanism Catalog
 
-- [Global Centroid-Moment-Tensor (CMT)](http://www.globalcmt.org/) |
+- [Global Centroid-Moment-Tensor (CMT)](https://www.globalcmt.org/) |
   [Catalog Search](https://www.globalcmt.org/CMTsearch.html) |
   [Catalog Files](https://www.globalcmt.org/CMTfiles.html)
 - [ISC Focal Mechanism](http://www.isc.ac.uk/iscbulletin/search/fmechanisms/)
@@ -68,13 +68,13 @@ toc: true
 - [Hi-net AUQA Focal Mechanism Catalog](http://www.hinet.bosai.go.jp/AQUA/aqua_catalogue.php?LANG=en)
 - [JMA Seismological Bulletin of Japan](https://www.data.jma.go.jp/svd/eqev/data/bulletin/index_e.html) |
   [CMT Solution](https://www.data.jma.go.jp/svd/eqev/data/bulletin/cmt_e.html) |
-  [Nodal Plane Solution](http://www.data.jma.go.jp/svd/eqev/data/bulletin/mech_e.html)
+  [Nodal Plane Solution](https://www.data.jma.go.jp/svd/eqev/data/bulletin/mech_e.html)
 - [JMA Focal Mechanism Catalog](https://hinetwww11.bosai.go.jp/auth/JMA/?LANG=en):
   Focal mechanism based on JMA Unified Hypocenter Catalog (Preliminary)
-- [NIED Moment Tensors](http://www.fnet.bosai.go.jp/event/joho.php?LANG=en) |
+- [NIED Moment Tensors](https://www.fnet.bosai.go.jp/event/joho.php?LANG=en) |
   [Catalog Search](https://www.fnet.bosai.go.jp/event/joho.php?LANG=en)
 - [Northern California Mechanism Catalog](http://www.ncedc.org/ncedc/catalog-search.html)
-- [Southern California Moment Tensor Catalog](http://service.scedc.caltech.edu/eq-catalogs/CMTsearch.php)
+- [Southern California Moment Tensor Catalog](https://service.scedc.caltech.edu/eq-catalogs/CMTsearch.php)
 - [European-Mediterranean Seismological Centre Moment Tensors Solutions](https://www.emsc-csem.org/Earthquake/index_tensors.php)
 - [Italy Moment Tensor Catalog](http://cnt.rm.ingv.it/en/tdmt)
 
@@ -83,7 +83,7 @@ toc: true
 - [ISC Arrival Time Data](http://www.isc.ac.uk/iscbulletin/search/arrivals/)
 - [中国台网震相数据](https://data.earthquake.cn/datashare/report.shtml?PAGEID=earthquake_zgtwzx)
 - [中国国家台网震相数据](https://data.earthquake.cn/datashare/report.shtml?PAGEID=earthquake_gjtwzx)
-- [JMA Arrival Time Data](http://www.data.jma.go.jp/svd/eqev/data/bulletin/deck_e.html)
+- [JMA Arrival Time Data](https://www.data.jma.go.jp/svd/eqev/data/bulletin/deck_e.html)
 
 ## Seismic Data Centers/Networks
 
@@ -114,7 +114,7 @@ toc: true
 - [台灣地震科學中心](https://tec.earth.sinica.edu.tw/index.php) |
   [資料中心](http://tecdc.earth.sinica.edu.tw/tecdc/)
 - [台灣中央研究院地球科學研究所：强震和移动地震台网](https://www.earth.sinica.edu.tw/content/labs/slab/smdmc/index.htm)
-- [Hi-net](http://www.hinet.bosai.go.jp/) | [F-net](http://www.fnet.bosai.go.jp/) |
+- [Hi-net](http://www.hinet.bosai.go.jp/) | [F-net](https://www.fnet.bosai.go.jp/) |
   [K-net, KiK-net](http://www.kyoshin.bosai.go.jp/):
   National Research Institute for Earth Science and Disaster Resilience (NIED) networks
 - [OHP DMC](http://ohpdmc.eri.u-tokyo.ac.jp/):
@@ -125,7 +125,7 @@ toc: true
 - [Alaska Earthquake Center](http://earthquake.alaska.edu/)
 - [Northern California Earthquake Data Center](http://www.ncedc.org/)
 - [Southern California Seismic Network](http://www.scsn.org) |
-  [Southern California Earthquake Data Center](http://scedc.caltech.edu/)
+  [Southern California Earthquake Data Center](https://scedc.caltech.edu/)
 - [Pacific Northwest Seismic Network](http://pnsn.org/)
 - [Canadian Seismic Stations and Data](https://www.earthquakescanada.nrcan.gc.ca/stndon/index-en.php)
 

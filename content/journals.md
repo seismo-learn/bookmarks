@@ -6,7 +6,7 @@ toc: true
 ## Multidisciplinary Journals
 
 - **Science**:
-    [Homepage](http://science.sciencemag.org/) |
+    [Homepage](https://science.sciencemag.org/) |
     [Current Issue](https://science.sciencemag.org/content/current) |
     [Archive](https://science.sciencemag.org/content/by/year)
 - **Nature**:
@@ -18,7 +18,7 @@ toc: true
     [Homepage](https://www.nature.com/ncomms/) |
     [Earth Sciences](https://www.nature.com/subjects/earth-and-environmental-sciences/ncomms)
 - **Science Advances**:
-    [Homepage](http://advances.sciencemag.org/) |
+    [Homepage](https://advances.sciencemag.org/) |
     [Archive](https://advances.sciencemag.org/content/by/year)
 - **Proceedings of the National Academy of Sciences (PNAS)**:
     [Homepage](https://www.pnas.org) |
