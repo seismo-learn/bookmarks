@@ -166,7 +166,7 @@ toc: true
   [Tutorials (in Chinese)](https://seismo-learn.org/software/taup/):
   Calculate traveltimes, ray parameters, ray paths, reflection points,
   piercing points of seismic phases, supporting custom Earth models
-- [obspy.taup](http://docs.obspy.org/packages/obspy.taup.html): TauP written in Python
+- [obspy.taup](https://docs.obspy.org/packages/obspy.taup.html): TauP written in Python
 - [ANISOtime](http://www-solid.eps.s.u-tokyo.ac.jp/~dsm/anisotime.html) |
   [GitHub](https://github.com/UT-GlobalSeismology/anisotime):
   Traveltime calculation for transversely isotropic (TI) spherically symmetric models
@@ -882,7 +882,7 @@ Resources
   **F**lat and **I**sotropic **L**ayered structure in the **O**cean
 - [BayHunter](https://github.com/jenndrei/BayHunter): McMC transdimensional Bayesian
   inversion of surface wave dispersion and receiver functions in Python
-- [Huajian Yao: Codes and Software](http://yaolab.ustc.edu.cn/resources.php?i=28):
+- [Huajian Yao: Codes and Software](https://yaolab.ustc.edu.cn/resources.php?i=28):
   Inversion of Vs, Vp/Vs, and interface depth using dispersion data and Rayleigh wave ellipticity
 - [LitMod_seis](https://www.juanafonso.com/software): A joint inversion code
   for inverting Vs and anisotropy
