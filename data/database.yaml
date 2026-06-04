@@ -284,7 +284,7 @@ sections:
     - name: Automated Splitting Project
       url: http://www.isc.ac.uk/SKS
       description: ISC shear-wave splitting database
-  - title: Surface wave Dispersion
+  - title: Surface-wave Dispersion
     resources:
     - name: Dispersion Maps
       url: http://ciei.colorado.edu/DispMaps
@@ -582,7 +582,7 @@ sections:
     - name: 'Global Earthquake Model: Strain Rate Model'
       url: https://gsrm2.unavco.org/intro/intro.html
       links:
-      - name: Introdution
+      - name: Introduction
         url: https://storage.globalquakemodel.org/what/seismic-hazard/strain-rate-model
 - title: Geographical Database
   resources:

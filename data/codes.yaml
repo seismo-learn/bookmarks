@@ -132,7 +132,7 @@ sections:
       description: Convert miniSEED format to SAC format
     - name: sac2mseed
       url: https://github.com/EarthScope/sac2mseed
-      description: Convert SAC format to minniSEED format
+      description: Convert SAC format to miniSEED format
     - name: win32tools
       url: http://www.hinet.bosai.go.jp/REGS/manual/dlDialogue.php?r=win32tools
       description: Convert WIN32 format used by Hi-net, to SAC format
@@ -164,7 +164,7 @@ sections:
         Python
     - name: CPS330
       url: http://www.eas.slu.edu/eqc/eqccps.html
-      description: Collection of programs for calculating theorectical seismogram,
+      description: Collection of programs for calculating theoretical seismogram,
         receiver function, surface wave dispersion curve et al.
       links:
       - name: A tutorial (in Chinese)
@@ -176,7 +176,7 @@ sections:
     - name: GISMO
       url: http://geoscience-community-codes.github.io/GISMO/
       description: Data download, processing and visualization software written in
-        Matlab
+        MATLAB
     - name: hinet_decon
       url: https://github.com/tktmyd/hinet_decon
       description: Deconvolve Hi-net velocity record by its seismometer response by
@@ -239,7 +239,7 @@ sections:
       url: https://ds.iris.edu/dms/products/emc/horizontalSlice.html
     - name: SeisTomoPy
       url: https://github.com/stephaniedurand/SeisTomoPy
-      description: Visulization of 3D tomography models and calculate traveltime in
+      description: Visualization of 3D tomography models and calculate traveltime in
         3D model
     - name: SubMachine
       url: https://www.earth.ox.ac.uk/~smachine/cgi/index.php
@@ -249,7 +249,7 @@ sections:
     - name: Tomoeye
       url: http://www.iearth.edu.au/codes/Tomoeye
       description: A set of programs for tomographic model visualization written in
-        MatLab 6.1 script
+        MATLAB 6.1 script
   - title: Visualization
     resources:
     - name: MATLAB for Analyzing and Visualizing Geospatial Data
@@ -284,7 +284,7 @@ sections:
     description: Traveltime calculation software, written in Python.
   - name: fast_methods
     url: https://github.com/jvgomez/fast_methods
-    description: N-Dimensional Fast Methodswritten in C++
+    description: N-Dimensional Fast Methods written in C++
   - name: FM3D
     url: http://rses.anu.edu.au/seismology/soft/fmmcode
     description: 3D traveltime calculation using Fast Marching Method in spherical
@@ -340,7 +340,7 @@ sections:
       url: http://www.eas.slu.edu/People/LZhu/home.html
       description: Calculate synthetic seismograms based on Generalized Ray Theory
     - name: Asymptotic ray theory
-      description: Collection of programs for calculating theorectical seismogram,
+      description: Collection of programs for calculating theoretical seismogram,
         receiver function, surface wave dispersion curve et al.
       links:
       - name: CPS330
@@ -351,7 +351,7 @@ sections:
       url: http://seis.karlov.mff.cuni.cz/software/sw3dcd21/crt/crt.htm
       description: Complete ray tracing subroutine package
     - name: Generalized ray
-      description: Collection of programs for calculating theorectical seismogram,
+      description: Collection of programs for calculating theoretical seismogram,
         receiver function, surface wave dispersion curve et al.
       links:
       - name: CPS330
@@ -430,7 +430,7 @@ sections:
       description: Calculate teleseismic body-wave synthetics using the matrix propagator
         method written in Python and Fortran
     - name: Wavenumber integration method
-      description: Collection of programs for calculating theorectical seismogram,
+      description: Collection of programs for calculating theoretical seismogram,
         receiver function, surface wave dispersion curve et al.
       links:
       - name: CPS330
@@ -442,7 +442,7 @@ sections:
   - title: Modal Summation Method for 1D Layered Earth
     resources:
     - name: Modal Summation
-      description: Collection of programs for calculating theorectical seismogram,
+      description: Collection of programs for calculating theoretical seismogram,
         receiver function, surface wave dispersion curve et al.
       links:
       - name: CPS330
@@ -466,7 +466,7 @@ sections:
       links:
       - name: Mineos
         url: https://github.com/jbrussell/MINEOS
-      - name: Matlab to MINEOS
+      - name: MATLAB to MINEOS
         url: https://github.com/jbrussell/matlab_to_mineos
       - name: MINEOS_synthetics
         url: https://github.com/jbrussell/MINEOS_synthetics
@@ -638,19 +638,19 @@ sections:
       - name: Ping Tong
         url: https://personal.ntu.edu.sg/tongping/index.html
     - name: Hybrid Methods
-      description: The coulping can be found in `specfem3D/couple_with_injection.f90`
+      description: The coupling can be found in `specfem3D/couple_with_injection.f90`
       links:
       - name: SPECFEM3D
         url: https://github.com/geodynamics/specfem3d
     - name: SEM-DSM-coupling
       url: https://github.com/wenbowu-geo/SEM_DSM_hybrid
       description: A hybrid method to efficiently compute teleseismic synthetics with
-        3D seismic strucure at source side (SEM) and 1D strucure outside the source
+        3D seismic structure at source side (SEM) and 1D structure outside the source
         region (DSM)
     - name: PSV Hybrid Method
       url: http://geophysics.geo.sunysb.edu/wen/resource/index.html
       description: Calculating synthetic seismograms involving two-dimensional localized
-        hetergeneous structures based on GRT-FD hybrid method
+        heterogeneous structures based on GRT-FD hybrid method
       links:
       - name: GitHub
         url: https://github.com/Geolab-USTC/PSV_Hybrid
@@ -658,7 +658,7 @@ sections:
       url: https://github.com/YoushanLiu/FDFK2D
       description: Efficient two-dimensional teleseismic wavefield hybrid simulation
         method for receiver function analysis
-  - title: Surface waves in 3D structures
+  - title: Surface Waves in 3D Structures
     resources:
     - name: Couplage
       url: http://www.quest-itn.org/library/software/couplage
@@ -791,7 +791,7 @@ sections:
       description: Invert source mechanisms for single‐force events
     - name: CPS330
       url: http://www.eas.slu.edu/eqc/eqccps.html
-      description: Collection of programs for calculating theorectical seismogram,
+      description: Collection of programs for calculating theoretical seismogram,
         receiver function, surface wave dispersion curve et al.
       links:
       - name: A tutorial (in Chinese)
@@ -929,7 +929,7 @@ sections:
         url: https://www.bilibili.com/video/av841708479?p=4
     - name: Etomo
       url: https://doi.org/10.6084/m9.figshare.21820860
-      description: A eikonal equaiton-based seismic tomography method for traveltime
+      description: A eikonal equation-based seismic tomography method for traveltime
         tomography
     - name: FAST
       url: http://terra.rice.edu/department/faculty/zelt/fast.html
@@ -953,12 +953,12 @@ sections:
     resources:
     - name: CPS330
       url: http://www.eas.slu.edu/eqc/eqccps.html
-      description: Collection of programs for calculating theorectical seismogram,
+      description: Collection of programs for calculating theoretical seismogram,
         receiver function, surface wave dispersion curve et al.
       links:
       - name: A tutorial (in Chinese)
         url: https://seismo-learn.org/software/cps/
-      - name: 'Tutorilas: Surface Waves'
+      - name: 'Tutorials: Surface Waves'
         url: http://www.eas.slu.edu/eqc/eqc_cps/TUTORIAL/
     - name: 'CU-Boulder: Research Products'
       url: http://ciei.colorado.edu/Products
@@ -1013,12 +1013,12 @@ sections:
     resources:
     - name: CPS330
       url: http://www.eas.slu.edu/eqc/eqccps.html
-      description: Collection of programs for calculating theorectical seismogram,
+      description: Collection of programs for calculating theoretical seismogram,
         receiver function, surface wave dispersion curve et al.
       links:
       - name: A tutorial (in Chinese)
         url: https://seismo-learn.org/software/cps/
-      - name: 'Tutorilas: Surface Waves'
+      - name: 'Tutorials: Surface Waves'
         url: http://www.eas.slu.edu/eqc/eqc_cps/TUTORIAL/
       - name: 'User Questions and Answers: The use of the two-station technique to
           obtain phase velocities'
@@ -1055,7 +1055,7 @@ sections:
       description: "**A**utomated **S**urface **W**ave Phase Velocity **M**easuring
         **S**ystem written in MATLAB, measuring the phase and amplitude of surface
         waves and then generate surface-wave tomography maps using the Eikonal and
-        Helmhotza tomography"
+        Helmholtz tomography"
       links:
       - name: GitHub
         url: https://github.com/jinwar/matgsdf
@@ -1068,7 +1068,7 @@ sections:
         url: https://www.koushare.com/video/videodetail/14523
     - name: disp_codes
       url: https://github.com/arjundatta23/disp_codes
-      description: A collection of seismological codes imlpementing three array-based
+      description: A collection of seismological codes implementing three array-based
         techniques for measuring multi-mode surface wave phase velocity dispersion
     - name: DisperNet
       url: https://github.com/Dongsh/DisperNet
@@ -1076,7 +1076,7 @@ sections:
         dispersion spectrum
     - name: GSpecDisp
       url: https://github.com/Hamzeh-Sadeghi/GSpecDisp
-      description: A Matlab package for phase-velocity dispersion measurement from
+      description: A MATLAB package for phase-velocity dispersion measurement from
         ambient-noise correlations
     - name: mat-LRTdisp
       url: https://github.com/jbrussell/mat-LRTdisp
@@ -1108,7 +1108,7 @@ sections:
       description: "**A**utomated **S**urface **W**ave Phase Velocity **M**easuring
         **S**ystem written in MATLAB, measuring the phase and amplitude of surface
         waves and then generate surface-wave tomography maps using the Eikonal and
-        Helmhotza tomography"
+        Helmholtz tomography"
       links:
       - name: GitHub
         url: https://github.com/jinwar/matgsdf
@@ -1140,12 +1140,12 @@ sections:
     resources:
     - name: CPS330
       url: http://www.eas.slu.edu/eqc/eqccps.html
-      description: Collection of programs for calculating theorectical seismogram,
+      description: Collection of programs for calculating theoretical seismogram,
         receiver function, surface wave dispersion curve et al.
       links:
       - name: A tutorial (in Chinese)
         url: https://seismo-learn.org/software/cps/
-      - name: 'Tutorilas: Surface Waves'
+      - name: 'Tutorials: Surface Waves'
         url: http://www.eas.slu.edu/eqc/eqc_cps/TUTORIAL/
       - name: srfpython
         url: https://github.com/obsmax/srfpython
@@ -1154,7 +1154,7 @@ sections:
       description: Surface wave dispersion inversion code written in MATLAB
     - name: MCDisp
       url: https://github.com/xin2zhang/MCDisp
-      description: Surface wave dispersion inversion using Monte Carlo methohd written
+      description: Surface wave dispersion inversion using Monte Carlo method written
         in Python
   - title: Surface-wave Tomography Workflow
     resources:
@@ -1187,7 +1187,7 @@ sections:
     resources:
     - name: CPS330
       url: http://www.eas.slu.edu/eqc/eqccps.html
-      description: Collection of programs for calculating theorectical seismogram,
+      description: Collection of programs for calculating theoretical seismogram,
         receiver function, surface wave dispersion curve et al.
       links:
       - name: A tutorial (in Chinese)
@@ -1243,7 +1243,7 @@ sections:
         url: https://blog.seisman.info/hk-install
     - name: CPS330
       url: http://www.eas.slu.edu/eqc/eqccps.html
-      description: Collection of programs for calculating theorectical seismogram,
+      description: Collection of programs for calculating theoretical seismogram,
         receiver function, surface wave dispersion curve et al.
       links:
       - name: 'Python wrapper: PyLayeredModel'
@@ -1277,7 +1277,7 @@ sections:
       url: http://www.eas.slu.edu/People/LZhu/home.html
       description: Common-Conversion-Point (CCP) stacking of receiver functions
       links:
-      - name: Chinses note
+      - name: Chinese note
         url: https://blog.seisman.info/ccp-install
     - name: CrazySeismic
       url: https://faculty.sustech.edu.cn/?p=39425&tagid=yucq&cat=5&iscss=1&snapid=1&lang=en
@@ -1290,7 +1290,7 @@ sections:
         url: https://www.bilibili.com/video/BV1e54y1i7FM?p=3
     - name: FuncLab
       url: https://seiscode.iris.washington.edu/projects/funclab
-      description: "(invalid link) : A Matlab based GUI for handling receiver functions"
+      description: "(invalid link) : A MATLAB based GUI for handling receiver functions"
       links:
       - name: revised FuncLab
         url: https://seiscode.iris.washington.edu/projects/funclab-revised
@@ -1321,7 +1321,7 @@ sections:
         url: https://www.bilibili.com/video/av841708479?p=2
     - name: PSV Hybrid RF
       url: http://geophysics.geo.sunysb.edu/wen/resource/index.html
-      description: Calculating synthetic RF in two-dimensional localized hetergeneous
+      description: Calculating synthetic RF in two-dimensional localized heterogeneous
         structures based on PSV Hybrid method (GRT-FD)
       links:
       - name: GitHub
@@ -1336,7 +1336,7 @@ sections:
         Carlo written in Fortran
     - name: RfPy
       url: https://paudetseis.github.io/RfPy/
-      description: Receiver function caculcation along with post-processing (e.g.,
+      description: Receiver function calculation along with post-processing (e.g.,
         hk, harmonic decomposition, CCP) written in Python
     - name: rj-RF
       url: http://www.iearth.edu.au/codes/rj-RF
@@ -1347,8 +1347,8 @@ sections:
       description: An interactive GUI tool to simulate P or S receiver functions
     - name: SplitRFLab
       url: https://github.com/xumi1993/SplitRFLab
-      description: A Matlab toolbox of processing receiver functions and shear wave
-        spliting
+      description: A MATLAB toolbox of processing receiver functions and shear wave
+        splitting
     - name: seispy
       url: https://github.com/xumi1993/seispy
       description: A Python module for processing seismological data and calculating
@@ -1370,7 +1370,7 @@ sections:
     resources:
     - name: SplitLab
       url: http://splitting.gm.univ-montp2.fr
-      description: Shear-wave birefringence analysis code written in Matlab
+      description: Shear-wave birefringence analysis code written in MATLAB
       links:
       - name: An updated version
         url: https://robporritt.wordpress.com/software
@@ -1413,7 +1413,7 @@ sections:
         method
     - name: Coda-Q-Inversion
       url: https://github.com/wew053/Coda-Q-Inversion
-      description: Coda-Q inversion written in MATALB
+      description: Coda-Q inversion written in MATLAB
     - name: MuRAT
       url: https://github.com/LucaDeSiena/MuRAT
       description: Multi-resolution seismic attenuation tomography using Body and
@@ -1450,7 +1450,7 @@ sections:
         **L**ayered structure in the **O**cean"
     - name: BayHunter
       url: https://github.com/jenndrei/BayHunter
-      description: McMC transdimensional Bayesian inversion of surface wave dispersion
+      description: MCMC transdimensional Bayesian inversion of surface wave dispersion
         and receiver functions in Python
     - name: 'Huajian Yao: Codes and Software'
       url: https://yaolab.ustc.edu.cn/resources.php?i=28
@@ -1464,7 +1464,7 @@ sections:
       description: Joint inversion of body and surface wave data for Vp/Vs
     - name: RfSurfHmc
       url: https://github.com/nqdu/RfSurfHmc
-      description: Joint inversion of Receiver Function and Surface Wave Disperion
+      description: Joint inversion of Receiver Function and Surface Wave Dispersion
         by Hamilton Monte Carlo Method
   - title: Waveform Inversion
     resources:
@@ -1609,7 +1609,7 @@ sections:
     - name: OpenHVSR
       url: https://www.samuelbignardi.com/en/openhvsr-project
       description: Measure and Inversion of HVSR written in MATLAB
-- title: Earth's interior
+- title: Earth's Interior
   resources:
   - name: FastTrip
     url: https://github.com/lijiaqi0315/FastTrip
@@ -1699,7 +1699,7 @@ sections:
       description: Seismic Phase Picker and Associator, written in Python
     - name: P-Phase Picker
       url: https://www.usgs.gov/node/279399
-      description: Detecting P-phase onset written in Java and Matlab
+      description: Detecting P-phase onset written in Java and MATLAB
   - title: Single Station Signal Analysis
     resources:
     - name: IRIS DMC Noise Toolkit
@@ -1708,7 +1708,7 @@ sections:
         computations and frequency dependent polarization analysis
     - name: BCseis
       url: http://www.ceri.memphis.edu/people/clangstn/software.html
-      description: a MatLab GUI and set of inline functions for performing various
+      description: A MATLAB GUI and set of inline functions for performing various
         non-linear thresholding operations using the Continuous Wavelet Transform
     - name: Est_noise
       url: https://www.usgs.gov/node/279390
@@ -1755,7 +1755,7 @@ sections:
       description: Computation and visualization of time-frequency representations
         of time signals using one or more of seven alternative methods of time-frequency
         analysis
-  - title: Array seismology
+  - title: Array Seismology
     resources:
     - name: ObsPy
       url: https://github.com/obspy/obspy
@@ -1786,20 +1786,20 @@ sections:
     - name: ATacR
       url: https://seiscode.iris.washington.edu/projects/atacr
       description: Automated Tilt and Compliance Removal (for ocean bottoms seismometers)
-        written in Matlab
+        written in MATLAB
     - name: Automatic detection of clipped seismic waveform
       url: https://github.com/jinhaizhang2020/Automatic-detection-of-clipped-seismic-waveform
       description: The code seems to be related to **CWPAR**.
     - name: CWPAR
       url: https://seiscode.iris.washington.edu/projects/cwpar-clipped-waveform-pickup-and-restoration
-      description: Clipped Waveform Pickup and Restoration written in Matlab
+      description: Clipped Waveform Pickup and Restoration written in MATLAB
     - name: DigitSeis
       url: http://www.seismology.harvard.edu/research/DigitSeis.html
-      description: A digitization software for analog seismograms written in Matlab
+      description: A digitization software for analog seismograms written in MATLAB
     - name: DLOPy
       url: https://github.com/jbrussell/DLOPy_v1.0
-      description: Calculate OBS horizontal orientations based on Raleigh-wave arrival
-        angle written in Python (DLOPy) or Matlab (orient)
+      description: Calculate OBS horizontal orientations based on Rayleigh-wave arrival
+        angle written in Python (DLOPy) or MATLAB (orient)
       links:
       - name: orient
         url: https://github.com/SeisPiano/orient
@@ -1837,9 +1837,9 @@ sections:
       description: Spherical Harmonic Tools
 - title: Seismological/Geophysical Library
   groups:
-  - title: Seismological Tools/Library
+  - title: Seismological Tools/Libraries
     resources:
-    - name: CREWES Matlab Toolbox
+    - name: CREWES MATLAB Toolbox
       url: https://www.crewes.org/ResearchLinks/FreeSoftware
       description: Numerical Methods of Exploration Seismology with algorithms in
         MATLAB
@@ -1849,7 +1849,7 @@ sections:
     - name: SEISAN
       url: http://www.seisan.info/
       description: Earthquake analysis software
-  - title: Geophysical Tools/Library
+  - title: Geophysical Tools/Libraries
     resources:
     - name: Fatiando
       url: https://www.fatiando.org/
@@ -1975,7 +1975,7 @@ sections:
     - name: LINPACK
       url: http://www.netlib.org/linpack/index.html
       description: a collection of Fortran subroutines that analyze and solve linear
-        equations and linear least-squares problems, which has been largely superceded
+        equations and linear least-squares problems, which has been largely superseded
         by **LAPACK**
   - title: Gradient Methods
     resources:
