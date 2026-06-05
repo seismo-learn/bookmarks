@@ -1,17 +1,8 @@
 {{ define "main" }}
 <div class="home-page">
 	<header class="home-intro">
-		<div class="home-intro-copy">
-			<p class="home-kicker">Seismology &amp; Geoscience Resources</p>
-			<p class="home-summary">{{ .Params.intro }}</p>
-		</div>
-		{{ with .Params.intro_points }}
-		<ul class="home-intro-points">
-			{{ range . }}
-			<li>{{ . }}</li>
-			{{ end }}
-		</ul>
-		{{ end }}
+		<p class="home-kicker">Seismology &amp; Geoscience Resources</p>
+		<p class="home-summary">{{ .Params.intro }}</p>
 	</header>
 
 	<section class="home-section">
@@ -36,6 +27,10 @@
 
 	<section class="home-section">
 		<hr class="home-rule">
+		<div class="home-section-heading">
+			<h2>Why This Collection Helps</h2>
+			<p>A few principles behind how the directory is organized and maintained.</p>
+		</div>
 		<div class="home-highlights">
 			{{ range .Params.highlights }}
 			<div class="home-highlight">
