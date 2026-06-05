@@ -1,11 +1,86 @@
 {{ define "main" }}
 {{ $data := partial "resource_data.html" . }}
-<h1>{{ .Title }}</h1>
-{{ .Content }}
+<div class="resource-page">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
 
-{{ range $data.sections }}
-{{ partial "resource_section.html" . }}
-{{ end }}
+  <div class="resource-search" data-resource-search>
+    <label class="resource-search-label" for="resource-search-input">Search entries</label>
+    <input
+      id="resource-search-input"
+      class="resource-search-input"
+      type="search"
+      placeholder="Filter by name, description, or related link"
+      autocomplete="off"
+      spellcheck="false"
+      data-resource-search-input
+    >
+    <p class="resource-search-summary" data-resource-search-summary>Showing all entries.</p>
+  </div>
+
+  <div class="resource-empty-state" data-resource-empty hidden>No matching entries found.</div>
+
+  <div data-resource-results>
+  {{ range $data.sections }}
+  {{ partial "resource_section.html" . }}
+  {{ end }}
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var root = document.querySelector("[data-resource-search]");
+  if (!root) return;
+
+  var input = root.querySelector("[data-resource-search-input]");
+  var summary = root.querySelector("[data-resource-search-summary]");
+  var emptyState = document.querySelector("[data-resource-empty]");
+  var sections = Array.prototype.slice.call(document.querySelectorAll("[data-resource-section]"));
+  var entries = Array.prototype.slice.call(document.querySelectorAll("[data-resource-entry]"));
+
+  function updateResults() {
+    var query = input.value.trim().toLowerCase();
+    var visibleCount = 0;
+
+    entries.forEach(function (entry) {
+      var haystack = entry.dataset.searchText || "";
+      var matched = query === "" || haystack.indexOf(query) !== -1;
+      entry.hidden = !matched;
+      if (matched) visibleCount += 1;
+    });
+
+    sections.forEach(function (section) {
+      var groups = Array.prototype.slice.call(section.querySelectorAll("[data-resource-group]"));
+      groups.forEach(function (group) {
+        var groupEntries = Array.prototype.slice.call(group.querySelectorAll("[data-resource-entry]"));
+        var hasVisibleEntries = groupEntries.some(function (entry) {
+          return !entry.hidden;
+        });
+        group.hidden = !hasVisibleEntries;
+      });
+
+      var directEntries = Array.prototype.slice.call(section.querySelectorAll(":scope > ul [data-resource-entry]"));
+      var hasVisibleDirectEntries = directEntries.some(function (entry) {
+        return !entry.hidden;
+      });
+      var hasVisibleGroups = groups.some(function (group) {
+        return !group.hidden;
+      });
+      section.hidden = !(hasVisibleDirectEntries || hasVisibleGroups);
+    });
+
+    emptyState.hidden = visibleCount !== 0;
+    if (query === "") {
+      summary.textContent = "Showing all entries.";
+    } else {
+      summary.textContent = "Showing " + visibleCount + " matching entr" + (visibleCount === 1 ? "y." : "ies.");
+    }
+  }
+
+  input.addEventListener("input", updateResults);
+  updateResults();
+});
+</script>
 {{ end }}
 
 {{ define "toc" }}

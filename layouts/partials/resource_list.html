@@ -1,7 +1,11 @@
 {{ with . }}
 <ul>
 {{ range . }}
-  <li>
+  {{ $searchText := printf "%s %s" .name (.description | default "") }}
+  {{ range (.links | default (slice)) }}
+    {{ $searchText = printf "%s %s %s" $searchText .name .url }}
+  {{ end }}
+  <li data-resource-entry data-search-text="{{ lower ($searchText | plainify) }}">
     {{ if .url }}
     <a href="{{ .url }}">{{ .name }}</a>
     {{ else }}

@@ -69,3 +69,54 @@ aside {
         width: 100%;
     }
 }
+
+.resource-search {
+    background: #f5f8fb;
+    border: 1px solid #d6dde6;
+    border-radius: 0.5rem;
+    margin: 1rem 0 1.5rem;
+    padding: 1rem;
+}
+
+.resource-search-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.resource-search-input {
+    border: 1px solid #b8c5d1;
+    border-radius: 0.375rem;
+    max-width: 32rem;
+    padding: 0.65rem 0.8rem;
+    width: 100%;
+}
+
+.resource-search-summary {
+    color: #5c6675;
+    font-size: 0.95rem;
+    margin: 0.6rem 0 0;
+}
+
+.resource-empty-state {
+    background: #f5f8fb;
+    border: 1px dashed #b8c5d1;
+    border-radius: 0.5rem;
+    color: #5c6675;
+    margin: 1rem 0 1.5rem;
+    padding: 1rem;
+}
+
+.resource-page .resource-section + .resource-section {
+    margin-top: 1.5rem;
+}
+
+.resource-group {
+    margin-top: 1rem;
+}
+
+li[data-resource-entry][hidden],
+.resource-group[hidden],
+.resource-section[hidden] {
+    display: none;
+}
