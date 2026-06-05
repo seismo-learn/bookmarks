@@ -2,16 +2,7 @@
 <div class="home-page">
 	<header class="home-intro">
 		<p class="home-kicker">Seismology &amp; Geoscience Resources</p>
-		<h1>{{ .Title }}</h1>
 		<p class="home-summary">{{ .Params.intro }}</p>
-		<div class="home-highlights">
-			{{ range .Params.highlights }}
-			<div class="home-highlight">
-				<h2>{{ .title }}</h2>
-				<p>{{ .text }}</p>
-			</div>
-			{{ end }}
-		</div>
 	</header>
 
 	<section class="home-section">
@@ -29,9 +20,19 @@
 					<h3>{{ .name }}</h3>
 					<p>{{ .description }}</p>
 				</div>
-				<span class="home-tile-action">Open</span>
 			</a>
 		{{ end }}
+		</div>
+	</section>
+
+	<section class="home-section">
+		<div class="home-highlights">
+			{{ range .Params.highlights }}
+			<div class="home-highlight">
+				<h2>{{ .title }}</h2>
+				<p>{{ .text }}</p>
+			</div>
+			{{ end }}
 		</div>
 	</section>
 </div>

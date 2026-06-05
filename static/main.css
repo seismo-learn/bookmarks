@@ -42,16 +42,11 @@ footer {
     text-transform: uppercase;
 }
 
-.home-intro h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
-    margin: 0;
-}
-
 .home-summary {
     color: #344154;
     font-size: 1.1rem;
     line-height: 1.6;
-    margin: 1rem 0 0;
+    margin: 0;
     max-width: 52rem;
 }
 
@@ -101,7 +96,7 @@ footer {
 .home-grid {
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .home-tile,
@@ -112,8 +107,8 @@ footer {
     color: inherit;
     display: grid;
     gap: 0.9rem;
-    grid-template-columns: auto 1fr auto;
-    min-height: 8.5rem;
+    grid-template-columns: auto 1fr;
+    min-height: 9rem;
     padding: 1rem;
     text-decoration: none;
 }
@@ -145,22 +140,15 @@ footer {
     margin: 0;
 }
 
-.home-tile-action {
-    align-self: start;
-    color: #355b7c;
-    font-size: 0.95rem;
-    font-weight: 600;
-    white-space: nowrap;
+@media (max-width: 62em) {
+    .home-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 @media (max-width: 48em) {
-    .home-tile,
-    .home-tile:hover {
-        grid-template-columns: auto 1fr;
-    }
-
-    .home-tile-action {
-        grid-column: 2;
+    .home-grid {
+        grid-template-columns: 1fr;
     }
 }
 
