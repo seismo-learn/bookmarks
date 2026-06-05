@@ -69,3 +69,54 @@ aside {
         width: 100%;
     }
 }
+
+.codes-search {
+    background: #f5f8fb;
+    border: 1px solid #d6dde6;
+    border-radius: 0.5rem;
+    margin: 1rem 0 1.5rem;
+    padding: 1rem;
+}
+
+.codes-search-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.codes-search-input {
+    border: 1px solid #b8c5d1;
+    border-radius: 0.375rem;
+    max-width: 32rem;
+    padding: 0.65rem 0.8rem;
+    width: 100%;
+}
+
+.codes-search-summary {
+    color: #5c6675;
+    font-size: 0.95rem;
+    margin: 0.6rem 0 0;
+}
+
+.codes-empty-state {
+    background: #f5f8fb;
+    border: 1px dashed #b8c5d1;
+    border-radius: 0.5rem;
+    color: #5c6675;
+    margin: 1rem 0 1.5rem;
+    padding: 1rem;
+}
+
+.codes-page .codes-section + .codes-section {
+    margin-top: 1.5rem;
+}
+
+.codes-group {
+    margin-top: 1rem;
+}
+
+.codes-resource-list li[hidden],
+.codes-group[hidden],
+.codes-section[hidden] {
+    display: none;
+}

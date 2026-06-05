@@ -1,0 +1,120 @@
+{{ define "main" }}
+{{ $data := partial "resource_data.html" . }}
+<div class="codes-page">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+
+  <div class="codes-search" data-codes-search>
+    <label class="codes-search-label" for="codes-search-input">Search codes</label>
+    <input
+      id="codes-search-input"
+      class="codes-search-input"
+      type="search"
+      placeholder="Filter by name, description, or related link"
+      autocomplete="off"
+      spellcheck="false"
+      data-codes-search-input
+    >
+    <p class="codes-search-summary" data-codes-search-summary>Showing all entries.</p>
+  </div>
+
+  <div class="codes-empty-state" data-codes-empty hidden>No matching entries found.</div>
+
+  <div data-codes-results>
+    {{ range $data.sections }}
+    <section class="codes-section" data-resource-section>
+      <h2 id="{{ anchorize .title }}">{{ .title }}</h2>
+      {{ partial "codes_resource_list.html" .resources }}
+      {{ $section := .title }}
+      {{ range .groups }}
+      <div class="codes-group" data-resource-group>
+        <h3 id="{{ anchorize (printf "%s-%s" $section .title) }}">{{ .title }}</h3>
+        {{ partial "codes_resource_list.html" .resources }}
+      </div>
+      {{ end }}
+    </section>
+    {{ end }}
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var root = document.querySelector("[data-codes-search]");
+  if (!root) return;
+
+  var input = root.querySelector("[data-codes-search-input]");
+  var summary = root.querySelector("[data-codes-search-summary]");
+  var emptyState = document.querySelector("[data-codes-empty]");
+  var sections = Array.prototype.slice.call(document.querySelectorAll("[data-resource-section]"));
+  var entries = Array.prototype.slice.call(document.querySelectorAll("[data-resource-entry]"));
+
+  function updateResults() {
+    var query = input.value.trim().toLowerCase();
+    var visibleCount = 0;
+
+    entries.forEach(function (entry) {
+      var haystack = entry.dataset.searchText || "";
+      var matched = query === "" || haystack.indexOf(query) !== -1;
+      entry.hidden = !matched;
+      if (matched) visibleCount += 1;
+    });
+
+    sections.forEach(function (section) {
+      var groups = Array.prototype.slice.call(section.querySelectorAll("[data-resource-group]"));
+      groups.forEach(function (group) {
+        var groupEntries = Array.prototype.slice.call(group.querySelectorAll("[data-resource-entry]"));
+        var hasVisibleEntries = groupEntries.some(function (entry) {
+          return !entry.hidden;
+        });
+        group.hidden = !hasVisibleEntries;
+      });
+
+      var directEntries = Array.prototype.slice.call(section.querySelectorAll(":scope > ul [data-resource-entry]"));
+      var hasVisibleDirectEntries = directEntries.some(function (entry) {
+        return !entry.hidden;
+      });
+      var hasVisibleGroups = groups.some(function (group) {
+        return !group.hidden;
+      });
+      section.hidden = !(hasVisibleDirectEntries || hasVisibleGroups);
+    });
+
+    emptyState.hidden = visibleCount !== 0;
+    if (query === "") {
+      summary.textContent = "Showing all entries.";
+    } else {
+      summary.textContent = "Showing " + visibleCount + " matching entr" + (visibleCount === 1 ? "y." : "ies.");
+    }
+  }
+
+  input.addEventListener("input", updateResults);
+  updateResults();
+});
+</script>
+{{ end }}
+
+{{ define "toc" }}
+{{ $data := partial "resource_data.html" . }}
+{{ if and .Params.toc $data }}
+<aside>
+  <h2>Table of Contents</h2>
+  <nav id="TableOfContents">
+    <ul>
+    {{ range $data.sections }}
+      <li>
+        <a href="#{{ anchorize .title }}">{{ .title }}</a>
+        {{ $section := .title }}
+        {{ with .groups }}
+        <ul>
+          {{ range . }}
+          <li><a href="#{{ anchorize (printf "%s-%s" $section .title) }}">{{ .title }}</a></li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      </li>
+    {{ end }}
+    </ul>
+  </nav>
+</aside>
+{{ end }}
+{{ end }}
