@@ -23,6 +23,11 @@ sections:
       url: https://www.nature.com/ncomms/current-issue
     - name: Archive
       url: https://www.nature.com/ncomms/volumes
+  - name: Communications Earth & Environment
+    homepage: https://www.nature.com/commsenv/
+    links:
+    - name: Archive
+      url: https://www.nature.com/commsenv/volumes
   - name: Science Advances
     homepage: https://www.science.org/journal/sciadv
     links:
