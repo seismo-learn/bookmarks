@@ -29,7 +29,13 @@
       {{ range $label := $primaryLabels }}
         {{ range $link := $links }}
           {{ if eq $link.name $label }}
+          {{ if eq $link.name "Homepage" }}
+          <a class="journal-link-pill journal-link-pill-primary" href="{{ $link.url }}" aria-label="Homepage" title="Homepage">
+            <i class="fas fa-home" aria-hidden="true"></i>
+          </a>
+          {{ else }}
           <a class="journal-link-pill journal-link-pill-primary" href="{{ $link.url }}">{{ $link.name }}</a>
+          {{ end }}
           {{ end }}
         {{ end }}
       {{ end }}

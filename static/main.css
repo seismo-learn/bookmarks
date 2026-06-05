@@ -511,6 +511,11 @@ aside {
     text-decoration: none;
 }
 
+.journal-link-pill i {
+    font-size: 0.88rem;
+    line-height: 1;
+}
+
 .journal-link-pill:hover {
     background: #ffffff;
     border-color: #aec0b8;
