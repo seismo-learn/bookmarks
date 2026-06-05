@@ -3,7 +3,7 @@
   {{ errorf "resources layout requires resource_data in front matter for %q" .File.Path }}
 {{ end }}
 
-{{ $data := index .Site.Data $name }}
+{{ $data := index hugo.Data $name }}
 {{ if not $data }}
   {{ errorf "resources layout could not find data file for resource_data=%q in %q" $name .File.Path }}
 {{ end }}
