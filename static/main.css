@@ -17,11 +17,39 @@ footer {
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   border: 1px solid #c4d3ce;
+  padding: 0.55rem 0.85rem;
 }
 
 .navbar-brand {
   color: #1f3a33;
   font-weight: bold
+}
+
+.site-nav-links {
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.navbar .nav-link {
+  border-radius: 999px;
+  color: #35554b;
+  line-height: 1;
+  padding: 0.45rem 0.75rem;
+}
+
+.navbar .nav-link:hover {
+  background: rgba(255, 255, 255, 0.5);
+  color: #1f3a33;
+}
+
+.navbar .nav-link.is-current {
+  background: rgba(255, 255, 255, 0.8);
+  color: #1f3a33;
+  font-weight: 600;
+}
+
+.navbar .nav-link.nav-link-edit {
+  margin-left: 0.25rem;
 }
 
 .home-page {
@@ -50,6 +78,41 @@ footer {
     font-size: 1.2rem;
     line-height: 1.7;
     margin: 0;
+}
+
+.home-quick-links {
+    display: grid;
+    gap: 0.9rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.home-quick-link,
+.home-quick-link:hover {
+    background: #f3f7f5;
+    border: 1px solid #d7ddd7;
+    border-radius: 0.5rem;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    min-height: 6.5rem;
+    padding: 0.95rem 1rem;
+    text-decoration: none;
+}
+
+.home-quick-link:hover {
+    background: #f8fbf9;
+    border-color: #aec0b8;
+}
+
+.home-quick-link-title {
+    color: #24323a;
+    font-weight: 600;
+}
+
+.home-quick-link-detail {
+    color: #5b6771;
+    line-height: 1.5;
 }
 
 .home-highlights {
@@ -154,7 +217,41 @@ footer {
     margin: 0 0 1.25rem;
 }
 
+footer {
+  border-top: 1px solid #d7ddd7;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+.site-footer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.site-footer-actions a {
+  background: #f3f7f5;
+  border: 1px solid #d7ddd7;
+  border-radius: 999px;
+  color: #345c52;
+  padding: 0.45rem 0.8rem;
+  text-decoration: none;
+}
+
+.site-footer-actions a:hover {
+  background: #f8fbf9;
+  border-color: #aec0b8;
+  color: #1f3a33;
+}
+
+.site-footer-meta {
+  color: #62707a;
+}
+
 @media (max-width: 62em) {
+    .home-quick-links,
     .home-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -165,6 +262,21 @@ footer {
         gap: 1.5rem;
     }
 
+    .navbar {
+      padding-left: 0.6rem;
+      padding-right: 0.6rem;
+    }
+
+    .site-nav-links {
+      gap: 0.2rem;
+    }
+
+    .navbar .nav-link {
+      padding-left: 0.6rem;
+      padding-right: 0.6rem;
+    }
+
+    .home-quick-links,
     .home-grid {
         grid-template-columns: 1fr;
     }

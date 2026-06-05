@@ -5,9 +5,15 @@
 	</a>
 
 	<div class="collapse navbar-collapse">
-		<ul class="navbar-nav ml-auto">
+		<div class="navbar-nav ml-auto site-nav-links">
 			{{ range .Site.Menus.main }}
-			<a class="nav-item nav-link active" href="{{ .URL }}">
+			{{ $isCurrent := false }}
+			{{ if eq .URL "/" }}
+				{{ $isCurrent = $.IsHome }}
+			{{ else if and $.RelPermalink (hasPrefix $.RelPermalink .URL) }}
+				{{ $isCurrent = true }}
+			{{ end }}
+			<a class="nav-item nav-link{{ if $isCurrent }} is-current{{ end }}" href="{{ .URL }}">
 				{{ .Name | safeHTML }}
 			</a>
 			{{ end }}
@@ -20,11 +26,11 @@
 				{{ end }}
 			{{ end }}
 			{{ with $editPath }}
-			<a class="nav-item nav-link active"
+			<a class="nav-item nav-link nav-link-edit"
 				href="{{ $.Site.Params.edit_page.repo_url }}/{{ $.Site.Params.edit_page.edit_mode }}/{{ $.Site.Params.edit_page.branch }}/{{ . }}">
 				<i class="fas fa-edit"></i> {{ $.Site.Params.edit_page.edit_text }}
 			</a>
 			{{ end }}
-		</ul>
+		</div>
 	</div>
 </nav>

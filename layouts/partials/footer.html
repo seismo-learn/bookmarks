@@ -1,12 +1,19 @@
 <footer>
-  <div class="container text-center">
-  {{ with .Site.Copyright }}
-    {{ replace . "{year}" now.Year | markdownify }}
-  {{ end }}
+  <div class="site-footer-actions">
+    <a href="https://github.com/seismo-learn/links#contributing">Contribute links</a>
+    <a href="https://github.com/seismo-learn/links/issues">Report broken links</a>
+    <a href="https://github.com/seismo-learn/links">View source</a>
   </div>
-  <div class="container text-center">
-  {{ with .Site.Params.lastupdate }}
-    {{ replace . "{now}" (now.Format "2006/01/02") | markdownify }}
-  {{ end }}
+  <div class="site-footer-meta">
+    <div class="container text-center">
+    {{ with .Site.Copyright }}
+      {{ replace . "{year}" now.Year | markdownify }}
+    {{ end }}
+    </div>
+    <div class="container text-center">
+    {{ with .Site.Params.lastupdate }}
+      {{ replace . "{now}" (now.Format "2006/01/02") | markdownify }}
+    {{ end }}
+    </div>
   </div>
 </footer>
