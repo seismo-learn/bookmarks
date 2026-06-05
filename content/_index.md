@@ -1,6 +1,8 @@
 ---
 title: Seismo Links
-intro: A curated directory of links for seismology and geoscience research, designed to help students, researchers, and practitioners get to useful journals, software, databases, learning material, jobs, and everyday tools faster.
+intro: A curated directory for seismology and geoscience research, built to help students, researchers, and practitioners get to useful journals, software, databases, learning material, jobs, and practical tools faster.
+intro_note: Start with the category that best matches your task, then follow the resource pages to more focused collections.
+contribute_note: This directory stays useful because people keep improving it. Missing links, outdated resources, and better references are all worth contributing.
 highlights:
   - title: Community-curated
     text: Keep useful resources in one maintained directory instead of scattered bookmarks.
