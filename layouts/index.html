@@ -1,18 +1,45 @@
 {{ define "main" }}
+<div class="home-page">
+	<header class="home-intro">
+		<p class="home-kicker">Seismology &amp; Geoscience Resources</p>
+		<p class="home-summary">{{ .Params.intro }}</p>
+	</header>
 
-<div class="card-columns mt-4">
-{{ range .Params.cards }}
-	<div class="card text-center">
-		<div class="card-body">
-			<i class="fas {{ .icon }} fa-5x"></i>
-			<h5 class="card-title">
-				<a href="{{ .link | relURL }}" class="iconLink stretched-link">{{ .name }}</a>
-			</h5>
+	<section class="home-section">
+		<div class="home-section-heading">
+			<h2>Browse by Category</h2>
+			<p>Start with the collection that matches the task at hand.</p>
 		</div>
-	</div>
-{{ end }}
-</div>
+		<div class="home-grid">
+		{{ range .Params.cards }}
+			<a class="home-tile" href="{{ .link | relURL }}">
+				<div class="home-tile-icon" aria-hidden="true">
+					<i class="fas {{ .icon }}"></i>
+				</div>
+				<div class="home-tile-body">
+					<h3>{{ .name }}</h3>
+					<p>{{ .description }}</p>
+				</div>
+			</a>
+		{{ end }}
+		</div>
+	</section>
 
-{{ .Content }}
+	<section class="home-section">
+		<hr class="home-rule">
+		<div class="home-section-heading">
+			<h2>Why This Collection Helps</h2>
+			<p>A few principles behind how the directory is organized and maintained.</p>
+		</div>
+		<div class="home-highlights">
+			{{ range .Params.highlights }}
+			<div class="home-highlight">
+				<h2>{{ .title }}</h2>
+				<p>{{ .text }}</p>
+			</div>
+			{{ end }}
+		</div>
+	</section>
+</div>
 
 {{ end }}
