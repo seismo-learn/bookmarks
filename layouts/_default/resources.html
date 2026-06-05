@@ -87,24 +87,26 @@ document.addEventListener("DOMContentLoaded", function () {
 {{ $data := partial "resource_data.html" . }}
 {{ if and .Params.toc $data }}
 <aside>
-  <h2>Table of Contents</h2>
-  <nav id="TableOfContents">
-    <ul>
-    {{ range $data.sections }}
-      <li>
-        <a href="#{{ anchorize .title }}">{{ .title }}</a>
-        {{ $section := .title }}
-        {{ with .groups }}
-        <ul>
-          {{ range . }}
-          <li><a href="#{{ anchorize (printf "%s-%s" $section .title) }}">{{ .title }}</a></li>
+  <details class="resource-toc">
+    <summary>Table of Contents</summary>
+    <nav id="TableOfContents">
+      <ul>
+      {{ range $data.sections }}
+        <li>
+          <a href="#{{ anchorize .title }}">{{ .title }}</a>
+          {{ $section := .title }}
+          {{ with .groups }}
+          <ul>
+            {{ range . }}
+            <li><a href="#{{ anchorize (printf "%s-%s" $section .title) }}">{{ .title }}</a></li>
+            {{ end }}
+          </ul>
           {{ end }}
-        </ul>
-        {{ end }}
-      </li>
-    {{ end }}
-    </ul>
-  </nav>
+        </li>
+      {{ end }}
+      </ul>
+    </nav>
+  </details>
 </aside>
 {{ end }}
 {{ end }}
