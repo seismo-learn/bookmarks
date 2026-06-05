@@ -1,6 +1,6 @@
 ---
 title: Scientific Research Codes
-layout: codes
+layout: resources
 resource_data: codes
 edit_path: data/codes.yaml
 toc: true
