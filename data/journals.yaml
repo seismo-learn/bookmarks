@@ -26,6 +26,8 @@ sections:
   - name: Communications Earth & Environment
     homepage: https://www.nature.com/commsenv/
     links:
+    - name: Current Issue
+      url: https://www.nature.com/commsenv/articles
     - name: Archive
       url: https://www.nature.com/commsenv/volumes
   - name: Science Advances
@@ -68,6 +70,8 @@ sections:
     abbreviations:
     - EPSL
     links:
+    - name: Current Issue
+      url: https://www.sciencedirect.com/journal/earth-and-planetary-science-letters/latest
     - name: Archive
       url: https://www.sciencedirect.com/journal/earth-and-planetary-science-letters/issues
   - name: Geochemistry, Geophysics, Geosystems
@@ -99,12 +103,14 @@ sections:
     abbreviations:
     - PEPI
     links:
+    - name: Current Issue
+      url: https://www.sciencedirect.com/journal/physics-of-the-earth-and-planetary-interiors/latest
     - name: Archive
       url: https://www.sciencedirect.com/journal/physics-of-the-earth-and-planetary-interiors/issues
   - name: Science China Earth Sciences
     homepage: https://www.springer.com/journal/11430
     links:
-    - name: Archive
+    - name: Current Issue
       url: https://link.springer.com/journal/11430/volumes-and-issues
   - name: Geophysical Journal International
     homepage: https://academic.oup.com/gji
@@ -114,7 +120,7 @@ sections:
     - name: Current Issue
       url: https://academic.oup.com/gji/issue
     - name: Archive
-      url: https://academic.oup.com/gji/issue
+      url: https://academic.oup.com/gji/issue-archive
   - name: Geophysical Research Letters
     homepage: https://agupubs.onlinelibrary.wiley.com/journal/19448007
     abbreviations:
