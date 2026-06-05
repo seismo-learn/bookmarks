@@ -1,5 +1,5 @@
 {{ with . }}
-<ul>
+<ul class="resource-list">
 {{ range . }}
   {{ $searchText := printf "%s %s" .name (.description | default "") }}
   {{ range (.links | default (slice)) }}

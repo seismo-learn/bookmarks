@@ -3,9 +3,12 @@
 {{ partial "resource_list.html" .resources }}
 {{ $section := .title }}
 {{ range .groups }}
-<div class="resource-group" data-resource-group>
-<h3 id="{{ anchorize (printf "%s-%s" $section .title) }}">{{ .title }}</h3>
+<details class="resource-group" id="{{ anchorize (printf "%s-%s" $section .title) }}" data-resource-group>
+<summary>
+  <span class="resource-group-title">{{ .title }}</span>
+  <span class="resource-group-count">{{ len (.resources | default (slice)) }}</span>
+</summary>
   {{ partial "resource_list.html" .resources }}
-  </div>
+</details>
 {{ end }}
   </section>

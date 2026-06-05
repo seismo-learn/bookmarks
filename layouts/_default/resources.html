@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var emptyState = document.querySelector("[data-resource-empty]");
   var sections = Array.prototype.slice.call(document.querySelectorAll("[data-resource-section]"));
   var entries = Array.prototype.slice.call(document.querySelectorAll("[data-resource-entry]"));
+  var groups = Array.prototype.slice.call(document.querySelectorAll("[data-resource-group]"));
   var params = new URLSearchParams(window.location.search);
 
   if (params.has("q")) {
@@ -72,20 +73,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     sections.forEach(function (section) {
-      var groups = Array.prototype.slice.call(section.querySelectorAll("[data-resource-group]"));
-      groups.forEach(function (group) {
+      var sectionGroups = Array.prototype.slice.call(section.querySelectorAll("[data-resource-group]"));
+      sectionGroups.forEach(function (group) {
         var groupEntries = Array.prototype.slice.call(group.querySelectorAll("[data-resource-entry]"));
         var hasVisibleEntries = groupEntries.some(function (entry) {
           return !entry.hidden;
         });
         group.hidden = !hasVisibleEntries;
+        if (query !== "" && hasVisibleEntries) {
+          if (!group.open) {
+            group.open = true;
+            group.dataset.autoOpened = "true";
+          }
+        } else if (query === "" && group.dataset.autoOpened === "true") {
+          group.open = false;
+          delete group.dataset.autoOpened;
+        }
       });
 
       var directEntries = Array.prototype.slice.call(section.querySelectorAll(":scope > ul [data-resource-entry]"));
       var hasVisibleDirectEntries = directEntries.some(function (entry) {
         return !entry.hidden;
       });
-      var hasVisibleGroups = groups.some(function (group) {
+      var hasVisibleGroups = sectionGroups.some(function (group) {
         return !group.hidden;
       });
       section.hidden = !(hasVisibleDirectEntries || hasVisibleGroups);
@@ -102,6 +112,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   input.addEventListener("input", updateResults);
+  groups.forEach(function (group) {
+    group.addEventListener("toggle", function () {
+      if (input.value.trim() === "") {
+        delete group.dataset.autoOpened;
+      }
+    });
+  });
   input.addEventListener("keydown", function (event) {
     if (event.key === "Escape" && input.value !== "") {
       input.value = "";
