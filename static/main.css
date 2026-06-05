@@ -70,6 +70,17 @@ aside {
     }
 }
 
+.resource-toc summary {
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.resource-toc[open] summary {
+    margin-bottom: 0.75rem;
+}
+
 .resource-search {
     background: #f5f8fb;
     border: 1px solid #d6dde6;
