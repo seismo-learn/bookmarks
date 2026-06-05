@@ -320,8 +320,6 @@ sections:
     links:
     - name: Arthur Snoke's version at IASPEI
       url: http://www.iaspei.org/downloads
-    - name: Arthur Snoke's version at IRIS
-      url: https://seiscode.iris.washington.edu/projects/iaspei-tau
     - name: B.L.N. Kennett and Ray Buland's version
       url: http://rses.anu.edu.au/seismology/soft/ttsoft.html
     - name: A revised version
@@ -451,10 +449,6 @@ sections:
         url: https://seismo-learn.org/software/cps/
   - title: Reflectivity/Wavenumber Integration for 1D Layered Spherical Earth
     resources:
-    - name: yaseis
-      url: https://seiscode.iris.washington.edu/projects/yaseis
-      description: Calculate synthetic seismograms in spherically layered isotropic
-        models
   - title: Normal Modes Summation for 1D Layered Spherical Earth
     resources:
     - name: Mineos
@@ -810,9 +804,6 @@ sections:
     - name: SKHASH
       url: https://code.usgs.gov/esc/SKHASH
       description: Python package for earthquake focal mechanism inversions
-    - name: focmec
-      url: https://seiscode.iris.washington.edu/projects/focmec
-      description: Determining and displaying double-couple earthquake focal mechanisms
     - name: FPFIT
       url: https://www.usgs.gov/software/fpfit-fpplot-and-fppage
       description: Calculate and plot fault-plane solutions from first-motion data
@@ -1267,12 +1258,6 @@ sections:
       links:
       - name: Recfunk21
         url: https://github.com/RU21Seismology/Recfunk21
-      - name: recfunk09_pick
-        url: https://seiscode.iris.washington.edu/projects/recfunk09-pick
-      - name: recfunk_ascii
-        url: https://seiscode.iris.washington.edu/projects/recfunk-ascii
-      - name: rfsyn
-        url: https://seiscode.iris.washington.edu/projects/rfsyn
     - name: CCP
       url: http://www.eas.slu.edu/People/LZhu/home.html
       description: Common-Conversion-Point (CCP) stacking of receiver functions
@@ -1288,12 +1273,6 @@ sections:
         url: https://www.linkresearcher.com/trainings/d65fe2ef-3cc8-4eef-9821-261e3d49a9ae
       - name: bilibili
         url: https://www.bilibili.com/video/BV1e54y1i7FM?p=3
-    - name: FuncLab
-      url: https://seiscode.iris.washington.edu/projects/funclab
-      description: "(invalid link) : A MATLAB based GUI for handling receiver functions"
-      links:
-      - name: revised FuncLab
-        url: https://seiscode.iris.washington.edu/projects/funclab-revised
     - name: h-k-c
       url: https://github.com/ljt-uiuc/H-k-c
       description: Generalized H-k after harmonic correction on receiver functions
@@ -1747,9 +1726,6 @@ sections:
       description: A set of c routines for computation of power spectral densities,
         coherence, probability density functions, and a handful of other tools for
         monitoring the health of a station
-      links:
-      - name: IRIS site
-        url: https://seiscode.iris.washington.edu/projects/station-analysis-tools
     - name: TF-SIGNAL
       url: http://www.nuquake.eu/Computer_Codes/tfsig.htm
       description: Computation and visualization of time-frequency representations
@@ -1783,16 +1759,9 @@ sections:
       description: Three-station interferometry written in Python
   - title: Seismic Data Digitization and Correction
     resources:
-    - name: ATacR
-      url: https://seiscode.iris.washington.edu/projects/atacr
-      description: Automated Tilt and Compliance Removal (for ocean bottoms seismometers)
-        written in MATLAB
     - name: Automatic detection of clipped seismic waveform
       url: https://github.com/jinhaizhang2020/Automatic-detection-of-clipped-seismic-waveform
       description: The code seems to be related to **CWPAR**.
-    - name: CWPAR
-      url: https://seiscode.iris.washington.edu/projects/cwpar-clipped-waveform-pickup-and-restoration
-      description: Clipped Waveform Pickup and Restoration written in MATLAB
     - name: DigitSeis
       url: http://www.seismology.harvard.edu/research/DigitSeis.html
       description: A digitization software for analog seismograms written in MATLAB
@@ -1951,11 +1920,6 @@ sections:
   groups:
   - title: Inversion Theory
     resources:
-    - name: 'Parameter Estimation and Inverse Problems: Example Code and Associated
-        Subroutines'
-      url: https://seiscode.iris.washington.edu/projects/peipcode
-      description: A compilation of inverse and parameter estimation code that accompanies
-        the second edition of the textbook "Parameter Estimation and Inverse Problems"
   - title: Linear Algebra
     resources:
     - name: BLAS
@@ -2067,8 +2031,6 @@ sections:
       description: A consortium of scientists from the university, government and
         industry sectors with interests in the development and application of inversion
         methodologies for the Earth Sciences
-    - name: IRIS SeisCode
-      url: https://seiscode.iris.washington.edu
     - name: ISTI Software
       url: https://www.isti.com/software
       description: Instrumental Software Technologies, Inc.
