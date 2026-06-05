@@ -1,18 +1,39 @@
 {{ define "main" }}
-
-<div class="card-columns mt-4">
-{{ range .Params.cards }}
-	<div class="card text-center">
-		<div class="card-body">
-			<i class="fas {{ .icon }} fa-5x"></i>
-			<h5 class="card-title">
-				<a href="{{ .link | relURL }}" class="iconLink stretched-link">{{ .name }}</a>
-			</h5>
+<div class="home-page">
+	<header class="home-intro">
+		<p class="home-kicker">Seismology &amp; Geoscience Resources</p>
+		<h1>{{ .Title }}</h1>
+		<p class="home-summary">{{ .Params.intro }}</p>
+		<div class="home-highlights">
+			{{ range .Params.highlights }}
+			<div class="home-highlight">
+				<h2>{{ .title }}</h2>
+				<p>{{ .text }}</p>
+			</div>
+			{{ end }}
 		</div>
-	</div>
-{{ end }}
-</div>
+	</header>
 
-{{ .Content }}
+	<section class="home-section">
+		<div class="home-section-heading">
+			<h2>Browse by Category</h2>
+			<p>Start with the collection that matches the task at hand.</p>
+		</div>
+		<div class="home-grid">
+		{{ range .Params.cards }}
+			<a class="home-tile" href="{{ .link | relURL }}">
+				<div class="home-tile-icon" aria-hidden="true">
+					<i class="fas {{ .icon }}"></i>
+				</div>
+				<div class="home-tile-body">
+					<h3>{{ .name }}</h3>
+					<p>{{ .description }}</p>
+				</div>
+				<span class="home-tile-action">Open</span>
+			</a>
+		{{ end }}
+		</div>
+	</section>
+</div>
 
 {{ end }}
