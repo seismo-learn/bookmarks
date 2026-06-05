@@ -31,7 +31,7 @@ sections:
             url: https://advances.sciencemag.org/
           - name: Archive
             url: https://advances.sciencemag.org/content/by/year
-      - name: Proceedings of the National Academy of Sciences (PNAS)
+      - name: Proceedings of the National Academy of Sciences
         links:
           - name: Homepage
             url: https://www.pnas.org
@@ -70,6 +70,9 @@ sections:
           - name: Archive
             url: https://www.sciencedirect.com/journal/earth-and-planetary-science-letters/issues
       - name: Geochemistry, Geophysics, Geosystems
+        abbreviations:
+          - G-Cubed
+          - G3
         links:
           - name: Homepage
             url: https://agupubs.onlinelibrary.wiley.com/hub/journal/10.1002/(ISSN)1525-2027/
@@ -77,7 +80,7 @@ sections:
             url: https://agupubs.onlinelibrary.wiley.com/toc/15252027/current
           - name: Archive
             url: https://agupubs.onlinelibrary.wiley.com/loi/15252027
-      - name: Nature GeoScience
+      - name: Nature Geoscience
         links:
           - name: Homepage
             url: https://www.nature.com/ngeo/index.html
@@ -145,8 +148,6 @@ sections:
           - name: Archive
             url: https://agupubs.onlinelibrary.wiley.com/loi/19449208
       - name: Tectonics
-        abbreviations:
-          - Tectonics
         links:
           - name: Homepage
             url: https://agupubs.onlinelibrary.wiley.com/journal/19449194
