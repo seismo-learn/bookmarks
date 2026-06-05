@@ -18,6 +18,11 @@ sections:
       url: https://www.nature.com/nature/volumes
   - name: Nature Communications
     homepage: https://www.nature.com/ncomms/
+    links:
+    - name: Current Issue
+      url: https://www.nature.com/ncomms/current-issue
+    - name: Archive
+      url: https://www.nature.com/ncomms/volumes
   - name: Science Advances
     homepage: https://www.science.org/journal/sciadv
     links:
@@ -31,14 +36,14 @@ sections:
     - name: Current Issue
       url: https://www.pnas.org/content/current
     - name: Archive
-      url: https://www.pnas.org/content/by/year
-    - name: Earth Sciences
-      url: https://www.pnas.org/content/by/section/Earth,%20Atmospheric,%20and%20Planetary%20Sciences
+      url: https://www.pnas.org/loi/pnas
   - name: Scientific Reports
     homepage: https://www.nature.com/srep/
     links:
-    - name: Earth Sciences
-      url: https://www.nature.com/subjects/earth-and-environmental-sciences/srep
+    - name: Current Issue
+      url: https://www.nature.com/srep/current-issue
+    - name: Archive
+      url: https://www.nature.com/srep/volumes
   - name: AGU Advances
     homepage: https://agupubs.onlinelibrary.wiley.com/journal/2576604x
     links:
@@ -55,11 +60,13 @@ sections:
       url: https://www.annualreviews.org/loi/earth
   - name: Earth and Planetary Science Letters
     homepage: https://www.sciencedirect.com/journal/earth-and-planetary-science-letters
+    abbreviations:
+    - EPSL
     links:
     - name: Archive
       url: https://www.sciencedirect.com/journal/earth-and-planetary-science-letters/issues
   - name: Geochemistry, Geophysics, Geosystems
-    homepage: https://agupubs.onlinelibrary.wiley.com/hub/journal/10.1002/(ISSN)1525-2027/
+    homepage: https://agupubs.onlinelibrary.wiley.com/journal/15252027
     abbreviations:
     - G-Cubed
     - G3
@@ -69,7 +76,7 @@ sections:
     - name: Archive
       url: https://agupubs.onlinelibrary.wiley.com/loi/15252027
   - name: Nature Geoscience
-    homepage: https://www.nature.com/ngeo/index.html
+    homepage: https://www.nature.com/ngeo/
     links:
     - name: Current Issue
       url: https://www.nature.com/ngeo/current-issue
@@ -83,7 +90,9 @@ sections:
     - name: Archive
       url: https://www.nature.com/natrevearthenviron/volumes/
   - name: Physics of the Earth and Planetary Interiors
-    homepage: https://www.sciencedirect.com/science/journal/00319201/
+    homepage: https://www.sciencedirect.com/journal/physics-of-the-earth-and-planetary-interiors
+    abbreviations:
+    - PEPI
     links:
     - name: Archive
       url: https://www.sciencedirect.com/journal/physics-of-the-earth-and-planetary-interiors/issues
@@ -97,8 +106,10 @@ sections:
     abbreviations:
     - GJI
     links:
-    - name: Old Archive (1922-1957)
-      url: https://academic.oup.com/gsmnras
+    - name: Current Issue
+      url: https://academic.oup.com/gji/issue
+    - name: Archive
+      url: https://academic.oup.com/gji/issue
   - name: Geophysical Research Letters
     homepage: https://agupubs.onlinelibrary.wiley.com/journal/19448007
     abbreviations:
@@ -150,8 +161,6 @@ sections:
     links:
     - name: Current Issue
       url: https://pubs.geoscienceworld.org/srl/issue
-    - name: Early Publication
-      url: https://pubs.geoscienceworld.org/srl/early-publication
     - name: Archive
       url: https://pubs.geoscienceworld.org/srl/list-of-years
 - title: Related Sources
