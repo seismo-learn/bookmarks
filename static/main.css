@@ -17,6 +17,7 @@ footer {
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   border: 1px solid #c4d3ce;
+  padding: 0.55rem 0.85rem;
 }
 
 .navbar-brand {
@@ -24,31 +25,66 @@ footer {
   font-weight: bold
 }
 
+.site-nav-links {
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.navbar .nav-link {
+  border-radius: 999px;
+  color: #35554b;
+  line-height: 1;
+  padding: 0.45rem 0.75rem;
+}
+
+.navbar .nav-link:hover {
+  background: rgba(255, 255, 255, 0.5);
+  color: #1f3a33;
+}
+
+.navbar .nav-link.is-current {
+  background: rgba(255, 255, 255, 0.8);
+  color: #1f3a33;
+  font-weight: 600;
+}
+
+.navbar .nav-link.nav-link-edit {
+  margin-left: 0.25rem;
+}
+
 .home-page {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    margin-top: 1.25rem;
+    gap: 2.5rem;
+    margin-top: 1.5rem;
+    max-width: 72rem;
 }
 
 .home-intro {
-    max-width: 52rem;
-    padding: 0.5rem 0 0.5rem;
+    align-items: end;
+    display: grid;
+    gap: 1rem 2rem;
+    grid-template-columns: minmax(0, 1.7fr) minmax(16rem, 0.9fr);
+    padding: 0.75rem 0 0.25rem;
 }
 
 .home-kicker {
     color: #345c52;
-    font-size: 0.9rem;
+    font-size: 1.35rem;
     font-weight: 600;
     letter-spacing: 0;
-    margin: 0 0 0.75rem;
-    text-transform: uppercase;
+    line-height: 1.3;
+    margin: 0 0 0.9rem;
+}
+
+.home-intro-copy {
+    max-width: 46rem;
 }
 
 .home-summary {
     color: #24323a;
-    font-size: 1.2rem;
-    line-height: 1.7;
+    font-size: 1.3rem;
+    line-height: 1.75;
     margin: 0;
 }
 
@@ -56,19 +92,19 @@ footer {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .home-highlight {
     background: #f6f8f4;
     border: 1px solid #d7ddd7;
     border-radius: 0.5rem;
-    padding: 1rem;
+    padding: 1rem 1rem 1.05rem;
 }
 
 .home-highlight h2 {
     font-size: 1rem;
-    margin: 0 0 0.5rem;
+    margin: 0 0 0.45rem;
 }
 
 .home-highlight p {
@@ -82,12 +118,12 @@ footer {
     flex-wrap: wrap;
     gap: 0.5rem 1rem;
     justify-content: space-between;
-    margin-bottom: 1rem;
+    margin-bottom: 1.1rem;
 }
 
 .home-section-heading h2 {
     color: #24323a;
-    font-size: 1.45rem;
+    font-size: 1.35rem;
     margin: 0;
 }
 
@@ -98,7 +134,7 @@ footer {
 
 .home-grid {
     display: grid;
-    gap: 1rem;
+    gap: 1.1rem;
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
@@ -110,10 +146,10 @@ footer {
     box-shadow: 0 1px 2px rgba(27, 42, 39, 0.05);
     color: inherit;
     display: grid;
-    gap: 0.9rem;
-    grid-template-columns: auto 1fr;
-    min-height: 9rem;
-    padding: 1rem;
+    gap: 0.85rem 1rem;
+    grid-template-columns: auto 1fr auto;
+    min-height: 9.5rem;
+    padding: 1.1rem 1.1rem 1.15rem;
     text-decoration: none;
 }
 
@@ -124,37 +160,111 @@ footer {
     transform: translateY(-1px);
 }
 
+.home-tile-featured {
+    background: #f9fbf8;
+}
+
 .home-tile-icon {
     align-items: center;
     background: #e8f0ec;
     border-radius: 0.5rem;
     color: #345c52;
     display: inline-flex;
-    font-size: 1.25rem;
-    height: 2.75rem;
+    font-size: 1.3rem;
+    height: 3rem;
     justify-content: center;
-    width: 2.75rem;
+    width: 3rem;
 }
 
 .home-tile-body h3 {
     color: #24323a;
-    font-size: 1.1rem;
-    margin: 0 0 0.4rem;
+    font-size: 1.08rem;
+    margin: 0 0 0.35rem;
 }
 
 .home-tile-body p {
     color: #53606b;
-    line-height: 1.55;
+    font-size: 0.98rem;
+    line-height: 1.6;
     margin: 0;
+}
+
+.home-tile-arrow {
+    align-self: start;
+    color: #6f837b;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .home-rule {
     border: 0;
     border-top: 1px solid #d7ddd7;
-    margin: 0 0 1.25rem;
+    margin: 0 0 1.5rem;
+}
+
+footer {
+  border-top: 1px solid #d7ddd7;
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+}
+
+.site-footer-inner {
+  align-items: start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  justify-content: space-between;
+  margin-bottom: 1.1rem;
+}
+
+.site-footer-heading {
+  max-width: 32rem;
+}
+
+.site-footer-title {
+  color: #24323a;
+  font-weight: 600;
+  margin: 0 0 0.35rem;
+}
+
+.site-footer-text {
+  color: #5d6973;
+  margin: 0;
+}
+
+.site-footer-actions {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  min-width: 13rem;
+}
+
+.site-footer-actions a {
+  color: #345c52;
+  padding: 0;
+  text-decoration: none;
+}
+
+.site-footer-actions a:hover {
+  color: #1f3a33;
+  text-decoration: underline;
+}
+
+.site-footer-meta {
+  color: #62707a;
 }
 
 @media (max-width: 62em) {
+    .home-page {
+        max-width: none;
+    }
+
+    .home-intro {
+        grid-template-columns: 1fr;
+    }
+
     .home-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -165,8 +275,31 @@ footer {
         gap: 1.5rem;
     }
 
+    .navbar {
+      padding-left: 0.6rem;
+      padding-right: 0.6rem;
+    }
+
+    .site-nav-links {
+      gap: 0.2rem;
+    }
+
+    .navbar .nav-link {
+      padding-left: 0.6rem;
+      padding-right: 0.6rem;
+    }
+
     .home-grid {
         grid-template-columns: 1fr;
+    }
+
+    .home-tile,
+    .home-tile:hover {
+        grid-template-columns: auto 1fr;
+    }
+
+    .home-tile-arrow {
+        display: none;
     }
 }
 

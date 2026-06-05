@@ -4,7 +4,7 @@
 baseURL = "https://seismo-learn.org/links/"
 locale = "en-us"
 title = "Seismo Links"
-copyright = "&copy; Copyright 2018 - {year}, [seismo-learn](https://seismo-learn.org/). </br> [Contributions](https://github.com/seismo-learn/links#contributing) are welcomed."
+copyright = "&copy; Copyright 2018 - {year}, [seismo-learn](https://seismo-learn.org/)."
 disableKinds = [ "taxonomy", "RSS" ]
 enableGitInfo = true
 

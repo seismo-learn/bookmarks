@@ -1,8 +1,10 @@
 {{ define "main" }}
 <div class="home-page">
 	<header class="home-intro">
-		<p class="home-kicker">Seismology &amp; Geoscience Resources</p>
-		<p class="home-summary">{{ .Params.intro }}</p>
+		<div class="home-intro-copy">
+			<p class="home-kicker">Seismology &amp; Geoscience Resources</p>
+			<p class="home-summary">{{ .Params.intro }}</p>
+		</div>
 	</header>
 
 	<section class="home-section">
@@ -12,7 +14,7 @@
 		</div>
 		<div class="home-grid">
 		{{ range .Params.cards }}
-			<a class="home-tile" href="{{ .link | relURL }}">
+			<a class="home-tile{{ if or (eq .link "codes") (eq .link "database") (eq .link "learning") }} home-tile-featured{{ end }}" href="{{ .link | relURL }}">
 				<div class="home-tile-icon" aria-hidden="true">
 					<i class="fas {{ .icon }}"></i>
 				</div>
@@ -20,6 +22,7 @@
 					<h3>{{ .name }}</h3>
 					<p>{{ .description }}</p>
 				</div>
+				<span class="home-tile-arrow" aria-hidden="true">&rarr;</span>
 			</a>
 		{{ end }}
 		</div>
