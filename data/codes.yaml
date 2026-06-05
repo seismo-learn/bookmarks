@@ -1289,8 +1289,7 @@ sections:
       - name: bilibili
         url: https://www.bilibili.com/video/BV1e54y1i7FM?p=3
     - name: FuncLab
-      url: https://seiscode.iris.washington.edu/projects/funclab
-      description: "(invalid link) : A MATLAB based GUI for handling receiver functions"
+      description: A MATLAB based GUI for handling receiver functions
       links:
       - name: revised FuncLab
         url: https://seiscode.iris.washington.edu/projects/funclab-revised
