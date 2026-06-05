@@ -70,6 +70,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var languageFilterList = document.querySelector("[data-codes-language-filter-list]");
   var languageFilterClear = document.querySelector("[data-codes-language-filter-clear]");
   var sortButtons = Array.prototype.slice.call(document.querySelectorAll("[data-sort-field]"));
+  var rowTagButtons = Array.prototype.slice.call(document.querySelectorAll("[data-filter-tag]"));
+  var rowLanguageButtons = Array.prototype.slice.call(document.querySelectorAll("[data-filter-language]"));
   var entries = Array.prototype.slice.call(document.querySelectorAll("[data-resource-entry]"));
   var params = new URLSearchParams(window.location.search);
   var activeTag = (params.get("tag") || "").toLowerCase();
@@ -257,11 +259,17 @@ document.addEventListener("DOMContentLoaded", function () {
         button.classList.toggle("is-active", button.dataset.tag === activeTag);
       });
     }
+    rowTagButtons.forEach(function (button) {
+      button.classList.toggle("is-active", button.dataset.filterTag === activeTag);
+    });
     if (languageFilterList) {
       Array.prototype.slice.call(languageFilterList.querySelectorAll(".codes-tag-filter-chip")).forEach(function (button) {
         button.classList.toggle("is-active", button.dataset.language === activeLanguage);
       });
     }
+    rowLanguageButtons.forEach(function (button) {
+      button.classList.toggle("is-active", button.dataset.filterLanguage === activeLanguage);
+    });
     syncQueryParam(rawQuery);
     updateSortUI();
   }
@@ -291,6 +299,20 @@ document.addEventListener("DOMContentLoaded", function () {
       updateResults();
     });
   }
+  rowTagButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var tag = button.dataset.filterTag || "";
+      activeTag = activeTag === tag ? "" : tag;
+      updateResults();
+    });
+  });
+  rowLanguageButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var language = button.dataset.filterLanguage || "";
+      activeLanguage = activeLanguage === language ? "" : language;
+      updateResults();
+    });
+  });
   if (resetButton) {
     resetButton.addEventListener("click", function () {
       input.value = "";

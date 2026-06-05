@@ -51,14 +51,14 @@
         <td class="codes-col-tags">
           {{ with .tags }}
           <div class="resource-tag-list">
-            {{ range . }}<span class="resource-tag">{{ . | title }}</span>{{ end }}
+            {{ range . }}<button type="button" class="resource-tag resource-filter-tag" data-filter-tag="{{ lower . }}">{{ . | title }}</button>{{ end }}
           </div>
           {{ end }}
         </td>
         <td class="codes-col-languages">
           {{ with .languages }}
           <div class="resource-language-list">
-            {{ range . }}<span class="resource-language">{{ . | title }}</span>{{ end }}
+            {{ range . }}<button type="button" class="resource-language resource-filter-language" data-filter-language="{{ lower . }}">{{ . | title }}</button>{{ end }}
           </div>
           {{ end }}
         </td>

@@ -552,11 +552,18 @@ aside {
     border-radius: 999px;
     color: #23443d;
     display: inline-flex;
+    cursor: pointer;
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0;
     line-height: 1;
     padding: 0.22rem 0.5rem;
+}
+
+.resource-tag.resource-filter-tag.is-active {
+    background: #c9ded4;
+    border-color: #6f9686;
+    color: #19332d;
 }
 
 .resource-language-list {
@@ -573,10 +580,17 @@ aside {
     border-radius: 999px;
     color: #24323a;
     display: inline-flex;
+    cursor: pointer;
     font-size: 0.75rem;
     font-weight: 600;
     line-height: 1;
     padding: 0.22rem 0.5rem;
+}
+
+.resource-language.resource-filter-language.is-active {
+    background: #c8d8e6;
+    border-color: #6f8ba3;
+    color: #15202b;
 }
 
 .codes-table-wrap {
