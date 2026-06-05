@@ -8,11 +8,13 @@
   {{ end }}
   <article class="journal-card" data-resource-entry data-search-text="{{ lower ($searchText | plainify) }}">
     <div class="journal-card-head">
-      {{ if .url }}
-      <a class="journal-card-title" href="{{ .url }}">{{ .name }}</a>
-      {{ else }}
-      <strong class="journal-card-title">{{ .name }}</strong>
-      {{ end }}
+      <div class="journal-card-title-row">
+        {{ if .url }}
+        <a class="journal-card-title" href="{{ .url }}">{{ .name }}</a>
+        {{ else }}
+        <strong class="journal-card-title">{{ .name }}</strong>
+        {{ end }}
+      </div>
       {{ with .description }}<p class="journal-card-description">{{ . | markdownify }}</p>{{ end }}
     </div>
 
