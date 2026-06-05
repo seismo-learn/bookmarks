@@ -5,19 +5,6 @@
 		<p class="home-summary">{{ .Params.intro }}</p>
 	</header>
 
-	{{ with .Params.quick_links }}
-	<section class="home-section">
-		<div class="home-quick-links" aria-label="Quick paths">
-			{{ range . }}
-			<a class="home-quick-link" href="{{ .link | relURL }}">
-				<span class="home-quick-link-title">{{ .title }}</span>
-				<span class="home-quick-link-detail">{{ .detail }}</span>
-			</a>
-			{{ end }}
-		</div>
-	</section>
-	{{ end }}
-
 	<section class="home-section">
 		<div class="home-section-heading">
 			<h2>Browse by Category</h2>
