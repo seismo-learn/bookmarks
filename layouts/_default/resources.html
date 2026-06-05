@@ -5,7 +5,6 @@
   {{ .Content }}
 
   <div class="resource-search" data-resource-search>
-    <label class="resource-search-label" for="resource-search-input">Search entries</label>
     <div class="resource-search-controls">
       <input
         id="resource-search-input"
@@ -20,7 +19,6 @@
         Clear
       </button>
     </div>
-    <p class="resource-search-summary" data-resource-search-summary>Showing all entries.</p>
   </div>
 
   <div class="resource-empty-state" data-resource-empty hidden>No matching entries found.</div>
@@ -39,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var input = root.querySelector("[data-resource-search-input]");
   var clearButton = root.querySelector("[data-resource-search-clear]");
-  var summary = root.querySelector("[data-resource-search-summary]");
   var emptyState = document.querySelector("[data-resource-empty]");
   var sections = Array.prototype.slice.call(document.querySelectorAll("[data-resource-section]"));
   var entries = Array.prototype.slice.call(document.querySelectorAll("[data-resource-entry]"));
@@ -93,11 +90,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     emptyState.hidden = visibleCount !== 0;
     clearButton.hidden = rawQuery === "";
-    if (query === "") {
-      summary.textContent = "Showing all entries.";
-    } else {
-      summary.textContent = "Showing " + visibleCount + " matching entr" + (visibleCount === 1 ? "y." : "ies.");
-    }
     syncQueryParam(rawQuery);
   }
 
