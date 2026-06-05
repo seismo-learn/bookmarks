@@ -1,8 +1,17 @@
 {{ define "main" }}
 <div class="home-page">
 	<header class="home-intro">
-		<p class="home-kicker">Seismology &amp; Geoscience Resources</p>
-		<p class="home-summary">{{ .Params.intro }}</p>
+		<div class="home-intro-copy">
+			<p class="home-kicker">Seismology &amp; Geoscience Resources</p>
+			<p class="home-summary">{{ .Params.intro }}</p>
+		</div>
+		{{ with .Params.intro_points }}
+		<ul class="home-intro-points">
+			{{ range . }}
+			<li>{{ . }}</li>
+			{{ end }}
+		</ul>
+		{{ end }}
 	</header>
 
 	<section class="home-section">
@@ -26,6 +35,7 @@
 	</section>
 
 	<section class="home-section">
+		<hr class="home-rule">
 		<div class="home-highlights">
 			{{ range .Params.highlights }}
 			<div class="home-highlight">
