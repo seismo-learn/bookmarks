@@ -170,57 +170,10 @@ sections:
       url: https://pubs.geoscienceworld.org/srl/list-of-years
 - title: Related Sources
   resources:
-  - name: Earth and Space Science Open Archive (ESSOAr)
-    links:
-    - name: Homepage
-      url: https://www.essoar.org/
-    - name: Geophysics
-      url: https://www.essoar.org/topic/agu-ed/1200
-  - name: EarthArXiv
-    links:
-    - name: Homepage
-      url: https://eartharxiv.org/
-    - name: Geophysics and Seismology
-      url: https://eartharxiv.org/repository/list/geophysics-and-seismology/
-  - name: arXiv
-    links:
-    - name: Homepage
-      url: https://arxiv.org/
-    - name: Geophysics
-      url: https://arxiv.org/list/physics.geo-ph/recent
-  - name: ORCID
-    url: https://orcid.org/
-    description: A persistent digital identifier for researchers
-  - name: Google Scholar
-    url: https://scholar.google.com/
-  - name: Publons
-    url: https://publons.com/
-    description: Your publications, citation metrics, peer reviews and journal editing work, in one place
+  - name: Web of Science
+    url: https://www.webofknowledge.com
+  - name: Scopus
+    url: https://www.scopus.com/home.uri
   - name: ResearchGate
     url: https://www.researchgate.net
     description: Social networking site for scientists and researchers
-  - name: 'Journal Citation Reports (Chinese Academy of Sciences: Geosciences)'
-    url: http://www.gaokeyan.com/journal/index.php?t=subject&sid=8&p=1&jcr=0
-    description: in Chinese
-  - name: Nature Index journals
-    url: https://www.natureindex.com/faq#journals
-  - name: Journal Abbreviations
-    url: https://woodward.library.ubc.ca/research-help/journal-abbreviations/
-    description: Search Science and Engineering Journal Abbreviations
-  - name: Scopus
-    url: https://www.scopus.com/home.uri
-    description: Abstract and citation database
-  - name: Web of Science
-    url: https://www.webofknowledge.com
-    description: Abstract and citation database
-  - name: Sci-Hub
-    url: http://sci-hub.tw/
-    description: Free access to millions of research papers and books
-    links:
-    - name: A tutorial in Chinese
-      url: https://gmt-china.org/blog/sci-hub/
-    - name: Where is Sci-Hub now?
-      url: https://whereisscihub.now.sh/
-  - name: SHERPA RoMEO
-    url: http://www.sherpa.ac.uk/romeo/index.php
-    description: Publisher copyright policies & self-archiving
