@@ -242,18 +242,14 @@ footer {
 }
 
 .site-footer-actions a {
-  background: #f3f7f5;
-  border: 1px solid #d7ddd7;
-  border-radius: 0.5rem;
   color: #345c52;
-  padding: 0.45rem 0.8rem;
+  padding: 0;
   text-decoration: none;
 }
 
 .site-footer-actions a:hover {
-  background: #f8fbf9;
-  border-color: #aec0b8;
   color: #1f3a33;
+  text-decoration: underline;
 }
 
 .site-footer-meta {
