@@ -6,20 +6,22 @@
     {{ $searchText = printf "%s %s %s" $searchText .name .url }}
   {{ end }}
   <li class="resource-entry" data-resource-entry data-search-text="{{ lower ($searchText | plainify) }}">
-    <div class="resource-entry-title">
+    <div class="resource-entry-main">
+      <div class="resource-entry-title">
       {{ if .url }}
       <a href="{{ .url }}">{{ .name }}</a>
       {{ else }}
       <strong>{{ .name }}</strong>
       {{ end }}
+      </div>
+      {{ with .links }}
+      <div class="resource-entry-links" aria-label="Related links">
+        {{ range . }}<a href="{{ .url }}">{{ .name }}</a>{{ end }}
+      </div>
+      {{ end }}
     </div>
     {{ with .description }}
     <p class="resource-entry-description">{{ . | markdownify }}</p>
-    {{ end }}
-    {{ with .links }}
-    <div class="resource-entry-links" aria-label="Related links">
-      {{ range . }}<a href="{{ .url }}">{{ .name }}</a>{{ end }}
-    </div>
     {{ end }}
   </li>
 {{ end }}
