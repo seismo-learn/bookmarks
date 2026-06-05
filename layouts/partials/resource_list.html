@@ -2,6 +2,12 @@
 <ul>
 {{ range . }}
   {{ $searchText := printf "%s %s" .name (.description | default "") }}
+  {{ range (.tags | default (slice)) }}
+    {{ $searchText = printf "%s %s" $searchText . }}
+  {{ end }}
+  {{ range (.languages | default (slice)) }}
+    {{ $searchText = printf "%s %s" $searchText . }}
+  {{ end }}
   {{ range (.links | default (slice)) }}
     {{ $searchText = printf "%s %s %s" $searchText .name .url }}
   {{ end }}
@@ -12,6 +18,16 @@
     <strong>{{ .name }}</strong>
     {{ end }}
     {{ with .description }}: {{ . | markdownify }}{{ end }}
+    {{ with .tags }}:
+      <span class="resource-tag-list">
+        {{ range . }}<span class="resource-tag">{{ . }}</span>{{ end }}
+      </span>
+    {{ end }}
+    {{ with .languages }}:
+      <span class="resource-language-list">
+        {{ range . }}<span class="resource-language">{{ . }}</span>{{ end }}
+      </span>
+    {{ end }}
     {{ with .links }}:
       {{ range $index, $link := . }}{{ if $index }} | {{ end }}<a href="{{ $link.url }}">{{ $link.name }}</a>{{ end }}
     {{ end }}
