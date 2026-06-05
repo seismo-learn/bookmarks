@@ -1,7 +1,12 @@
 {{ with .resources }}
 <div class="journal-list">
-{{ range . }}
+  {{ range . }}
   {{ $searchText := printf "%s %s" .name (.description | default "") }}
+  {{ with .abbreviations }}
+    {{ range . }}
+      {{ $searchText = printf "%s %s" $searchText . }}
+    {{ end }}
+  {{ end }}
   {{ $links := .links | default (slice) }}
   {{ range $links }}
     {{ $searchText = printf "%s %s %s" $searchText .name .url }}

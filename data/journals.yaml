@@ -106,12 +106,16 @@ sections:
           - name: Archive
             url: https://link.springer.com/journal/11430/volumes-and-issues
       - name: Geophysical Journal International
+        abbreviations:
+          - GJI
         links:
           - name: Homepage
             url: https://academic.oup.com/gji
           - name: Old Archive (1922-1957)
             url: https://academic.oup.com/gsmnras
       - name: Geophysical Research Letters
+        abbreviations:
+          - GRL
         links:
           - name: Homepage
             url: https://agupubs.onlinelibrary.wiley.com/journal/19448007
@@ -120,6 +124,9 @@ sections:
           - name: Archive
             url: https://agupubs.onlinelibrary.wiley.com/loi/19448007
       - name: "Journal of Geophysical Research: Solid Earth"
+        abbreviations:
+          - JGR Solid Earth
+          - JGR-SE
         links:
           - name: Homepage
             url: https://agupubs.onlinelibrary.wiley.com/journal/21699356
@@ -128,6 +135,8 @@ sections:
           - name: Archive
             url: https://agupubs.onlinelibrary.wiley.com/loi/21699356
       - name: Reviews of Geophysics
+        abbreviations:
+          - Rev Geophys
         links:
           - name: Homepage
             url: https://agupubs.onlinelibrary.wiley.com/journal/19449208
@@ -136,6 +145,8 @@ sections:
           - name: Archive
             url: https://agupubs.onlinelibrary.wiley.com/loi/19449208
       - name: Tectonics
+        abbreviations:
+          - Tectonics
         links:
           - name: Homepage
             url: https://agupubs.onlinelibrary.wiley.com/journal/19449194
@@ -144,6 +155,8 @@ sections:
           - name: Archive
             url: https://agupubs.onlinelibrary.wiley.com/loi/19449194
       - name: Bulletin of the Seismological Society of America
+        abbreviations:
+          - BSSA
         links:
           - name: Homepage
             url: https://pubs.geoscienceworld.org/bssa
@@ -152,6 +165,8 @@ sections:
           - name: Archive
             url: https://pubs.geoscienceworld.org/bssa/list-of-years
       - name: Seismological Research Letters
+        abbreviations:
+          - SRL
         links:
           - name: Homepage
             url: https://pubs.geoscienceworld.org/srl
