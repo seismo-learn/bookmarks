@@ -6,6 +6,9 @@
 
   <div class="resource-search" data-resource-search>
     <div class="resource-search-controls">
+      <span class="resource-search-icon" aria-hidden="true">
+        <i class="fas fa-search"></i>
+      </span>
       <input
         id="resource-search-input"
         class="resource-search-input"
@@ -25,7 +28,14 @@
 
   <div data-resource-results>
   {{ range $data.sections }}
-  {{ partial "resource_section.html" . }}
+    {{ if eq .title "Journals" }}
+      <section class="resource-section" data-resource-section>
+        <h2 id="journals">Journals</h2>
+        {{ partial "resource_journal_list.html" (dict "resources" .resources) }}
+      </section>
+    {{ else }}
+      {{ partial "resource_section.html" . }}
+    {{ end }}
   {{ end }}
   </div>
 </div>
@@ -60,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var rawQuery = input.value.trim();
     var query = rawQuery.toLowerCase();
     var visibleCount = 0;
+    var visibleSections = 0;
 
     entries.forEach(function (entry) {
       var haystack = entry.dataset.searchText || "";
@@ -78,14 +89,16 @@ document.addEventListener("DOMContentLoaded", function () {
         group.hidden = !hasVisibleEntries;
       });
 
-      var directEntries = Array.prototype.slice.call(section.querySelectorAll(":scope > ul [data-resource-entry]"));
+      var directEntries = Array.prototype.slice.call(section.querySelectorAll("[data-resource-entry]"));
       var hasVisibleDirectEntries = directEntries.some(function (entry) {
         return !entry.hidden;
       });
       var hasVisibleGroups = groups.some(function (group) {
         return !group.hidden;
       });
-      section.hidden = !(hasVisibleDirectEntries || hasVisibleGroups);
+      var sectionVisible = hasVisibleDirectEntries || hasVisibleGroups;
+      section.hidden = !sectionVisible;
+      if (sectionVisible) visibleSections += 1;
     });
 
     emptyState.hidden = visibleCount !== 0;
@@ -125,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
           {{ $section := .title }}
           {{ with .groups }}
           <ul>
-            {{ range . }}
+      {{ range . }}
             <li><a href="#{{ anchorize (printf "%s-%s" $section .title) }}">{{ .title }}</a></li>
             {{ end }}
           </ul>

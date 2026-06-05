@@ -1,0 +1,39 @@
+{{ with .resources }}
+<div class="journal-list">
+{{ range . }}
+  {{ $searchText := printf "%s %s" .name (.description | default "") }}
+  {{ $links := .links | default (slice) }}
+  {{ range $links }}
+    {{ $searchText = printf "%s %s %s" $searchText .name .url }}
+  {{ end }}
+  <article class="journal-card" data-resource-entry data-search-text="{{ lower ($searchText | plainify) }}">
+    <div class="journal-card-head">
+      {{ if .url }}
+      <a class="journal-card-title" href="{{ .url }}">{{ .name }}</a>
+      {{ else }}
+      <strong class="journal-card-title">{{ .name }}</strong>
+      {{ end }}
+      {{ with .description }}<p class="journal-card-description">{{ . | markdownify }}</p>{{ end }}
+    </div>
+
+    {{ with .links }}
+    {{ $primaryLabels := slice "Homepage" "Current Issue" "Submission" "Submit" "Submission Guidelines" }}
+    <div class="journal-card-links">
+      {{ range $label := $primaryLabels }}
+        {{ range $link := $links }}
+          {{ if eq $link.name $label }}
+          <a class="journal-link-pill journal-link-pill-primary" href="{{ $link.url }}">{{ $link.name }}</a>
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      {{ range $link := $links }}
+        {{ if not (in $primaryLabels $link.name) }}
+        <a class="journal-link-pill" href="{{ $link.url }}">{{ $link.name }}</a>
+        {{ end }}
+      {{ end }}
+    </div>
+    {{ end }}
+  </article>
+{{ end }}
+</div>
+{{ end }}

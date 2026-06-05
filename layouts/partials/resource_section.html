@@ -1,11 +1,19 @@
 <section class="resource-section" data-resource-section>
-<h2 id="{{ anchorize .title }}">{{ .title }}</h2>
-{{ partial "resource_list.html" .resources }}
-{{ $section := .title }}
-{{ range .groups }}
-<div class="resource-group" data-resource-group>
-<h3 id="{{ anchorize (printf "%s-%s" $section .title) }}">{{ .title }}</h3>
-  {{ partial "resource_list.html" .resources }}
+  <h2 id="{{ anchorize .title }}">{{ .title }}</h2>
+  {{ if .isJournals }}
+    {{ partial "resource_journal_list.html" (dict "resources" .resources) }}
+  {{ else }}
+    {{ partial "resource_list.html" .resources }}
+  {{ end }}
+  {{ $section := .title }}
+  {{ range .groups }}
+  <div class="resource-group" data-resource-group>
+    <h3 id="{{ anchorize (printf "%s-%s" $section .title) }}">{{ .title }}</h3>
+    {{ if $.isJournals }}
+      {{ partial "resource_journal_list.html" (dict "resources" .resources) }}
+    {{ else }}
+      {{ partial "resource_list.html" .resources }}
+    {{ end }}
   </div>
-{{ end }}
-  </section>
+  {{ end }}
+</section>

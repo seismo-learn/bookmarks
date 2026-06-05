@@ -1,5 +1,5 @@
 sections:
-  - title: Multidisciplinary Journals
+  - title: Journals
     resources:
       - name: Science
         links:
@@ -47,9 +47,6 @@ sections:
             url: https://www.nature.com/srep/
           - name: Earth Sciences
             url: https://www.nature.com/subjects/earth-and-environmental-sciences/srep
-
-  - title: Earth Sciences Journals
-    resources:
       - name: AGU Advances
         links:
           - name: Homepage
@@ -108,12 +105,6 @@ sections:
             url: https://www.springer.com/journal/11430
           - name: Archive
             url: https://link.springer.com/journal/11430/volumes-and-issues
-      - name: Eos
-        url: https://eos.org
-        description: Earth & Space Science news distributed by [AGU](https://agupubs.onlinelibrary.wiley.com)
-
-  - title: Geophysics Journals
-    resources:
       - name: Geophysical Journal International
         links:
           - name: Homepage
@@ -152,9 +143,6 @@ sections:
             url: https://agupubs.onlinelibrary.wiley.com/toc/19449194/current
           - name: Archive
             url: https://agupubs.onlinelibrary.wiley.com/loi/19449194
-
-  - title: Seismology Journals
-    resources:
       - name: Bulletin of the Seismological Society of America
         links:
           - name: Homepage
@@ -174,7 +162,7 @@ sections:
           - name: Archive
             url: https://pubs.geoscienceworld.org/srl/list-of-years
 
-  - title: Preprint Archives
+  - title: Related Sources
     resources:
       - name: Earth and Space Science Open Archive (ESSOAr)
         links:
@@ -194,9 +182,6 @@ sections:
             url: https://arxiv.org/
           - name: Geophysics
             url: https://arxiv.org/list/physics.geo-ph/recent
-
-  - title: Researchers' Academic Profile
-    resources:
       - name: ORCID
         url: https://orcid.org/
         description: A persistent digital identifier for researchers
@@ -208,9 +193,6 @@ sections:
       - name: ResearchGate
         url: https://www.researchgate.net
         description: Social networking site for scientists and researchers
-
-  - title: Related Resources
-    resources:
       - name: "Journal Citation Reports (Chinese Academy of Sciences: Geosciences)"
         url: http://www.gaokeyan.com/journal/index.php?t=subject&sid=8&p=1&jcr=0
         description: in Chinese
