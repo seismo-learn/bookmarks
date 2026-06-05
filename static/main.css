@@ -471,6 +471,7 @@ aside {
     display: flex;
     gap: 0.5rem;
     justify-content: space-between;
+    min-height: 2.7em;
 }
 
 .journal-card-title-row .journal-card-title {
@@ -479,10 +480,13 @@ aside {
 
 .journal-card-title {
     color: #24323a;
-    display: inline-block;
+    display: -webkit-box;
     font-size: 0.95rem;
     font-weight: 600;
     line-height: 1.35;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 
 .journal-card-description {
