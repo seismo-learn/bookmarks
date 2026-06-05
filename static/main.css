@@ -147,11 +147,71 @@ aside {
 }
 
 .resource-page .resource-section + .resource-section {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+}
+
+.resource-section {
+    border-top: 1px solid #dde5ee;
+    padding-top: 1.25rem;
+}
+
+.resource-section-title {
+    margin-bottom: 1rem;
 }
 
 .resource-group {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+}
+
+.resource-group-title {
+    color: #5c6675;
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+}
+
+.resource-list {
+    display: grid;
+    gap: 0.85rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.resource-entry {
+    background: #f8fafc;
+    border: 1px solid #d9e1ea;
+    border-radius: 0.5rem;
+    padding: 0.9rem 1rem;
+}
+
+.resource-entry-title {
+    font-size: 1.02rem;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.resource-entry-description {
+    color: #5c6675;
+    margin: 0.45rem 0 0;
+}
+
+.resource-entry-description p {
+    margin: 0;
+}
+
+.resource-entry-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem 0.8rem;
+    margin-top: 0.7rem;
+}
+
+.resource-entry-links a {
+    background: #eef3f8;
+    border: 1px solid #d6dde6;
+    border-radius: 999px;
+    font-size: 0.92rem;
+    padding: 0.2rem 0.6rem;
 }
 
 li[data-resource-entry][hidden],

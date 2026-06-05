@@ -1,19 +1,25 @@
 {{ with . }}
-<ul>
+<ul class="resource-list">
 {{ range . }}
   {{ $searchText := printf "%s %s" .name (.description | default "") }}
   {{ range (.links | default (slice)) }}
     {{ $searchText = printf "%s %s %s" $searchText .name .url }}
   {{ end }}
-  <li data-resource-entry data-search-text="{{ lower ($searchText | plainify) }}">
-    {{ if .url }}
-    <a href="{{ .url }}">{{ .name }}</a>
-    {{ else }}
-    <strong>{{ .name }}</strong>
+  <li class="resource-entry" data-resource-entry data-search-text="{{ lower ($searchText | plainify) }}">
+    <div class="resource-entry-title">
+      {{ if .url }}
+      <a href="{{ .url }}">{{ .name }}</a>
+      {{ else }}
+      <strong>{{ .name }}</strong>
+      {{ end }}
+    </div>
+    {{ with .description }}
+    <p class="resource-entry-description">{{ . | markdownify }}</p>
     {{ end }}
-    {{ with .description }}: {{ . | markdownify }}{{ end }}
-    {{ with .links }}:
-      {{ range $index, $link := . }}{{ if $index }} | {{ end }}<a href="{{ $link.url }}">{{ $link.name }}</a>{{ end }}
+    {{ with .links }}
+    <div class="resource-entry-links" aria-label="Related links">
+      {{ range . }}<a href="{{ .url }}">{{ .name }}</a>{{ end }}
+    </div>
     {{ end }}
   </li>
 {{ end }}
