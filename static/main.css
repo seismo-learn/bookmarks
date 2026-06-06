@@ -207,10 +207,13 @@ footer {
 }
 
 .home-tile-arrow {
+    align-items: center;
     align-self: start;
     color: #6f837b;
-    font-size: 1rem;
-    font-weight: 600;
+    display: inline-flex;
+    font-size: 1.1rem;
+    justify-content: center;
+    line-height: 1;
 }
 
 .home-rule {
