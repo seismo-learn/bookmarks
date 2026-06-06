@@ -33,6 +33,9 @@ To build it locally, you need to follow the steps below:
     $ make serve
     ```
 
+    The build regenerates the homepage "recent updates" data automatically,
+    so you do not need to create that file by hand.
+
 ## Contributing
 
 Everyone is welcome to contribute to this site. Contributions include, but are not limited to:
