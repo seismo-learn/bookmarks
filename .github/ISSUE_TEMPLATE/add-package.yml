@@ -36,6 +36,14 @@ body:
       placeholder: Python, Fortran
     validations:
       required: false
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A concise, single-sentence description of the package itself.
+      placeholder: A Python package for seismic waveform analysis.
+    validations:
+      required: true
   - type: input
     id: category
     attributes:
@@ -45,13 +53,17 @@ body:
     validations:
       required: false
   - type: textarea
-    id: summary
+    id: why_it_belongs_here
     attributes:
       label: Why it belongs here
-      description: Briefly explain what the package does and why it should be added.
+      description: More detailed reasoning for why this package should be added.
       placeholder: This package helps with...
     validations:
       required: true
+  - type: markdown
+    attributes:
+      value: |
+        **Note:** new entries are added to `data/codes.yaml` in alphabetical order by package name.
   - type: checkboxes
     id: checklist
     attributes:
