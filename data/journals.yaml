@@ -1,185 +1,174 @@
 ---
-sections:
-- title: Journals
-  resources:
-  - name: Science
-    homepage: https://www.science.org/journal/science
-    links:
-    - name: Current Issue
-      url: https://www.science.org/toc/science/current
-    - name: Archive
-      url: https://www.science.org/loi/science
-  - name: Nature
-    homepage: https://www.nature.com/nature/
-    links:
-    - name: Current Issue
-      url: https://www.nature.com/nature/current-issue
-    - name: Archive
-      url: https://www.nature.com/nature/volumes
-  - name: Nature Communications
-    homepage: https://www.nature.com/ncomms/
-    links:
-    - name: Current Issue
-      url: https://www.nature.com/ncomms/current-issue
-    - name: Archive
-      url: https://www.nature.com/ncomms/volumes
-  - name: Communications Earth & Environment
-    homepage: https://www.nature.com/commsenv/
-    links:
-    - name: Current Issue
-      url: https://www.nature.com/commsenv/articles
-    - name: Archive
-      url: https://www.nature.com/commsenv/volumes
-  - name: Science Advances
-    homepage: https://www.science.org/journal/sciadv
-    links:
-    - name: Current Issue
-      url: https://www.science.org/toc/sciadv/current
-    - name: Archive
-      url: https://www.science.org/loi/sciadv
-  - name: Proceedings of the National Academy of Sciences
-    homepage: https://www.pnas.org
-    links:
-    - name: Current Issue
-      url: https://www.pnas.org/content/current
-    - name: Archive
-      url: https://www.pnas.org/loi/pnas
-  - name: Scientific Reports
-    homepage: https://www.nature.com/srep/
-    links:
-    - name: Current Issue
-      url: https://www.nature.com/srep/current-issue
-    - name: Archive
-      url: https://www.nature.com/srep/volumes
-  - name: AGU Advances
-    homepage: https://agupubs.onlinelibrary.wiley.com/journal/2576604x
-    links:
-    - name: Current Issue
-      url: https://agupubs.onlinelibrary.wiley.com/toc/2576604x/current
-    - name: Archive
-      url: https://agupubs.onlinelibrary.wiley.com/loi/2576604x
-  - name: Annual Review of Earth and Planetary Sciences
-    homepage: https://www.annualreviews.org/journal/earth
-    links:
-    - name: Current Issue
-      url: https://www.annualreviews.org/toc/earth/current
-    - name: Archive
-      url: https://www.annualreviews.org/loi/earth
-  - name: Earth and Planetary Science Letters
-    homepage: https://www.sciencedirect.com/journal/earth-and-planetary-science-letters
-    abbreviations:
-    - EPSL
-    links:
-    - name: Current Issue
-      url: https://www.sciencedirect.com/journal/earth-and-planetary-science-letters/latest
-    - name: Archive
-      url: https://www.sciencedirect.com/journal/earth-and-planetary-science-letters/issues
-  - name: Geochemistry, Geophysics, Geosystems
-    homepage: https://agupubs.onlinelibrary.wiley.com/journal/15252027
-    abbreviations:
-    - G-Cubed
-    - G3
-    links:
-    - name: Current Issue
-      url: https://agupubs.onlinelibrary.wiley.com/toc/15252027/current
-    - name: Archive
-      url: https://agupubs.onlinelibrary.wiley.com/loi/15252027
-  - name: Nature Geoscience
-    homepage: https://www.nature.com/ngeo/
-    links:
-    - name: Current Issue
-      url: https://www.nature.com/ngeo/current-issue
-    - name: Archive
-      url: https://www.nature.com/ngeo/volumes
-  - name: Nature Reviews Earth & Environment
-    homepage: https://www.nature.com/natrevearthenviron
-    links:
-    - name: Current Issue
-      url: https://www.nature.com/natrevearthenviron/current-issue
-    - name: Archive
-      url: https://www.nature.com/natrevearthenviron/volumes/
-  - name: Physics of the Earth and Planetary Interiors
-    homepage: https://www.sciencedirect.com/journal/physics-of-the-earth-and-planetary-interiors
-    abbreviations:
-    - PEPI
-    links:
-    - name: Current Issue
-      url: https://www.sciencedirect.com/journal/physics-of-the-earth-and-planetary-interiors/latest
-    - name: Archive
-      url: https://www.sciencedirect.com/journal/physics-of-the-earth-and-planetary-interiors/issues
-  - name: Science China Earth Sciences
-    homepage: https://www.springer.com/journal/11430
-    links:
-    - name: Current Issue
-      url: https://link.springer.com/journal/11430/volumes-and-issues
-  - name: Geophysical Journal International
-    homepage: https://academic.oup.com/gji
-    abbreviations:
-    - GJI
-    links:
-    - name: Current Issue
-      url: https://academic.oup.com/gji/issue
-    - name: Archive
-      url: https://academic.oup.com/gji/issue-archive
-  - name: Geophysical Research Letters
-    homepage: https://agupubs.onlinelibrary.wiley.com/journal/19448007
-    abbreviations:
-    - GRL
-    links:
-    - name: Current Issue
-      url: https://agupubs.onlinelibrary.wiley.com/toc/19448007/current
-    - name: Archive
-      url: https://agupubs.onlinelibrary.wiley.com/loi/19448007
-  - name: 'Journal of Geophysical Research: Solid Earth'
-    homepage: https://agupubs.onlinelibrary.wiley.com/journal/21699356
-    abbreviations:
-    - JGR Solid Earth
-    - JGR-SE
-    links:
-    - name: Current Issue
-      url: https://agupubs.onlinelibrary.wiley.com/toc/21699356/current
-    - name: Archive
-      url: https://agupubs.onlinelibrary.wiley.com/loi/21699356
-  - name: Reviews of Geophysics
-    homepage: https://agupubs.onlinelibrary.wiley.com/journal/19449208
-    abbreviations:
-    - Rev Geophys
-    links:
-    - name: Current Issue
-      url: https://agupubs.onlinelibrary.wiley.com/toc/19449208/current
-    - name: Archive
-      url: https://agupubs.onlinelibrary.wiley.com/loi/19449208
-  - name: Tectonics
-    homepage: https://agupubs.onlinelibrary.wiley.com/journal/19449194
-    links:
-    - name: Current Issue
-      url: https://agupubs.onlinelibrary.wiley.com/toc/19449194/current
-    - name: Archive
-      url: https://agupubs.onlinelibrary.wiley.com/loi/19449194
-  - name: Bulletin of the Seismological Society of America
-    homepage: https://pubs.geoscienceworld.org/bssa
-    abbreviations:
-    - BSSA
-    links:
-    - name: Current Issue
-      url: https://pubs.geoscienceworld.org/bssa/issue
-    - name: Archive
-      url: https://pubs.geoscienceworld.org/bssa/list-of-years
-  - name: Seismological Research Letters
-    homepage: https://pubs.geoscienceworld.org/srl
-    abbreviations:
-    - SRL
-    links:
-    - name: Current Issue
-      url: https://pubs.geoscienceworld.org/srl/issue
-    - name: Archive
-      url: https://pubs.geoscienceworld.org/srl/list-of-years
-- title: Related Sources
-  resources:
-  - name: Web of Science
-    url: https://www.webofknowledge.com
-  - name: Scopus
-    url: https://www.scopus.com/home.uri
-  - name: ResearchGate
-    url: https://www.researchgate.net
-    description: Social networking site for scientists and researchers
+resources:
+- name: Science
+  homepage: https://www.science.org/journal/science
+  links:
+  - name: Current Issue
+    url: https://www.science.org/toc/science/current
+  - name: Archive
+    url: https://www.science.org/loi/science
+- name: Nature
+  homepage: https://www.nature.com/nature/
+  links:
+  - name: Current Issue
+    url: https://www.nature.com/nature/current-issue
+  - name: Archive
+    url: https://www.nature.com/nature/volumes
+- name: Nature Communications
+  homepage: https://www.nature.com/ncomms/
+  links:
+  - name: Current Issue
+    url: https://www.nature.com/ncomms/current-issue
+  - name: Archive
+    url: https://www.nature.com/ncomms/volumes
+- name: Communications Earth & Environment
+  homepage: https://www.nature.com/commsenv/
+  links:
+  - name: Current Issue
+    url: https://www.nature.com/commsenv/articles
+  - name: Archive
+    url: https://www.nature.com/commsenv/volumes
+- name: Science Advances
+  homepage: https://www.science.org/journal/sciadv
+  links:
+  - name: Current Issue
+    url: https://www.science.org/toc/sciadv/current
+  - name: Archive
+    url: https://www.science.org/loi/sciadv
+- name: Proceedings of the National Academy of Sciences
+  homepage: https://www.pnas.org
+  links:
+  - name: Current Issue
+    url: https://www.pnas.org/content/current
+  - name: Archive
+    url: https://www.pnas.org/loi/pnas
+- name: Scientific Reports
+  homepage: https://www.nature.com/srep/
+  links:
+  - name: Current Issue
+    url: https://www.nature.com/srep/current-issue
+  - name: Archive
+    url: https://www.nature.com/srep/volumes
+- name: AGU Advances
+  homepage: https://agupubs.onlinelibrary.wiley.com/journal/2576604x
+  links:
+  - name: Current Issue
+    url: https://agupubs.onlinelibrary.wiley.com/toc/2576604x/current
+  - name: Archive
+    url: https://agupubs.onlinelibrary.wiley.com/loi/2576604x
+- name: Annual Review of Earth and Planetary Sciences
+  homepage: https://www.annualreviews.org/journal/earth
+  links:
+  - name: Current Issue
+    url: https://www.annualreviews.org/toc/earth/current
+  - name: Archive
+    url: https://www.annualreviews.org/loi/earth
+- name: Earth and Planetary Science Letters
+  homepage: https://www.sciencedirect.com/journal/earth-and-planetary-science-letters
+  abbreviations:
+  - EPSL
+  links:
+  - name: Current Issue
+    url: https://www.sciencedirect.com/journal/earth-and-planetary-science-letters/latest
+  - name: Archive
+    url: https://www.sciencedirect.com/journal/earth-and-planetary-science-letters/issues
+- name: Geochemistry, Geophysics, Geosystems
+  homepage: https://agupubs.onlinelibrary.wiley.com/journal/15252027
+  abbreviations:
+  - G-Cubed
+  - G3
+  links:
+  - name: Current Issue
+    url: https://agupubs.onlinelibrary.wiley.com/toc/15252027/current
+  - name: Archive
+    url: https://agupubs.onlinelibrary.wiley.com/loi/15252027
+- name: Nature Geoscience
+  homepage: https://www.nature.com/ngeo/
+  links:
+  - name: Current Issue
+    url: https://www.nature.com/ngeo/current-issue
+  - name: Archive
+    url: https://www.nature.com/ngeo/volumes
+- name: Nature Reviews Earth & Environment
+  homepage: https://www.nature.com/natrevearthenviron
+  links:
+  - name: Current Issue
+    url: https://www.nature.com/natrevearthenviron/current-issue
+  - name: Archive
+    url: https://www.nature.com/natrevearthenviron/volumes/
+- name: Physics of the Earth and Planetary Interiors
+  homepage: https://www.sciencedirect.com/journal/physics-of-the-earth-and-planetary-interiors
+  abbreviations:
+  - PEPI
+  links:
+  - name: Current Issue
+    url: https://www.sciencedirect.com/journal/physics-of-the-earth-and-planetary-interiors/latest
+  - name: Archive
+    url: https://www.sciencedirect.com/journal/physics-of-the-earth-and-planetary-interiors/issues
+- name: Science China Earth Sciences
+  homepage: https://www.springer.com/journal/11430
+  links:
+  - name: Current Issue
+    url: https://link.springer.com/journal/11430/volumes-and-issues
+- name: Geophysical Journal International
+  homepage: https://academic.oup.com/gji
+  abbreviations:
+  - GJI
+  links:
+  - name: Current Issue
+    url: https://academic.oup.com/gji/issue
+  - name: Archive
+    url: https://academic.oup.com/gji/issue-archive
+- name: Geophysical Research Letters
+  homepage: https://agupubs.onlinelibrary.wiley.com/journal/19448007
+  abbreviations:
+  - GRL
+  links:
+  - name: Current Issue
+    url: https://agupubs.onlinelibrary.wiley.com/toc/19448007/current
+  - name: Archive
+    url: https://agupubs.onlinelibrary.wiley.com/loi/19448007
+- name: 'Journal of Geophysical Research: Solid Earth'
+  homepage: https://agupubs.onlinelibrary.wiley.com/journal/21699356
+  abbreviations:
+  - JGR Solid Earth
+  - JGR-SE
+  links:
+  - name: Current Issue
+    url: https://agupubs.onlinelibrary.wiley.com/toc/21699356/current
+  - name: Archive
+    url: https://agupubs.onlinelibrary.wiley.com/loi/21699356
+- name: Reviews of Geophysics
+  homepage: https://agupubs.onlinelibrary.wiley.com/journal/19449208
+  abbreviations:
+  - Rev Geophys
+  links:
+  - name: Current Issue
+    url: https://agupubs.onlinelibrary.wiley.com/toc/19449208/current
+  - name: Archive
+    url: https://agupubs.onlinelibrary.wiley.com/loi/19449208
+- name: Tectonics
+  homepage: https://agupubs.onlinelibrary.wiley.com/journal/19449194
+  links:
+  - name: Current Issue
+    url: https://agupubs.onlinelibrary.wiley.com/toc/19449194/current
+  - name: Archive
+    url: https://agupubs.onlinelibrary.wiley.com/loi/19449194
+- name: Bulletin of the Seismological Society of America
+  homepage: https://pubs.geoscienceworld.org/bssa
+  abbreviations:
+  - BSSA
+  links:
+  - name: Current Issue
+    url: https://pubs.geoscienceworld.org/bssa/issue
+  - name: Archive
+    url: https://pubs.geoscienceworld.org/bssa/list-of-years
+- name: Seismological Research Letters
+  homepage: https://pubs.geoscienceworld.org/srl
+  abbreviations:
+  - SRL
+  links:
+  - name: Current Issue
+    url: https://pubs.geoscienceworld.org/srl/issue
+  - name: Archive
+    url: https://pubs.geoscienceworld.org/srl/list-of-years

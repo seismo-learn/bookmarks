@@ -27,15 +27,10 @@
   <div class="resource-empty-state" data-resource-empty hidden>No matching entries found.</div>
 
   <div data-resource-results>
-  {{ range $data.sections }}
-    {{ if eq .title "Journals" }}
-      <section class="resource-section" data-resource-section>
-        <h2 id="journals">Journals</h2>
-        {{ partial "resource_journal_list.html" (dict "resources" .resources) }}
-      </section>
-    {{ else }}
-      {{ partial "resource_section.html" . }}
-    {{ end }}
+  {{ with $data.resources }}
+    <section class="resource-section" data-resource-section>
+      {{ partial "resource_journal_list.html" (dict "resources" .) }}
+    </section>
   {{ end }}
   </div>
 </div>
@@ -126,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 {{ define "toc" }}
 {{ $data := partial "resource_data.html" . }}
-{{ if and .Params.toc $data }}
+{{ if and .Params.toc $data.sections }}
 <aside>
   <details class="resource-toc">
     <summary>Table of Contents</summary>
