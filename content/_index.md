@@ -15,8 +15,8 @@ cards:
     link: codes
     icon: fa-code
     description: Scientific software, processing packages, workflows, and code collections.
-  - name: Database
-    link: database
+  - name: Dataset
+    link: dataset
     icon: fa-database
     description: Earthquake catalogs, seismic networks, stations, maps, and reference datasets.
   - name: Learning
