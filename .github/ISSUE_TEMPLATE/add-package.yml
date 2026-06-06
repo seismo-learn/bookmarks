@@ -60,10 +60,6 @@ body:
       placeholder: This package helps with...
     validations:
       required: true
-  - type: markdown
-    attributes:
-      value: |
-        **Note:** new entries are added to `data/codes.yaml` in alphabetical order by package name.
   - type: checkboxes
     id: checklist
     attributes:

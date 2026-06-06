@@ -6,6 +6,7 @@ When working from the "Add a package" issue form, treat the submitted fields as 
 
 - Add the package entry to `data/codes.yaml` under the existing `sections` structure.
 - Keep the entry sorted alphabetically by `name` within its section.
+- When adding a new package, insert it in the correct alphabetical position rather than appending it to the end.
 - Use the issue form fields as follows:
   - `Package name` -> `name`
   - `Homepage` -> `url`
