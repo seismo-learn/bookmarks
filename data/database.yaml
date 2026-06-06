@@ -196,7 +196,7 @@ sections:
     resources:
     - name: 地震科学数据中心
       url: http://www.esdc.ac.cn/
-      description: Previous data centers do not work now.
+      description: Previous data centers are no longer functional.
       links:
       - name: 中国地震学科数据中心：国家测震台网数据备份中心
         url: http://www.seisdmc.ac.cn/

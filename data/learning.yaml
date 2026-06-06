@@ -8,7 +8,7 @@ sections:
             description: What are those "beach balls"? A 6-minute video explaining beachballs for non-seismologists and beginners
           - name: SEED Channel Naming
             url: https://ds.iris.edu/ds/nodes/dmc/data/formats/seed-channel-naming/
-            description: Explain channel code for seismic waveform data
+            description: Explains channel codes for seismic waveform data
 
       - title: Workshops & Courses
         resources:

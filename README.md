@@ -35,7 +35,7 @@ To build it locally, you need to follow the steps below:
 
 ## Contributing
 
-Everyone is welcome to contribute to this site. Contributions include but not limited to:
+Everyone is welcome to contribute to this site. Contributions include, but are not limited to:
 
 - Add more useful links
 - Report/Fix broken links

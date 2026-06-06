@@ -5,7 +5,7 @@ This document describes structured resource lists rendered by the reusable
 
 ## Page front matter
 
-Use the `resources` layout and point `resource_data` at a data file name:
+Use the `resources` layout and point `resource_data` to a data file name:
 
 ```yaml
 ---

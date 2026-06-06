@@ -31,7 +31,7 @@ sections:
     - Waveform Modeling
   - name: AxiSEM3D
     url: https://github.com/AxiSEMunity/AxiSEM3D
-    description: a spectral-element based solver for large-scale 3D seismic wave propagation simulations.
+    description: A spectral-element based solver for large-scale 3D seismic wave propagation simulations.
     languages:
     - C++
     tags:

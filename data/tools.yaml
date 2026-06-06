@@ -25,7 +25,7 @@ sections:
             description: Simple way to choose a license
           - name: DevDocs
             url: https://devdocs.io/
-            description: API documentations of multiple programming languages/tools in one place
+            description: API documentation for multiple programming languages/tools in one place
           - name: regex101
             url: https://regex101.com/
             description: Online regular expressions tester and debugger
@@ -44,7 +44,7 @@ sections:
         resources:
           - name: Convertio
             url: https://convertio.co/
-            description: Convert your files to any formats (300+ formats supported)
+            description: Convert your files to any format (300+ formats supported)
           - name: WebPlotDigitizer
             url: https://automeris.io/WebPlotDigitizer
             description: Web based tool to extract data from plots, images, and maps
