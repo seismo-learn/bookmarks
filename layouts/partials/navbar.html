@@ -1,6 +1,6 @@
 <nav class="navbar sticky-top navbar-expand navbar-light">
-	<a class="navbar-brand" href="{{ .Site.BaseURL }}">
-		<img src="{{ .Site.BaseURL }}/logo.png" style="width:30px" />
+	<a class="navbar-brand" href="{{ "" | relURL }}">
+		<img src="{{ "logo.png" | relURL }}" style="width:30px" />
 		{{ .Site.Title }}
 	</a>
 

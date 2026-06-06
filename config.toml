@@ -3,7 +3,7 @@
 #
 baseURL = "https://seismo-learn.org/links/"
 locale = "en-us"
-title = "Seismo Links"
+title = "Seismo Bookmarks"
 copyright = "&copy; Copyright 2018 - {year}, [seismo-learn](https://seismo-learn.org/)."
 disableKinds = [ "taxonomy", "RSS" ]
 enableGitInfo = true
