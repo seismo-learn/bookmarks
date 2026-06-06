@@ -1,6 +1,6 @@
 # Seismo Bookmarks
 
-[![Deploy](https://github.com/seismo-learn/links/actions/workflows/deploy.yml/badge.svg)](https://github.com/seismo-learn/links/actions/workflows/deploy.yml)
+[![Deploy](https://github.com/seismo-learn/bookmarks/actions/workflows/deploy.yml/badge.svg)](https://github.com/seismo-learn/bookmarks/actions/workflows/deploy.yml)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc/4.0/deed.en)
 
 This repository contains the source code for the [Seismo Bookmarks](https://seismo-learn.org/links/)
@@ -20,14 +20,14 @@ To build it locally, you need to follow the steps below:
 
     ```
     # Clone the repository and then switch to the directory
-    $ git clone https://github.com/seismo-learn/links.git
-    $ cd links
+    $ git clone https://github.com/seismo-learn/bookmarks.git
+    $ cd bookmarks
     ```
 
 3.  Build the website
 
 	Run the following command, then you can view the site by visiting
-    http://localhost:1313/links/ in your local web browser.
+    http://localhost:1313/bookmarks/ in your local web browser.
 
     ```
     $ make serve
@@ -42,8 +42,8 @@ Everyone is welcome to contribute to this site. Contributions include, but are n
 - Improve the web design
 - Any brilliant ideas
 
-For any contributions, please open an [issue](https://github.com/seismo-learn/links/issues)
-or submit a [Pull Request](https://github.com/seismo-learn/links/pulls).
+For any contributions, please open an [issue](https://github.com/seismo-learn/bookmarks/issues)
+or submit a [Pull Request](https://github.com/seismo-learn/bookmarks/pulls).
 You could also refer to the [contributing guides](https://seismo-learn.org/contributing/) (in Chinese)
 if you are unfamiliar with git, GitHub, Markdown and so on.
 

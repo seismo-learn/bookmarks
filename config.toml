@@ -1,7 +1,7 @@
 #
 # Hugo configuration file
 #
-baseURL = "https://seismo-learn.org/links/"
+baseURL = "https://seismo-learn.org/bookmarks/"
 locale = "en-us"
 title = "Seismo Bookmarks"
 copyright = "&copy; Copyright 2018 - {year}, [seismo-learn](https://seismo-learn.org/)."
@@ -23,7 +23,7 @@ lastupdate = "Built by [Hugo](https://gohugo.io/) on {now}."
   jquery_version = "3.7.1"
 
   [params.edit_page]
-  repo_url = "https://github.com/seismo-learn/links"
+  repo_url = "https://github.com/seismo-learn/bookmarks"
   branch = "main"
   edit_mode = "edit"
   repo_dir = "content"
@@ -43,5 +43,5 @@ lastupdate = "Built by [Hugo](https://gohugo.io/) on {now}."
 
 [[menu.main]]
   name = '<i class="fab fa-github"></i>'
-  url = "https://github.com/seismo-learn/links"
+  url = "https://github.com/seismo-learn/bookmarks"
   weight = 40
