@@ -196,6 +196,7 @@ sections:
   - name: GMT
     url: https://www.generic-mapping-tools.org/
     description: The Generic Mapping Tools
+    doi: 10.1029/2019GC008515
     languages:
     - C
     tags:
@@ -224,7 +225,7 @@ sections:
     - Shell
     tags:
     - InSAR
-  - name: GPU-MatchLocate1.0
+  - name: GPU-MatchLocate
     url: https://github.com/MinLiu19/GPU-MatchLocate1.0
     description: An improved match and locate method using GPU
     languages:
@@ -274,6 +275,7 @@ sections:
   - name: HinetPy
     url: https://github.com/seisman/hinetpy
     description: A Python package for accessing and processing NIED Hi-net seismic data.
+    doi: 10.21105/joss.06840
     languages:
     - Python
     tags:

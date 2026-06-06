@@ -541,8 +541,8 @@ aside {
 .resource-tag-list {
     display: inline-flex;
     flex-wrap: wrap;
-    gap: 0.25rem;
-    margin-left: 0.3rem;
+    gap: 0.18rem;
+    margin-left: 0.15rem;
     vertical-align: middle;
 }
 
@@ -557,7 +557,7 @@ aside {
     font-weight: 600;
     letter-spacing: 0;
     line-height: 1;
-    padding: 0.22rem 0.5rem;
+    padding: 0.16rem 0.42rem;
 }
 
 .resource-tag.resource-filter-tag.is-active {
@@ -569,8 +569,8 @@ aside {
 .resource-language-list {
     display: inline-flex;
     flex-wrap: wrap;
-    gap: 0.25rem;
-    margin-left: 0.3rem;
+    gap: 0.18rem;
+    margin-left: 0.15rem;
     vertical-align: middle;
 }
 
@@ -584,7 +584,7 @@ aside {
     font-size: 0.75rem;
     font-weight: 600;
     line-height: 1;
-    padding: 0.22rem 0.5rem;
+    padding: 0.16rem 0.42rem;
 }
 
 .resource-language.resource-filter-language.is-active {
@@ -608,6 +608,13 @@ aside {
     border-bottom: 1px solid #d7ddd7;
     padding: 0.7rem 0.75rem;
     vertical-align: top;
+}
+
+.codes-col-tags,
+.codes-col-languages,
+.codes-col-links {
+    padding-left: 0.45rem;
+    padding-right: 0.45rem;
 }
 
 .codes-table th + th,
@@ -765,11 +772,11 @@ aside {
 }
 
 .codes-col-details {
-    width: 37%;
+    width: 38%;
 }
 
 .codes-col-tags {
-    width: 20%;
+    width: 18%;
 }
 
 .codes-col-languages {
@@ -789,17 +796,20 @@ aside {
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
+    margin-top: 0.06rem;
     max-width: 100%;
 }
 
 .codes-related-link {
-    background: #f6f8f4;
-    border: 1px solid #cfdbd1;
+    background: linear-gradient(180deg, #f5faf6 0%, #e8f0ec 100%);
+    border: 1px solid #c7d2cb;
     border-radius: 999px;
-    color: #345c52;
+    color: #23443d;
     display: inline-flex;
+    font-size: 0.75rem;
+    font-weight: 600;
     line-height: 1;
-    padding: 0.28rem 0.55rem;
+    padding: 0.16rem 0.42rem;
     text-decoration: none;
 }
 
@@ -813,6 +823,14 @@ aside {
 .codes-related-link {
     max-width: 100%;
     overflow-wrap: anywhere;
+}
+
+.codes-related-links .codes-doi-link {
+    color: #62707a;
+}
+
+.codes-related-links .codes-doi-link:hover {
+    color: #345c52;
 }
 
 .codes-tag-filter {

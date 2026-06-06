@@ -26,6 +26,9 @@
       {{ range (.languages | default (slice)) }}
         {{ $searchText = printf "%s %s" $searchText . }}
       {{ end }}
+      {{ with .doi }}
+        {{ $searchText = printf "%s %s" $searchText . }}
+      {{ end }}
       {{ range (.links | default (slice)) }}
         {{ $searchText = printf "%s %s %s" $searchText .name .url }}
       {{ end }}
@@ -63,6 +66,11 @@
           {{ end }}
         </td>
         <td class="codes-col-links">
+          {{ with .doi }}
+          <div class="codes-related-links">
+            <a class="codes-related-link codes-doi-link" href="https://dx.doi.org/{{ . }}">DOI: {{ . }}</a>
+          </div>
+          {{ end }}
           {{ with .links }}
           <div class="codes-related-links">
             {{ range . }}<a class="codes-related-link" href="{{ .url }}">{{ .name }}</a>{{ end }}
