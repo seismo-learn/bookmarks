@@ -99,11 +99,12 @@ footer {
     background: #f6f8f4;
     border: 1px solid #d7ddd7;
     border-radius: 0.5rem;
-    padding: 1rem 1rem 1.05rem;
+    padding: 1.05rem 1.05rem 1.1rem;
 }
 
 .home-highlight h2 {
     font-size: 1rem;
+    font-weight: 500;
     margin: 0 0 0.45rem;
 }
 
@@ -118,12 +119,13 @@ footer {
     flex-wrap: wrap;
     gap: 0.5rem 1rem;
     justify-content: space-between;
-    margin-bottom: 1.1rem;
+    margin-bottom: 1.25rem;
 }
 
 .home-section-heading h2 {
     color: #24323a;
     font-size: 1.35rem;
+    font-weight: 500;
     margin: 0;
 }
 

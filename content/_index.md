@@ -4,11 +4,11 @@ intro: A curated directory for seismology and geoscience research, organized to 
 contribute_note: This directory stays useful because people keep improving it. Missing links, outdated resources, and better references are all worth contributing.
 highlights:
   - title: Community-curated
-    text: Keep useful resources in one maintained directory instead of scattered bookmarks.
+    text: Maintained by contributors who keep the directory current.
   - title: Research-focused
-    text: Prioritize tools, data portals, journals, and learning material that support real work.
+    text: Collected for real seismology and geoscience work.
   - title: Easy to improve
-    text: Every page links back to its source file so contributors can fix and expand entries quickly.
+    text: Each page links back to its source file for quick edits.
 # list of cards shown on the landing page
 cards:
   - name: Codes
