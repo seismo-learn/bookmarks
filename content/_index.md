@@ -1,6 +1,6 @@
 ---
 title: Seismo Bookmarks
-intro: A curated directory for seismology and geoscience research, built to help students, researchers, and practitioners get to useful journals, software, databases, learning material, jobs, and practical tools faster.
+intro: A curated directory for seismology and geoscience research, organized to help students, researchers, and practitioners reach useful journals, software, databases, learning material, jobs, and practical tools faster.
 contribute_note: This directory stays useful because people keep improving it. Missing links, outdated resources, and better references are all worth contributing.
 highlights:
   - title: Community-curated

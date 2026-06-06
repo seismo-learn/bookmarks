@@ -1,5 +1,5 @@
 ---
-title: Scientific Research Codes
+title: Codes
 layout: codes
 resource_data: codes
 edit_path: data/codes.yaml
