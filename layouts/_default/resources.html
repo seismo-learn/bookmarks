@@ -13,7 +13,7 @@
         id="resource-search-input"
         class="resource-search-input"
         type="search"
-        placeholder="Filter by name, description, or related link"
+        placeholder='{{ if eq .Title "Journals" }}Filter by name, abbreviation, or related link{{ else }}Filter by name, description, or related link{{ end }}'
         autocomplete="off"
         spellcheck="false"
         data-resource-search-input
