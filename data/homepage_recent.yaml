@@ -1,0 +1,10 @@
+recent_updates:
+  - date: 2026-06-06
+    message: Add seed-vault
+    hash: 1ec316932a228cf70f6ecad105b6c0f484ef971e
+  - date: 2026-06-05
+    message: Remove a few journal links
+    hash: b58ecd42a7707121123ed81875cac15f4fceb21b
+  - date: 2026-06-05
+    message: Add one more journal
+    hash: c30bcbbeeff4bb2ec75f43f32e020d954b9583e1

@@ -5,6 +5,21 @@
 			<p class="home-kicker">Seismology &amp; Geoscience Resources</p>
 			<p class="home-summary">{{ .Params.intro }}</p>
 		</div>
+		{{ with hugo.Data.homepage_recent.recent_updates }}
+		<aside class="home-recent-update">
+			<h2 class="home-recent-label">Recent updates</h2>
+			<ul class="home-recent-list">
+				{{ range . }}
+				<li class="home-recent-item">
+					<div class="home-recent-line">
+						<span class="home-recent-date">{{ .date }}</span>
+						<a class="home-recent-message" href="{{ $.Site.Params.edit_page.repo_url }}/commit/{{ .hash }}">{{ .message }}</a>
+					</div>
+				</li>
+				{{ end }}
+			</ul>
+		</aside>
+		{{ end }}
 	</header>
 
 	<section class="home-section">

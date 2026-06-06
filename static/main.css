@@ -88,6 +88,75 @@ footer {
     margin: 0;
 }
 
+.home-recent-update {
+    align-items: flex-start;
+    align-self: stretch;
+    background: linear-gradient(180deg, #f5f8fb 0%, #eef3f8 100%);
+    border: 1px solid #d6dde6;
+    border-radius: 0.5rem;
+    color: #53606b;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    justify-content: center;
+    margin: 0;
+    min-height: 100%;
+    padding: 0.9rem 1rem;
+}
+
+.home-recent-label {
+    color: #24323a;
+    font-size: 0.96rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.home-recent-list {
+    display: grid;
+    gap: 0.45rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.home-recent-item {
+    display: grid;
+    gap: 0.15rem;
+}
+
+.home-recent-line {
+    align-items: baseline;
+    display: grid;
+    gap: 0.25rem 0.45rem;
+    grid-template-columns: auto 1fr;
+}
+
+.home-recent-date {
+    color: #6b7882;
+    font-size: 0.96rem;
+    line-height: 1.35;
+}
+
+.home-recent-message {
+    color: #24323a;
+    display: block;
+    font-size: 0.96rem;
+    line-height: 1.35;
+    text-decoration: none;
+}
+
+.home-recent-message:hover {
+    color: #1f3a33;
+    text-decoration: underline;
+}
+
+@media (max-width: 62em) {
+    .home-recent-update {
+        min-height: auto;
+    }
+}
+
 .home-highlights {
     display: grid;
     gap: 1rem;
