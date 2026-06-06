@@ -595,7 +595,7 @@ sections:
       url: https://docs.gmt-china.org/latest/dataset/gshhg/
   - name: DCW
     url: https://github.com/genericMappingTools/dcw-gmt
-    description: The **D**igital **C**hart of the **W**orld **D**ata
+    description: The **D**igital **C**hart of the **W**orld
     links:
     - name: 'GMT-China: 世界数字图表'
       url: https://docs.gmt-china.org/latest/dataset/dcw/

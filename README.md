@@ -3,7 +3,7 @@
 [![Deploy](https://github.com/seismo-learn/bookmarks/actions/workflows/deploy.yml/badge.svg)](https://github.com/seismo-learn/bookmarks/actions/workflows/deploy.yml)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc/4.0/deed.en)
 
-This repository contains the source code for the [Seismo Bookmarks](https://seismo-learn.org/links/)
+This repository contains the source code for the [Seismo Bookmarks](https://seismo-learn.org/bookmarks/)
 site, which collects useful links for Geophysics and Seismology research.
 
 ## Build the site locally
