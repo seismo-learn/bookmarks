@@ -4,7 +4,7 @@ set -eu
 repo_dir=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 output="$repo_dir/data/homepage_recent.yaml"
 
-commits=$(git -C "$repo_dir" log -20 --format='%H%x1f%cs%x1f%s' -- data/*.yaml || true)
+commits=$(git -C "$repo_dir" log -50 --format='%H%x1f%cs%x1f%s' -- data/*.yaml || true)
 
 if [ -n "$commits" ]; then
   {
