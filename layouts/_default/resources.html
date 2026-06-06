@@ -34,6 +34,19 @@
       </section>
     {{ end }}
     <p class="journals-hint">Missing a journal? <a href="{{ $.Site.Params.edit_page.repo_url }}/blob/{{ $.Site.Params.edit_page.branch }}/data/journals.yaml">Edit the data and submit a pull request!</a></p>
+  {{ else if eq .Title "Dataset" }}
+    <div class="codes-toolbar dataset-toolbar">
+      <p class="codes-count" data-dataset-count></p>
+      <button type="button" class="codes-reset" data-dataset-reset hidden>Reset filters</button>
+    </div>
+    <div class="codes-tag-filter dataset-category-filter" data-dataset-category-filter hidden>
+      <span class="codes-tag-filter-label">Categories</span>
+      <div class="codes-tag-filter-list" data-dataset-category-filter-list></div>
+      <button type="button" class="codes-tag-filter-clear" data-dataset-category-filter-clear hidden>Clear category</button>
+    </div>
+    <section class="resource-section" data-resource-section>
+      {{ partial "resource_table_flat.html" $data.resources }}
+    </section>
   {{ else }}
     {{ range $data.sections }}
       {{ partial "resource_section.html" . }}
@@ -53,6 +66,19 @@ document.addEventListener("DOMContentLoaded", function () {
   var sections = Array.prototype.slice.call(document.querySelectorAll("[data-resource-section]"));
   var entries = Array.prototype.slice.call(document.querySelectorAll("[data-resource-entry]"));
   var params = new URLSearchParams(window.location.search);
+  var datasetCount = document.querySelector("[data-dataset-count]");
+  var datasetReset = document.querySelector("[data-dataset-reset]");
+  var datasetTable = document.querySelector(".resource-table");
+  var datasetSortHeaders = Array.prototype.slice.call(document.querySelectorAll("[data-dataset-sort-field]"));
+  var datasetCategoryFilter = document.querySelector("[data-dataset-category-filter]");
+  var datasetCategoryFilterList = document.querySelector("[data-dataset-category-filter-list]");
+  var datasetCategoryFilterClear = document.querySelector("[data-dataset-category-filter-clear]");
+  var datasetRowCategoryButtons = Array.prototype.slice.call(document.querySelectorAll("[data-dataset-filter-category]"));
+  var datasetCategories = {};
+  var datasetCategoryLabels = {};
+  var activeDatasetSort = (params.get("sort") || "category").toLowerCase();
+  var datasetSortDir = (params.get("dir") || "asc").toLowerCase();
+  var activeDatasetCategory = (params.get("category") || "").toLowerCase();
 
   if (params.has("q")) {
     input.value = params.get("q");
@@ -68,11 +94,117 @@ document.addEventListener("DOMContentLoaded", function () {
     window.history.replaceState({}, "", next);
   }
 
+  function syncDatasetQueryParam(query) {
+    var next = new URL(window.location.href);
+    if (query === "") {
+      next.searchParams.delete("q");
+    } else {
+      next.searchParams.set("q", query);
+    }
+    if (activeDatasetSort === "category") {
+      next.searchParams.delete("sort");
+    } else {
+      next.searchParams.set("sort", activeDatasetSort);
+    }
+    if (datasetSortDir === "asc") {
+      next.searchParams.delete("dir");
+    } else {
+      next.searchParams.set("dir", datasetSortDir);
+    }
+    if (activeDatasetCategory === "") {
+      next.searchParams.delete("category");
+    } else {
+      next.searchParams.set("category", activeDatasetCategory);
+    }
+    window.history.replaceState({}, "", next);
+  }
+
+  function updateDatasetSortUI() {
+    datasetSortHeaders.forEach(function (header) {
+      var field = header.dataset.datasetSortField;
+      header.classList.toggle("is-active", field === activeDatasetSort);
+      header.setAttribute("aria-sort", field === activeDatasetSort ? (datasetSortDir === "asc" ? "ascending" : "descending") : "none");
+      var icon = header.querySelector("i");
+      if (icon) {
+        if (field === activeDatasetSort) {
+          icon.className = datasetSortDir === "asc" ? "fas fa-sort-up" : "fas fa-sort-down";
+        } else {
+          icon.className = "fas fa-sort";
+        }
+      }
+    });
+  }
+
+  function updateDatasetFilterUI() {
+    if (datasetCategoryFilterClear) {
+      datasetCategoryFilterClear.hidden = activeDatasetCategory === "";
+    }
+    if (datasetCategoryFilterList) {
+      Array.prototype.slice.call(datasetCategoryFilterList.querySelectorAll(".codes-tag-filter-chip")).forEach(function (button) {
+        button.classList.toggle("is-active", button.dataset.category === activeDatasetCategory);
+      });
+    }
+    datasetRowCategoryButtons.forEach(function (button) {
+      button.classList.toggle("is-active", button.dataset.datasetFilterCategory === activeDatasetCategory);
+    });
+  }
+
+  function updateDatasetResults() {
+    var rawQuery = input.value.trim();
+    var query = rawQuery.toLowerCase();
+    var visibleCount = 0;
+
+    entries.forEach(function (entry) {
+      var haystack = entry.dataset.searchText || "";
+      var entryCategories = (entry.dataset.category || "").split(",").map(function (category) {
+        return category.trim();
+      }).filter(Boolean);
+      var categoryMatched = activeDatasetCategory === "" || entryCategories.indexOf(activeDatasetCategory) !== -1;
+      var matched = (query === "" || haystack.indexOf(query) !== -1) && categoryMatched;
+      entry.hidden = !matched;
+      entry.dataset.matches = matched ? "1" : "0";
+      if (matched) visibleCount += 1;
+    });
+
+    if (datasetTable) {
+      var tbody = datasetTable.querySelector("tbody");
+      if (tbody) {
+        entries.slice().sort(function (a, b) {
+          var aVisible = a.dataset.matches === "1";
+          var bVisible = b.dataset.matches === "1";
+          if (aVisible !== bVisible) {
+            return aVisible ? -1 : 1;
+          }
+          var aKey = activeDatasetSort === "category" ? (a.dataset.category || "") : (a.dataset.name || "");
+          var bKey = activeDatasetSort === "category" ? (b.dataset.category || "") : (b.dataset.name || "");
+          aKey = aKey.toLowerCase();
+          bKey = bKey.toLowerCase();
+          if (aKey < bKey) return datasetSortDir === "asc" ? -1 : 1;
+          if (aKey > bKey) return datasetSortDir === "asc" ? 1 : -1;
+          return 0;
+        }).forEach(function (entry) {
+          tbody.appendChild(entry);
+        });
+      }
+    }
+
+    emptyState.hidden = visibleCount !== 0;
+    clearButton.hidden = rawQuery === "";
+    if (datasetCount) {
+      datasetCount.textContent = visibleCount + " of " + entries.length + " datasets shown";
+    }
+    if (datasetReset) {
+      datasetReset.hidden = rawQuery === "" && activeDatasetCategory === "" && activeDatasetSort === "category" && datasetSortDir === "asc";
+    }
+    updateDatasetSortUI();
+    updateDatasetFilterUI();
+    syncDatasetQueryParam(rawQuery);
+  }
+
   function updateResults() {
     var rawQuery = input.value.trim();
     var query = rawQuery.toLowerCase();
     var visibleCount = 0;
-    var visibleSections = 0;
 
     entries.forEach(function (entry) {
       var haystack = entry.dataset.searchText || "";
@@ -98,14 +230,101 @@ document.addEventListener("DOMContentLoaded", function () {
       var hasVisibleGroups = groups.some(function (group) {
         return !group.hidden;
       });
-      var sectionVisible = hasVisibleDirectEntries || hasVisibleGroups;
-      section.hidden = !sectionVisible;
-      if (sectionVisible) visibleSections += 1;
+      section.hidden = !(hasVisibleDirectEntries || hasVisibleGroups);
     });
 
     emptyState.hidden = visibleCount !== 0;
     clearButton.hidden = rawQuery === "";
     syncQueryParam(rawQuery);
+  }
+
+  if (datasetTable) {
+    entries.forEach(function (entry) {
+      var categories = (entry.dataset.category || "").split(",").map(function (category) {
+        return category.trim();
+      }).filter(Boolean);
+      categories.forEach(function (category) {
+        datasetCategories[category] = true;
+        if (!datasetCategoryLabels[category]) {
+          datasetCategoryLabels[category] = (entry.getAttribute("data-category-original") || "").split(",").map(function (value) {
+            return value.trim();
+          }).filter(Boolean)[categories.indexOf(category)] || category;
+        }
+      });
+    });
+
+    if (datasetCategoryFilterList) {
+      Object.keys(datasetCategories).sort().forEach(function (category) {
+        var button = document.createElement("button");
+        button.type = "button";
+        button.className = "codes-tag-filter-chip";
+        button.textContent = datasetCategoryLabels[category] || category;
+        button.dataset.category = category;
+        button.addEventListener("click", function () {
+          activeDatasetCategory = activeDatasetCategory === category ? "" : category;
+          updateDatasetResults();
+        });
+        datasetCategoryFilterList.appendChild(button);
+      });
+      if (datasetCategoryFilter) {
+        datasetCategoryFilter.hidden = Object.keys(datasetCategories).length === 0;
+      }
+    }
+
+    datasetRowCategoryButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        var category = button.dataset.datasetFilterCategory || "";
+        activeDatasetCategory = activeDatasetCategory === category ? "" : category;
+        updateDatasetResults();
+      });
+    });
+
+    datasetSortHeaders.forEach(function (header) {
+      header.addEventListener("click", function () {
+        var field = header.dataset.datasetSortField || "name";
+        if (activeDatasetSort === field) {
+          datasetSortDir = datasetSortDir === "asc" ? "desc" : "asc";
+        } else {
+          activeDatasetSort = field;
+          datasetSortDir = "asc";
+        }
+        updateDatasetResults();
+      });
+    });
+
+    if (datasetCategoryFilterClear) {
+      datasetCategoryFilterClear.addEventListener("click", function () {
+        activeDatasetCategory = "";
+        updateDatasetResults();
+      });
+    }
+
+    if (datasetReset) {
+      datasetReset.addEventListener("click", function () {
+        input.value = "";
+        activeDatasetCategory = "";
+        activeDatasetSort = "name";
+        datasetSortDir = "asc";
+        updateDatasetResults();
+        input.focus();
+      });
+    }
+
+    input.addEventListener("input", updateDatasetResults);
+    input.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && input.value !== "") {
+        input.value = "";
+        updateDatasetResults();
+        input.focus();
+      }
+    });
+    clearButton.addEventListener("click", function () {
+      input.value = "";
+      updateDatasetResults();
+      input.focus();
+    });
+    updateDatasetResults();
+    return;
   }
 
   input.addEventListener("input", updateResults);
@@ -128,7 +347,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 {{ define "toc" }}
 {{ $data := partial "resource_data.html" . }}
-{{ if and .Params.toc $data.sections }}
+{{ if and .Params.toc $data.sections (ne .Title "Dataset") }}
 <aside>
   <details class="resource-toc">
     <summary>Table of Contents</summary>

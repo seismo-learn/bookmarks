@@ -1,0 +1,69 @@
+{{ with . }}
+<div class="codes-table-wrap">
+  <table class="codes-table resource-table">
+    <colgroup>
+      <col class="codes-col-name">
+      <col class="codes-col-details">
+      <col class="resource-col-category">
+      <col class="codes-col-links">
+    </colgroup>
+    <thead>
+      <tr>
+        <th><button type="button" class="codes-table-sort-header" data-dataset-sort-field="name"><span>Name</span><i class="fas fa-sort"></i></button></th>
+        <th>Description</th>
+        <th><button type="button" class="codes-table-sort-header" data-dataset-sort-field="category"><span>Category</span><i class="fas fa-sort"></i></button></th>
+        <th>Links</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{ range . }}
+      {{ $searchText := printf "%s %s" .name (.description | default "") }}
+      {{ range (.category | default (slice)) }}
+        {{ $searchText = printf "%s %s" $searchText . }}
+      {{ end }}
+      {{ range (.links | default (slice)) }}
+        {{ $searchText = printf "%s %s %s" $searchText .name .url }}
+      {{ end }}
+      {{ $categoryText := "" }}
+      {{ with .category }}
+        {{ range $index, $category := . }}
+          {{ if $index }}{{ $categoryText = printf "%s,%s" $categoryText (lower $category) }}{{ else }}{{ $categoryText = lower $category }}{{ end }}
+        {{ end }}
+      {{ end }}
+      <tr
+        data-resource-entry
+        data-name="{{ lower .name }}"
+        data-category="{{ $categoryText }}"
+        data-category-original="{{ with .category }}{{ range $index, $category := . }}{{ if $index }},{{ end }}{{ . }}{{ end }}{{ end }}"
+        data-search-text="{{ lower ($searchText | plainify) }}"
+      >
+        <td class="codes-col-name">
+          {{ if .url }}
+          <a href="{{ .url }}"><strong>{{ .name }}</strong></a>
+          {{ else }}
+          <strong>{{ .name }}</strong>
+          {{ end }}
+        </td>
+        <td class="codes-col-details">
+          {{ with .description }}{{ . | markdownify }}{{ end }}
+        </td>
+        <td class="resource-col-category">
+          {{ with .category }}
+          <div class="resource-category-list">
+            {{ range . }}<button type="button" class="resource-category resource-filter-category" data-dataset-filter-category="{{ lower . }}">{{ . }}</button>{{ end }}
+          </div>
+          {{ end }}
+        </td>
+        <td class="codes-col-links">
+          {{ with .links }}
+          <div class="codes-related-links">
+            {{ range . }}<a class="codes-related-link" href="{{ .url }}">{{ .name }}</a>{{ end }}
+          </div>
+          {{ end }}
+        </td>
+      </tr>
+    {{ end }}
+    </tbody>
+  </table>
+</div>
+{{ end }}

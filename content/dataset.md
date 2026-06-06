@@ -1,7 +1,7 @@
 ---
 title: Dataset
 layout: resources
-resource_data: database
-edit_path: data/database.yaml
+resource_data: dataset
+edit_path: data/dataset.yaml
 toc: true
 ---
