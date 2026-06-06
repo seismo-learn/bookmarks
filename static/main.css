@@ -1032,23 +1032,23 @@ aside {
     }
 
     .codes-col-name {
-        width: 18%;
+        width: 26%;
     }
 
     .codes-col-details {
-        width: 28%;
+        width: 46%;
     }
 
     .codes-col-tags {
-        width: 24%;
+        display: none;
     }
 
     .codes-col-languages {
-        width: 10%;
+        display: none;
     }
 
     .codes-col-links {
-        width: 20%;
+        width: 28%;
     }
 
     .codes-related-links {
@@ -1057,6 +1057,13 @@ aside {
 
     .codes-related-link {
         padding: 0.22rem 0.45rem;
+    }
+
+    .codes-table th:nth-child(3),
+    .codes-table th:nth-child(4),
+    .codes-table td:nth-child(3),
+    .codes-table td:nth-child(4) {
+        display: none;
     }
 }
 
