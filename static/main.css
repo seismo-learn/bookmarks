@@ -88,6 +88,27 @@ footer {
     margin: 0;
 }
 
+.journals-hint {
+    background: #f5f8fb;
+    border-left: 3px solid #7aa7d8;
+    color: #62707a;
+    font-size: 0.94rem;
+    line-height: 1.5;
+    margin: 0.55rem 0 0;
+    padding: 0.65rem 0.85rem;
+}
+
+.journals-hint a {
+    color: #345c52;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.journals-hint a:hover {
+    color: #1f3a33;
+    text-decoration: underline;
+}
+
 .home-recent-update {
     align-items: flex-start;
     align-self: stretch;

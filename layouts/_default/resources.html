@@ -32,6 +32,9 @@
       {{ partial "resource_journal_list.html" (dict "resources" .) }}
     </section>
   {{ end }}
+  {{ if eq .Title "Journals" }}
+  <p class="journals-hint">Missing a journal? <a href="{{ $.Site.Params.edit_page.repo_url }}/blob/{{ $.Site.Params.edit_page.branch }}/data/journals.yaml">Edit the data and submit a pull request!</a></p>
+  {{ end }}
   </div>
 </div>
 
