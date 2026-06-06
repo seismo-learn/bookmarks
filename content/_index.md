@@ -11,10 +11,6 @@ highlights:
     text: Every page links back to its source file so contributors can fix and expand entries quickly.
 # list of cards shown on the landing page
 cards:
-  - name: Journals
-    link: journals
-    icon: fa-book-open
-    description: Publishing venues, profiles, citation tools, and paper access resources.
   - name: Codes
     link: codes
     icon: fa-code
@@ -27,6 +23,10 @@ cards:
     link: learning
     icon: fa-graduation-cap
     description: Courses, tutorials, books, lecture notes, and training material.
+  - name: Journals
+    link: journals
+    icon: fa-book-open
+    description: Publishing venues, profiles, citation tools, and paper access resources.
   - name: Jobs
     link: jobs
     icon: fa-ad

@@ -161,7 +161,22 @@ footer {
 }
 
 .home-tile-featured {
-    background: #f9fbf8;
+    background: linear-gradient(180deg, #f3f8f5 0%, #eef4f0 100%);
+    border-color: #b8cbc2;
+    box-shadow: 0 2px 6px rgba(27, 42, 39, 0.06);
+}
+
+.home-tile-featured .home-tile-icon {
+    background: #dce9e3;
+    color: #26443c;
+}
+
+.home-tile-featured .home-tile-body h3 {
+    color: #1f3a33;
+}
+
+.home-tile-featured .home-tile-arrow {
+    color: #4d6d63;
 }
 
 .home-tile-icon {
