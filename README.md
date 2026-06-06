@@ -3,7 +3,7 @@
 [![Deploy](https://github.com/seismo-learn/links/actions/workflows/deploy.yml/badge.svg)](https://github.com/seismo-learn/links/actions/workflows/deploy.yml)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc/4.0/deed.en)
 
-This repository contains the source codes for the [Seismo Links](https://seismo-learn.org/links/)
+This repository contains the source code for the [Seismo Links](https://seismo-learn.org/links/)
 site, which collects useful links for Geophysics and Seismology research.
 
 ## Build the site locally
@@ -14,7 +14,7 @@ the fastest static site generator [Hugo](https://gohugo.io/).
 
 To build it locally, you need to follow the steps below:
 
-1.  [Install hugo](https://gohugo.io/getting-started/installing/)
+1.  [Install Hugo](https://gohugo.io/getting-started/installing/)
 
 2.  Clone the repository
 

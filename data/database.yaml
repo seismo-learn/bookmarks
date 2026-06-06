@@ -367,7 +367,7 @@ sections:
       url: https://ds.iris.edu/ds/products/emc-referencemodels
     - name: 'TauP: Standard Models'
       url: https://www.seis.sc.edu/taup
-      description: The **StdModels** folder in the source contain a few 1D models
+      description: The **StdModels** folder in the source contains a few 1D models
         (e.g., PREM, AK135, iasp91)
     - name: 'AK135: model, traveltime tables, plots and software'
       url: http://rses.anu.edu.au/seismology/ak135/intro.html
