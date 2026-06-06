@@ -5,6 +5,10 @@ on:
   schedule:
     - cron: "00 18 * * 0"
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   check-links:
     runs-on: ubuntu-slim
@@ -23,8 +27,13 @@ jobs:
             --root-dir "${{ github.workspace }}"
             --verbose
             --no-progress
+            --retry-wait-time 2
+            --max-retries 2
+            --timeout 20
             './**/*.md'
             './**/*.html'
+            './**/*.yaml'
+            './**/*.yml'
             './config.toml'
           fail: false
           jobSummary: true
