@@ -1,0 +1,283 @@
+document.addEventListener("DOMContentLoaded", function () {
+  var root = document.querySelector("[data-resource-search]");
+  if (!root) return;
+
+  var input = root.querySelector("[data-resource-search-input]");
+  var clearButton = root.querySelector("[data-resource-search-clear]");
+  var emptyState = document.querySelector("[data-resource-empty]");
+  var countNode = document.querySelector("[data-codes-count]");
+  var resetButton = document.querySelector("[data-codes-reset]");
+  var tagFilter = document.querySelector("[data-codes-tag-filter]");
+  var tagFilterList = document.querySelector("[data-codes-tag-filter-list]");
+  var tagFilterClear = document.querySelector("[data-codes-tag-filter-clear]");
+  var languageFilter = document.querySelector("[data-codes-language-filter]");
+  var languageFilterList = document.querySelector("[data-codes-language-filter-list]");
+  var languageFilterClear = document.querySelector("[data-codes-language-filter-clear]");
+  var sortButtons = Array.prototype.slice.call(document.querySelectorAll("[data-sort-field]"));
+  var rowTagButtons = Array.prototype.slice.call(document.querySelectorAll("[data-filter-tag]"));
+  var rowLanguageButtons = Array.prototype.slice.call(document.querySelectorAll("[data-filter-language]"));
+  var entries = Array.prototype.slice.call(document.querySelectorAll("[data-resource-entry]"));
+  var params = new URLSearchParams(window.location.search);
+  var activeTag = (params.get("tag") || "").toLowerCase();
+  var activeLanguage = (params.get("language") || "").toLowerCase();
+  var activeSort = (params.get("sort") || "name").toLowerCase();
+  var sortDirection = (params.get("dir") || "asc").toLowerCase();
+  var tagSet = {};
+  var tagLabels = {};
+  var languageSet = {};
+  var languageLabels = {};
+
+  function syncQueryParam(query) {
+    var next = new URL(window.location.href);
+    if (query === "") {
+      next.searchParams.delete("q");
+    } else {
+      next.searchParams.set("q", query);
+    }
+    if (activeTag === "") {
+      next.searchParams.delete("tag");
+    } else {
+      next.searchParams.set("tag", activeTag);
+    }
+    if (activeLanguage === "") {
+      next.searchParams.delete("language");
+    } else {
+      next.searchParams.set("language", activeLanguage);
+    }
+    if (activeSort === "name") {
+      next.searchParams.delete("sort");
+    } else {
+      next.searchParams.set("sort", activeSort);
+    }
+    if (sortDirection === "asc") {
+      next.searchParams.delete("dir");
+    } else {
+      next.searchParams.set("dir", sortDirection);
+    }
+    window.history.replaceState({}, "", next);
+  }
+
+  function sortKeyFor(entry, field) {
+    if (field === "tags") {
+      return (entry.dataset.tags || "").replace(/,/g, " ").toLowerCase();
+    }
+    if (field === "languages") {
+      return (entry.dataset.languages || "").replace(/,/g, " ").toLowerCase();
+    }
+    return (entry.dataset.name || "").toLowerCase();
+  }
+
+  function updateSortUI() {
+    sortButtons.forEach(function (button) {
+      var field = button.dataset.sortField;
+      button.classList.toggle("is-active", field === activeSort);
+      button.setAttribute("aria-sort", field === activeSort ? (sortDirection === "asc" ? "ascending" : "descending") : "none");
+      var icon = button.querySelector("i");
+      if (icon) {
+        if (field === activeSort) {
+          icon.className = sortDirection === "asc" ? "fas fa-sort-up" : "fas fa-sort-down";
+        } else {
+          icon.className = "fas fa-sort";
+        }
+      }
+    });
+  }
+
+  function updateResults() {
+    var rawQuery = input.value.trim();
+    var query = rawQuery.toLowerCase();
+    var visibleCount = 0;
+
+    entries.forEach(function (entry) {
+      var haystack = entry.dataset.searchText || "";
+      var entryTags = (entry.dataset.tags || "").split(",").map(function (tag) {
+        return tag.trim();
+      }).filter(Boolean);
+      var entryLanguages = (entry.dataset.languages || "").split(",").map(function (language) {
+        return language.trim();
+      }).filter(Boolean);
+      var tagMatched = activeTag === "" || entryTags.indexOf(activeTag) !== -1;
+      var languageMatched = activeLanguage === "" || entryLanguages.indexOf(activeLanguage) !== -1;
+      var matched = (query === "" || haystack.indexOf(query) !== -1) && tagMatched && languageMatched;
+      entry.hidden = !matched;
+      entry.classList.toggle("is-tagged-hidden", !tagMatched && activeTag !== "");
+      entry.dataset.matches = matched ? "1" : "0";
+      if (matched) visibleCount += 1;
+    });
+
+    var tbody = document.querySelector(".codes-table tbody");
+    if (tbody) {
+      entries.slice().sort(function (a, b) {
+        var aVisible = a.dataset.matches === "1";
+        var bVisible = b.dataset.matches === "1";
+        if (aVisible !== bVisible) {
+          return aVisible ? -1 : 1;
+        }
+        var aKey = sortKeyFor(a, activeSort);
+        var bKey = sortKeyFor(b, activeSort);
+        if (aKey < bKey) return sortDirection === "asc" ? -1 : 1;
+        if (aKey > bKey) return sortDirection === "asc" ? 1 : -1;
+        return 0;
+      }).forEach(function (entry) {
+        tbody.appendChild(entry);
+      });
+    }
+
+    emptyState.hidden = visibleCount !== 0;
+    if (countNode) {
+      countNode.textContent = visibleCount + " of " + entries.length + " packages shown";
+    }
+    if (resetButton) {
+      resetButton.hidden = rawQuery === "" && activeTag === "" && activeLanguage === "" && activeSort === "name" && sortDirection === "asc";
+    }
+    clearButton.hidden = rawQuery === "";
+    if (tagFilterClear) {
+      tagFilterClear.hidden = activeTag === "";
+    }
+    if (languageFilterClear) {
+      languageFilterClear.hidden = activeLanguage === "";
+    }
+    if (tagFilterList) {
+      Array.prototype.slice.call(tagFilterList.querySelectorAll(".codes-tag-filter-chip")).forEach(function (button) {
+        button.classList.toggle("is-active", button.dataset.tag === activeTag);
+      });
+    }
+    rowTagButtons.forEach(function (button) {
+      button.classList.toggle("is-active", button.dataset.filterTag === activeTag);
+    });
+    if (languageFilterList) {
+      Array.prototype.slice.call(languageFilterList.querySelectorAll(".codes-tag-filter-chip")).forEach(function (button) {
+        button.classList.toggle("is-active", button.dataset.language === activeLanguage);
+      });
+    }
+    rowLanguageButtons.forEach(function (button) {
+      button.classList.toggle("is-active", button.dataset.filterLanguage === activeLanguage);
+    });
+    syncQueryParam(rawQuery);
+    updateSortUI();
+  }
+
+  entries.forEach(function (entry) {
+    var tags = (entry.dataset.tags || "").split(",").map(function (tag) {
+      return tag.trim();
+    }).filter(Boolean);
+    tags.forEach(function (tag) {
+      tagSet[tag] = true;
+      if (!tagLabels[tag]) {
+        tagLabels[tag] = (entry.getAttribute("data-tags-original") || "").split(",").map(function (value) {
+          return value.trim();
+        }).filter(Boolean)[tags.indexOf(tag)] || tag;
+      }
+    });
+    var languages = (entry.dataset.languages || "").split(",").map(function (language) {
+      return language.trim();
+    }).filter(Boolean);
+    languages.forEach(function (language) {
+      languageSet[language] = true;
+      if (!languageLabels[language]) {
+        languageLabels[language] = (entry.getAttribute("data-languages-original") || "").split(",").map(function (value) {
+          return value.trim();
+        }).filter(Boolean)[languages.indexOf(language)] || language;
+      }
+    });
+  });
+
+  if (tagFilter && tagFilterList) {
+    Object.keys(tagSet).sort().forEach(function (tag) {
+      var button = document.createElement("button");
+      button.type = "button";
+      button.className = "codes-tag-filter-chip";
+      button.textContent = tagLabels[tag] || tag;
+      button.dataset.tag = tag;
+      button.addEventListener("click", function () {
+        activeTag = activeTag === tag ? "" : tag;
+        updateResults();
+      });
+      tagFilterList.appendChild(button);
+    });
+    tagFilter.hidden = Object.keys(tagSet).length === 0;
+  }
+
+  if (languageFilter && languageFilterList) {
+    Object.keys(languageSet).sort().forEach(function (language) {
+      var button = document.createElement("button");
+      button.type = "button";
+      button.className = "codes-tag-filter-chip";
+      button.textContent = languageLabels[language] || language;
+      button.dataset.language = language;
+      button.addEventListener("click", function () {
+        activeLanguage = activeLanguage === language ? "" : language;
+        updateResults();
+      });
+      languageFilterList.appendChild(button);
+    });
+    languageFilter.hidden = Object.keys(languageSet).length === 0;
+  }
+
+  if (params.has("q")) {
+    input.value = params.get("q");
+  }
+
+  input.addEventListener("input", updateResults);
+  input.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && input.value !== "") {
+      input.value = "";
+      updateResults();
+      input.focus();
+    }
+  });
+  clearButton.addEventListener("click", function () {
+    input.value = "";
+    updateResults();
+    input.focus();
+  });
+  if (tagFilterClear) {
+    tagFilterClear.addEventListener("click", function () {
+      activeTag = "";
+      updateResults();
+    });
+  }
+  if (languageFilterClear) {
+    languageFilterClear.addEventListener("click", function () {
+      activeLanguage = "";
+      updateResults();
+    });
+  }
+  rowTagButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var tag = button.dataset.filterTag || "";
+      activeTag = activeTag === tag ? "" : tag;
+      updateResults();
+    });
+  });
+  rowLanguageButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var language = button.dataset.filterLanguage || "";
+      activeLanguage = activeLanguage === language ? "" : language;
+      updateResults();
+    });
+  });
+  if (resetButton) {
+    resetButton.addEventListener("click", function () {
+      input.value = "";
+      activeTag = "";
+      activeLanguage = "";
+      activeSort = "name";
+      sortDirection = "asc";
+      updateResults();
+      input.focus();
+    });
+  }
+  sortButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      if (activeSort === button.dataset.sortField) {
+        sortDirection = sortDirection === "asc" ? "desc" : "asc";
+      } else {
+        activeSort = button.dataset.sortField;
+        sortDirection = "asc";
+      }
+      updateResults();
+    });
+  });
+  updateResults();
+});
