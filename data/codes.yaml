@@ -473,6 +473,8 @@ sections:
     - Python
     tags:
     - Data Analysis
+    - Data Request
+    - Data Processing
   - name: obspyDMT
     url: https://github.com/kasra-hosseini/obspyDMT
     description: A Python toolbox for the query, retrieval, processing and management of seismological data sets.
@@ -700,6 +702,14 @@ sections:
     - MATLAB
     tags:
     - Signal Analysis
+  - name: seed-vault
+    url: https://github.com/AuScope/seed-vault
+    description: A cross platform GUI utility for searching, viewing, and downloading seismic data from FDSN servers
+    doi: 10.1785/0220250167
+    languages:
+    - Python
+    tags:
+    - Data Request
   - name: seisDD
     url: https://github.com/yanhuay/seisDD
     description: Double-difference adjoint seismic tomography
