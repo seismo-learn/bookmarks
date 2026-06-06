@@ -1,0 +1,63 @@
+name: Add a package
+description: Suggest a scientific package to add to the codes list
+title: "[Request] Add package XXX"
+labels:
+  - enhancement
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Package name
+      description: The name shown in the codes list.
+      placeholder: Example Package
+    validations:
+      required: true
+  - type: input
+    id: homepage
+    attributes:
+      label: Homepage
+      description: The main project website or repository URL.
+      placeholder: https://example.org
+    validations:
+      required: true
+  - type: input
+    id: doi
+    attributes:
+      label: DOI
+      description: Enter the bare DOI only, for example 10.1234/example.2024.01.
+      placeholder: 10.1234/example.2024.01
+    validations:
+      required: false
+  - type: input
+    id: languages
+    attributes:
+      label: Language(s)
+      description: Comma-separated list of supported languages.
+      placeholder: Python, Fortran
+    validations:
+      required: false
+  - type: input
+    id: category
+    attributes:
+      label: Category or tag
+      description: A short category or tag that fits the codes list.
+      placeholder: Earthquake Detection
+    validations:
+      required: false
+  - type: textarea
+    id: summary
+    attributes:
+      label: Why it belongs here
+      description: Briefly explain what the package does and why it should be added.
+      placeholder: This package helps with...
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: The homepage is reachable.
+        - label: The DOI resolves correctly, if provided.
+        - label: The package is relevant to seismology, geophysics, or closely related workflows.
+        - label: The package is not already listed.
