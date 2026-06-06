@@ -556,6 +556,15 @@ sections:
     tags:
     - Data Processing
     - Visualization
+  - name: PyGRT
+    url: https://github.com/Dengda98/PyGRT
+    doi: 10.1785/0220250057
+    description: An integrated, efficient toolkit to compute synthetic seismograms and static deformation in layered media, including displacement, strain, stress and rotation.
+    languages:
+    - C
+    - Python
+    tags:
+    - Waveform Modeling
   - name: pykonal
     url: https://github.com/malcolmw/pykonal
     description: Travel-time calculator based on the fast-marching method solution to the Eikonal equation.
