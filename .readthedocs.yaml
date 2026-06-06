@@ -13,5 +13,6 @@ build:
     # Full customized build process
     # https://docs.readthedocs.io/en/stable/build-customization.html#override-the-build-process
     - curl -sSL https://github.com/gohugoio/hugo/releases/download/v0.162.1/hugo_extended_0.162.1_Linux-64bit.tar.gz | tar zxvf - hugo
-    - sed -i "s#https://seismo-learn.org/links/#${READTHEDOCS_CANONICAL_URL}#" config.toml
+    - sed -i "s#https://seismo-learn.org/bookmarks/#${READTHEDOCS_CANONICAL_URL}#" config.toml
+    - sh scripts/update-homepage-recent.sh
     - ./hugo -d $READTHEDOCS_OUTPUT/html/
