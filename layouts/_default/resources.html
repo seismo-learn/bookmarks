@@ -47,6 +47,7 @@
     <section class="resource-section" data-resource-section>
       {{ partial "resource_table_flat.html" $data.resources }}
     </section>
+    <p class="journals-hint">Missing a dataset or broken link? <a href="{{ $.Site.Params.edit_page.repo_url }}/blob/{{ $.Site.Params.edit_page.branch }}/data/dataset.yaml">Edit the data and submit a pull request!</a></p>
   {{ else }}
     {{ range $data.sections }}
       {{ partial "resource_section.html" . }}
