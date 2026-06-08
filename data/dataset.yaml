@@ -5,12 +5,6 @@ resources:
   category:
   - 3D Tomographic Model
   description: Resource for gap_p4.
-- name: 'Lawrence Livermore National Laboratory: Global 3-D Seismic Tomography'
-  url: https://www-gs.llnl.gov/nuclear-threat-reduction/nuclear-explosion-monitoring/global-3d-seismic-tomography
-  category:
-  - 3D Tomographic Model
-  description: 'Resource for lawrence livermore national laboratory: global 3-d seismic
-    tomography.'
 - name: UU-P07
   url: http://www.atlas-of-the-underworld.org/uu-p07-model/
   category:
@@ -26,22 +20,6 @@ resources:
   description: Scanned Seismograms from Historical Earthquakes
   category:
   - Analog Seismograms
-- name: 'GMT: Global Earth Relief Grids'
-  url: https://docs.generic-mapping-tools.org/latest/datasets/remote-data.html#global-earth-relief-grids
-  category:
-  - Earth Relief Database
-  links:
-  - name: 'GMT-China: 全球地形起伏数据'
-    url: https://docs.gmt-china.org/latest/dataset/earth-relief/
-  description: 'Resource for gmt: global earth relief grids.'
-- name: 'Google Maps: Elevation API'
-  url: https://developers.google.com/maps/documentation/elevation/start?hl=zh-cn
-  category:
-  - Earth Relief Database
-  links:
-  - name: 利用 Google Maps 获取超高精度高程数据
-    url: https://gmt-china.org/blog/google-maps-elevation-api
-  description: Elevation or topography resource
 - name: ISC Arrival Time Data
   url: http://www.isc.ac.uk/iscbulletin/search/arrivals/
   category:
@@ -158,11 +136,6 @@ resources:
   description: Focal mechanism resource
   category:
   - Focal Mechanism Catalog
-- name: Italy Moment Tensor Catalog
-  url: http://cnt.rm.ingv.it/en/tdmt
-  category:
-  - Focal Mechanism Catalog
-  description: Earthquake catalog
 - name: JMA Focal Mechanism Catalog
   url: https://hinetwww11.bosai.go.jp/auth/JMA/?LANG=en
   description: Focal mechanism based on JMA Unified Hypocenter Catalog (Preliminary)
@@ -211,22 +184,6 @@ resources:
   description: Global geoscience data
   category:
   - Geology
-- name: 全国地质资料馆
-  url: http://www.ngac.org.cn/
-  description: 手机应用：第四纪
-  category:
-  - Geology
-  links:
-  - name: 数据分布列表
-    url: http://www.ngac.org.cn/Distribute/List
-- name: 地质专业知识服务系统
-  url: http://geol.ckcest.cn/index.html
-  category:
-  - Geology
-  links:
-  - name: 3.0 版本介绍
-    url: http://www.cgl.cgs.gov.cn/gzdt_4169/dwdt_4172/202103/t20210330_666996.html
-  description: Resource for 地质专业知识服务系统.
 - name: Global Historical Earthquake Archive (1000-1903)
   url: https://emidius.eu/GEH/
   category:
