@@ -78,7 +78,7 @@ resources:
   url: https://docs.gmt-china.org/latest/dataset-CN/CN-faults/
   category:
   - Fault Database
-  description: 'Resource for gmt-china: 中国断层数据.'
+  description: Geological fault data for China.
 - name: HimaTibetMap
   url: https://github.com/HimaTibetMap/HimaTibetMap
   description: Database of active faults and associated features (suture zones, Cenozoic
@@ -104,7 +104,7 @@ resources:
   - Fault Database
 - name: Broadband Array in Taiwan for Seismology CMTs
   url: https://bats.earth.sinica.edu.tw/
-  description: Resource for broadband array in taiwan for seismology cmts.
+  description: Broadband array focal mechanism catalog in Taiwan.
   category:
   - Focal Mechanism Catalog
   links:
@@ -165,7 +165,7 @@ resources:
   description: Focal mechanism catalog for Northern California.
 - name: Saint Louis University Moment Tensor Determinations
   url: http://www.eas.slu.edu/eqc/eqcmt.html
-  description: Resource for saint louis university moment tensor determinations.
+  description: Moment tensor determinations from Saint Louis University.
   category:
   - Focal Mechanism Catalog
 - name: Southern California Moment Tensor Catalog
@@ -177,7 +177,7 @@ resources:
   url: https://docs.gmt-china.org/latest/dataset-CN/geo3al/
   category:
   - Geology
-  description: 'Resource for gmt-china: 中国及邻区地质图数据.'
+  description: Geological map data for China and neighboring regions.
 - name: OneGeology Portal
   url: https://portal.onegeology.org/OnegeologyGlobal/
   description: Global geoscience data
@@ -218,10 +218,10 @@ resources:
   url: http://www-solid.eps.s.u-tokyo.ac.jp/~sloweq/
   category:
   - Global Earthquake Catalog
-  description: Slow-earthquake resource
+  description: Slow-earthquake catalog.
 - name: The Human-Induced Earthquake Database
   url: http://inducedearthquakes.org/
-  description: Resource for the human-induced earthquake database.
+  description: Database of human-induced earthquakes.
   category:
   - Global Earthquake Catalog
 - name: USGS ANSS Comprehensive Earthquake Catalog
@@ -236,24 +236,24 @@ resources:
     url: https://earthquake.usgs.gov/fdsnws/event/1/
 - name: World Tremor Database
   url: http://www-solid.eps.s.u-tokyo.ac.jp/~idehara/wtd0/Welcome.html
-  description: Slow-earthquake resource
+  description: Slow-earthquake catalog.
   category:
   - Global Earthquake Catalog
 - name: International Centre for Global Earth Models (ICGEM)
   url: http://icgem.gfz-potsdam.de/home
   category:
   - Gravity
-  description: Reference model or dataset
+  description: Global gravity field model repository.
 - name: International Digital Elevation Model Service (IDEMS)
   url: https://idems.maps.arcgis.com/home/index.html
   category:
   - Gravity
-  description: Reference model or dataset
+  description: Global digital elevation model service.
 - name: International Geodynamics and Earth Tide Service (IGETS)
   url: http://igets.u-strasbg.fr
   category:
   - Gravity
-  description: Resource for international geodynamics and earth tide service (igets).
+  description: Geodetic and Earth tide service data.
 - name: International Gravimetric Bureau (BGI)
   url: https://bgi.obs-mip.fr/
   description: Gravity grids and models including WGM2012 and EGM2008.
@@ -278,7 +278,7 @@ resources:
   url: https://earth-info.nga.mil/
   category:
   - Gravity
-  description: Resource for national geospatial-intelligence agency (nga).
+  description: Geodesy and gravity-related datasets from NGA.
 - name: 'NGA: World Geodetic System 1984 Data'
   url: https://earth-info.nga.mil/index.php?dir=wgs84&action=wgs84
   description: Earth Gravitational Model (1984, 1996, 2008)
@@ -288,12 +288,12 @@ resources:
   url: https://docs.gmt-china.org/latest/dataset-CN/CN-block/
   category:
   - Plate Boundary Model
-  description: 'Resource for gmt-china: 中国大陆及周边活动地块数据.'
+  description: Plate-boundary and block model data for China and surroundings.
 - name: NNR-MORVEL56
   url: http://geoscience.wisc.edu/~chuck/MORVEL/PltBoundaries.html
   category:
   - Plate Boundary Model
-  description: Resource for nnr-morvel56.
+  description: Plate motion model without net rotation.
 - name: NUVEL
   url: http://jules.unavco.org/GMT
   category:
@@ -301,7 +301,7 @@ resources:
   links:
   - name: Chinese Introduction
     url: https://blog.seisman.info/plate-boundary-datasets
-  description: Resource for nuvel.
+  description: Plate motion model.
 - name: PB2002
   url: http://peterbird.name/publications/2003_PB2002/2003_PB2002.htm
   category:
@@ -309,7 +309,7 @@ resources:
   links:
   - name: 'GMT-China: PB2002'
     url: https://docs.gmt-china.org/latest/dataset/PB2002/
-  description: Resource for pb2002.
+  description: Plate boundary model of Bird (2003).
 - name: GLImER
   url: https://www.stephanerondenay.com/glimer-map/map.html
   description: "**G**lobal **L**ithospheric **Im**aging using **E**arthquake **R**ecordings
@@ -351,7 +351,7 @@ resources:
   links:
   - name: Web Service
     url: https://service.iris.edu/irisws/earth-model/1/
-  description: Reference model or dataset
+  description: Earth model data and services from IRIS EMC.
 - name: LITHO1.0
   url: https://igppweb.ucsd.edu/~gabi/litho1.0.html
   description: An updated crust and lithospheric model of the Earth
@@ -376,20 +376,20 @@ resources:
   url: https://igppweb.ucsd.edu/~gabi/rem.html
   category:
   - Reference Seismological Model
-  description: Reference model or dataset
+  description: Standard one-dimensional Earth reference model.
 - name: 中国区域地震学参考模型
   url: http://chinageorefmodel.org
   category:
   - Reference Seismological Model
-  description: Resource for 中国区域地震学参考模型.
+  description: Regional seismological reference model for China.
 - name: Australian Catalog
   url: https://earthquakes.ga.gov.au/
-  description: Earthquake catalog in Australia.
+  description: Earthquake catalog for Australia.
   category:
   - Regional Earthquake Catalog
 - name: Canada Earthquake Catalog
   url: https://www.earthquakescanada.nrcan.gc.ca/stndon/NEDB-BNDS/index-en.php
-  description: Earthquake catalog in Canada provided by Natural Resources Canada (NRCan).
+  description: Earthquake catalog provided by Natural Resources Canada.
   category:
   - Regional Earthquake Catalog
   links:
@@ -413,7 +413,7 @@ resources:
   - Regional Earthquake Catalog
 - name: Northern California Earthquake Catalog
   url: http://www.ncedc.org/ncedc/catalog-search.html
-  description: Earthquake catalog in Northern California
+  description: Earthquake catalog for Northern California.
   category:
   - Regional Earthquake Catalog
   links:
@@ -431,7 +431,7 @@ resources:
     url: https://www.gfz-potsdam.de/en/section/seismic-hazard-and-risk-dynamics/data-products-services/sheec-earthquake-catalogue/
 - name: Southern California Earthquake Catalog
   url: https://scedc.caltech.edu/data/eq-catalogs.html
-  description: Earthquake catalog in Southern California
+  description: Earthquake catalog for Southern California.
   category:
   - Regional Earthquake Catalog
   links:
@@ -453,23 +453,22 @@ resources:
   url: https://igppweb.ucsd.edu/~gabi/sediment.html
   category:
   - Sediment
-  description: Map or visualization resource
+  description: Global map of sediment thickness.
 - name: Sediment Thickness of the World's Oceans and Marginal Seas
   url: https://www.ngdc.noaa.gov/mgg/sedthick
   category:
   - Sediment
-  description: Resource for sediment thickness of the world's oceans and marginal
-    seas.
+  description: Sediment thickness dataset for the oceans and marginal seas.
 - name: Alaska Earthquake Center
   url: http://earthquake.alaska.edu/
   category:
   - Seismic Data Center
-  description: Resource for alaska earthquake center.
+  description: Seismic data center for Alaska.
 - name: AlpArray
   url: http://www.alparray.ethz.ch/en/home/
   category:
   - Seismic Data Center
-  description: Resource for alparray.
+  description: Alpine seismic array data.
 - name: AusPass
   url: http://auspass.edu.au/index.html
   description: the **Aus**tralian **Pass**ive Seismic Server
@@ -482,7 +481,7 @@ resources:
   url: https://www.earthquakescanada.nrcan.gc.ca/stndon/index-en.php
   category:
   - Seismic Data Center
-  description: Resource for canadian seismic stations and data.
+  description: Canadian seismic stations and data.
 - name: CTBTO
   url: https://www.ctbto.org/
   description: "**C**omprehensive Nuclear-**T**est-**B**an **T**reaty **O**rganization"
@@ -507,7 +506,7 @@ resources:
   links:
   - name: Seismological Data Services
     url: https://epos-no.uib.no/#/data-services/seismology
-  description: Resource for european plate observing system (norway).
+  description: Norwegian seismology data services within EPOS.
 - name: FDSN Network Codes
   url: https://www.fdsn.org/networks/
   description: Network codes assigned by the FDSN to facilitate unique identifiers
@@ -518,7 +517,7 @@ resources:
   url: https://www.fdsn.org/webservices/datacenters/
   category:
   - Seismic Data Center
-  description: Seismic data center
+  description: Supporting data centers for FDSN web services.
 - name: GeoNet
   url: https://www.geonet.org.nz/
   description: Geological hazard information for New Zealand
@@ -558,7 +557,7 @@ resources:
   url: http://www.ncedc.org/
   category:
   - Seismic Data Center
-  description: Seismic data center
+  description: Seismic data center for Northern California.
 - name: OHP DMC
   url: http://ohpdmc.eri.u-tokyo.ac.jp/
   description: "**O**cean **H**emisphere **P**roject **D**ata **M**anagement **C**enter"
@@ -586,12 +585,12 @@ resources:
   url: http://www.cses.ac.cn
   category:
   - Seismic Data Center
-  description: Resource for 中国地震科学实验场.
+  description: Chinese Earthquake Science Experimental Field.
 - name: 台灣中央研究院地球科學研究所：强震和移动地震台网
   url: https://www.earth.sinica.edu.tw/content/labs/slab/smdmc/index.htm
   category:
   - Seismic Data Center
-  description: Resource for 台灣中央研究院地球科學研究所：强震和移动地震台网.
+  description: Strong-motion and mobile seismic network data.
 - name: 台灣地震科學中心
   url: https://tec.earth.sinica.edu.tw/index.php
   category:
@@ -599,7 +598,7 @@ resources:
   links:
   - name: 資料中心
     url: http://tecdc.earth.sinica.edu.tw/tecdc/
-  description: Resource for 台灣地震科學中心.
+  description: Taiwan Earthquake Research Center.
 - name: 地震科学数据中心
   url: http://www.esdc.ac.cn/
   description: Previous data centers are no longer functional.
@@ -615,7 +614,7 @@ resources:
   url: http://www.efehr.org/en/efehr/Services-and-Partners
   category:
   - Seismic Data Products
-  description: Service directory
+  description: Directory of earthquake-hazard services and partners.
 - name: 'IRIS Products: globalstacks'
   url: https://ds.iris.edu/ds/products/globalstacks
   description: Global stacks of millions of seismograms
@@ -658,7 +657,7 @@ resources:
   links:
   - name: Introduction
     url: https://storage.globalquakemodel.org/what/seismic-hazard/strain-rate-model
-  description: Reference model or dataset
+  description: Global strain-rate model.
 - name: Slab2
   url: https://cmerwebmap.cr.usgs.gov/catalog/item/5aa1b00ee4b0b1c392e86467
   description: A Comprehensive Subduction Zone Geometry Model
@@ -678,7 +677,7 @@ resources:
   url: https://www.ldeo.columbia.edu/~ekstrom/Projects/SWP
   category:
   - Surface-wave Dispersion
-  description: Reference model or dataset
+  description: Global surface-wave dispersion model.
 - name: 'IRIS Products: ANCC-CIEI'
   url: https://ds.iris.edu/ds/products/ancc-ciei/
   description: An ambient noise cross-correlation based database of empirical Green's
@@ -694,7 +693,7 @@ resources:
   url: https://www.ldeo.columbia.edu/~ekstrom/Projects/ANT/USANT12.html
   category:
   - Surface-wave Dispersion
-  description: Map or visualization resource
+  description: Surface-wave velocity map set for the western United States.
 - name: Global Volcanism Program
   url: https://volcano.si.edu
   category:
