@@ -34,6 +34,20 @@
       </section>
     {{ end }}
     <p class="journals-hint">Missing a journal? <a href="{{ $.Site.Params.edit_page.repo_url }}/blob/{{ $.Site.Params.edit_page.branch }}/data/journals.yaml">Edit the data and submit a pull request!</a></p>
+  {{ else if eq .Title "Learning" }}
+    <div class="codes-toolbar dataset-toolbar">
+      <p class="codes-count" data-learning-count></p>
+      <button type="button" class="codes-reset" data-learning-reset hidden>Reset filters</button>
+    </div>
+    <div class="codes-tag-filter dataset-category-filter" data-learning-tag-filter hidden>
+      <span class="codes-tag-filter-label">Tags</span>
+      <div class="codes-tag-filter-list" data-learning-tag-filter-list></div>
+      <button type="button" class="codes-tag-filter-clear" data-learning-tag-filter-clear hidden>Clear tag</button>
+    </div>
+    <section class="resource-section" data-resource-section>
+      {{ partial "resource_table_learning.html" $data.resources }}
+    </section>
+    <p class="journals-hint">Missing a learning resource? <a href="{{ $.Site.Params.edit_page.repo_url }}/blob/{{ $.Site.Params.edit_page.branch }}/data/learning.yaml">Edit the data and submit a pull request!</a></p>
   {{ else if eq .Title "Dataset" }}
     <div class="codes-toolbar dataset-toolbar">
       <p class="codes-count" data-dataset-count></p>
@@ -69,17 +83,25 @@ document.addEventListener("DOMContentLoaded", function () {
   var params = new URLSearchParams(window.location.search);
   var datasetCount = document.querySelector("[data-dataset-count]");
   var datasetReset = document.querySelector("[data-dataset-reset]");
+  var learningCount = document.querySelector("[data-learning-count]");
+  var learningReset = document.querySelector("[data-learning-reset]");
+  var learningTagFilter = document.querySelector("[data-learning-tag-filter]");
+  var learningTagFilterList = document.querySelector("[data-learning-tag-filter-list]");
+  var learningTagFilterClear = document.querySelector("[data-learning-tag-filter-clear]");
   var datasetTable = document.querySelector(".resource-table");
   var datasetSortHeaders = Array.prototype.slice.call(document.querySelectorAll("[data-dataset-sort-field]"));
   var datasetCategoryFilter = document.querySelector("[data-dataset-category-filter]");
   var datasetCategoryFilterList = document.querySelector("[data-dataset-category-filter-list]");
   var datasetCategoryFilterClear = document.querySelector("[data-dataset-category-filter-clear]");
   var datasetRowCategoryButtons = Array.prototype.slice.call(document.querySelectorAll("[data-dataset-filter-category]"));
+  var learningTagButtons = Array.prototype.slice.call(document.querySelectorAll("[data-learning-filter-tag]"));
   var datasetCategories = {};
   var datasetCategoryLabels = {};
+  var learningTags = {};
   var activeDatasetSort = (params.get("sort") || "category").toLowerCase();
   var datasetSortDir = (params.get("dir") || "asc").toLowerCase();
   var activeDatasetCategory = (params.get("category") || "").toLowerCase();
+  var activeLearningTag = (params.get("tag") || "").toLowerCase();
 
   if (params.has("q")) {
     input.value = params.get("q");
@@ -116,6 +138,21 @@ document.addEventListener("DOMContentLoaded", function () {
       next.searchParams.delete("category");
     } else {
       next.searchParams.set("category", activeDatasetCategory);
+    }
+    window.history.replaceState({}, "", next);
+  }
+
+  function syncLearningQueryParam(query) {
+    var next = new URL(window.location.href);
+    if (query === "") {
+      next.searchParams.delete("q");
+    } else {
+      next.searchParams.set("q", query);
+    }
+    if (activeLearningTag === "") {
+      next.searchParams.delete("tag");
+    } else {
+      next.searchParams.set("tag", activeLearningTag);
     }
     window.history.replaceState({}, "", next);
   }
@@ -200,6 +237,104 @@ document.addEventListener("DOMContentLoaded", function () {
     updateDatasetSortUI();
     updateDatasetFilterUI();
     syncDatasetQueryParam(rawQuery);
+  }
+
+  if (learningTagFilter && learningTagFilterList) {
+    entries.forEach(function (entry) {
+      var tags = (entry.dataset.tags || "").split(",").map(function (tag) {
+        return tag.trim();
+      }).filter(Boolean);
+      tags.forEach(function (tag) {
+        learningTags[tag] = true;
+      });
+    });
+
+    Object.keys(learningTags).sort().forEach(function (tag) {
+      var button = document.createElement("button");
+      button.type = "button";
+      button.className = "codes-tag-filter-chip";
+      button.textContent = tag;
+      button.dataset.tag = tag;
+      button.addEventListener("click", function () {
+        activeLearningTag = activeLearningTag === tag ? "" : tag;
+        updateLearningResults();
+      });
+      learningTagFilterList.appendChild(button);
+    });
+    learningTagFilter.hidden = Object.keys(learningTags).length === 0;
+
+    function updateLearningFilterUI() {
+      if (learningTagFilterClear) {
+        learningTagFilterClear.hidden = activeLearningTag === "";
+      }
+      if (learningTagFilterList) {
+        Array.prototype.slice.call(learningTagFilterList.querySelectorAll(".codes-tag-filter-chip")).forEach(function (button) {
+          button.classList.toggle("is-active", button.dataset.tag === activeLearningTag);
+        });
+      }
+      learningTagButtons.forEach(function (button) {
+        button.classList.toggle("is-active", button.dataset.learningFilterTag === activeLearningTag);
+      });
+    }
+
+    function updateLearningResults() {
+      var rawQuery = input.value.trim();
+      var query = rawQuery.toLowerCase();
+      var visibleCount = 0;
+
+      entries.forEach(function (entry) {
+        var haystack = entry.dataset.searchText || "";
+        var entryTags = (entry.dataset.tags || "").split(",").map(function (tag) {
+          return tag.trim();
+        }).filter(Boolean);
+        var tagMatched = activeLearningTag === "" || entryTags.indexOf(activeLearningTag) !== -1;
+        var matched = (query === "" || haystack.indexOf(query) !== -1) && tagMatched;
+        entry.hidden = !matched;
+        entry.dataset.matches = matched ? "1" : "0";
+        if (matched) visibleCount += 1;
+      });
+
+      emptyState.hidden = visibleCount !== 0;
+      clearButton.hidden = rawQuery === "";
+      if (learningCount) {
+        learningCount.textContent = visibleCount + " of " + entries.length + " resources shown";
+      }
+      if (learningReset) {
+        learningReset.hidden = rawQuery === "" && activeLearningTag === "";
+      }
+      updateLearningFilterUI();
+      syncLearningQueryParam(rawQuery);
+    }
+
+    if (learningTagFilterClear) {
+      learningTagFilterClear.addEventListener("click", function () {
+        activeLearningTag = "";
+        updateLearningResults();
+      });
+    }
+    if (learningReset) {
+      learningReset.addEventListener("click", function () {
+        input.value = "";
+        activeLearningTag = "";
+        updateLearningResults();
+        input.focus();
+      });
+    }
+    input.addEventListener("input", updateLearningResults);
+    input.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && input.value !== "") {
+        input.value = "";
+        updateLearningResults();
+        input.focus();
+      }
+    });
+    clearButton.addEventListener("click", function () {
+      input.value = "";
+      updateLearningResults();
+      input.focus();
+    });
+    updateLearningResults();
+    return;
   }
 
   function updateResults() {

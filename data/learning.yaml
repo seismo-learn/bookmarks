@@ -1,73 +1,71 @@
-sections:
-  - title: Seismology
-    groups:
-      - title: Short Videos & Posts
-        resources:
-          - name: Focal Mechanisms Explained
-            url: https://www.youtube.com/watch?v=MomVOkyDdLo
-            description: What are those "beach balls"? A 6-minute video explaining beachballs for non-seismologists and beginners
-          - name: SEED Channel Naming
-            url: https://ds.iris.edu/ds/nodes/dmc/data/formats/seed-channel-naming/
-            description: Explains channel codes for seismic waveform data
-
-      - title: Workshops & Courses
-        resources:
-          - name: Seismology Skill Building Workshop for Undergraduates
-            url: https://www.iris.edu/hq/inclass/course/ssbw
-          - name: Remote Online Sessions for Emerging Seismologists (ROSES)
-            description: Summer school offered by AGU Seismology Section
-            links:
-              - name: 2020
-                url: https://connect.agu.org/seismology/roses/roses2020materials
-              - name: 2020 IRIS
-                url: https://www.iris.edu/hq/inclass/course/roses_2020
-              - name: 2020 Codes
-                url: https://github.com/roseseismo/roses2020
-              - name: 2021
-                url: https://connect.agu.org/seismology/roses/roses2021materials
-              - name: 2021 Codes
-                url: https://github.com/roseseismo/roses2021
-              - name: 2022
-                url: https://www.iris.edu/hq/inclass/course/roses
-          - name: 地震学算法与程序培训班
-            url: http://seismo.training.ustc.edu.cn/
-            links:
-              - name: 2023 年第九届 蔻享
-                url: https://www.koushare.com/live/details/18392
-              - name: 2022 年第八届 蔻享
-                url: https://www.koushare.com/live/details/9410
-              - name: 2021 年第七届 蔻享
-                url: https://www.koushare.com/live/details/2257?vid=13953
-              - name: 2020 年第六届 领研
-                url: https://www.linkresearcher.com/trainings/d65fe2ef-3cc8-4eef-9821-261e3d49a9ae
-              - name: 2020 年第六届 B 站
-                url: https://www.bilibili.com/video/BV1e54y1i7FM
-          - name: 地球物理暑期学校（北京大学）
-            links:
-              - name: 2020 年：“地震噪声相干与成像”
-                url: https://sess2.pku.edu.cn/xwzx/xytz/344137.htm
-              - name: 2020 年 B 站
-                url: https://space.bilibili.com/668681871?spm_id_from=333.788.b_765f7570696e666f.2
-              - name: 2021 年：”地震波全波形成像应用“
-                url: https://sess2.pku.edu.cn/xwzx/xytz/353510.htm
-          - name: "Computers, Waves, Simulations: A Practical Introduction to Numerical Methods using Python"
-            url: https://www.coursera.org/learn/computers-waves-simulations
-
-  - title: Geophysics & Tectonics
-    resources:
-      - name: Geophysics & Tectonics Seminar
-        url: https://sites.google.com/g.uky.edu/gtseminar/home?authuser=0
-        links:
-          - name: Videos
-            url: https://sites.google.com/g.uky.edu/gtseminar/videos
-
-  - title: Inverse Theory
-    resources:
-      - name: Lecture Notes Inverse Theory
-        url: https://gitlab.com/swp_ethz/public/lecture_notes_inverse_theory
-        description: Exercises and examples accompanying the lecture notes on inverse theory by [Andreas Fichtner](https://erdw.ethz.ch/personen/profil.andreas-fichtner.html)
-
-  - title: Python
-    resources:
-      - name: A Visual Intro to NumPy and Data Representation
-        url: http://jalammar.github.io/visual-numpy/
+---
+resources:
+- name: Focal Mechanisms Explained
+  url: https://www.youtube.com/watch?v=MomVOkyDdLo
+  description: What are those "beach balls"? A 6-minute video explaining beachballs
+    for non-seismologists and beginners
+  tags:
+  - Seismology
+  - Videos
+- name: SEED Channel Naming
+  url: https://ds.iris.edu/ds/nodes/dmc/data/formats/seed-channel-naming/
+  description: Explains channel codes for seismic waveform data
+  tags:
+  - Seismology
+  - Posts
+- name: Seismology Skill Building Workshop for Undergraduates
+  url: https://www.iris.edu/hq/inclass/course/ssbw
+  tags:
+  - Seismology
+  - Workshops & Courses
+- name: Remote Online Sessions for Emerging Seismologists (ROSES)
+  description: Summer school offered by AGU Seismology Section
+  links:
+  - name: 2020
+    url: https://connect.agu.org/seismology/roses/roses2020materials
+  - name: 2020 IRIS
+    url: https://www.iris.edu/hq/inclass/course/roses_2020
+  - name: 2020 Codes
+    url: https://github.com/roseseismo/roses2020
+  - name: 2021
+    url: https://connect.agu.org/seismology/roses/roses2021materials
+  - name: 2021 Codes
+    url: https://github.com/roseseismo/roses2021
+  - name: 2022
+    url: https://www.iris.edu/hq/inclass/course/roses
+  tags:
+  - Seismology
+  - Workshops & Courses
+- name: 地震学算法与程序培训班
+  url: http://seismo.training.ustc.edu.cn/
+  links:
+  - name: 2023 年第九届 蔻享
+    url: https://www.koushare.com/live/details/18392
+  - name: 2022 年第八届 蔻享
+    url: https://www.koushare.com/live/details/9410
+  - name: 2021 年第七届 蔻享
+    url: https://www.koushare.com/live/details/2257?vid=13953
+  - name: 2020 年第六届 领研
+    url: https://www.linkresearcher.com/trainings/d65fe2ef-3cc8-4eef-9821-261e3d49a9ae
+  - name: 2020 年第六届 B 站
+    url: https://www.bilibili.com/video/BV1e54y1i7FM
+  tags:
+  - Seismology
+  - Workshops & Courses
+- name: 地球物理暑期学校（北京大学）
+  links:
+  - name: 2020 年：“地震噪声相干与成像”
+    url: https://sess2.pku.edu.cn/xwzx/xytz/344137.htm
+  - name: 2020 年 B 站
+    url: https://space.bilibili.com/668681871?spm_id_from=333.788.b_765f7570696e666f.2
+  - name: 2021 年：”地震波全波形成像应用“
+    url: https://sess2.pku.edu.cn/xwzx/xytz/353510.htm
+  tags:
+  - Seismology
+  - Workshops & Courses
+- name: 'Computers, Waves, Simulations: A Practical Introduction to Numerical Methods
+    using Python'
+  url: https://www.coursera.org/learn/computers-waves-simulations
+  tags:
+  - Seismology
+  - Workshops & Courses
