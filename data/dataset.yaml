@@ -1,36 +1,21 @@
 ---
 resources:
-- name: GAP_P4
-  url: http://www.jamstec.go.jp/pacific21/google_earth/en/kmlgenerator/tomography.html
-  category:
-  - 3D Tomographic Model
-  description: 3D tomographic model for the Pacific region.
-- name: UU-P07
-  url: http://www.atlas-of-the-underworld.org/uu-p07-model/
-  category:
-  - 3D Tomographic Model
-  description: 3D tomographic model from Utrecht University.
 - name: Borovoye Archive Data from Underground Nuclear Tests
   url: https://www.ldeo.columbia.edu/res/pi/Monitoring/Arch/BRV_arch_deglitched.html
-  category:
-  - Analog Seismograms
-  description: Archived seismic data
-- name: Seismo Archives
-  url: https://ds.iris.edu/seismo-archives
-  description: Scanned Seismograms from Historical Earthquakes
+  description: Seismic data from underground nuclear tests recorded at the Borovoye Geophysical Observatory (BRV) since 1967.
   category:
   - Analog Seismograms
 - name: ISC Arrival Time Data
   url: http://www.isc.ac.uk/iscbulletin/search/arrivals/
   category:
   - Earthquake Arrival Time
-  description: Arrival-time and phase data
+  description: Arrival-time and phase data from the International Seismological Centre (ISC).
 - name: JMA Arrival Time Data
   url: https://www.data.jma.go.jp/svd/eqev/data/bulletin/deck_e.html
   category:
   - Earthquake Arrival Time
-  description: Arrival-time and phase data
-- name: 中国台网震相数据
+  description: Arrival-time and phase data froom the Japan Meteorological Agency (JMA).
+- name: 中国地震台网震相数据
   url: https://data.earthquake.cn/datashare/report.shtml?PAGEID=earthquake_zgtwzx
   category:
   - Earthquake Arrival Time
@@ -40,84 +25,39 @@ resources:
   category:
   - Earthquake Arrival Time
   description: Arrival-time and phase data from the national Chinese seismic network.
-- name: Active faults and folds in the United States
+- name: Quaternary Fault and Fold Database of the United States
   url: https://www.usgs.gov/natural-hazards/earthquake-hazards/faults
   category:
-  - Fault Database
-  description: Fault and active-tectonics resource
-- name: Active Tectonics of the Andes
-  url: https://github.com/ActiveTectonicsAndes/ATA
-  description: Constituent dataset of the GEM Global Active Faults Database.
-  category:
-  - Fault Database
-  links:
-  - name: Brief Introduction
-    url: http://rocksandwater.net/blog/2012/10/ata-announcement
-- name: Central Asia Fault Database
-  url: https://esdynamics.geo.uni-tuebingen.de/faults/
-  category:
-  - Fault Database
-  description: Fault and active-tectonics resource
+  - Fault
+  description: Quaternary Fault and Fold Database of the United States provided by USGS.
 - name: European Database of Seismogenic Faults
   url: https://www.seismofaults.eu
   category:
-  - Fault Database
-  description: Fault and active-tectonics resource
+  - Fault
+  description: European Databases of Seismogenic Faults
 - name: GEM GAF-DB
   url: https://github.com/GEMScienceTools/gem-global-active-faults
-  description: "**G**lobal **A**ctive **F**aults **D**ata**b**ase maintained by the
-    **G**lobal **E**arthquake **M**odel Foundation"
+  description: Global Active Faults Database maintained by the Global Earthquake Model Foundation
   category:
-  - Fault Database
-  links:
-  - name: Brief Introduction
-    url: http://rocksandwater.net/blog/2018/10/the-gem-global-active-faults-database-and-webmap
-  - name: "**G**lobal **E**arthquake **M**odel Foundation"
-    url: https://www.globalquakemodel.org/
-- name: 'GMT-China: 中国断层数据'
+  - Fault
+- name: 中国断层数据
   url: https://docs.gmt-china.org/latest/dataset-CN/CN-faults/
   category:
-  - Fault Database
+  - Fault
   description: Geological fault data for China.
 - name: HimaTibetMap
   url: https://github.com/HimaTibetMap/HimaTibetMap
-  description: Database of active faults and associated features (suture zones, Cenozoic
-    volcanic rocks) in the Indo-Asian collision zone, and Constituent Dataset of GEM
-    GAF-DB
+  description: active faults and associated features (suture zones, Cenozoic volcanic rocks) in the Indo-Asian collision zone.
   category:
   - Fault Database
-  links:
-  - name: Brief Introduction
-    url: http://rocksandwater.net/blog/2011/07/himatibetmap-1-1
-- name: 中国地震局地质研究所：全国活动断层展示系统
-  url: http://www.neotectonics.cn/arcgis/apps/webappviewer/index.html?id=3c0d8234c1dc43eaa0bec3ea03bb00bc
-  description: 手机应用：第四纪
-  category:
-  - Fault Database
-  links:
-  - name: 说明
-    url: https://www.eq-igl.ac.cn/tzgg/info/2020/21942.html
-- name: 中国地震灾害防御中心：地震活动断层探察数据中心
-  url: http://www.activefault-datacenter.cn/
-  description: 手机应用：第四纪
-  category:
-  - Fault Database
-- name: Broadband Array in Taiwan for Seismology CMTs
-  url: https://bats.earth.sinica.edu.tw/
+- name: AutoBATS MT Catalog
+  url: https://tecdc.earth.sinica.edu.tw/FM/AutoBATS/
   description: Broadband array focal mechanism catalog in Taiwan.
   category:
   - Focal Mechanism Catalog
-  links:
-  - name: Catalog Search
-    url: http://tecws.earth.sinica.edu.tw/BATS/cmtbyform.php
-- name: European-Mediterranean Seismological Centre Moment Tensors Solutions
-  url: https://www.emsc-csem.org/Earthquake/index_tensors.php
-  category:
-  - Focal Mechanism Catalog
-  description: Moment tensor solutions for the European-Mediterranean region.
-- name: Global Centroid-Moment-Tensor (CMT)
+- name: Global CMT
   url: https://www.globalcmt.org/
-  description: Global centroid-moment-tensor catalog.
+  description: Global Centroid-Moment-Tensor catalog.
   category:
   - Focal Mechanism Catalog
   links:
@@ -173,16 +113,6 @@ resources:
   category:
   - Focal Mechanism Catalog
   description: Moment tensor catalog for Southern California.
-- name: 'GMT-China: 中国及邻区地质图数据'
-  url: https://docs.gmt-china.org/latest/dataset-CN/geo3al/
-  category:
-  - Geology
-  description: Geological map data for China and neighboring regions.
-- name: OneGeology Portal
-  url: https://portal.onegeology.org/OnegeologyGlobal/
-  description: Global portal for geological map data.
-  category:
-  - Geology
 - name: Global Historical Earthquake Archive (1000-1903)
   url: https://emidius.eu/GEH/
   category:
@@ -190,8 +120,7 @@ resources:
   description: Historical earthquake archive covering 1000 to 1903.
 - name: Global Waveform Catalog
   url: https://github.com/samwimpenny/Global-Waveform-Catalogue
-  description: A database of point-source fault-plane solutions and focal depths for
-    moderate-magnitude earthquakes
+  description: A database of point-source fault-plane solutions and focal depths for moderate-magnitude earthquakes
   category:
   - Global Earthquake Catalog
 - name: ISC Bulletin
@@ -216,7 +145,7 @@ resources:
   - name: Catalog Search
     url: http://www.isc.ac.uk/isc-ehb/search/
 - name: Slow Earthquake Database
-  url: http://www-solid.eps.s.u-tokyo.ac.jp/~sloweq/
+  url: https://eqdb.sakura.ne.jp/
   category:
   - Global Earthquake Catalog
   description: Database of slow earthquakes.
@@ -285,8 +214,8 @@ resources:
   description: Earth Gravitational Model (1984, 1996, 2008)
   category:
   - Gravity
-- name: 'GMT-China: 中国大陆及周边活动地块数据'
-  url: https://docs.gmt-china.org/latest/dataset-CN/CN-block/
+- name: 中国大陆及周边活动地块数据
+  url: https://docs.gmt-china.org/latest/dataset/CN-block/
   category:
   - Plate Boundary Model
   description: Plate-boundary and block model data for China and surroundings.
@@ -508,17 +437,6 @@ resources:
   - name: Seismological Data Services
     url: https://epos-no.uib.no/#/data-services/seismology
   description: Norwegian seismology data services within EPOS.
-- name: FDSN Network Codes
-  url: https://www.fdsn.org/networks/
-  description: Network codes assigned by the FDSN to facilitate unique identifiers
-    for seismological data streams
-  category:
-  - Seismic Data Center
-- name: 'FDSN Web Services: Supporting Data Centers'
-  url: https://www.fdsn.org/webservices/datacenters/
-  category:
-  - Seismic Data Center
-  description: Supporting data centers for FDSN web services.
 - name: GeoNet
   url: https://www.geonet.org.nz/
   description: Geological hazard information for New Zealand
@@ -648,7 +566,7 @@ resources:
   - Shear-wave Splitting
 - name: Earth Global Stress Change Database
   url: http://geophysics.geo.sunysb.edu/wen/resource/index.html
-  description: by Lianxing Wen
+  description: Earth Global Stress Change Database
   category:
   - Stress/Strain Database
 - name: 'Global Earthquake Model: Strain Rate Model'
