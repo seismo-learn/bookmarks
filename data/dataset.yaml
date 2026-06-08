@@ -4,12 +4,12 @@ resources:
   url: http://www.jamstec.go.jp/pacific21/google_earth/en/kmlgenerator/tomography.html
   category:
   - 3D Tomographic Model
-  description: Resource for gap_p4.
+  description: 3D tomographic model for the Pacific region.
 - name: UU-P07
   url: http://www.atlas-of-the-underworld.org/uu-p07-model/
   category:
   - 3D Tomographic Model
-  description: Resource for uu-p07.
+  description: 3D tomographic model from Utrecht University.
 - name: Borovoye Archive Data from Underground Nuclear Tests
   url: https://www.ldeo.columbia.edu/res/pi/Monitoring/Arch/BRV_arch_deglitched.html
   category:
@@ -34,12 +34,12 @@ resources:
   url: https://data.earthquake.cn/datashare/report.shtml?PAGEID=earthquake_zgtwzx
   category:
   - Earthquake Arrival Time
-  description: Resource for 中国台网震相数据.
+  description: Arrival-time and phase data from the China Earthquake Networks Center.
 - name: 中国国家台网震相数据
   url: https://data.earthquake.cn/datashare/report.shtml?PAGEID=earthquake_gjtwzx
   category:
   - Earthquake Arrival Time
-  description: Resource for 中国国家台网震相数据.
+  description: Arrival-time and phase data from the national Chinese seismic network.
 - name: Active faults and folds in the United States
   url: https://www.usgs.gov/natural-hazards/earthquake-hazards/faults
   category:
@@ -47,7 +47,7 @@ resources:
   description: Fault and active-tectonics resource
 - name: Active Tectonics of the Andes
   url: https://github.com/ActiveTectonicsAndes/ATA
-  description: Constituent Dataset of GEM GAF-DB
+  description: Constituent dataset of the GEM Global Active Faults Database.
   category:
   - Fault Database
   links:
@@ -114,11 +114,10 @@ resources:
   url: https://www.emsc-csem.org/Earthquake/index_tensors.php
   category:
   - Focal Mechanism Catalog
-  description: Resource for european-mediterranean seismological centre moment tensors
-    solutions.
+  description: Moment tensor solutions for the European-Mediterranean region.
 - name: Global Centroid-Moment-Tensor (CMT)
   url: https://www.globalcmt.org/
-  description: Resource for global centroid-moment-tensor.
+  description: Global centroid-moment-tensor catalog.
   category:
   - Focal Mechanism Catalog
   links:
@@ -128,7 +127,7 @@ resources:
     url: https://www.globalcmt.org/CMTfiles.html
 - name: Hi-net AUQA Focal Mechanism Catalog
   url: http://www.hinet.bosai.go.jp/AQUA/aqua_catalogue.php?LANG=en
-  description: Earthquake catalog
+  description: Focal mechanism catalog from the Hi-net AQUA project.
   category:
   - Focal Mechanism Catalog
 - name: ISC Focal Mechanism
@@ -158,12 +157,12 @@ resources:
   links:
   - name: Catalog Search
     url: https://www.fnet.bosai.go.jp/event/joho.php?LANG=en
-  description: Resource for nied moment tensors.
+  description: Moment tensor solutions from NIED.
 - name: Northern California Mechanism Catalog
   url: http://www.ncedc.org/ncedc/catalog-search.html
   category:
   - Focal Mechanism Catalog
-  description: Earthquake catalog
+  description: Focal mechanism catalog for Northern California.
 - name: Saint Louis University Moment Tensor Determinations
   url: http://www.eas.slu.edu/eqc/eqcmt.html
   description: Resource for saint louis university moment tensor determinations.
@@ -173,7 +172,7 @@ resources:
   url: https://service.scedc.caltech.edu/eq-catalogs/CMTsearch.php
   category:
   - Focal Mechanism Catalog
-  description: Earthquake catalog
+  description: Moment tensor catalog for Southern California.
 - name: 'GMT-China: 中国及邻区地质图数据'
   url: https://docs.gmt-china.org/latest/dataset-CN/geo3al/
   category:
@@ -414,7 +413,7 @@ resources:
   - Regional Earthquake Catalog
 - name: Northern California Earthquake Catalog
   url: http://www.ncedc.org/ncedc/catalog-search.html
-  description: Earthquake catalog in Norther California
+  description: Earthquake catalog in Northern California
   category:
   - Regional Earthquake Catalog
   links:
