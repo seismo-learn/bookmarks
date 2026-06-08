@@ -132,7 +132,7 @@ resources:
   - Focal Mechanism Catalog
 - name: ISC Focal Mechanism
   url: http://www.isc.ac.uk/iscbulletin/search/fmechanisms/
-  description: Focal mechanism resource
+  description: Focal mechanism catalog from ISC.
   category:
   - Focal Mechanism Catalog
 - name: JMA Focal Mechanism Catalog
@@ -149,7 +149,7 @@ resources:
     url: https://www.data.jma.go.jp/svd/eqev/data/bulletin/cmt_e.html
   - name: Nodal Plane Solution
     url: https://www.data.jma.go.jp/svd/eqev/data/bulletin/mech_e.html
-  description: Earthquake bulletin and catalog
+  description: Seismological bulletin with focal-mechanism solutions from JMA.
 - name: NIED Moment Tensors
   url: https://www.fnet.bosai.go.jp/event/joho.php?LANG=en
   category:
@@ -180,13 +180,14 @@ resources:
   description: Geological map data for China and neighboring regions.
 - name: OneGeology Portal
   url: https://portal.onegeology.org/OnegeologyGlobal/
-  description: Global geoscience data
+  description: Global portal for geological map data.
   category:
   - Geology
 - name: Global Historical Earthquake Archive (1000-1903)
   url: https://emidius.eu/GEH/
   category:
   - Global Earthquake Catalog
+  description: Historical earthquake archive covering 1000 to 1903.
 - name: Global Waveform Catalog
   url: https://github.com/samwimpenny/Global-Waveform-Catalogue
   description: A database of point-source fault-plane solutions and focal depths for
@@ -218,7 +219,7 @@ resources:
   url: http://www-solid.eps.s.u-tokyo.ac.jp/~sloweq/
   category:
   - Global Earthquake Catalog
-  description: Slow-earthquake catalog.
+  description: Database of slow earthquakes.
 - name: The Human-Induced Earthquake Database
   url: http://inducedearthquakes.org/
   description: Database of human-induced earthquakes.
@@ -236,7 +237,7 @@ resources:
     url: https://earthquake.usgs.gov/fdsnws/event/1/
 - name: World Tremor Database
   url: http://www-solid.eps.s.u-tokyo.ac.jp/~idehara/wtd0/Welcome.html
-  description: Slow-earthquake catalog.
+  description: Worldwide tremor and slow-earthquake database.
   category:
   - Global Earthquake Catalog
 - name: International Centre for Global Earth Models (ICGEM)
