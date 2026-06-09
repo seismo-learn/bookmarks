@@ -22,12 +22,12 @@ cards:
     link: learning
     icon: fa-graduation-cap
     description: Courses, tutorials, books, lecture notes, and training material.
-  - name: Journals
-    link: journals
-    icon: fa-book-open
-    description: Publishing venues, profiles, citation tools, and paper access resources.
   - name: Tools
     link: tools
     icon: fa-tools
     description: Everyday utilities for science, programming, documents, writing, and workflows.
+  - name: Journals
+    link: journals
+    icon: fa-book-open
+    description: Publishing venues, profiles, citation tools, and paper access resources.
 ---
