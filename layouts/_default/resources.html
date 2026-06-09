@@ -33,7 +33,6 @@
         {{ partial "resource_journal_list.html" (dict "resources" .) }}
       </section>
     {{ end }}
-    <p class="journals-hint">Missing a journal? <a href="{{ $.Site.Params.edit_page.repo_url }}/blob/{{ $.Site.Params.edit_page.branch }}/data/journals.yaml">Edit the data and submit a pull request!</a></p>
   {{ else if or (eq .Title "Learning") (eq .Title "Tools") }}
     <div class="codes-toolbar dataset-toolbar">
       <p class="codes-count" data-learning-count></p>
@@ -47,7 +46,6 @@
     <section class="resource-section" data-resource-section>
       {{ partial "resource_table_learning.html" $data.resources }}
     </section>
-    <p class="journals-hint">{{ if eq .Title "Tools" }}Missing a tool?{{ else }}Missing a learning resource?{{ end }} <a href="{{ $.Site.Params.edit_page.repo_url }}/blob/{{ $.Site.Params.edit_page.branch }}/data/{{ if eq .Title "Tools" }}tools{{ else }}learning{{ end }}.yaml">Edit the data and submit a pull request!</a></p>
   {{ else if eq .Title "Dataset" }}
     <div class="codes-toolbar dataset-toolbar">
       <p class="codes-count" data-dataset-count></p>
@@ -61,7 +59,6 @@
     <section class="resource-section" data-resource-section>
       {{ partial "resource_table_flat.html" $data.resources }}
     </section>
-    <p class="journals-hint">Missing a dataset or broken link? <a href="{{ $.Site.Params.edit_page.repo_url }}/blob/{{ $.Site.Params.edit_page.branch }}/data/dataset.yaml">Edit the data and submit a pull request!</a></p>
   {{ else }}
     {{ range $data.sections }}
       {{ partial "resource_section.html" . }}
@@ -69,6 +66,10 @@
   {{ end }}
   </div>
 </div>
+
+{{ with .Params.contribute_note }}
+<p class="journals-hint">{{ . }} <a href="{{ $.Site.Params.edit_page.repo_url }}/blob/{{ $.Site.Params.edit_page.branch }}/{{ $.Params.edit_path }}">Edit the data and submit a pull request!</a></p>
+{{ end }}
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {

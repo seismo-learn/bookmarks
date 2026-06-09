@@ -1,5 +1,6 @@
 {{ define "main" }}
 {{ $data := partial "resource_data.html" . }}
+{{ $editPath := .Params.edit_path }}
 <div class="resource-page codes-page">
   <h1>{{ .Title }}</h1>
   {{ .Content }}
@@ -44,5 +45,8 @@
     {{ partial "resource_codes_table.html" (dict "resources" $data.resources) }}
   </div>
 </div>
+{{ with .Params.contribute_note }}
+<p class="journals-hint">{{ . }} <a href="{{ $.Site.Params.edit_page.repo_url }}/blob/{{ $.Site.Params.edit_page.branch }}/{{ $editPath }}">Edit the data and submit a pull request!</a></p>
+{{ end }}
 <script src="{{ "js/codes-page.js" | relURL }}"></script>
 {{ end }}
