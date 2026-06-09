@@ -10,6 +10,8 @@ enableGitInfo = true
 
 [params]
 lastupdate = "Built by [Hugo](https://gohugo.io/) on {now}."
+contribute_note = "This directory stays useful because people keep improving it. Missing links, outdated resources, and better references are all worth contributing."
+footer_title = "Help keep Seismo Bookmarks useful"
 
   [params.assets]
   bootstrap_cdn = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap"
@@ -41,7 +43,6 @@ lastupdate = "Built by [Hugo](https://gohugo.io/) on {now}."
   [[params.footer_links.items]]
   label = "View source"
   url = "https://github.com/seismo-learn/bookmarks"
-
 [markup.goldmark.renderer]
   unsafe = true
   [markup.tableOfContents]

@@ -1,14 +1,10 @@
 <footer>
   <div class="site-footer-inner">
     <div class="site-footer-heading">
-      <p class="site-footer-title">Help keep Seismo Bookmarks useful</p>
-      <p class="site-footer-text">
-        {{ with .Params.contribute_note }}
-          {{ . }}
-        {{ else }}
-          Contribute references, update outdated resources, or report broken links to keep the directory reliable.
-        {{ end }}
-      </p>
+      <p class="site-footer-title">{{ .Site.Params.footer_title }}</p>
+      {{ with .Site.Params.contribute_note }}
+      <p class="site-footer-text">{{ . }}</p>
+      {{ end }}
     </div>
     <div class="site-footer-actions">
       {{ with .Site.Params.footer_links }}
