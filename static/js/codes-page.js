@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
   var clearButton = root.querySelector("[data-resource-search-clear]");
   var emptyState = document.querySelector("[data-resource-empty]");
   var countNode = document.querySelector("[data-codes-count]");
-  var resetButton = document.querySelector("[data-codes-reset]");
   var tagFilter = document.querySelector("[data-codes-tag-filter]");
   var tagFilterList = document.querySelector("[data-codes-tag-filter-list]");
   var tagFilterClear = document.querySelector("[data-codes-tag-filter-clear]");
@@ -257,17 +256,6 @@ document.addEventListener("DOMContentLoaded", function () {
       updateResults();
     });
   });
-  if (resetButton) {
-    resetButton.addEventListener("click", function () {
-      input.value = "";
-      activeTag = "";
-      activeLanguage = "";
-      activeSort = "name";
-      sortDirection = "asc";
-      updateResults();
-      input.focus();
-    });
-  }
   sortButtons.forEach(function (button) {
     button.addEventListener("click", function () {
       if (activeSort === button.dataset.sortField) {

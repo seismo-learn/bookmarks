@@ -33,23 +33,21 @@
     {{ if or (eq .Params.resource_data "learning") (eq .Params.resource_data "tools") }}
     <div class="codes-toolbar dataset-toolbar">
       <p class="codes-count" data-learning-count></p>
-      <button type="button" class="codes-reset" data-learning-reset hidden>Reset filters</button>
     </div>
     <div class="codes-tag-filter dataset-category-filter" data-learning-tag-filter hidden>
       <span class="codes-tag-filter-label">Tags</span>
       <div class="codes-tag-filter-list" data-learning-tag-filter-list></div>
-      <button type="button" class="codes-tag-filter-clear" data-learning-tag-filter-clear hidden>Clear tag</button>
+      <button type="button" class="codes-tag-filter-clear" data-learning-tag-filter-clear hidden>Clear tags</button>
     </div>
     {{ partial "resource_table_view.html" (dict "kind" "learning" "resources" $data.resources "columns" .Params.columns "sortable_columns" .Params.sortable_columns) }}
     {{ else if eq .Params.resource_data "dataset" }}
     <div class="codes-toolbar dataset-toolbar">
       <p class="codes-count" data-dataset-count></p>
-      <button type="button" class="codes-reset" data-dataset-reset hidden>Reset filters</button>
     </div>
     <div class="codes-tag-filter dataset-tag-filter" data-dataset-tag-filter hidden>
       <span class="codes-tag-filter-label">Tags</span>
       <div class="codes-tag-filter-list" data-dataset-tag-filter-list></div>
-      <button type="button" class="codes-tag-filter-clear" data-dataset-tag-filter-clear hidden>Clear tag</button>
+      <button type="button" class="codes-tag-filter-clear" data-dataset-tag-filter-clear hidden>Clear tags</button>
     </div>
     {{ partial "resource_table_view.html" (dict "kind" "dataset" "resources" $data.resources "columns" .Params.columns "sortable_columns" .Params.sortable_columns) }}
     {{ end }}

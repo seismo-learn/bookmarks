@@ -7,9 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var emptyState = document.querySelector("[data-resource-empty]");
   var entries = Array.prototype.slice.call(document.querySelectorAll("[data-resource-entry]"));
   var datasetCount = document.querySelector("[data-dataset-count]");
-  var datasetReset = document.querySelector("[data-dataset-reset]");
   var learningCount = document.querySelector("[data-learning-count]");
-  var learningReset = document.querySelector("[data-learning-reset]");
   var learningTagFilter = document.querySelector("[data-learning-tag-filter]");
   var learningTagFilterList = document.querySelector("[data-learning-tag-filter-list]");
   var learningTagFilterClear = document.querySelector("[data-learning-tag-filter-clear]");
@@ -34,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var activeLearningTag = (params.get("tag") || "").toLowerCase();
 
   if (!input) return;
-  if (!datasetCount && !datasetReset && !learningCount && !learningReset && !learningTagFilter && !datasetTagFilter) return;
+  if (!datasetCount && !learningCount && !learningTagFilter && !datasetTagFilter) return;
   if (params.has("q")) {
     input.value = params.get("q");
   }
@@ -126,7 +124,6 @@ document.addEventListener("DOMContentLoaded", function () {
     emptyState.hidden = visibleCount !== 0;
     clearButton.hidden = rawQuery === "";
     if (datasetCount) datasetCount.textContent = visibleCount + " of " + entries.length + " datasets shown";
-    if (datasetReset) datasetReset.hidden = rawQuery === "" && activeDatasetTag === "" && activeDatasetSort === "tags" && datasetSortDir === "asc";
     updateDatasetSortUI();
     updateDatasetFilterUI();
     syncDatasetQueryParam(rawQuery);
@@ -190,7 +187,6 @@ document.addEventListener("DOMContentLoaded", function () {
     emptyState.hidden = visibleCount !== 0;
     clearButton.hidden = rawQuery === "";
     if (learningCount) learningCount.textContent = visibleCount + " of " + entries.length + " resources shown";
-    if (learningReset) learningReset.hidden = rawQuery === "" && activeLearningTag === "";
     updateLearningFilterUI();
     syncLearningQueryParam(rawQuery);
   }
@@ -231,14 +227,6 @@ document.addEventListener("DOMContentLoaded", function () {
       learningTagFilterClear.addEventListener("click", function () {
         activeLearningTag = "";
         updateLearningResults();
-      });
-    }
-    if (learningReset) {
-      learningReset.addEventListener("click", function () {
-        input.value = "";
-        activeLearningTag = "";
-        updateLearningResults();
-        input.focus();
       });
     }
     input.addEventListener("input", updateLearningResults);
@@ -302,16 +290,6 @@ document.addEventListener("DOMContentLoaded", function () {
       datasetTagFilterClear.addEventListener("click", function () {
         activeDatasetTag = "";
         updateDatasetResults();
-      });
-    }
-    if (datasetReset) {
-      datasetReset.addEventListener("click", function () {
-        input.value = "";
-        activeDatasetTag = "";
-        activeDatasetSort = "name";
-        datasetSortDir = "asc";
-        updateDatasetResults();
-        input.focus();
       });
     }
     input.addEventListener("input", updateDatasetResults);
