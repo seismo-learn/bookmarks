@@ -14,7 +14,7 @@ resources:
   url: https://www.data.jma.go.jp/svd/eqev/data/bulletin/deck_e.html
   category:
   - Earthquake Arrival Time
-  description: Arrival-time and phase data froom the Japan Meteorological Agency (JMA).
+  description: Arrival-time and phase data from the Japan Meteorological Agency (JMA).
 - name: 中国地震台网震相数据
   url: https://data.earthquake.cn/datashare/report.shtml?PAGEID=earthquake_zgtwzx
   category:
@@ -34,10 +34,10 @@ resources:
   url: https://www.seismofaults.eu
   category:
   - Fault
-  description: European Databases of Seismogenic Faults
+  description: Database of seismogenic faults in Europe.
 - name: GEM GAF-DB
   url: https://github.com/GEMScienceTools/gem-global-active-faults
-  description: Global Active Faults Database maintained by the Global Earthquake Model Foundation
+  description: Global Active Faults Database maintained by the Global Earthquake Model Foundation.
   category:
   - Fault
 - name: 中国断层数据
@@ -47,7 +47,7 @@ resources:
   description: Geological fault data for China.
 - name: HimaTibetMap
   url: https://github.com/HimaTibetMap/HimaTibetMap
-  description: active faults and associated features (suture zones, Cenozoic volcanic rocks) in the Indo-Asian collision zone.
+  description: Active faults and associated features, including suture zones and Cenozoic volcanic rocks, in the Indo-Asian collision zone.
   category:
   - Fault
 - name: AutoBATS MT Catalog
@@ -77,7 +77,7 @@ resources:
   - Focal Mechanism Catalog
 - name: JMA Focal Mechanism Catalog
   url: https://hinetwww11.bosai.go.jp/auth/JMA/?LANG=en
-  description: Focal mechanism based on JMA Unified Hypocenter Catalog (Preliminary)
+  description: Focal mechanisms based on the JMA Unified Hypocenter Catalog (Preliminary).
   category:
   - Focal Mechanism Catalog
 - name: JMA Seismological Bulletin of Japan
@@ -120,7 +120,7 @@ resources:
   description: Historical earthquake archive covering 1000 to 1903.
 - name: Global Waveform Catalog
   url: https://github.com/samwimpenny/Global-Waveform-Catalogue
-  description: A database of point-source fault-plane solutions and focal depths for moderate-magnitude earthquakes
+  description: Database of point-source fault-plane solutions and focal depths for moderate-magnitude earthquakes.
   category:
   - Global Earthquake Catalog
 - name: ISC Bulletin
@@ -137,8 +137,8 @@ resources:
     url: http://www.isc.ac.uk/fdsnws/event/1/
 - name: ISC-EHB Bulletin
   url: http://www.isc.ac.uk/isc-ehb/
-  description: The ISC-EHB Dataset is a groomed version of the ISC Bulletin, and contains
-    208480 seismic events from 1964 to 2021, where the period 1964-2008 has been rebuilt.
+  description: The ISC-EHB Dataset is a curated version of the ISC Bulletin, containing
+    208480 seismic events from 1964 to 2021, with the period 1964-2008 rebuilt.
   category:
   - Global Earthquake Catalog
   links:
@@ -158,7 +158,7 @@ resources:
   url: https://earthquake.usgs.gov/data/comcat/
   category:
   - Global Earthquake Catalog
-  description: Global Earthquake catalog provided by USGS.
+  description: Global earthquake catalog provided by USGS.
   links:
   - name: Web Search
     url: https://earthquake.usgs.gov/earthquakes/search/
@@ -173,12 +173,12 @@ resources:
   url: http://icgem.gfz-potsdam.de/home
   category:
   - Gravity
-  description: Global gravity field model repository.
+  description: Repository of global gravity field models.
 - name: International Digital Elevation Model Service (IDEMS)
   url: https://idems.maps.arcgis.com/home/index.html
   category:
   - Gravity
-  description: Global digital elevation model service.
+  description: Service for global digital elevation models.
 - name: International Geodynamics and Earth Tide Service (IGETS)
   url: http://igets.u-strasbg.fr
   category:
@@ -203,7 +203,7 @@ resources:
   url: http://www.isgeoid.polimi.it
   category:
   - Gravity
-  description: Geodetic reference resource
+  description: Geodetic reference resource.
 - name: National Geospatial-Intelligence Agency (NGA)
   url: https://earth-info.nga.mil/
   category:
@@ -211,7 +211,7 @@ resources:
   description: Geodesy and gravity-related datasets from NGA.
 - name: 'NGA: World Geodetic System 1984 Data'
   url: https://earth-info.nga.mil/index.php?dir=wgs84&action=wgs84
-  description: Earth Gravitational Model (1984, 1996, 2008)
+  description: Earth Gravitational Models from 1984, 1996, and 2008.
   category:
   - Gravity
 - name: 中国大陆及周边活动地块数据
@@ -294,7 +294,7 @@ resources:
   - Reference Seismological Model
 - name: Shear-wave Velocity Models
   url: http://ciei.colorado.edu/Models
-  description: by University of Colorado, Boulder
+  description: Provided by the University of Colorado Boulder.
   category:
   - Reference Seismological Model
 - name: Some regional Crustal Models
@@ -584,7 +584,7 @@ resources:
     url: https://github.com/usgs/slab2
 - name: Dispersion Maps
   url: http://ciei.colorado.edu/DispMaps
-  description: by University of Colorado, Boulder
+  description: Provided by the University of Colorado Boulder.
   category:
   - Surface-wave Dispersion
 - name: Global Dispersion Model GDM52
@@ -612,14 +612,14 @@ resources:
   url: https://volcano.si.edu
   category:
   - Volcano
-  description: Volcano resource
+  description: Volcano resource.
 - name: NOAA Volcanic Data and Information
   url: https://www.ngdc.noaa.gov/hazard/volcano.shtml
   category:
   - Volcano
-  description: Volcano resource
+  description: Volcano resource.
 - name: Volcano Discovery
   url: https://www.volcanodiscovery.com
   category:
   - Volcano
-  description: Volcano resource
+  description: Volcano resource.
