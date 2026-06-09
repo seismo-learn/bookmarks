@@ -7,32 +7,8 @@ resources:
   tags:
   - Seismology
   - Videos
-- name: SEED Channel Naming
-  url: https://ds.iris.edu/ds/nodes/dmc/data/formats/seed-channel-naming/
-  description: Explains channel codes for seismic waveform data
-  tags:
-  - Seismology
-  - Posts
-- name: Seismology Skill Building Workshop for Undergraduates
-  url: https://www.iris.edu/hq/inclass/course/ssbw
-  tags:
-  - Seismology
-  - Workshops & Courses
-- name: Remote Online Sessions for Emerging Seismologists (ROSES)
-  description: Summer school offered by AGU Seismology Section
-  links:
-  - name: 2020
-    url: https://connect.agu.org/seismology/roses/roses2020materials
-  - name: 2020 IRIS
-    url: https://www.iris.edu/hq/inclass/course/roses_2020
-  - name: 2020 Codes
-    url: https://github.com/roseseismo/roses2020
-  - name: 2021
-    url: https://connect.agu.org/seismology/roses/roses2021materials
-  - name: 2021 Codes
-    url: https://github.com/roseseismo/roses2021
-  - name: 2022
-    url: https://www.iris.edu/hq/inclass/course/roses
+- name: Seismology Skill Building Workshop
+  url: https://www.earthscope.org/education/skill-building-learning/courses/ssbw/
   tags:
   - Seismology
   - Workshops & Courses
@@ -49,17 +25,6 @@ resources:
     url: https://www.linkresearcher.com/trainings/d65fe2ef-3cc8-4eef-9821-261e3d49a9ae
   - name: 2020 年第六届 B 站
     url: https://www.bilibili.com/video/BV1e54y1i7FM
-  tags:
-  - Seismology
-  - Workshops & Courses
-- name: 地球物理暑期学校（北京大学）
-  links:
-  - name: 2020 年：“地震噪声相干与成像”
-    url: https://sess2.pku.edu.cn/xwzx/xytz/344137.htm
-  - name: 2020 年 B 站
-    url: https://space.bilibili.com/668681871?spm_id_from=333.788.b_765f7570696e666f.2
-  - name: 2021 年：”地震波全波形成像应用“
-    url: https://sess2.pku.edu.cn/xwzx/xytz/353510.htm
   tags:
   - Seismology
   - Workshops & Courses
