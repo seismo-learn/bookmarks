@@ -1,87 +1,99 @@
-sections:
-  - title: Science
-    resources:
-      - name: Periodic Table of Elements
-        url: https://www.ptable.com
-      - name: Animations of the free oscillations of the Earth
-        url: https://saviot.cnrs.fr/terre/index.en.html
-      - name: IRIS Seismic Monitor
-        url: https://www.iris.edu/app/seismic-monitor/map
-      - name: IRIS Station Monitor
-        url: https://www.iris.edu/app/station_monitor/
-
-  - title: Computer
-    resources:
-      - name: IPIP
-        url: https://www.ipip.net/
-        description: The best IP geolocation database
-
-  - title: Programming
-    groups:
-      - title: General Tools
-        resources:
-          - name: Choose an open source license
-            url: https://choosealicense.com/
-            description: Simple way to choose a license
-          - name: DevDocs
-            url: https://devdocs.io/
-            description: API documentation for multiple programming languages/tools in one place
-          - name: regex101
-            url: https://regex101.com/
-            description: Online regular expressions tester and debugger
-      - title: Python
-        resources:
-          - name: strftime
-            url: http://strftime.org/
-            description: Python strftime reference
-          - name: ruff
-            url: https://github.com/astral-sh/ruff
-            description: An extremely fast Python linter and code formatter, written in Rust.
-
-  - title: Document
-    groups:
-      - title: General Tools
-        resources:
-          - name: Convertio
-            url: https://convertio.co/
-            description: Convert your files to any format (300+ formats supported)
-          - name: WebPlotDigitizer
-            url: https://automeris.io/WebPlotDigitizer
-            description: Web based tool to extract data from plots, images, and maps
-      - title: PDF
-        resources:
-          - name: cpdf
-            url: http://community.coherentpdf.com/
-            description: Command line tool to manipulate existing PDF files
-          - name: ILovePDF
-            url: https://www.ilovepdf.com/
-            description: Every tool you need to work with PDFs in one place
-          - name: pdftk
-            url: https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/
-            description: The PDF toolkit for doing everyday things with PDF documents
-          - name: PDF2JPG
-            url: https://pdf2jpg.net/
-            description: Free PDF to JPG online converter
-          - name: Smallpdf
-            url: https://smallpdf.com/
-            description: All-in-one easy-to-use online PDF tools
-      - title: Image
-        resources:
-          - name: ILoveIMG
-            url: https://www.iloveimg.com/
-            description: Every tool you could want to edit images in bulk
-          - name: Logoly
-            url: https://www.logoly.pro/
-            description: A simple online logo generator
-          - name: Squoosh
-            url: https://squoosh.app/
-            description: Image compression web app provided by Google
-
-  - title: Writing
-    resources:
-      - name: Grammarly
-        url: https://www.grammarly.com
-        description: Free writing assistant to check your grammar
-      - name: IRIS citations
-        url: https://www.iris.edu/hq/iris_citations
-        description: How to cite/acknowledge IRIS data
+---
+resources:
+- name: Periodic Table of Elements
+  url: https://www.ptable.com
+  description: Interactive periodic table with detailed information about each element.
+  tags:
+  - Science
+- name: Animations of the free oscillations of the Earth
+  url: https://saviot.cnrs.fr/terre/index.en.html
+  description: Animations of the free oscillations of the Earth, including spheroidal and toroidal modes.
+  tags:
+  - Science
+- name: IRIS Seismic Monitor
+  url: https://www.iris.edu/app/seismic-monitor/map
+  description: Real-time monitor of global seismic activity.
+  tags:
+  - Science
+- name: IPIP
+  url: https://www.ipip.net/
+  description: The best IP geolocation database
+  tags:
+  - Computer
+  - Web
+- name: Choose an open source license
+  url: https://choosealicense.com/
+  description: Simple way to choose a license
+  tags:
+  - Programming
+  - Web
+- name: DevDocs
+  url: https://devdocs.io/
+  description: API documentation for multiple programming languages/tools in one place
+  tags:
+  - Programming
+  - Web
+- name: regex101
+  url: https://regex101.com/
+  description: Online regular expressions tester and debugger
+  tags:
+  - Programming
+  - Web
+- name: strftime
+  url: http://strftime.org/
+  description: Python strftime reference
+  tags:
+  - Programming
+  - Python
+- name: ruff
+  url: https://github.com/astral-sh/ruff
+  description: An extremely fast Python linter and code formatter, written in Rust.
+  tags:
+  - Programming
+  - Python
+- name: Convertio
+  url: https://convertio.co/
+  description: Convert your files to any format (300+ formats supported)
+  tags:
+  - Document Conversion
+- name: WebPlotDigitizer
+  url: https://automeris.io/WebPlotDigitizer
+  description: Web based tool to extract data from plots, images, and maps
+  tags:
+  - Data Extraction
+- name: cpdf
+  url: http://community.coherentpdf.com/
+  description: Command line tool to manipulate existing PDF files
+  tags:
+  - Document Conversion
+  - PDF
+- name: ILovePDF
+  url: https://www.ilovepdf.com/
+  description: Every tool you need to work with PDFs in one place
+  tags:
+  - Document Conversion
+  - PDF
+- name: Smallpdf
+  url: https://smallpdf.com/
+  description: All-in-one easy-to-use online PDF tools
+  tags:
+  - Document Conversion
+  - PDF
+- name: ILoveIMG
+  url: https://www.iloveimg.com/
+  description: Every tool you could want to edit images in bulk
+  tags:
+  - Document Conversion
+  - Image
+- name: Squoosh
+  url: https://squoosh.app/
+  description: Image compression web app provided by Google
+  tags:
+  - Image Compression
+  - Web
+- name: IRIS citations
+  url: https://www.iris.edu/hq/iris_citations
+  description: How to cite/acknowledge IRIS data
+  tags:
+  - Science
+  - Writing

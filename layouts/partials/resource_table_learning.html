@@ -5,14 +5,12 @@
       <col class="codes-col-name">
       <col class="codes-col-details">
       <col class="codes-col-tags">
-      <col class="codes-col-links">
     </colgroup>
     <thead>
       <tr>
         <th>Name</th>
         <th>Description</th>
         <th>Tags</th>
-        <th>Links</th>
       </tr>
     </thead>
     <tbody>
@@ -45,13 +43,6 @@
           {{ with .tags }}
           <div class="resource-tag-list">
             {{ range . }}<button type="button" class="resource-tag resource-filter-tag" data-learning-filter-tag="{{ lower . }}">{{ . }}</button>{{ end }}
-          </div>
-          {{ end }}
-        </td>
-        <td class="codes-col-links">
-          {{ with .links }}
-          <div class="codes-related-links">
-            {{ range . }}<a class="codes-related-link" href="{{ .url }}">{{ .name }}</a>{{ end }}
           </div>
           {{ end }}
         </td>
