@@ -54,7 +54,6 @@ resources:
   doi: 10.1785/0220250175
   languages:
   - Python
-  - MATLAB
   tags:
   - Earthquake Statistics
 - name: BurnMan
