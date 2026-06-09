@@ -59,10 +59,6 @@
     <section class="resource-section" data-resource-section>
       {{ partial "resource_table_flat.html" $data.resources }}
     </section>
-  {{ else }}
-    {{ range $data.sections }}
-      {{ partial "resource_section.html" . }}
-    {{ end }}
   {{ end }}
   </div>
 </div>
