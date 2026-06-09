@@ -1,6 +1,5 @@
 ---
 title: Journals
-layout: resources
 view: cards
 search_placeholder: Filter by name, abbreviation, or related link
 resource_data: journals

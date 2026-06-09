@@ -99,12 +99,14 @@
           {{ $searchText = printf "%s %s %s" $searchText .name .url }}
         {{ end }}
         {{ $tagText := "" }}
+        {{ $tagOriginal := "" }}
         {{ with .tags }}
           {{ range $index, $tag := . }}
             {{ if $index }}{{ $tagText = printf "%s,%s" $tagText (lower $tag) }}{{ else }}{{ $tagText = lower $tag }}{{ end }}
+            {{ if $index }}{{ $tagOriginal = printf "%s,%s" $tagOriginal . }}{{ else }}{{ $tagOriginal = . }}{{ end }}
           {{ end }}
         {{ end }}
-        <tr data-resource-entry data-search-text="{{ lower ($searchText | plainify) }}" data-tags="{{ $tagText }}">
+        <tr data-resource-entry data-search-text="{{ lower ($searchText | plainify) }}" data-tags="{{ $tagText }}" data-tags-original="{{ $tagOriginal }}">
           <td class="codes-col-name">
             {{ if .url }}
             <a href="{{ .url }}"><strong>{{ .name }}</strong></a>

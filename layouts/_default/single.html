@@ -1,13 +1,12 @@
 {{ define "main" }}
+{{ if .Params.resource_data }}
+  {{ if eq .File.BaseFileName "codes" }}
+    {{ partial "codes_page.html" . }}
+  {{ else }}
+    {{ partial "resources_page.html" . }}
+  {{ end }}
+{{ else }}
 <h1>{{ .Title }}</h1>
 {{ .Content }}
-{{ end }}
-
-{{ define "toc" }}
-{{ if .Params.toc }}
-<aside>
-  <h2>Table of Contents</h2>
-  {{ .TableOfContents }}
-</aside>
 {{ end }}
 {{ end }}

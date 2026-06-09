@@ -1,0 +1,51 @@
+{{ $data := partial "resource_data.html" . }}
+{{ $editPath := .Params.edit_path }}
+<div class="resource-page codes-page">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+
+  <div class="resource-search" data-resource-search>
+    <div class="resource-search-controls">
+      <span class="resource-search-icon" aria-hidden="true">
+        <i class="fas fa-search"></i>
+      </span>
+      <input
+        id="resource-search-input"
+        class="resource-search-input"
+        type="search"
+        placeholder="Filter by name, description, tags, languages, or related link"
+        autocomplete="off"
+        spellcheck="false"
+        data-resource-search-input
+      >
+      <button type="button" class="resource-search-clear" data-resource-search-clear hidden>
+        Clear
+      </button>
+    </div>
+  </div>
+
+  <div class="resource-empty-state" data-resource-empty hidden>No matching entries found.</div>
+  <div class="codes-toolbar">
+    <div class="codes-count" data-codes-count></div>
+    <button type="button" class="codes-reset" data-codes-reset hidden>Reset filters</button>
+  </div>
+  <div class="codes-tag-filter" data-codes-tag-filter hidden>
+    <span class="codes-tag-filter-label">Tags</span>
+    <div class="codes-tag-filter-list" data-codes-tag-filter-list></div>
+    <button type="button" class="codes-tag-filter-clear" data-codes-tag-filter-clear hidden>Clear tag</button>
+  </div>
+  <div class="codes-tag-filter codes-language-filter" data-codes-language-filter hidden>
+    <span class="codes-tag-filter-label">Languages</span>
+    <div class="codes-tag-filter-list" data-codes-language-filter-list></div>
+    <button type="button" class="codes-tag-filter-clear" data-codes-language-filter-clear hidden>Clear language</button>
+  </div>
+
+  <div data-resource-results>
+    {{ partial "resource_table_view.html" (dict "kind" "codes" "resources" $data.resources "columns" .Params.columns) }}
+  </div>
+</div>
+{{ with .Params.contribute_note }}
+<p class="journals-hint">{{ . }} <a href="{{ $.Site.Params.edit_page.repo_url }}/blob/{{ $.Site.Params.edit_page.branch }}/{{ $editPath }}">Edit the data and submit a pull request!</a></p>
+{{ end }}
+<script src="{{ "js/resource-filters.js" | relURL }}"></script>
+<script src="{{ "js/codes-page.js" | relURL }}"></script>

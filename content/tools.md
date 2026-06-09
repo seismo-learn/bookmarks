@@ -1,6 +1,5 @@
 ---
 title: Tools
-layout: resources
 view: table
 search_placeholder: Filter by name, description, or related link
 columns:

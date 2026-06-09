@@ -1,6 +1,5 @@
 ---
 title: Codes
-layout: codes
 view: table
 search_placeholder: Filter by name, description, tags, languages, or related link
 columns:
