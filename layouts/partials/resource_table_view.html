@@ -1,0 +1,9 @@
+{{ $kind := .kind | default "sectioned" }}
+{{ $resources := .resources }}
+{{ if eq $kind "codes" }}
+  {{ partial "resource_codes_table.html" (dict "resources" $resources) }}
+{{ else if eq $kind "dataset" }}
+  {{ partial "resource_table_flat.html" $resources }}
+{{ else if eq $kind "learning" }}
+  {{ partial "resource_table_learning.html" $resources }}
+{{ end }}

@@ -1,8 +1,9 @@
 ---
 title: Codes
 layout: codes
+view: table
+search_placeholder: Filter by name, description, tags, languages, or related link
 resource_data: codes
 edit_path: data/codes.yaml
 contribute_note: Missing a code package or broken link?
-toc: true
 ---

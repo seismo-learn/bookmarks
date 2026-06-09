@@ -42,7 +42,7 @@
   </div>
 
   <div data-resource-results>
-    {{ partial "resource_codes_table.html" (dict "resources" $data.resources) }}
+    {{ partial "resource_table_view.html" (dict "kind" "codes" "resources" $data.resources) }}
   </div>
 </div>
 {{ with .Params.contribute_note }}

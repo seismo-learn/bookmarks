@@ -1,0 +1,5 @@
+{{ with .resources }}
+<section class="resource-section" data-resource-section>
+  {{ partial "resource_journal_list.html" (dict "resources" .) }}
+</section>
+{{ end }}

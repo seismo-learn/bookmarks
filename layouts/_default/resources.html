@@ -1,5 +1,6 @@
 {{ define "main" }}
 {{ $data := partial "resource_data.html" . }}
+{{ $view := .Params.view | default "table" }}
 <div class="resource-page">
   <h1>{{ .Title }}</h1>
   {{ .Content }}
@@ -13,7 +14,7 @@
         id="resource-search-input"
         class="resource-search-input"
         type="search"
-        placeholder='{{ if eq .Title "Journals" }}Filter by name, abbreviation, or related link{{ else }}Filter by name, description, or related link{{ end }}'
+        placeholder='{{ .Params.search_placeholder | default "Filter by name, description, or related link" }}'
         autocomplete="off"
         spellcheck="false"
         data-resource-search-input
@@ -27,13 +28,10 @@
   <div class="resource-empty-state" data-resource-empty hidden>No matching entries found.</div>
 
   <div data-resource-results>
-  {{ if eq .Title "Journals" }}
-    {{ with $data.resources }}
-      <section class="resource-section" data-resource-section>
-        {{ partial "resource_journal_list.html" (dict "resources" .) }}
-      </section>
-    {{ end }}
-  {{ else if or (eq .Title "Learning") (eq .Title "Tools") }}
+  {{ if eq $view "cards" }}
+    {{ partial "resource_card_view.html" (dict "resources" $data.resources) }}
+  {{ else if eq $view "table" }}
+    {{ if or (eq .Params.resource_data "learning") (eq .Params.resource_data "tools") }}
     <div class="codes-toolbar dataset-toolbar">
       <p class="codes-count" data-learning-count></p>
       <button type="button" class="codes-reset" data-learning-reset hidden>Reset filters</button>
@@ -43,10 +41,8 @@
       <div class="codes-tag-filter-list" data-learning-tag-filter-list></div>
       <button type="button" class="codes-tag-filter-clear" data-learning-tag-filter-clear hidden>Clear tag</button>
     </div>
-    <section class="resource-section" data-resource-section>
-      {{ partial "resource_table_learning.html" $data.resources }}
-    </section>
-  {{ else if eq .Title "Dataset" }}
+    {{ partial "resource_table_view.html" (dict "kind" "learning" "resources" $data.resources) }}
+    {{ else if eq .Params.resource_data "dataset" }}
     <div class="codes-toolbar dataset-toolbar">
       <p class="codes-count" data-dataset-count></p>
       <button type="button" class="codes-reset" data-dataset-reset hidden>Reset filters</button>
@@ -56,9 +52,8 @@
       <div class="codes-tag-filter-list" data-dataset-category-filter-list></div>
       <button type="button" class="codes-tag-filter-clear" data-dataset-category-filter-clear hidden>Clear category</button>
     </div>
-    <section class="resource-section" data-resource-section>
-      {{ partial "resource_table_flat.html" $data.resources }}
-    </section>
+    {{ partial "resource_table_view.html" (dict "kind" "dataset" "resources" $data.resources) }}
+    {{ end }}
   {{ end }}
   </div>
 </div>
@@ -476,32 +471,4 @@ document.addEventListener("DOMContentLoaded", function () {
   updateResults();
 });
 </script>
-{{ end }}
-
-{{ define "toc" }}
-{{ $data := partial "resource_data.html" . }}
-{{ if and .Params.toc $data.sections (ne .Title "Dataset") }}
-<aside>
-  <details class="resource-toc">
-    <summary>Table of Contents</summary>
-    <nav id="TableOfContents">
-      <ul>
-      {{ range $data.sections }}
-        <li>
-          <a href="#{{ anchorize .title }}">{{ .title }}</a>
-          {{ $section := .title }}
-          {{ with .groups }}
-          <ul>
-      {{ range . }}
-            <li><a href="#{{ anchorize (printf "%s-%s" $section .title) }}">{{ .title }}</a></li>
-            {{ end }}
-          </ul>
-          {{ end }}
-        </li>
-      {{ end }}
-      </ul>
-    </nav>
-  </details>
-</aside>
-{{ end }}
 {{ end }}
