@@ -1,6 +1,6 @@
 {{ with .resources }}
 <section class="resource-section" data-resource-section>
-  <div class="journal-list">
+  <div class="resource-card-list">
     {{ range . }}
     {{ $searchText := printf "%s %s" .name (.description | default "") }}
     {{ with .abbreviations }}
@@ -16,35 +16,35 @@
     {{ if $homepage }}
       {{ $searchText = printf "%s %s" $searchText $homepage }}
     {{ end }}
-    <article class="journal-card" data-resource-entry data-search-text="{{ lower ($searchText | plainify) }}">
-      <div class="journal-card-head">
-        <div class="journal-card-title-row">
+    <article class="resource-card" data-resource-entry data-search-text="{{ lower ($searchText | plainify) }}">
+      <div class="resource-card-head">
+        <div class="resource-card-title-row">
           {{ if .url }}
-          <a class="journal-card-title" href="{{ .url }}">{{ .name }}</a>
+          <a class="resource-card-title" href="{{ .url }}">{{ .name }}</a>
           {{ else }}
-          <strong class="journal-card-title">{{ .name }}</strong>
+          <strong class="resource-card-title">{{ .name }}</strong>
           {{ end }}
         </div>
-        {{ with .description }}<p class="journal-card-description">{{ . | markdownify }}</p>{{ end }}
+        {{ with .description }}<p class="resource-card-description">{{ . | markdownify }}</p>{{ end }}
       </div>
 
       {{ $primaryLabels := slice "Current Issue" "Submit" "Submission Guidelines" }}
-      <div class="journal-card-links">
+      <div class="resource-card-links">
         {{ with $homepage }}
-        <a class="journal-link-pill journal-link-pill-primary" href="{{ . }}" aria-label="Homepage" title="Homepage">
+        <a class="resource-link-pill resource-link-pill-primary" href="{{ . }}" aria-label="Homepage" title="Homepage">
           <i class="fas fa-home" aria-hidden="true"></i>
         </a>
         {{ end }}
         {{ range $label := $primaryLabels }}
           {{ range $link := $links }}
             {{ if eq $link.name $label }}
-            <a class="journal-link-pill journal-link-pill-primary" href="{{ $link.url }}">{{ $link.name }}</a>
+            <a class="resource-link-pill resource-link-pill-primary" href="{{ $link.url }}">{{ $link.name }}</a>
             {{ end }}
           {{ end }}
         {{ end }}
         {{ range $link := $links }}
           {{ if not (in $primaryLabels $link.name) }}
-          <a class="journal-link-pill" href="{{ $link.url }}">{{ $link.name }}</a>
+          <a class="resource-link-pill" href="{{ $link.url }}">{{ $link.name }}</a>
           {{ end }}
         {{ end }}
       </div>

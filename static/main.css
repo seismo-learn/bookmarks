@@ -515,12 +515,13 @@ aside {
     margin-top: 1.5rem;
 }
 
-.journal-list {
+.resource-card-list {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     gap: 0.675rem;
 }
 
-.journal-card {
+.resource-card {
     background: linear-gradient(180deg, #ffffff 0%, #fbfcf9 100%);
     border: 1px solid #d7ddd7;
     border-radius: 0.5rem;
@@ -529,11 +530,11 @@ aside {
     padding: 0.75rem 0.8rem 0.8rem;
 }
 
-.journal-card-head {
+.resource-card-head {
     margin-bottom: 0.5rem;
 }
 
-.journal-card-title-row {
+.resource-card-title-row {
     align-items: start;
     display: flex;
     gap: 0.5rem;
@@ -541,11 +542,11 @@ aside {
     min-height: 2.7em;
 }
 
-.journal-card-title-row .journal-card-title {
+.resource-card-title-row .resource-card-title {
     flex: 1 1 auto;
 }
 
-.journal-card-title {
+.resource-card-title {
     color: #24323a;
     display: -webkit-box;
     font-size: 0.95rem;
@@ -556,21 +557,21 @@ aside {
     -webkit-line-clamp: 2;
 }
 
-.journal-card-description {
+.resource-card-description {
     color: #53606b;
     font-size: 0.93rem;
     line-height: 1.45;
     margin: 0.25rem 0 0;
 }
 
-.journal-card-links {
+.resource-card-links {
     display: flex;
     flex-wrap: wrap;
     gap: 0.3rem;
 }
 
-.journal-link-pill,
-.journal-link-pill:hover {
+.resource-link-pill,
+.resource-link-pill:hover {
     background: #f3f7f5;
     border: 1px solid #d7ddd7;
     border-radius: 999px;
@@ -582,25 +583,25 @@ aside {
     text-decoration: none;
 }
 
-.journal-link-pill i {
+.resource-link-pill i {
     font-size: 0.88rem;
     line-height: 1;
 }
 
-.journal-link-pill:hover {
+.resource-link-pill:hover {
     background: #ffffff;
     border-color: #aec0b8;
     color: #1f3a33;
 }
 
-.journal-link-pill-primary {
+.resource-link-pill-primary {
     background: #e8f0ec;
     border-color: #c7d2cb;
     color: #1f3a33;
     font-weight: 600;
 }
 
-.journal-link-pill-primary:hover {
+.resource-link-pill-primary:hover {
     background: #ffffff;
     border-color: #aec0b8;
 }
@@ -902,13 +903,13 @@ aside {
 }
 
 @media (min-width: 62em) {
-    .journal-list {
+    .resource-card-list {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
 @media (min-width: 90em) {
-    .journal-list {
+    .resource-card-list {
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 }
