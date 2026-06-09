@@ -126,9 +126,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (countNode) {
       countNode.textContent = visibleCount + " of " + entries.length + " packages shown";
     }
-    if (resetButton) {
-      resetButton.hidden = rawQuery === "" && activeTag === "" && activeLanguage === "" && activeSort === "name" && sortDirection === "asc";
-    }
     clearButton.hidden = rawQuery === "";
     if (tagFilterClear) {
       tagFilterClear.hidden = activeTag === "";

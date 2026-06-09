@@ -6,6 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
   var clearButton = root.querySelector("[data-resource-search-clear]");
   var emptyState = document.querySelector("[data-resource-empty]");
   var entries = Array.prototype.slice.call(document.querySelectorAll("[data-resource-entry]"));
+  var searchState = createResourceSearchState({
+    input: input,
+    clearButton: clearButton,
+    emptyState: emptyState,
+    entries: entries,
+  });
   var datasetCount = document.querySelector("[data-dataset-count]");
   var learningCount = document.querySelector("[data-learning-count]");
   var learningTagFilter = document.querySelector("[data-learning-tag-filter]");
@@ -121,12 +127,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    emptyState.hidden = visibleCount !== 0;
-    clearButton.hidden = rawQuery === "";
     if (datasetCount) datasetCount.textContent = visibleCount + " of " + entries.length + " datasets shown";
     updateDatasetSortUI();
     updateDatasetFilterUI();
-    syncDatasetQueryParam(rawQuery);
+    searchState.syncQuery(window.location.href, { query: rawQuery });
   }
 
   function updateLearningFilterUI() {
@@ -184,11 +188,9 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
 
-    emptyState.hidden = visibleCount !== 0;
-    clearButton.hidden = rawQuery === "";
     if (learningCount) learningCount.textContent = visibleCount + " of " + entries.length + " resources shown";
     updateLearningFilterUI();
-    syncLearningQueryParam(rawQuery);
+    searchState.syncQuery(window.location.href, { query: rawQuery });
   }
 
   if (learningTagFilter && learningTagFilterList) {
