@@ -6,5 +6,7 @@
   <link rel="stylesheet" href="{{.Site.Params.assets.bootswatch_cdn}}/{{.Site.Params.assets.bootswatch_version}}/{{.Site.Params.assets.bootswatch_theme}}/bootstrap.min.css">
   <link rel="stylesheet" href="{{.Site.Params.assets.fontawesome_cdn}}/{{.Site.Params.assets.fontawesome_version}}/css/all.min.css">
   <link rel="stylesheet" href="{{.Site.BaseURL}}main.css">
+  <link rel="icon" type="image/png" href="{{ "logo.png" | relURL }}">
+  <link rel="apple-touch-icon" href="{{ "logo.png" | relURL }}">
   <title>{{ .Site.Title }} {{ if not .IsHome }} | {{ .Title }}{{ end }}</title>
 </head>
