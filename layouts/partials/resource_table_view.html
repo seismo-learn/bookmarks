@@ -1,10 +1,218 @@
-{{ $kind := .kind | default "sectioned" }}
+{{ $kind := .kind | default "codes" }}
 {{ $resources := .resources }}
 {{ $columns := .columns }}
-{{ if eq $kind "codes" }}
-  {{ partial "resource_codes_table.html" (dict "resources" $resources "columns" $columns) }}
-{{ else if eq $kind "dataset" }}
-  {{ partial "resource_table_flat.html" (dict "resources" $resources "columns" $columns) }}
+{{ if eq $kind "dataset" }}
+  {{ $columns := $columns | default (slice "Name" "Description" "Tags" "Links") }}
+  {{ with $resources }}
+  <div class="codes-table-wrap">
+    <table class="codes-table resource-table">
+      <colgroup>
+        <col class="codes-col-name">
+        <col class="codes-col-details">
+        <col class="resource-col-tags">
+        <col class="codes-col-links">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><button type="button" class="codes-table-sort-header" data-dataset-sort-field="name"><span>{{ index $columns 0 }}</span><i class="fas fa-sort"></i></button></th>
+          <th>{{ index $columns 1 }}</th>
+          <th><button type="button" class="codes-table-sort-header" data-dataset-sort-field="tags"><span>{{ index $columns 2 }}</span><i class="fas fa-sort"></i></button></th>
+          <th>{{ index $columns 3 }}</th>
+        </tr>
+      </thead>
+      <tbody>
+      {{ range . }}
+        {{ $searchText := printf "%s %s" .name (.description | default "") }}
+        {{ range (.tags | default (slice)) }}
+          {{ $searchText = printf "%s %s" $searchText . }}
+        {{ end }}
+        {{ range (.links | default (slice)) }}
+          {{ $searchText = printf "%s %s %s" $searchText .name .url }}
+        {{ end }}
+        {{ $tagText := "" }}
+        {{ with .tags }}
+          {{ range $index, $tag := . }}
+            {{ if $index }}{{ $tagText = printf "%s,%s" $tagText (lower $tag) }}{{ else }}{{ $tagText = lower $tag }}{{ end }}
+          {{ end }}
+        {{ end }}
+        <tr
+          data-resource-entry
+          data-name="{{ lower .name }}"
+          data-tags="{{ $tagText }}"
+          data-tags-original="{{ with .tags }}{{ range $index, $tag := . }}{{ if $index }},{{ end }}{{ . }}{{ end }}{{ end }}"
+          data-search-text="{{ lower ($searchText | plainify) }}"
+        >
+          <td class="codes-col-name">
+            {{ if .url }}
+            <a href="{{ .url }}"><strong>{{ .name }}</strong></a>
+            {{ else }}
+            <strong>{{ .name }}</strong>
+            {{ end }}
+          </td>
+          <td class="codes-col-details">
+            {{ with .description }}{{ . | markdownify }}{{ end }}
+          </td>
+          <td class="resource-col-tags">
+            {{ with .tags }}
+            <div class="resource-tag-list">
+              {{ range . }}<button type="button" class="resource-tag resource-filter-tag" data-dataset-filter-tag="{{ lower . }}">{{ . }}</button>{{ end }}
+            </div>
+            {{ end }}
+          </td>
+          <td class="codes-col-links">
+            {{ with .links }}
+            <div class="codes-related-links">
+              {{ range . }}<a class="codes-related-link" href="{{ .url }}">{{ .name }}</a>{{ end }}
+            </div>
+            {{ end }}
+          </td>
+        </tr>
+      {{ end }}
+      </tbody>
+    </table>
+  </div>
+  {{ end }}
 {{ else if eq $kind "learning" }}
-  {{ partial "resource_table_learning.html" (dict "resources" $resources "columns" $columns) }}
+  {{ $columns := $columns | default (slice "Name" "Description" "Tags") }}
+  {{ with $resources }}
+  <div class="codes-table-wrap">
+    <table class="codes-table resource-table">
+      <colgroup>
+        <col class="codes-col-name">
+        <col class="codes-col-details">
+        <col class="codes-col-tags">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>{{ index $columns 0 }}</th>
+          <th>{{ index $columns 1 }}</th>
+          <th>{{ index $columns 2 }}</th>
+        </tr>
+      </thead>
+      <tbody>
+      {{ range . }}
+        {{ $searchText := printf "%s %s" .name (.description | default "") }}
+        {{ range (.tags | default (slice)) }}
+          {{ $searchText = printf "%s %s" $searchText . }}
+        {{ end }}
+        {{ range (.links | default (slice)) }}
+          {{ $searchText = printf "%s %s %s" $searchText .name .url }}
+        {{ end }}
+        {{ $tagText := "" }}
+        {{ with .tags }}
+          {{ range $index, $tag := . }}
+            {{ if $index }}{{ $tagText = printf "%s,%s" $tagText (lower $tag) }}{{ else }}{{ $tagText = lower $tag }}{{ end }}
+          {{ end }}
+        {{ end }}
+        <tr data-resource-entry data-search-text="{{ lower ($searchText | plainify) }}" data-tags="{{ $tagText }}">
+          <td class="codes-col-name">
+            {{ if .url }}
+            <a href="{{ .url }}"><strong>{{ .name }}</strong></a>
+            {{ else }}
+            <strong>{{ .name }}</strong>
+            {{ end }}
+          </td>
+          <td class="codes-col-details">
+            {{ with .description }}{{ . | markdownify }}{{ end }}
+          </td>
+          <td class="codes-col-tags">
+            {{ with .tags }}
+            <div class="resource-tag-list">
+              {{ range . }}<button type="button" class="resource-tag resource-filter-tag" data-learning-filter-tag="{{ lower . }}">{{ . }}</button>{{ end }}
+            </div>
+            {{ end }}
+          </td>
+        </tr>
+      {{ end }}
+      </tbody>
+    </table>
+  </div>
+  {{ end }}
+{{ else }}
+  {{ $columns := $columns | default (slice "Name" "Description" "Tags" "Languages" "Related Links") }}
+  {{ with $resources }}
+  <div class="codes-table-wrap">
+    <table class="codes-table">
+      <colgroup>
+        <col class="codes-col-name">
+        <col class="codes-col-details">
+        <col class="codes-col-tags">
+        <col class="codes-col-languages">
+        <col class="codes-col-links">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><button type="button" class="codes-table-sort-header" data-sort-field="name"><span>{{ index $columns 0 }}</span><i class="fas fa-sort"></i></button></th>
+          <th>{{ index $columns 1 }}</th>
+          <th><button type="button" class="codes-table-sort-header" data-sort-field="tags"><span>{{ index $columns 2 }}</span><i class="fas fa-sort"></i></button></th>
+          <th><button type="button" class="codes-table-sort-header" data-sort-field="languages"><span>{{ index $columns 3 }}</span></button></th>
+          <th>{{ index $columns 4 }}</th>
+        </tr>
+      </thead>
+      <tbody>
+      {{ range . }}
+        {{ $searchText := printf "%s %s" .name (.description | default "") }}
+        {{ range (.tags | default (slice)) }}
+          {{ $searchText = printf "%s %s" $searchText . }}
+        {{ end }}
+        {{ range (.languages | default (slice)) }}
+          {{ $searchText = printf "%s %s" $searchText . }}
+        {{ end }}
+        {{ with .doi }}
+          {{ $searchText = printf "%s %s" $searchText . }}
+        {{ end }}
+        {{ range (.links | default (slice)) }}
+          {{ $searchText = printf "%s %s %s" $searchText .name .url }}
+        {{ end }}
+        <tr
+          data-resource-entry
+          data-name="{{ lower .name }}"
+          data-search-text="{{ lower ($searchText | plainify) }}"
+          data-tags="{{ with .tags }}{{ range $index, $tag := . }}{{ if $index }},{{ end }}{{ lower $tag }}{{ end }}{{ end }}"
+          data-tags-original="{{ with .tags }}{{ range $index, $tag := . }}{{ if $index }},{{ end }}{{ . }}{{ end }}{{ end }}"
+          data-languages="{{ with .languages }}{{ range $index, $language := . }}{{ if $index }},{{ end }}{{ lower $language }}{{ end }}{{ end }}"
+          data-languages-original="{{ with .languages }}{{ range $index, $language := . }}{{ if $index }},{{ end }}{{ . }}{{ end }}{{ end }}"
+        >
+          <td class="codes-col-name">
+            {{ if .url }}
+            <a href="{{ .url }}"><strong>{{ .name }}</strong></a>
+            {{ else }}
+            <strong>{{ .name }}</strong>
+            {{ end }}
+          </td>
+          <td class="codes-col-details">
+            {{ with .description }}<div class="codes-description">{{ . | markdownify }}</div>{{ end }}
+          </td>
+          <td class="codes-col-tags">
+            {{ with .tags }}
+            <div class="resource-tag-list">
+              {{ range . }}<button type="button" class="resource-tag resource-filter-tag" data-filter-tag="{{ lower . }}">{{ . | title }}</button>{{ end }}
+            </div>
+            {{ end }}
+          </td>
+          <td class="codes-col-languages">
+            {{ with .languages }}
+            <div class="resource-language-list">
+              {{ range . }}<button type="button" class="resource-language resource-filter-language" data-filter-language="{{ lower . }}">{{ . | title }}</button>{{ end }}
+            </div>
+            {{ end }}
+          </td>
+          <td class="codes-col-links">
+            {{ with .doi }}
+            <div class="codes-related-links">
+              <a class="codes-related-link codes-doi-link" href="https://dx.doi.org/{{ . }}">DOI: {{ . }}</a>
+            </div>
+            {{ end }}
+            {{ with .links }}
+            <div class="codes-related-links">
+              {{ range . }}<a class="codes-related-link" href="{{ .url }}">{{ .name }}</a>{{ end }}
+            </div>
+            {{ end }}
+          </td>
+        </tr>
+      {{ end }}
+      </tbody>
+    </table>
+  </div>
+  {{ end }}
 {{ end }}
