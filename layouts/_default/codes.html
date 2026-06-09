@@ -1,13 +1,5 @@
 {{ define "main" }}
 {{ $data := partial "resource_data.html" . }}
-{{ $scratch := newScratch }}
-{{ $scratch.Set "resources" (slice) }}
-{{ range $data.sections }}
-  {{ range .resources }}
-    {{ $scratch.Add "resources" (slice .) }}
-  {{ end }}
-{{ end }}
-{{ $resources := $scratch.Get "resources" }}
 <div class="resource-page codes-page">
   <h1>{{ .Title }}</h1>
   {{ .Content }}
@@ -49,7 +41,7 @@
   </div>
 
   <div data-resource-results>
-    {{ partial "resource_codes_table.html" (dict "resources" $resources) }}
+    {{ partial "resource_codes_table.html" (dict "resources" $data.resources) }}
   </div>
 </div>
 <script src="{{ "js/codes-page.js" | relURL }}"></script>

@@ -1,922 +1,978 @@
 ---
-sections:
-- resources:
-  - name: ANIMATIVITY
-    url: https://github.com/RUseismology/ANIMATIVITY
-    description: Reflectivity Algorithm for body Wave propagation through layered anisotropic media
-    languages:
-    - MATLAB
-    tags:
-    - Waveform Modeling
-  - name: ANISOtime
-    url: http://www-solid.eps.s.u-tokyo.ac.jp/~dsm/anisotime.html
-    description: Travel time computation software for laterally homogeneous, transversely isotropic, spherical media
-    languages:
-    - Java
-    tags:
-    - Ray Tracing
-  - name: aser
-    url: http://www.eas.slu.edu/People/LZhu/home.html
-    description: Generalized Ray Theory (GRT) synthetic seismogram package
-    languages:
-    - C
-    tags:
-    - Waveform Modeling
-  - name: AstroSeis
-    url: https://github.com/ytian159/AstroSeis
-    description: MATLAB codes for computing 3-D seismic wavefields in small planetary bodies using the Boundary Element Method
-    languages:
-    - MATLAB
-    tags:
-    - Waveform Modeling
-  - name: AxiSEM3D
-    url: https://github.com/AxiSEMunity/AxiSEM3D
-    description: A spectral-element based solver for large-scale 3D seismic wave propagation simulations.
-    languages:
-    - C++
-    tags:
-    - Waveform Modeling
-  - name: BayHunter
-    url: https://github.com/jenndrei/BayHunter
-    description: MCMC transdimensional Bayesian inversion of surface wave dispersion and receiver functions in Python
-    languages:
-    - Python
-    tags:
-    - Receiver Function
-    - Tomography
-  - name: BurnMan
-    url: https://github.com/geodynamics/burnman
-    description: a Python toolkit for planetary geophysics, geochemistry and thermodynamics
-    languages:
-    - Python
-    tags:
-    - Thermodynamic Modeling
-  - name: CC-FJpy
-    url: https://github.com/ColinLii/CC-FJpy
-    description: A Python Package for seismic ambient noise cross-correlation and the frequency-Bessel transform method
-    languages:
-    - Python
-    tags:
-    - Ambient Noise
-    links:
-    - name: Tutorial
-      url: https://www.koushare.com/video/videodetail/14523
-  - name: CPS330
-    url: https://rbherrmann.github.io/ComputerProgramsSeismology/index.html
-    description: Computer programs in seismology. An evolving tool for instruction and research.
-    links:
-    - name: Tutorial (in Chinese)
-      url: https://seismo-learn.org/software/cps/
-    tags:
-    - Data Analysis
-    - Waveform Modeling
-    - Receiver Function
-    - Dispersion Curve
-    languages:
-    - Fortran
-    - C
-  - name: dataselect
-    url: https://github.com/EarthScope/dataselect
-    description: Selection and sorting for data in miniSEED format
-    languages:
-    - C
-    tags:
-    - Format Conversion
-  - name: DAzimSurfTomo
-    url: https://github.com/Chuanming-Liu/DAzimSurfTomo
-    description: Direct inversion of Rayleigh wave dispersion data for 3-D azimuthal anisotropy based on ray tracing
-    languages:
-    - Fortran
-    tags:
-    - Tomography
-    links:
-    - name: Tutorial
-      url: https://www.koushare.com/video/videodetail/14733
-  - name: Detex
-    url: https://github.com/d-chambers/Detex
-    description: A Python package for subspace detection and waveform similarity clustering
-    languages:
-    - Python
-    tags:
-    - Earthquake Detection
-  - name: DRadiSurfTomo
-    url: https://github.com/ShaoqianHu/DRadiSurfTomo
-    description: Direct Surface Wave Radial Anisotropy Tomography written in Fortran
-    languages:
-    - Fortran
-    tags:
-    - Tomography
-  - name: DSurfTomo
-    url: https://github.com/HongjianFang/DSurfTomo
-    description: Direct inversion of surface dispersion data based on ray tracing
-    languages:
-    - Fortran
-    tags:
-    - Tomography
-  - name: EllipticiPy
-    url: https://github.com/StuartJRussell/EllipticiPy
-    description: Python package for the calculation of ellipticity corrections for seismic waves.
-    languages:
-    - Python
-    tags:
-    - Ray Tracing
-  - name: EQcorrscan
-    url: https://github.com/eqcorrscan/EQcorrscan
-    description: Earthquake detection and analysis in Python.
-    languages:
-    - Python
-    tags:
-    - Earthquake Detection
-  - name: FAST
-    url: https://github.com/stanford-futuredata/FAST
-    description: End-to-end earthquake detection pipeline via efficient time series similarity search
-    languages:
-    - Python
-    tags:
-    - Earthquake Detection
-  - name: FastMatchedFilter
-    url: https://github.com/beridel/fast_matched_filter
-    description: An efficient seismic matched-filter search for both CPU and GPU architectures
-    languages:
-    - Python
-    tags:
-    - Earthquake Detection
-  - name: FastTrip
-    url: https://github.com/lijiaqi0315/FastTrip
-    description: Fast MPI-accelerated Triplication Waveform Inversion Package
-    languages:
-    - Python
-    tags:
-    - Full Waveform Inversion
-  - name: FDFK2D
-    url: https://github.com/YoushanLiu/FDFK2D
-    description: Efficient two-dimensional teleseismic wavefield hybrid simulation method for receiver function analysis
-    languages:
-    - Fortran
-    tags:
-    - Waveform Modeling
-  - name: fk
-    url: http://www.eas.slu.edu/People/LZhu/home.html
-    description: Calculate synthetic seismograms in layered isotropic models using frequency-wavenumber method
-    languages:
-    - C
-    tags:
-    - Waveform Modeling
-    links:
-    - name: Tutorial (in Chinese)
-      url: https://seismo-learn.org/software/fk/
-  - name: FM3D
-    url: http://www.iearth.edu.au/codes/3Dfastmarching/
-    description: 3D traveltime calculation using Fast Marching Method in spherical coordinates
-    languages:
-    - Fortran
-    tags:
-    - Ray Tracing
-  - name: FnetPy
-    url: https://github.com/seisman/FnetPy
-    description: A Python package to request seismic waveform data from F-net
-    languages:
-    - Python
-    tags:
-    - Data Request
-  - name: gCAP
-    url: http://www.eas.slu.edu/People/LZhu/home.html
-    description: Focal mechanism inversion using Cut and Paste method
-    languages:
-    - Fortran
-    tags:
-    - Focal Mechanism
-  - name: GISMO
-    url: http://geoscience-community-codes.github.io/GISMO/
-    description: A seismic data analysis toolbox for MATLAB
-    languages:
-    - MATLAB
-    tags:
-    - Data Analysis
-  - name: GMT
-    url: https://www.generic-mapping-tools.org/
-    description: The Generic Mapping Tools
-    doi: 10.1029/2019GC008515
-    languages:
-    - C
-    tags:
-    - Data Processing
-    - Visualization
-    links:
-    - name: GMT China Community
-      url: https://gmt-china.org
-    - name: Manual (in Chinese)
-      url: https://docs.gmt-china.org/latest/
-    - name: Try GMT online!
-      url: https://github.com/GenericMappingTools/try-gmt
-  - name: GMT.jl
-    url: https://github.com/GenericMappingTools/GMT.jl
-    description: Generic Mapping Tools Library Wrapper for Julia
-    languages:
-    - Julia
-    tags:
-    - Data Processing
-    - Visualization
-  - name: GMTSAR
-    url: https://topex.ucsd.edu/gmtsar/
-    description: An InSAR processing system based on GMT
-    languages:
-    - C
-    - Shell
-    tags:
-    - InSAR
-  - name: GPU-MatchLocate
-    url: https://github.com/MinLiu19/GPU-MatchLocate1.0
-    description: An improved match and locate method using GPU
-    languages:
-    - C
-    tags:
-    - Earthquake Detection
-  - name: GrowClust
-    url: https://github.com/dttrugman/GrowClust
-    description: Relative relocation of earthquake hypocenters based on waveform cross-correlation data
-    languages:
-    - Fortran
-    tags:
-    - Earthquake Location
-  - name: GrowClust3D.jl
-    url: https://github.com/dttrugman/GrowClust3D.jl
-    description: Relative relocation of earthquake hypocenters based on waveform cross-correlation data
-    languages:
-    - Julia
-    tags:
-    - Earthquake Location
-  - name: grtm
-    url: https://github.com/YunyiQian/grtm
-    description: The generalized reflection and transmission method (GRTM) with the peak-trough averaging technique (PTAT) for fast and accurate Green's function calculations, especially for surface sources.
-    languages:
-    - Fortran
-    tags:
-    - Waveform Modeling
-  - name: h-k-c
-    url: https://github.com/ljt-uiuc/H-k-c
-    description: Generalized H-k after harmonic correction on receiver functions
-    languages:
-    - Fortran
-    tags:
-    - Receiver Function
-    links:
-    - name: linkresearcher
-      url: https://www.linkresearcher.com/trainings/d65fe2ef-3cc8-4eef-9821-261e3d49a9ae
-    - name: bilibili
-      url: https://www.bilibili.com/video/av841708479?p=3
-  - name: hinet_decon
-    url: https://github.com/tktmyd/hinet_decon
-    description: Deconvolve Hi-net velocity record by its seismometer response by using inverse filtering technique
-    languages:
-    - Fortran
-    tags:
-    - Data Processing
-  - name: HinetPy
-    url: https://github.com/seisman/hinetpy
-    description: A Python package for accessing and processing NIED Hi-net seismic data.
-    doi: 10.21105/joss.06840
-    languages:
-    - Python
-    tags:
-    - Data Request
-  - name: hk
-    url: http://www.eas.slu.edu/People/LZhu/home.html
-    description: Receiver function package (synthetic RF, deconvolution, and H-k stacking)
-    languages:
-    - Fortran
-    tags:
-    - Receiver Function
-    links:
-    - name: Note (in Chinese)
-      url: https://blog.seisman.info/hk-install
-  - name: hvsrpy
-    url: https://github.com/jpvantassel/hvsrpy
-    description: A Python package for horizontal-to-vertical spectral ratio processing
-    languages:
-    - Python
-    tags:
-    - Noise HVSR
-  - name: HypoDD
-    url: https://www.ldeo.columbia.edu/~felixw/hypoDD.html
-    description: Double-difference earthquake location
-    languages:
-    - Fortran
-    tags:
-    - Earthquake Location
-  - name: HYPOINVERSE
-    url: https://www.usgs.gov/software/hypoinverse-earthquake-location
-    description: Locate earthquakes and determine magnitudes in a local or regional seismic network
-    languages:
-    - C
-    tags:
-    - Earthquake Location
-  - name: Instaseis
-    url: http://instaseis.net
-    description: Instant Global Seismograms Based on a Broadband Waveform Database
-    languages:
-    - Python
-    tags:
-    - Waveform Modeling
-  - name: JDSurfG
-    url: https://github.com/nqdu/JDSurfG
-    description: Joint Inversion of Direct Surface Wave Tomography and Bouguer Gravity
-    languages:
-    - C
-    tags:
-    - Tomography
-  - name: libmseed
-    url: https://github.com/EarthScope/libmseed
-    description: The miniSEED data format library
-    languages:
-    - C
-    tags:
-    - Format Conversion
-  - name: lsforce
-    url: https://code.usgs.gov/ghsc/lhp/lsforce
-    description: A Python-based single-force seismic inversion framework for massive landslides
-    languages:
-    - Python
-    tags:
-    - Focal Mechanism
-  - name: MatchLocate
-    url: https://github.com/Dal-mzhang/MatchLocate2
-    description: Detect and locate small events from continuous seismic waveforms using templates
-    languages:
-    - C
-    tags:
-    - Earthquake Detection
-  - name: MATnoise
-    url: https://github.com/jbrussell/MATnoise
-    description: Calculate ambient noise cross-correlations, measure phase velocities, and invert for phase velocity maps in MATLAB
-    languages:
-    - MATLAB
-    tags:
-    - Ambient Noise Tomography
-  - name: MCDisp
-    url: https://github.com/xin2zhang/MCDisp
-    description: Surface wave dispersion inversion using Monte Carlo method written in Python
-    languages:
-    - Python
-    tags:
-    - Tomography
-  - name: MCTomo
-    url: https://github.com/xin2zhang/MCTomo
-    description: 2D and 3D Monte Carlo seismic tomography
-    languages:
-    - Fortran
-    tags:
-    - Tomography
-  - name: MESS
-    url: https://github.com/YijianZhou/MESS
-    description: Matched filter earthquake detector
-    languages:
-    - Python
-    tags:
-    - Earthquake Detection
-  - name: Mineos
-    url: https://github.com/geodynamics/mineos
-    description: Computes synthetic seismograms in a spherically symmetric non-rotating Earth by summing normal modes
-    languages:
-    - Fortran
-    tags:
-    - Waveform Modeling
-  - name: MSAT
-    url: https://github.com/andreww/MSAT
-    description: The MATLAB Seismic Anisotropy Toolkit
-    languages:
-    - MATLAB
-    tags:
-    - Shear Wave Splitting
-  - name: mseed2sac
-    url: https://github.com/EarthScope/mseed2sac
-    description: Convert miniSEED time series data to SAC format
-    languages:
-    - C
-    tags:
-    - Format Conversion
-  - name: msmod
-    url: https://github.com/EarthScope/msmod
-    description: A general purpose tool for modifying miniSEED records.
-    languages:
-    - C
-    tags:
-    - Format Conversion
-  - name: MSNoise
-    url: http://www.msnoise.org
-    description: A Python Package for Monitoring seismic velocity changes using ambient seismic noise
-    languages:
-    - Python
-    tags:
-    - Ambient Noise Monitoring
-  - name: multisplit
-    url: https://github.com/ftilmann/multisplit
-    description: Measure shear wave splitting from SAC files
-    languages:
-    - C
-    tags:
-    - Shear Wave Splitting
-  - name: multitaper
-    url: https://github.com/gaprieto/multitaper
-    description: Multitaper Spectral Estimation
-    languages:
-    - Python
-    tags:
-    - Signal Analysis
-  - name: multitel3
-    url: https://github.com/YunyiQian/multitel3
-    description: A hybrid method of ray theory and haskell matrix to calculate teleseismic body wave Green's functions in RTZ components
-    languages:
-    - Fortran
-    - C
-    tags:
-    - Waveform Modeling
-  - name: MuRAT
-    url: https://github.com/LucaDeSiena/MuRAT
-    description: A multi-resolution seismic attenuation tomography code
-    languages:
-    - MATLAB
-    tags:
-    - Attenuation
-  - name: MUSTANG
-    url: https://service.iris.edu/mustang
-    description: A quality assurance system that provides metrics pertaining to seismic data quality
-    languages:
-    - Web
-    tags:
-    - Data Quality Assessment
-  - name: NEXD
-    url: https://github.com/seismology-RUB/NEXD-3D
-    description: High order simulation of seismic waves using the nodal discontinuous Galerkin method
-    languages:
-    - Fortran
-    tags:
-    - Waveform Modeling
-  - name: NoisePy
-    url: https://github.com/noisepy/NoisePy
-    description: Ambient-Noise Seismology Package
-    languages:
-    - Python
-    tags:
-    - Ambient Noise Processing
-  - name: NonLinLoc
-    url: https://github.com/ut-beg-texnet/NonLinLoc
-    description: Probabilistic, Non-Linear, Global-Search Earthquake Location in 3D Media
-    languages:
-    - C
-    tags:
-    - Earthquake Location
-  - name: ObsPy
-    url: https://github.com/obspy/obspy
-    description: A Python Toolbox for seismology/seismological observatories.
-    languages:
-    - Python
-    tags:
-    - Data Analysis
-    - Data Request
-    - Data Processing
-  - name: obspyDMT
-    url: https://github.com/kasra-hosseini/obspyDMT
-    description: A Python toolbox for the query, retrieval, processing and management of seismological data sets.
-    languages:
-    - Python
-    tags:
-    - Data Request
-  - name: OBStools
-    url: https://github.com/nfsi-canada/OBStools
-    description: Tools for processing broadband ocean-bottom seismic data
-    languages:
-    - Python
-    tags:
-    - Data Processing
-  - name: OpenSWPC
-    url: https://github.com/OpenSWPC/OpenSWPC
-    description: A Seismic Wave Propagation Code by Parallel Finite Difference Method
-    languages:
-    - Fortran
-    tags:
-    - Waveform Modeling
-  - name: OrientPy
-    url: https://github.com/nfsi-canada/OrientPy
-    description: Seismic station orientation tools
-    languages:
-    - Python
-    tags:
-    - Station Assessment
-  - name: PAL
-    url: https://github.com/YijianZhou/PAL
-    description: An Earthquake Detection and Location Architecture for Continuous Seismograms, Phase Picking, Association, Location, and Matched Filter
-    languages:
-    - Python
-    tags:
-    - Earthquake Detection
-  - name: PhaseLink
-    url: https://github.com/interseismic/PhaseLink
-    description: A deep learning approach to seismic phase association
-    languages:
-    - Python
-    tags:
-    - Earthquake Location
-  - name: PhaseNet
-    url: https://github.com/AI4EPS/PhaseNet
-    description: A Deep-Neural-Network-Based Seismic Arrival Time Picking Method
-    languages:
-    - Python
-    tags:
-    - Phase Picking
-    links:
-    - name: Tutorial (in Chinese)
-      url: https://www.koushare.com/video/videodetail/14754
-  - name: psphoton
-    url: https://github.com/nmancinelli/psphoton
-    description: Monte Carlo simulation of elastic-wave scattering processes in Earth's interior
-    languages:
-    - Fortran
-    tags:
-    - Scattering
-  - name: PSV_Hybrid
-    url: https://github.com/Geolab-USTC/PSV_Hybrid
-    description: Calculating synthetic seismograms involving two-dimensional localized heterogeneous structures based on GRT-FD hybrid method
-    languages:
-    - C
-    tags:
-    - Waveform Modeling
-  - name: pyekfmm
-    url: https://github.com/aaspip/pyekfmm
-    description: A python package for 3D fast-marching-based traveltime calculation and its applications in seismology
-    languages:
-    - Python
-    tags:
-    - Ray Tracing
-  - name: PyGMT
-    url: https://www.pygmt.org
-    description: A Python interface for the Generic Mapping Tools
-    languages:
-    - Python
-    tags:
-    - Data Processing
-    - Visualization
-  - name: PyGRT
-    url: https://github.com/Dengda98/PyGRT
-    doi: 10.1785/0220250057
-    description: An integrated, efficient toolkit to compute synthetic seismograms and static deformation in layered media, including displacement, strain, stress and rotation.
-    languages:
-    - C
-    - Python
-    tags:
-    - Waveform Modeling
-  - name: pykonal
-    url: https://github.com/malcolmw/pykonal
-    description: Travel-time calculator based on the fast-marching method solution to the Eikonal equation.
-    languages:
-    - Python
-    tags:
-    - Ray Tracing
-  - name: PyRaySum
-    url: https://github.com/paudetseis/PyRaysum
-    description: Teleseismic body wave modeling through stacks of (dipping/anisotropic) layers
-    languages:
-    - Python
-    tags:
-    - Waveform Modeling
-  - name: pySeismicFMM
-    url: https://github.com/gozwei/pySeismicFMM
-    description: Python based travel time calculation in regular 2D and 3D grids in Cartesian and geographic coordinates using Fast Marching Method
-    languages:
-    - Python
-    tags:
-    - Ray Tracing
-  - name: pyTDMT
-    url: https://github.com/fabriziobernardi/pydmt
-    description: Time Domain Moment Tensor Inversion
-    languages:
-    - Python
-    tags:
-    - Focal Mechanism
-  - name: PyVoroTomo
-    url: https://github.com/HongjianFang/PyVoroTomo
-    description: Poisson Voronoi cells based seismic traveltime tomography method
-    languages:
-    - Python
-    tags:
-    - Tomography
-    links:
-    - name: Tutorial
-      url: https://www.koushare.com/video/videodetail/14785
-  - name: qopen
-    url: https://github.com/trichter/qopen
-    description: Separation of intrinsic and scattering Q by envelope inversion
-    languages:
-    - Python
-    tags:
-    - Attenuation
-  - name: rdseed
-    url: https://github.com/iris-edu-legacy/rdseed
-    description: Read an FDSN SEED format volume
-    languages:
-    - C
-    tags:
-    - Format Conversion
-    links:
-    - name: Tutorial (in Chinese)
-      url: https://blog.seisman.info/tags/SEED
-  - name: REAL
-    url: https://github.com/Dal-mzhang/REAL
-    description: Rapid Earthquake Association and Location
-    languages:
-    - C
-    tags:
-    - Earthquake Location
-  - name: REDPy
-    url: https://github.com/ahotovec/REDPy
-    description: Repeating Earthquake Detector
-    languages:
-    - Python
-    tags:
-    - Earthquake Detection
-  - name: rf
-    url: https://github.com/trichter/rf
-    description: Receiver function calculation in seismology
-    languages:
-    - Python
-    tags:
-    - Receiver Function
-  - name: RfPy
-    url: https://paudetseis.github.io/RfPy/
-    description: Teleseismic receiver function calculation and post-processing
-    languages:
-    - Python
-    tags:
-    - Receiver Function
-  - name: RfSurfHmc
-    url: https://github.com/nqdu/RfSurfHmc
-    description: Joint inversion of Receiver Function and Surface Wave Dispersion by Hamilton Monte Carlo Method
-    languages:
-    - Fortran
-    tags:
-    - Receiver Function
-    - Tomography
-  - name: ROVER
-    url: https://github.com/EarthScope/rover
-    description: Robust data access tool for FDSN data centers
-    languages:
-    - Python
-    tags:
-    - Data Request
-  - name: RSTT
-    url: https://www.sandia.gov/rstt/
-    description: Regional Seismic Travel Time
-    tags:
-    - Ray Tracing
-  - name: RT-EQcorrscan
-    url: https://github.com/eqcorrscan/RT_EQcorrscan
-    description: Real-time implementation of EQcorrscan's matched-filter earthquake detection
-    languages:
-    - Python
-    tags:
-    - Earthquake Detection
-  - name: SAC
-    url: https://www.iris.edu/ds/nodes/dmc/forms/sac/
-    description: Seismic Analysis Code
-    languages:
-    - C
-    tags:
-    - Data Analysis
-    links:
-    - name: Manual (Chinese)
-      url: https://seisman.github.io/SAC_Docs_zh/
-    - name: Manual (English)
-      url: https://ds.iris.edu/files/sac-manual/
-    - name: Video
-      url: https://www.youtube.com/watch?v=zZeUvHkOOAM&list=PLD4D607C2FA317E6D&index=147
-  - name: sac2mseed
-    url: https://github.com/EarthScope/sac2mseed
-    description: Convert SAC time series data to miniSEED
-    languages:
-    - C
-    tags:
-    - Format Conversion
-  - name: scikit-fmm
-    url: https://github.com/scikit-fmm/scikit-fmm
-    description: A Python extension module which implements the fast marching method.
-    languages:
-    - Python
-    tags:
-    - Ray Tracing
-  - name: SEC_C
-    url: https://github.com/Naderss/SEC_C
-    description: Super-Efficient Cross-Correlation
-    languages:
-    - Python
-    - MATLAB
-    tags:
-    - Signal Analysis
-  - name: seed-vault
-    url: https://github.com/AuScope/seed-vault
-    description: A cross platform GUI utility for searching, viewing, and downloading seismic data from FDSN servers
-    doi: 10.1785/0220250167
-    languages:
-    - Python
-    tags:
-    - Data Request
-  - name: seisDD
-    url: https://github.com/yanhuay/seisDD
-    description: Double-difference adjoint seismic tomography
-    languages:
-    - Fortran
-    tags:
-    - Full Waveform Inversion
-  - name: SeisIO.jl
-    url: https://github.com/jpjones76/SeisIO.jl
-    description: Julia language support for geophysical time series data
-    languages:
-    - Julia
-    tags:
-    - Data Processing
-  - name: SeisNoise.jl
-    url: https://github.com/JuliaSeismo/SeisNoise.jl
-    description: Ambient Noise Cross-Correlation in Julia
-    languages:
-    - Julia
-    tags:
-    - Ambient Noise Processing
-  - name: seispy
-    url: https://github.com/xumi1993/seispy
-    description: A Python module for processing seismological data and calculating Receiver Function
-    languages:
-    - Python
-    tags:
-    - Receiver Function
-  - name: SeisSol
-    url: https://github.com/SeisSol/SeisSol
-    description: A scientific software for the numerical simulation of seismic wave phenomena and earthquake dynamics
-    languages:
-    - C
-    - Python
-    tags:
-    - Earthquake Dynamics
-  - name: SeisTomoPy
-    url: https://github.com/stephaniedurand/SeisTomoPy_V3
-    description: Fast visualization, comparison and calculations in global tomographic models
-    languages:
-    - Python
-    tags:
-    - Visualization
-  - name: SEM-DSM-coupling
-    url: https://github.com/wenbowu-geo/SEM_DSM_hybrid
-    description: A hybrid method to efficiently compute teleseismic synthetics with 3D seismic structure at source side (SEM) and 1D structure outside the source region (DSM)
-    languages:
-    - Fortran
-    tags:
-    - Waveform Modeling
-  - name: SHTOOLS
-    url: https://github.com/SHTOOLS/SHTOOLS
-    description: Spherical Harmonic Tools
-    languages:
-    - Fortran
-    - Python
-    tags:
-    - Signal Analysis
-  - name: SOD
-    url: https://www.seis.sc.edu/sod
-    description: Standing Order for Data.
-    languages:
-    - Java
-    tags:
-    - Data Request
-    links:
-    - name: Tutorial (in Chinese)
-      url: https://seismo-learn.org/software/sod/
-    - name: Recipes
-      url: https://github.com/seismo-learn/SOD-recipes
-  - name: SOFI2D
-    url: https://gitlab.kit.edu/kit/gpi/ag/software/sofi2d
-    description: 2D finite-difference seismic wave simulation
-    languages:
-    - C
-    tags:
-    - Waveform Modeling
-  - name: SOFI2D_sh
-    url: https://gitlab.kit.edu/kit/gpi/ag/software/sofi2d_sh
-    description: 2D finite-difference SH-wave simulation
-    languages:
-    - C
-    tags:
-    - Waveform Modeling
-  - name: SPECFEM1D
-    url: https://github.com/SPECFEM/specfem1d
-    description: Simulates seismic wave propagation in a one-dimensional heterogeneous medium.
-    languages:
-    - Fortran
-    - Python
-    tags:
-    - Waveform Modeling
-  - name: SPECFEM2D
-    url: https://github.com/SPECFEM/specfem2d
-    description: simulates forward and adjoint seismic wave propagation in two-dimensional acoustic, (an)elastic, poroelastic or coupled acoustic-(an)elastic-poroelastic media, with Convolution PML absorbing conditions.
-    languages:
-    - Fortran
-    tags:
-    - Waveform Modeling
-  - name: SPECFEM3D
-    url: https://github.com/SPECFEM/specfem3d
-    description: Cartesian simulates acoustic (fluid), elastic (solid), coupled acoustic/elastic, or poroelastic seismic wave propagation in any type of conforming mesh of hexahedra (structured & unstructured).
-    languages:
-    - Fortran
-    tags:
-    - Waveform Modeling
-  - name: SPECFEM3D_GLOBE
-    url: https://github.com/SPECFEM/specfem3d_globe
-    description: Globe simulates global and regional (continental-scale) seismic wave propagation for Earth, Mars & Moon.
-    languages:
-    - Fortran
-    tags:
-    - Waveform Modeling
-  - name: specnm
-    url: https://gitlab.com/JohKem1/specnm
-    description: A tool for the computation of gravito-elastic free oscillations or normal modes of spherically symmetric bodies based on a spectral element discretization of the underlying radial ordinary differential equations.
-    languages:
-    - Python
-    tags:
-    - Waveform Modeling
-  - name: SplitPy
-    url: https://paudetseis.github.io/SplitPy/
-    description: Teleseismic shear-wave (SKS) Splitting Toolbox
-    languages:
-    - Python
-    tags:
-    - Shear Wave Splitting
-  - name: SubMachine
-    url: https://orfeus-eu.org/submachine/
-    description: A computational engine to visualize models and datasets of the Earth's subsurface
-    languages:
-    - Web
-    tags:
-    - Visualization
-  - name: SW3D
-    url: http://seis.karlov.mff.cuni.cz/
-    description: Seismic Waves in complex 3D structures
-    languages:
-    - Fortran
-    tags:
-    - Waveform Modeling
-  - name: SW4
-    url: https://github.com/geodynamics/sw4
-    description: 3D finite-difference seismic wave simulation (4th order)
-    languages:
-    - Fortran
-    tags:
-    - Waveform Modeling
-  - name: sws_tools
-    url: https://github.com/michaelgrund/sws_tools
-    description: MATLAB tools for modeling and plotting of shear-wave splitting data
-    languages:
-    - MATLAB
-    tags:
-    - Shear Wave Splitting
-  - name: TauP
-    url: https://www.seis.sc.edu/taup/
-    description: A seismic travel time calculator.
-    languages:
-    - Java
-    tags:
-    - Ray Tracing
-    links:
-    - name: Tutorials (in Chinese)
-      url: https://seismo-learn.org/software/taup/
-  - name: telewavesim
-    url: https://github.com/paudetseis/Telewavesim
-    description: Teleseismic body wave modeling through stacks of (submarine/anisotropic) layers
-    languages:
-    - Python
-    - Fortran
-    tags:
-    - Waveform Modeling
-  - name: Tomoeye
-    url: http://www.iearth.edu.au/codes/Tomoeye
-    description: A set of programs for tomographic model visualization written in MATLAB 6.1 script
-    languages:
-    - MATLAB
-    tags:
-    - Visualization
-  - name: Velest
-    url: https://seg.ethz.ch/software/velest.html
-    description: 1-D inversion of velocities and hypocenter locations
-    languages:
-    - Fortran
-    tags:
-    - Earthquake Location
-  - name: win32tools
-    url: http://www.hinet.bosai.go.jp/REGS/manual/dlDialogue.php?r=win32tools
-    description: Convert WIN32 format used by Hi-net, to SAC format
-    languages:
-    - C
-    tags:
-    - Format Conversion
-  - name: yam
-    url: https://github.com/trichter/yam
-    description: Yet another monitoring tool using correlations of ambient noise
-    languages:
-    - Python
-    tags:
-    - Ambient Noise Monitoring
+resources:
+- name: ANIMATIVITY
+  url: https://github.com/RUseismology/ANIMATIVITY
+  description: Reflectivity Algorithm for body Wave propagation through layered anisotropic
+    media
+  languages:
+  - MATLAB
+  tags:
+  - Waveform Modeling
+- name: ANISOtime
+  url: http://www-solid.eps.s.u-tokyo.ac.jp/~dsm/anisotime.html
+  description: Travel time computation software for laterally homogeneous, transversely
+    isotropic, spherical media
+  languages:
+  - Java
+  tags:
+  - Ray Tracing
+- name: aser
+  url: http://www.eas.slu.edu/People/LZhu/home.html
+  description: Generalized Ray Theory (GRT) synthetic seismogram package
+  languages:
+  - C
+  tags:
+  - Waveform Modeling
+- name: AstroSeis
+  url: https://github.com/ytian159/AstroSeis
+  description: MATLAB codes for computing 3-D seismic wavefields in small planetary
+    bodies using the Boundary Element Method
+  languages:
+  - MATLAB
+  tags:
+  - Waveform Modeling
+- name: AxiSEM3D
+  url: https://github.com/AxiSEMunity/AxiSEM3D
+  description: A spectral-element based solver for large-scale 3D seismic wave propagation
+    simulations.
+  languages:
+  - C++
+  tags:
+  - Waveform Modeling
+- name: BayHunter
+  url: https://github.com/jenndrei/BayHunter
+  description: MCMC transdimensional Bayesian inversion of surface wave dispersion
+    and receiver functions in Python
+  languages:
+  - Python
+  tags:
+  - Receiver Function
+  - Tomography
+- name: BurnMan
+  url: https://github.com/geodynamics/burnman
+  description: a Python toolkit for planetary geophysics, geochemistry and thermodynamics
+  languages:
+  - Python
+  tags:
+  - Thermodynamic Modeling
+- name: CC-FJpy
+  url: https://github.com/ColinLii/CC-FJpy
+  description: A Python Package for seismic ambient noise cross-correlation and the
+    frequency-Bessel transform method
+  languages:
+  - Python
+  tags:
+  - Ambient Noise
+  links:
+  - name: Tutorial
+    url: https://www.koushare.com/video/videodetail/14523
+- name: CPS330
+  url: https://rbherrmann.github.io/ComputerProgramsSeismology/index.html
+  description: Computer programs in seismology. An evolving tool for instruction and
+    research.
+  links:
+  - name: Tutorial (in Chinese)
+    url: https://seismo-learn.org/software/cps/
+  tags:
+  - Data Analysis
+  - Waveform Modeling
+  - Receiver Function
+  - Dispersion Curve
+  languages:
+  - Fortran
+  - C
+- name: dataselect
+  url: https://github.com/EarthScope/dataselect
+  description: Selection and sorting for data in miniSEED format
+  languages:
+  - C
+  tags:
+  - Format Conversion
+- name: DAzimSurfTomo
+  url: https://github.com/Chuanming-Liu/DAzimSurfTomo
+  description: Direct inversion of Rayleigh wave dispersion data for 3-D azimuthal
+    anisotropy based on ray tracing
+  languages:
+  - Fortran
+  tags:
+  - Tomography
+  links:
+  - name: Tutorial
+    url: https://www.koushare.com/video/videodetail/14733
+- name: Detex
+  url: https://github.com/d-chambers/Detex
+  description: A Python package for subspace detection and waveform similarity clustering
+  languages:
+  - Python
+  tags:
+  - Earthquake Detection
+- name: DRadiSurfTomo
+  url: https://github.com/ShaoqianHu/DRadiSurfTomo
+  description: Direct Surface Wave Radial Anisotropy Tomography written in Fortran
+  languages:
+  - Fortran
+  tags:
+  - Tomography
+- name: DSurfTomo
+  url: https://github.com/HongjianFang/DSurfTomo
+  description: Direct inversion of surface dispersion data based on ray tracing
+  languages:
+  - Fortran
+  tags:
+  - Tomography
+- name: EllipticiPy
+  url: https://github.com/StuartJRussell/EllipticiPy
+  description: Python package for the calculation of ellipticity corrections for seismic
+    waves.
+  languages:
+  - Python
+  tags:
+  - Ray Tracing
+- name: EQcorrscan
+  url: https://github.com/eqcorrscan/EQcorrscan
+  description: Earthquake detection and analysis in Python.
+  languages:
+  - Python
+  tags:
+  - Earthquake Detection
+- name: FAST
+  url: https://github.com/stanford-futuredata/FAST
+  description: End-to-end earthquake detection pipeline via efficient time series
+    similarity search
+  languages:
+  - Python
+  tags:
+  - Earthquake Detection
+- name: FastMatchedFilter
+  url: https://github.com/beridel/fast_matched_filter
+  description: An efficient seismic matched-filter search for both CPU and GPU architectures
+  languages:
+  - Python
+  tags:
+  - Earthquake Detection
+- name: FastTrip
+  url: https://github.com/lijiaqi0315/FastTrip
+  description: Fast MPI-accelerated Triplication Waveform Inversion Package
+  languages:
+  - Python
+  tags:
+  - Full Waveform Inversion
+- name: FDFK2D
+  url: https://github.com/YoushanLiu/FDFK2D
+  description: Efficient two-dimensional teleseismic wavefield hybrid simulation method
+    for receiver function analysis
+  languages:
+  - Fortran
+  tags:
+  - Waveform Modeling
+- name: fk
+  url: http://www.eas.slu.edu/People/LZhu/home.html
+  description: Calculate synthetic seismograms in layered isotropic models using frequency-wavenumber
+    method
+  languages:
+  - C
+  tags:
+  - Waveform Modeling
+  links:
+  - name: Tutorial (in Chinese)
+    url: https://seismo-learn.org/software/fk/
+- name: FM3D
+  url: http://www.iearth.edu.au/codes/3Dfastmarching/
+  description: 3D traveltime calculation using Fast Marching Method in spherical coordinates
+  languages:
+  - Fortran
+  tags:
+  - Ray Tracing
+- name: FnetPy
+  url: https://github.com/seisman/FnetPy
+  description: A Python package to request seismic waveform data from F-net
+  languages:
+  - Python
+  tags:
+  - Data Request
+- name: gCAP
+  url: http://www.eas.slu.edu/People/LZhu/home.html
+  description: Focal mechanism inversion using Cut and Paste method
+  languages:
+  - Fortran
+  tags:
+  - Focal Mechanism
+- name: GISMO
+  url: http://geoscience-community-codes.github.io/GISMO/
+  description: A seismic data analysis toolbox for MATLAB
+  languages:
+  - MATLAB
+  tags:
+  - Data Analysis
+- name: GMT
+  url: https://www.generic-mapping-tools.org/
+  description: The Generic Mapping Tools
+  doi: 10.1029/2019GC008515
+  languages:
+  - C
+  tags:
+  - Data Processing
+  - Visualization
+  links:
+  - name: GMT China Community
+    url: https://gmt-china.org
+  - name: Manual (in Chinese)
+    url: https://docs.gmt-china.org/latest/
+  - name: Try GMT online!
+    url: https://github.com/GenericMappingTools/try-gmt
+- name: GMT.jl
+  url: https://github.com/GenericMappingTools/GMT.jl
+  description: Generic Mapping Tools Library Wrapper for Julia
+  languages:
+  - Julia
+  tags:
+  - Data Processing
+  - Visualization
+- name: GMTSAR
+  url: https://topex.ucsd.edu/gmtsar/
+  description: An InSAR processing system based on GMT
+  languages:
+  - C
+  - Shell
+  tags:
+  - InSAR
+- name: GPU-MatchLocate
+  url: https://github.com/MinLiu19/GPU-MatchLocate1.0
+  description: An improved match and locate method using GPU
+  languages:
+  - C
+  tags:
+  - Earthquake Detection
+- name: GrowClust
+  url: https://github.com/dttrugman/GrowClust
+  description: Relative relocation of earthquake hypocenters based on waveform cross-correlation
+    data
+  languages:
+  - Fortran
+  tags:
+  - Earthquake Location
+- name: GrowClust3D.jl
+  url: https://github.com/dttrugman/GrowClust3D.jl
+  description: Relative relocation of earthquake hypocenters based on waveform cross-correlation
+    data
+  languages:
+  - Julia
+  tags:
+  - Earthquake Location
+- name: grtm
+  url: https://github.com/YunyiQian/grtm
+  description: The generalized reflection and transmission method (GRTM) with the
+    peak-trough averaging technique (PTAT) for fast and accurate Green's function
+    calculations, especially for surface sources.
+  languages:
+  - Fortran
+  tags:
+  - Waveform Modeling
+- name: h-k-c
+  url: https://github.com/ljt-uiuc/H-k-c
+  description: Generalized H-k after harmonic correction on receiver functions
+  languages:
+  - Fortran
+  tags:
+  - Receiver Function
+  links:
+  - name: linkresearcher
+    url: https://www.linkresearcher.com/trainings/d65fe2ef-3cc8-4eef-9821-261e3d49a9ae
+  - name: bilibili
+    url: https://www.bilibili.com/video/av841708479?p=3
+- name: hinet_decon
+  url: https://github.com/tktmyd/hinet_decon
+  description: Deconvolve Hi-net velocity record by its seismometer response by using
+    inverse filtering technique
+  languages:
+  - Fortran
+  tags:
+  - Data Processing
+- name: HinetPy
+  url: https://github.com/seisman/hinetpy
+  description: A Python package for accessing and processing NIED Hi-net seismic data.
+  doi: 10.21105/joss.06840
+  languages:
+  - Python
+  tags:
+  - Data Request
+- name: hk
+  url: http://www.eas.slu.edu/People/LZhu/home.html
+  description: Receiver function package (synthetic RF, deconvolution, and H-k stacking)
+  languages:
+  - Fortran
+  tags:
+  - Receiver Function
+  links:
+  - name: Note (in Chinese)
+    url: https://blog.seisman.info/hk-install
+- name: hvsrpy
+  url: https://github.com/jpvantassel/hvsrpy
+  description: A Python package for horizontal-to-vertical spectral ratio processing
+  languages:
+  - Python
+  tags:
+  - Noise HVSR
+- name: HypoDD
+  url: https://www.ldeo.columbia.edu/~felixw/hypoDD.html
+  description: Double-difference earthquake location
+  languages:
+  - Fortran
+  tags:
+  - Earthquake Location
+- name: HYPOINVERSE
+  url: https://www.usgs.gov/software/hypoinverse-earthquake-location
+  description: Locate earthquakes and determine magnitudes in a local or regional
+    seismic network
+  languages:
+  - C
+  tags:
+  - Earthquake Location
+- name: Instaseis
+  url: http://instaseis.net
+  description: Instant Global Seismograms Based on a Broadband Waveform Database
+  languages:
+  - Python
+  tags:
+  - Waveform Modeling
+- name: JDSurfG
+  url: https://github.com/nqdu/JDSurfG
+  description: Joint Inversion of Direct Surface Wave Tomography and Bouguer Gravity
+  languages:
+  - C
+  tags:
+  - Tomography
+- name: libmseed
+  url: https://github.com/EarthScope/libmseed
+  description: The miniSEED data format library
+  languages:
+  - C
+  tags:
+  - Format Conversion
+- name: lsforce
+  url: https://code.usgs.gov/ghsc/lhp/lsforce
+  description: A Python-based single-force seismic inversion framework for massive
+    landslides
+  languages:
+  - Python
+  tags:
+  - Focal Mechanism
+- name: MatchLocate
+  url: https://github.com/Dal-mzhang/MatchLocate2
+  description: Detect and locate small events from continuous seismic waveforms using
+    templates
+  languages:
+  - C
+  tags:
+  - Earthquake Detection
+- name: MATnoise
+  url: https://github.com/jbrussell/MATnoise
+  description: Calculate ambient noise cross-correlations, measure phase velocities,
+    and invert for phase velocity maps in MATLAB
+  languages:
+  - MATLAB
+  tags:
+  - Ambient Noise Tomography
+- name: MCDisp
+  url: https://github.com/xin2zhang/MCDisp
+  description: Surface wave dispersion inversion using Monte Carlo method written
+    in Python
+  languages:
+  - Python
+  tags:
+  - Tomography
+- name: MCTomo
+  url: https://github.com/xin2zhang/MCTomo
+  description: 2D and 3D Monte Carlo seismic tomography
+  languages:
+  - Fortran
+  tags:
+  - Tomography
+- name: MESS
+  url: https://github.com/YijianZhou/MESS
+  description: Matched filter earthquake detector
+  languages:
+  - Python
+  tags:
+  - Earthquake Detection
+- name: Mineos
+  url: https://github.com/geodynamics/mineos
+  description: Computes synthetic seismograms in a spherically symmetric non-rotating
+    Earth by summing normal modes
+  languages:
+  - Fortran
+  tags:
+  - Waveform Modeling
+- name: MSAT
+  url: https://github.com/andreww/MSAT
+  description: The MATLAB Seismic Anisotropy Toolkit
+  languages:
+  - MATLAB
+  tags:
+  - Shear Wave Splitting
+- name: mseed2sac
+  url: https://github.com/EarthScope/mseed2sac
+  description: Convert miniSEED time series data to SAC format
+  languages:
+  - C
+  tags:
+  - Format Conversion
+- name: msmod
+  url: https://github.com/EarthScope/msmod
+  description: A general purpose tool for modifying miniSEED records.
+  languages:
+  - C
+  tags:
+  - Format Conversion
+- name: MSNoise
+  url: http://www.msnoise.org
+  description: A Python Package for Monitoring seismic velocity changes using ambient
+    seismic noise
+  languages:
+  - Python
+  tags:
+  - Ambient Noise Monitoring
+- name: multisplit
+  url: https://github.com/ftilmann/multisplit
+  description: Measure shear wave splitting from SAC files
+  languages:
+  - C
+  tags:
+  - Shear Wave Splitting
+- name: multitaper
+  url: https://github.com/gaprieto/multitaper
+  description: Multitaper Spectral Estimation
+  languages:
+  - Python
+  tags:
+  - Signal Analysis
+- name: multitel3
+  url: https://github.com/YunyiQian/multitel3
+  description: A hybrid method of ray theory and haskell matrix to calculate teleseismic
+    body wave Green's functions in RTZ components
+  languages:
+  - Fortran
+  - C
+  tags:
+  - Waveform Modeling
+- name: MuRAT
+  url: https://github.com/LucaDeSiena/MuRAT
+  description: A multi-resolution seismic attenuation tomography code
+  languages:
+  - MATLAB
+  tags:
+  - Attenuation
+- name: MUSTANG
+  url: https://service.iris.edu/mustang
+  description: A quality assurance system that provides metrics pertaining to seismic
+    data quality
+  languages:
+  - Web
+  tags:
+  - Data Quality Assessment
+- name: NEXD
+  url: https://github.com/seismology-RUB/NEXD-3D
+  description: High order simulation of seismic waves using the nodal discontinuous
+    Galerkin method
+  languages:
+  - Fortran
+  tags:
+  - Waveform Modeling
+- name: NoisePy
+  url: https://github.com/noisepy/NoisePy
+  description: Ambient-Noise Seismology Package
+  languages:
+  - Python
+  tags:
+  - Ambient Noise Processing
+- name: NonLinLoc
+  url: https://github.com/ut-beg-texnet/NonLinLoc
+  description: Probabilistic, Non-Linear, Global-Search Earthquake Location in 3D
+    Media
+  languages:
+  - C
+  tags:
+  - Earthquake Location
+- name: ObsPy
+  url: https://github.com/obspy/obspy
+  description: A Python Toolbox for seismology/seismological observatories.
+  languages:
+  - Python
+  tags:
+  - Data Analysis
+  - Data Request
+  - Data Processing
+- name: obspyDMT
+  url: https://github.com/kasra-hosseini/obspyDMT
+  description: A Python toolbox for the query, retrieval, processing and management
+    of seismological data sets.
+  languages:
+  - Python
+  tags:
+  - Data Request
+- name: OBStools
+  url: https://github.com/nfsi-canada/OBStools
+  description: Tools for processing broadband ocean-bottom seismic data
+  languages:
+  - Python
+  tags:
+  - Data Processing
+- name: OpenSWPC
+  url: https://github.com/OpenSWPC/OpenSWPC
+  description: A Seismic Wave Propagation Code by Parallel Finite Difference Method
+  languages:
+  - Fortran
+  tags:
+  - Waveform Modeling
+- name: OrientPy
+  url: https://github.com/nfsi-canada/OrientPy
+  description: Seismic station orientation tools
+  languages:
+  - Python
+  tags:
+  - Station Assessment
+- name: PAL
+  url: https://github.com/YijianZhou/PAL
+  description: An Earthquake Detection and Location Architecture for Continuous Seismograms,
+    Phase Picking, Association, Location, and Matched Filter
+  languages:
+  - Python
+  tags:
+  - Earthquake Detection
+- name: PhaseLink
+  url: https://github.com/interseismic/PhaseLink
+  description: A deep learning approach to seismic phase association
+  languages:
+  - Python
+  tags:
+  - Earthquake Location
+- name: PhaseNet
+  url: https://github.com/AI4EPS/PhaseNet
+  description: A Deep-Neural-Network-Based Seismic Arrival Time Picking Method
+  languages:
+  - Python
+  tags:
+  - Phase Picking
+  links:
+  - name: Tutorial (in Chinese)
+    url: https://www.koushare.com/video/videodetail/14754
+- name: psphoton
+  url: https://github.com/nmancinelli/psphoton
+  description: Monte Carlo simulation of elastic-wave scattering processes in Earth's
+    interior
+  languages:
+  - Fortran
+  tags:
+  - Scattering
+- name: PSV_Hybrid
+  url: https://github.com/Geolab-USTC/PSV_Hybrid
+  description: Calculating synthetic seismograms involving two-dimensional localized
+    heterogeneous structures based on GRT-FD hybrid method
+  languages:
+  - C
+  tags:
+  - Waveform Modeling
+- name: pyekfmm
+  url: https://github.com/aaspip/pyekfmm
+  description: A python package for 3D fast-marching-based traveltime calculation
+    and its applications in seismology
+  languages:
+  - Python
+  tags:
+  - Ray Tracing
+- name: PyGMT
+  url: https://www.pygmt.org
+  description: A Python interface for the Generic Mapping Tools
+  languages:
+  - Python
+  tags:
+  - Data Processing
+  - Visualization
+- name: PyGRT
+  url: https://github.com/Dengda98/PyGRT
+  doi: 10.1785/0220250057
+  description: An integrated, efficient toolkit to compute synthetic seismograms and
+    static deformation in layered media, including displacement, strain, stress and
+    rotation.
+  languages:
+  - C
+  - Python
+  tags:
+  - Waveform Modeling
+- name: pykonal
+  url: https://github.com/malcolmw/pykonal
+  description: Travel-time calculator based on the fast-marching method solution to
+    the Eikonal equation.
+  languages:
+  - Python
+  tags:
+  - Ray Tracing
+- name: PyRaySum
+  url: https://github.com/paudetseis/PyRaysum
+  description: Teleseismic body wave modeling through stacks of (dipping/anisotropic)
+    layers
+  languages:
+  - Python
+  tags:
+  - Waveform Modeling
+- name: pySeismicFMM
+  url: https://github.com/gozwei/pySeismicFMM
+  description: Python based travel time calculation in regular 2D and 3D grids in
+    Cartesian and geographic coordinates using Fast Marching Method
+  languages:
+  - Python
+  tags:
+  - Ray Tracing
+- name: pyTDMT
+  url: https://github.com/fabriziobernardi/pydmt
+  description: Time Domain Moment Tensor Inversion
+  languages:
+  - Python
+  tags:
+  - Focal Mechanism
+- name: PyVoroTomo
+  url: https://github.com/HongjianFang/PyVoroTomo
+  description: Poisson Voronoi cells based seismic traveltime tomography method
+  languages:
+  - Python
+  tags:
+  - Tomography
+  links:
+  - name: Tutorial
+    url: https://www.koushare.com/video/videodetail/14785
+- name: qopen
+  url: https://github.com/trichter/qopen
+  description: Separation of intrinsic and scattering Q by envelope inversion
+  languages:
+  - Python
+  tags:
+  - Attenuation
+- name: rdseed
+  url: https://github.com/iris-edu-legacy/rdseed
+  description: Read an FDSN SEED format volume
+  languages:
+  - C
+  tags:
+  - Format Conversion
+  links:
+  - name: Tutorial (in Chinese)
+    url: https://blog.seisman.info/tags/SEED
+- name: REAL
+  url: https://github.com/Dal-mzhang/REAL
+  description: Rapid Earthquake Association and Location
+  languages:
+  - C
+  tags:
+  - Earthquake Location
+- name: REDPy
+  url: https://github.com/ahotovec/REDPy
+  description: Repeating Earthquake Detector
+  languages:
+  - Python
+  tags:
+  - Earthquake Detection
+- name: rf
+  url: https://github.com/trichter/rf
+  description: Receiver function calculation in seismology
+  languages:
+  - Python
+  tags:
+  - Receiver Function
+- name: RfPy
+  url: https://paudetseis.github.io/RfPy/
+  description: Teleseismic receiver function calculation and post-processing
+  languages:
+  - Python
+  tags:
+  - Receiver Function
+- name: RfSurfHmc
+  url: https://github.com/nqdu/RfSurfHmc
+  description: Joint inversion of Receiver Function and Surface Wave Dispersion by
+    Hamilton Monte Carlo Method
+  languages:
+  - Fortran
+  tags:
+  - Receiver Function
+  - Tomography
+- name: ROVER
+  url: https://github.com/EarthScope/rover
+  description: Robust data access tool for FDSN data centers
+  languages:
+  - Python
+  tags:
+  - Data Request
+- name: RSTT
+  url: https://www.sandia.gov/rstt/
+  description: Regional Seismic Travel Time
+  tags:
+  - Ray Tracing
+- name: RT-EQcorrscan
+  url: https://github.com/eqcorrscan/RT_EQcorrscan
+  description: Real-time implementation of EQcorrscan's matched-filter earthquake
+    detection
+  languages:
+  - Python
+  tags:
+  - Earthquake Detection
+- name: SAC
+  url: https://www.iris.edu/ds/nodes/dmc/forms/sac/
+  description: Seismic Analysis Code
+  languages:
+  - C
+  tags:
+  - Data Analysis
+  links:
+  - name: Manual (Chinese)
+    url: https://seisman.github.io/SAC_Docs_zh/
+  - name: Manual (English)
+    url: https://ds.iris.edu/files/sac-manual/
+  - name: Video
+    url: https://www.youtube.com/watch?v=zZeUvHkOOAM&list=PLD4D607C2FA317E6D&index=147
+- name: sac2mseed
+  url: https://github.com/EarthScope/sac2mseed
+  description: Convert SAC time series data to miniSEED
+  languages:
+  - C
+  tags:
+  - Format Conversion
+- name: scikit-fmm
+  url: https://github.com/scikit-fmm/scikit-fmm
+  description: A Python extension module which implements the fast marching method.
+  languages:
+  - Python
+  tags:
+  - Ray Tracing
+- name: SEC_C
+  url: https://github.com/Naderss/SEC_C
+  description: Super-Efficient Cross-Correlation
+  languages:
+  - Python
+  - MATLAB
+  tags:
+  - Signal Analysis
+- name: seed-vault
+  url: https://github.com/AuScope/seed-vault
+  description: A cross platform GUI utility for searching, viewing, and downloading
+    seismic data from FDSN servers
+  doi: 10.1785/0220250167
+  languages:
+  - Python
+  tags:
+  - Data Request
+- name: seisDD
+  url: https://github.com/yanhuay/seisDD
+  description: Double-difference adjoint seismic tomography
+  languages:
+  - Fortran
+  tags:
+  - Full Waveform Inversion
+- name: SeisIO.jl
+  url: https://github.com/jpjones76/SeisIO.jl
+  description: Julia language support for geophysical time series data
+  languages:
+  - Julia
+  tags:
+  - Data Processing
+- name: SeisNoise.jl
+  url: https://github.com/JuliaSeismo/SeisNoise.jl
+  description: Ambient Noise Cross-Correlation in Julia
+  languages:
+  - Julia
+  tags:
+  - Ambient Noise Processing
+- name: seispy
+  url: https://github.com/xumi1993/seispy
+  description: A Python module for processing seismological data and calculating Receiver
+    Function
+  languages:
+  - Python
+  tags:
+  - Receiver Function
+- name: SeisSol
+  url: https://github.com/SeisSol/SeisSol
+  description: A scientific software for the numerical simulation of seismic wave
+    phenomena and earthquake dynamics
+  languages:
+  - C
+  - Python
+  tags:
+  - Earthquake Dynamics
+- name: SeisTomoPy
+  url: https://github.com/stephaniedurand/SeisTomoPy_V3
+  description: Fast visualization, comparison and calculations in global tomographic
+    models
+  languages:
+  - Python
+  tags:
+  - Visualization
+- name: SEM-DSM-coupling
+  url: https://github.com/wenbowu-geo/SEM_DSM_hybrid
+  description: A hybrid method to efficiently compute teleseismic synthetics with
+    3D seismic structure at source side (SEM) and 1D structure outside the source
+    region (DSM)
+  languages:
+  - Fortran
+  tags:
+  - Waveform Modeling
+- name: SHTOOLS
+  url: https://github.com/SHTOOLS/SHTOOLS
+  description: Spherical Harmonic Tools
+  languages:
+  - Fortran
+  - Python
+  tags:
+  - Signal Analysis
+- name: SOD
+  url: https://www.seis.sc.edu/sod
+  description: Standing Order for Data.
+  languages:
+  - Java
+  tags:
+  - Data Request
+  links:
+  - name: Tutorial (in Chinese)
+    url: https://seismo-learn.org/software/sod/
+  - name: Recipes
+    url: https://github.com/seismo-learn/SOD-recipes
+- name: SOFI2D
+  url: https://gitlab.kit.edu/kit/gpi/ag/software/sofi2d
+  description: 2D finite-difference seismic wave simulation
+  languages:
+  - C
+  tags:
+  - Waveform Modeling
+- name: SOFI2D_sh
+  url: https://gitlab.kit.edu/kit/gpi/ag/software/sofi2d_sh
+  description: 2D finite-difference SH-wave simulation
+  languages:
+  - C
+  tags:
+  - Waveform Modeling
+- name: SPECFEM1D
+  url: https://github.com/SPECFEM/specfem1d
+  description: Simulates seismic wave propagation in a one-dimensional heterogeneous
+    medium.
+  languages:
+  - Fortran
+  - Python
+  tags:
+  - Waveform Modeling
+- name: SPECFEM2D
+  url: https://github.com/SPECFEM/specfem2d
+  description: simulates forward and adjoint seismic wave propagation in two-dimensional
+    acoustic, (an)elastic, poroelastic or coupled acoustic-(an)elastic-poroelastic
+    media, with Convolution PML absorbing conditions.
+  languages:
+  - Fortran
+  tags:
+  - Waveform Modeling
+- name: SPECFEM3D
+  url: https://github.com/SPECFEM/specfem3d
+  description: Cartesian simulates acoustic (fluid), elastic (solid), coupled acoustic/elastic,
+    or poroelastic seismic wave propagation in any type of conforming mesh of hexahedra
+    (structured & unstructured).
+  languages:
+  - Fortran
+  tags:
+  - Waveform Modeling
+- name: SPECFEM3D_GLOBE
+  url: https://github.com/SPECFEM/specfem3d_globe
+  description: Globe simulates global and regional (continental-scale) seismic wave
+    propagation for Earth, Mars & Moon.
+  languages:
+  - Fortran
+  tags:
+  - Waveform Modeling
+- name: specnm
+  url: https://gitlab.com/JohKem1/specnm
+  description: A tool for the computation of gravito-elastic free oscillations or
+    normal modes of spherically symmetric bodies based on a spectral element discretization
+    of the underlying radial ordinary differential equations.
+  languages:
+  - Python
+  tags:
+  - Waveform Modeling
+- name: SplitPy
+  url: https://paudetseis.github.io/SplitPy/
+  description: Teleseismic shear-wave (SKS) Splitting Toolbox
+  languages:
+  - Python
+  tags:
+  - Shear Wave Splitting
+- name: SubMachine
+  url: https://orfeus-eu.org/submachine/
+  description: A computational engine to visualize models and datasets of the Earth's
+    subsurface
+  languages:
+  - Web
+  tags:
+  - Visualization
+- name: SW3D
+  url: http://seis.karlov.mff.cuni.cz/
+  description: Seismic Waves in complex 3D structures
+  languages:
+  - Fortran
+  tags:
+  - Waveform Modeling
+- name: SW4
+  url: https://github.com/geodynamics/sw4
+  description: 3D finite-difference seismic wave simulation (4th order)
+  languages:
+  - Fortran
+  tags:
+  - Waveform Modeling
+- name: sws_tools
+  url: https://github.com/michaelgrund/sws_tools
+  description: MATLAB tools for modeling and plotting of shear-wave splitting data
+  languages:
+  - MATLAB
+  tags:
+  - Shear Wave Splitting
+- name: TauP
+  url: https://www.seis.sc.edu/taup/
+  description: A seismic travel time calculator.
+  languages:
+  - Java
+  tags:
+  - Ray Tracing
+  links:
+  - name: Tutorials (in Chinese)
+    url: https://seismo-learn.org/software/taup/
+- name: telewavesim
+  url: https://github.com/paudetseis/Telewavesim
+  description: Teleseismic body wave modeling through stacks of (submarine/anisotropic)
+    layers
+  languages:
+  - Python
+  - Fortran
+  tags:
+  - Waveform Modeling
+- name: Tomoeye
+  url: http://www.iearth.edu.au/codes/Tomoeye
+  description: A set of programs for tomographic model visualization written in MATLAB
+    6.1 script
+  languages:
+  - MATLAB
+  tags:
+  - Visualization
+- name: Velest
+  url: https://seg.ethz.ch/software/velest.html
+  description: 1-D inversion of velocities and hypocenter locations
+  languages:
+  - Fortran
+  tags:
+  - Earthquake Location
+- name: win32tools
+  url: http://www.hinet.bosai.go.jp/REGS/manual/dlDialogue.php?r=win32tools
+  description: Convert WIN32 format used by Hi-net, to SAC format
+  languages:
+  - C
+  tags:
+  - Format Conversion
+- name: yam
+  url: https://github.com/trichter/yam
+  description: Yet another monitoring tool using correlations of ambient noise
+  languages:
+  - Python
+  tags:
+  - Ambient Noise Monitoring
