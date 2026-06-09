@@ -2,18 +2,19 @@
 resources:
 - name: Focal Mechanisms Explained
   url: https://www.youtube.com/watch?v=MomVOkyDdLo
-  description: What are those "beach balls"? A 6-minute video explaining beachballs
-    for non-seismologists and beginners
+  description: A short video explaining focal mechanisms for beginners and non-seismologists.
   tags:
   - Seismology
   - Videos
 - name: Seismology Skill Building Workshop
   url: https://www.earthscope.org/education/skill-building-learning/courses/ssbw/
+  description: EarthScope training material for developing practical seismology skills.
   tags:
   - Seismology
   - Workshops & Courses
 - name: 地震学算法与程序培训班
   url: http://seismo.training.ustc.edu.cn/
+  description: A Chinese-language training series on seismological algorithms and software.
   links:
   - name: 2023 年第九届 蔻享
     url: https://www.koushare.com/live/details/18392
@@ -31,6 +32,7 @@ resources:
 - name: 'Computers, Waves, Simulations: A Practical Introduction to Numerical Methods
     using Python'
   url: https://www.coursera.org/learn/computers-waves-simulations
+  description: A practical introduction to numerical methods for wave simulation using Python.
   tags:
   - Seismology
   - Workshops & Courses
