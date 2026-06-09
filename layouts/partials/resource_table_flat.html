@@ -1,40 +1,41 @@
-{{ with . }}
+{{ $columns := .columns | default (slice "Name" "Description" "Tags" "Links") }}
+{{ with .resources | default . }}
 <div class="codes-table-wrap">
   <table class="codes-table resource-table">
     <colgroup>
       <col class="codes-col-name">
       <col class="codes-col-details">
-      <col class="resource-col-category">
+      <col class="resource-col-tags">
       <col class="codes-col-links">
     </colgroup>
     <thead>
       <tr>
-        <th><button type="button" class="codes-table-sort-header" data-dataset-sort-field="name"><span>Name</span><i class="fas fa-sort"></i></button></th>
-        <th>Description</th>
-        <th><button type="button" class="codes-table-sort-header" data-dataset-sort-field="category"><span>Category</span><i class="fas fa-sort"></i></button></th>
-        <th>Links</th>
+        <th><button type="button" class="codes-table-sort-header" data-dataset-sort-field="name"><span>{{ index $columns 0 }}</span><i class="fas fa-sort"></i></button></th>
+        <th>{{ index $columns 1 }}</th>
+        <th><button type="button" class="codes-table-sort-header" data-dataset-sort-field="tags"><span>{{ index $columns 2 }}</span><i class="fas fa-sort"></i></button></th>
+        <th>{{ index $columns 3 }}</th>
       </tr>
     </thead>
     <tbody>
     {{ range . }}
       {{ $searchText := printf "%s %s" .name (.description | default "") }}
-      {{ range (.category | default (slice)) }}
+      {{ range (.tags | default (slice)) }}
         {{ $searchText = printf "%s %s" $searchText . }}
       {{ end }}
       {{ range (.links | default (slice)) }}
         {{ $searchText = printf "%s %s %s" $searchText .name .url }}
       {{ end }}
-      {{ $categoryText := "" }}
-      {{ with .category }}
-        {{ range $index, $category := . }}
-          {{ if $index }}{{ $categoryText = printf "%s,%s" $categoryText (lower $category) }}{{ else }}{{ $categoryText = lower $category }}{{ end }}
+      {{ $tagText := "" }}
+      {{ with .tags }}
+        {{ range $index, $tag := . }}
+          {{ if $index }}{{ $tagText = printf "%s,%s" $tagText (lower $tag) }}{{ else }}{{ $tagText = lower $tag }}{{ end }}
         {{ end }}
       {{ end }}
       <tr
         data-resource-entry
         data-name="{{ lower .name }}"
-        data-category="{{ $categoryText }}"
-        data-category-original="{{ with .category }}{{ range $index, $category := . }}{{ if $index }},{{ end }}{{ . }}{{ end }}{{ end }}"
+        data-tags="{{ $tagText }}"
+        data-tags-original="{{ with .tags }}{{ range $index, $tag := . }}{{ if $index }},{{ end }}{{ . }}{{ end }}{{ end }}"
         data-search-text="{{ lower ($searchText | plainify) }}"
       >
         <td class="codes-col-name">
@@ -47,10 +48,10 @@
         <td class="codes-col-details">
           {{ with .description }}{{ . | markdownify }}{{ end }}
         </td>
-        <td class="resource-col-category">
-          {{ with .category }}
-          <div class="resource-category-list">
-            {{ range . }}<button type="button" class="resource-category resource-filter-category" data-dataset-filter-category="{{ lower . }}">{{ . }}</button>{{ end }}
+        <td class="resource-col-tags">
+          {{ with .tags }}
+          <div class="resource-tag-list">
+            {{ range . }}<button type="button" class="resource-tag resource-filter-tag" data-dataset-filter-tag="{{ lower . }}">{{ . }}</button>{{ end }}
           </div>
           {{ end }}
         </td>

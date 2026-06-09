@@ -1,4 +1,5 @@
-{{ with . }}
+{{ $columns := .columns | default (slice "Name" "Description" "Tags") }}
+{{ with .resources | default . }}
 <div class="codes-table-wrap">
   <table class="codes-table resource-table">
     <colgroup>
@@ -8,9 +9,9 @@
     </colgroup>
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Tags</th>
+        <th>{{ index $columns 0 }}</th>
+        <th>{{ index $columns 1 }}</th>
+        <th>{{ index $columns 2 }}</th>
       </tr>
     </thead>
     <tbody>

@@ -41,18 +41,18 @@
       <div class="codes-tag-filter-list" data-learning-tag-filter-list></div>
       <button type="button" class="codes-tag-filter-clear" data-learning-tag-filter-clear hidden>Clear tag</button>
     </div>
-    {{ partial "resource_table_view.html" (dict "kind" "learning" "resources" $data.resources) }}
+    {{ partial "resource_table_view.html" (dict "kind" "learning" "resources" $data.resources "columns" .Params.columns) }}
     {{ else if eq .Params.resource_data "dataset" }}
     <div class="codes-toolbar dataset-toolbar">
       <p class="codes-count" data-dataset-count></p>
       <button type="button" class="codes-reset" data-dataset-reset hidden>Reset filters</button>
     </div>
-    <div class="codes-tag-filter dataset-category-filter" data-dataset-category-filter hidden>
-      <span class="codes-tag-filter-label">Categories</span>
-      <div class="codes-tag-filter-list" data-dataset-category-filter-list></div>
-      <button type="button" class="codes-tag-filter-clear" data-dataset-category-filter-clear hidden>Clear category</button>
+    <div class="codes-tag-filter dataset-tag-filter" data-dataset-tag-filter hidden>
+      <span class="codes-tag-filter-label">Tags</span>
+      <div class="codes-tag-filter-list" data-dataset-tag-filter-list></div>
+      <button type="button" class="codes-tag-filter-clear" data-dataset-tag-filter-clear hidden>Clear tag</button>
     </div>
-    {{ partial "resource_table_view.html" (dict "kind" "dataset" "resources" $data.resources) }}
+    {{ partial "resource_table_view.html" (dict "kind" "dataset" "resources" $data.resources "columns" .Params.columns) }}
     {{ end }}
   {{ end }}
   </div>
@@ -82,17 +82,17 @@ document.addEventListener("DOMContentLoaded", function () {
   var learningTagFilterClear = document.querySelector("[data-learning-tag-filter-clear]");
   var datasetTable = document.querySelector(".resource-table");
   var datasetSortHeaders = Array.prototype.slice.call(document.querySelectorAll("[data-dataset-sort-field]"));
-  var datasetCategoryFilter = document.querySelector("[data-dataset-category-filter]");
-  var datasetCategoryFilterList = document.querySelector("[data-dataset-category-filter-list]");
-  var datasetCategoryFilterClear = document.querySelector("[data-dataset-category-filter-clear]");
-  var datasetRowCategoryButtons = Array.prototype.slice.call(document.querySelectorAll("[data-dataset-filter-category]"));
+  var datasetTagFilter = document.querySelector("[data-dataset-tag-filter]");
+  var datasetTagFilterList = document.querySelector("[data-dataset-tag-filter-list]");
+  var datasetTagFilterClear = document.querySelector("[data-dataset-tag-filter-clear]");
+  var datasetRowTagButtons = Array.prototype.slice.call(document.querySelectorAll("[data-dataset-filter-tag]"));
   var learningTagButtons = Array.prototype.slice.call(document.querySelectorAll("[data-learning-filter-tag]"));
-  var datasetCategories = {};
-  var datasetCategoryLabels = {};
+  var datasetTags = {};
+  var datasetTagLabels = {};
   var learningTags = {};
-  var activeDatasetSort = (params.get("sort") || "category").toLowerCase();
+  var activeDatasetSort = (params.get("sort") || "tags").toLowerCase();
   var datasetSortDir = (params.get("dir") || "asc").toLowerCase();
-  var activeDatasetCategory = (params.get("category") || "").toLowerCase();
+  var activeDatasetTag = (params.get("tag") || "").toLowerCase();
   var activeLearningTag = (params.get("tag") || "").toLowerCase();
 
   if (params.has("q")) {
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       next.searchParams.set("q", query);
     }
-    if (activeDatasetSort === "category") {
+    if (activeDatasetSort === "tags") {
       next.searchParams.delete("sort");
     } else {
       next.searchParams.set("sort", activeDatasetSort);
@@ -126,10 +126,10 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       next.searchParams.set("dir", datasetSortDir);
     }
-    if (activeDatasetCategory === "") {
-      next.searchParams.delete("category");
+    if (activeDatasetTag === "") {
+      next.searchParams.delete("tag");
     } else {
-      next.searchParams.set("category", activeDatasetCategory);
+      next.searchParams.set("tag", activeDatasetTag);
     }
     window.history.replaceState({}, "", next);
   }
@@ -166,16 +166,16 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function updateDatasetFilterUI() {
-    if (datasetCategoryFilterClear) {
-      datasetCategoryFilterClear.hidden = activeDatasetCategory === "";
+    if (datasetTagFilterClear) {
+      datasetTagFilterClear.hidden = activeDatasetTag === "";
     }
-    if (datasetCategoryFilterList) {
-      Array.prototype.slice.call(datasetCategoryFilterList.querySelectorAll(".codes-tag-filter-chip")).forEach(function (button) {
-        button.classList.toggle("is-active", button.dataset.category === activeDatasetCategory);
+    if (datasetTagFilterList) {
+      Array.prototype.slice.call(datasetTagFilterList.querySelectorAll(".codes-tag-filter-chip")).forEach(function (button) {
+        button.classList.toggle("is-active", button.dataset.tag === activeDatasetTag);
       });
     }
-    datasetRowCategoryButtons.forEach(function (button) {
-      button.classList.toggle("is-active", button.dataset.datasetFilterCategory === activeDatasetCategory);
+    datasetRowTagButtons.forEach(function (button) {
+      button.classList.toggle("is-active", button.dataset.datasetFilterTag === activeDatasetTag);
     });
   }
 
@@ -186,11 +186,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     entries.forEach(function (entry) {
       var haystack = entry.dataset.searchText || "";
-      var entryCategories = (entry.dataset.category || "").split(",").map(function (category) {
-        return category.trim();
+      var entryTags = (entry.dataset.tags || "").split(",").map(function (tag) {
+        return tag.trim();
       }).filter(Boolean);
-      var categoryMatched = activeDatasetCategory === "" || entryCategories.indexOf(activeDatasetCategory) !== -1;
-      var matched = (query === "" || haystack.indexOf(query) !== -1) && categoryMatched;
+      var tagMatched = activeDatasetTag === "" || entryTags.indexOf(activeDatasetTag) !== -1;
+      var matched = (query === "" || haystack.indexOf(query) !== -1) && tagMatched;
       entry.hidden = !matched;
       entry.dataset.matches = matched ? "1" : "0";
       if (matched) visibleCount += 1;
@@ -205,8 +205,8 @@ document.addEventListener("DOMContentLoaded", function () {
           if (aVisible !== bVisible) {
             return aVisible ? -1 : 1;
           }
-          var aKey = activeDatasetSort === "category" ? (a.dataset.category || "") : (a.dataset.name || "");
-          var bKey = activeDatasetSort === "category" ? (b.dataset.category || "") : (b.dataset.name || "");
+          var aKey = activeDatasetSort === "tags" ? (a.dataset.tags || "") : (a.dataset.name || "");
+          var bKey = activeDatasetSort === "tags" ? (b.dataset.tags || "") : (b.dataset.name || "");
           aKey = aKey.toLowerCase();
           bKey = bKey.toLowerCase();
           if (aKey < bKey) return datasetSortDir === "asc" ? -1 : 1;
@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", function () {
       datasetCount.textContent = visibleCount + " of " + entries.length + " datasets shown";
     }
     if (datasetReset) {
-      datasetReset.hidden = rawQuery === "" && activeDatasetCategory === "" && activeDatasetSort === "category" && datasetSortDir === "asc";
+      datasetReset.hidden = rawQuery === "" && activeDatasetTag === "" && activeDatasetSort === "tags" && datasetSortDir === "asc";
     }
     updateDatasetSortUI();
     updateDatasetFilterUI();
@@ -368,41 +368,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (datasetTable) {
     entries.forEach(function (entry) {
-      var categories = (entry.dataset.category || "").split(",").map(function (category) {
-        return category.trim();
+      var tags = (entry.dataset.tags || "").split(",").map(function (tag) {
+        return tag.trim();
       }).filter(Boolean);
-      categories.forEach(function (category) {
-        datasetCategories[category] = true;
-        if (!datasetCategoryLabels[category]) {
-          datasetCategoryLabels[category] = (entry.getAttribute("data-category-original") || "").split(",").map(function (value) {
+      tags.forEach(function (tag) {
+        datasetTags[tag] = true;
+        if (!datasetTagLabels[tag]) {
+          datasetTagLabels[tag] = (entry.getAttribute("data-tags-original") || "").split(",").map(function (value) {
             return value.trim();
-          }).filter(Boolean)[categories.indexOf(category)] || category;
+          }).filter(Boolean)[tags.indexOf(tag)] || tag;
         }
       });
     });
 
-    if (datasetCategoryFilterList) {
-      Object.keys(datasetCategories).sort().forEach(function (category) {
+    if (datasetTagFilterList) {
+      Object.keys(datasetTags).sort().forEach(function (tag) {
         var button = document.createElement("button");
         button.type = "button";
         button.className = "codes-tag-filter-chip";
-        button.textContent = datasetCategoryLabels[category] || category;
-        button.dataset.category = category;
+        button.textContent = datasetTagLabels[tag] || tag;
+        button.dataset.tag = tag;
         button.addEventListener("click", function () {
-          activeDatasetCategory = activeDatasetCategory === category ? "" : category;
+          activeDatasetTag = activeDatasetTag === tag ? "" : tag;
           updateDatasetResults();
         });
-        datasetCategoryFilterList.appendChild(button);
+        datasetTagFilterList.appendChild(button);
       });
-      if (datasetCategoryFilter) {
-        datasetCategoryFilter.hidden = Object.keys(datasetCategories).length === 0;
+      if (datasetTagFilter) {
+        datasetTagFilter.hidden = Object.keys(datasetTags).length === 0;
       }
     }
 
-    datasetRowCategoryButtons.forEach(function (button) {
+    datasetRowTagButtons.forEach(function (button) {
       button.addEventListener("click", function () {
-        var category = button.dataset.datasetFilterCategory || "";
-        activeDatasetCategory = activeDatasetCategory === category ? "" : category;
+        var tag = button.dataset.datasetFilterTag || "";
+        activeDatasetTag = activeDatasetTag === tag ? "" : tag;
         updateDatasetResults();
       });
     });
@@ -420,9 +420,9 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    if (datasetCategoryFilterClear) {
-      datasetCategoryFilterClear.addEventListener("click", function () {
-        activeDatasetCategory = "";
+    if (datasetTagFilterClear) {
+      datasetTagFilterClear.addEventListener("click", function () {
+        activeDatasetTag = "";
         updateDatasetResults();
       });
     }
@@ -430,7 +430,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (datasetReset) {
       datasetReset.addEventListener("click", function () {
         input.value = "";
-        activeDatasetCategory = "";
+        activeDatasetTag = "";
         activeDatasetSort = "name";
         datasetSortDir = "asc";
         updateDatasetResults();

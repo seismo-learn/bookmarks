@@ -1,9 +1,10 @@
 {{ $kind := .kind | default "sectioned" }}
 {{ $resources := .resources }}
+{{ $columns := .columns }}
 {{ if eq $kind "codes" }}
-  {{ partial "resource_codes_table.html" (dict "resources" $resources) }}
+  {{ partial "resource_codes_table.html" (dict "resources" $resources "columns" $columns) }}
 {{ else if eq $kind "dataset" }}
-  {{ partial "resource_table_flat.html" $resources }}
+  {{ partial "resource_table_flat.html" (dict "resources" $resources "columns" $columns) }}
 {{ else if eq $kind "learning" }}
-  {{ partial "resource_table_learning.html" $resources }}
+  {{ partial "resource_table_learning.html" (dict "resources" $resources "columns" $columns) }}
 {{ end }}

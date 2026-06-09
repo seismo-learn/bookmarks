@@ -1,3 +1,4 @@
+{{ $columns := .columns | default (slice "Name" "Description" "Tags" "Languages" "Related Links") }}
 {{ with .resources }}
 <div class="codes-table-wrap">
   <table class="codes-table">
@@ -10,11 +11,11 @@
     </colgroup>
     <thead>
       <tr>
-        <th><button type="button" class="codes-table-sort-header" data-sort-field="name"><span>Name</span><i class="fas fa-sort"></i></button></th>
-        <th>Description</th>
-        <th><button type="button" class="codes-table-sort-header" data-sort-field="tags"><span>Tags</span><i class="fas fa-sort"></i></button></th>
-        <th><button type="button" class="codes-table-sort-header" data-sort-field="languages"><span>Languages</span></button></th>
-        <th>Related Links</th>
+        <th><button type="button" class="codes-table-sort-header" data-sort-field="name"><span>{{ index $columns 0 }}</span><i class="fas fa-sort"></i></button></th>
+        <th>{{ index $columns 1 }}</th>
+        <th><button type="button" class="codes-table-sort-header" data-sort-field="tags"><span>{{ index $columns 2 }}</span><i class="fas fa-sort"></i></button></th>
+        <th><button type="button" class="codes-table-sort-header" data-sort-field="languages"><span>{{ index $columns 3 }}</span></button></th>
+        <th>{{ index $columns 4 }}</th>
       </tr>
     </thead>
     <tbody>
