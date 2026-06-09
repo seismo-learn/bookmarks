@@ -40,7 +40,11 @@
     <tbody>
     {{ range . }}
       {{ $resource := . }}
-      {{ $searchText := printf "%s %s" .name (.description | default "") }}
+      {{ $descriptionText := "" }}
+      {{ with .description }}
+        {{ $descriptionText = . | markdownify | plainify }}
+      {{ end }}
+      {{ $searchText := printf "%s %s" .name $descriptionText }}
       {{ range (.tags | default (slice)) }}
         {{ $searchText = printf "%s %s" $searchText . }}
       {{ end }}
