@@ -1,5 +1,55 @@
 {{ with .resources }}
 <section class="resource-section" data-resource-section>
-  {{ partial "resource_journal_list.html" (dict "resources" .) }}
+  <div class="journal-list">
+    {{ range . }}
+    {{ $searchText := printf "%s %s" .name (.description | default "") }}
+    {{ with .abbreviations }}
+      {{ range . }}
+        {{ $searchText = printf "%s %s" $searchText . }}
+      {{ end }}
+    {{ end }}
+    {{ $links := .links | default (slice) }}
+    {{ $homepage := .homepage | default "" }}
+    {{ range $links }}
+      {{ $searchText = printf "%s %s %s" $searchText .name .url }}
+    {{ end }}
+    {{ if $homepage }}
+      {{ $searchText = printf "%s %s" $searchText $homepage }}
+    {{ end }}
+    <article class="journal-card" data-resource-entry data-search-text="{{ lower ($searchText | plainify) }}">
+      <div class="journal-card-head">
+        <div class="journal-card-title-row">
+          {{ if .url }}
+          <a class="journal-card-title" href="{{ .url }}">{{ .name }}</a>
+          {{ else }}
+          <strong class="journal-card-title">{{ .name }}</strong>
+          {{ end }}
+        </div>
+        {{ with .description }}<p class="journal-card-description">{{ . | markdownify }}</p>{{ end }}
+      </div>
+
+      {{ $primaryLabels := slice "Current Issue" "Submit" "Submission Guidelines" }}
+      <div class="journal-card-links">
+        {{ with $homepage }}
+        <a class="journal-link-pill journal-link-pill-primary" href="{{ . }}" aria-label="Homepage" title="Homepage">
+          <i class="fas fa-home" aria-hidden="true"></i>
+        </a>
+        {{ end }}
+        {{ range $label := $primaryLabels }}
+          {{ range $link := $links }}
+            {{ if eq $link.name $label }}
+            <a class="journal-link-pill journal-link-pill-primary" href="{{ $link.url }}">{{ $link.name }}</a>
+            {{ end }}
+          {{ end }}
+        {{ end }}
+        {{ range $link := $links }}
+          {{ if not (in $primaryLabels $link.name) }}
+          <a class="journal-link-pill" href="{{ $link.url }}">{{ $link.name }}</a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </article>
+    {{ end }}
+  </div>
 </section>
 {{ end }}
