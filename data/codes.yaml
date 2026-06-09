@@ -48,6 +48,14 @@ resources:
   tags:
   - Receiver Function
   - Tomography
+- name: bEST
+  url: https://github.com/MatteoTaroniINGV/bEST---Universal-estimation-of-the-Gutenberg-Richter-b-value
+  description: Gutenberg-Richter b-value Toolkit for Python and MATLAB
+  doi: 10.1785/0220250175
+  languages:
+  - Python
+  tags:
+  - Earthquake Statistics
 - name: BurnMan
   url: https://github.com/geodynamics/burnman
   description: a Python toolkit for planetary geophysics, geochemistry and thermodynamics
