@@ -25,12 +25,10 @@
           {{ if eq $field "related links" }}{{ $sortField = "links" }}{{ end }}
           <th>
             {{ if and (in $sortableColumnsText .) (in (slice "name" "tags" "languages") $sortField) }}
-              {{ if eq $kind "dataset" }}
-              <button type="button" class="codes-table-sort-header" data-dataset-sort-field="{{ $sortField }}"><span>{{ . }}</span><i class="fas fa-sort"></i></button>
-              {{ else if eq $kind "learning" }}
-              <button type="button" class="codes-table-sort-header" data-learning-sort-field="{{ $sortField }}"><span>{{ . }}</span><i class="fas fa-sort"></i></button>
-              {{ else }}
+              {{ if eq $kind "codes" }}
               <button type="button" class="codes-table-sort-header" data-sort-field="{{ $sortField }}"><span>{{ . }}</span><i class="fas fa-sort"></i></button>
+              {{ else }}
+              <button type="button" class="codes-table-sort-header" data-resource-sort-field="{{ $sortField }}"><span>{{ . }}</span><i class="fas fa-sort"></i></button>
               {{ end }}
             {{ else }}
             {{ . }}
@@ -79,12 +77,10 @@
             {{ with $resource.tags }}
             <div class="resource-tag-list">
               {{ range . }}
-                {{ if eq $kind "dataset" }}
-                <button type="button" class="resource-tag resource-filter-tag" data-dataset-filter-tag="{{ lower . }}">{{ . }}</button>
-                {{ else if eq $kind "learning" }}
-                <button type="button" class="resource-tag resource-filter-tag" data-learning-filter-tag="{{ lower . }}">{{ . }}</button>
-                {{ else }}
+                {{ if eq $kind "codes" }}
                 <button type="button" class="resource-tag resource-filter-tag" data-filter-tag="{{ lower . }}">{{ . | title }}</button>
+                {{ else }}
+                <button type="button" class="resource-tag resource-filter-tag" data-resource-filter-tag="{{ lower . }}">{{ . }}</button>
                 {{ end }}
               {{ end }}
             </div>

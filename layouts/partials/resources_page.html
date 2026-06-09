@@ -1,5 +1,6 @@
 {{ $data := partial "resource_data.html" . }}
 {{ $view := .Params.view | default "table" }}
+{{ $kind := .Params.resource_data }}
 <div class="resource-page">
   <h1>{{ .Title }}</h1>
   {{ .Content }}
@@ -30,27 +31,15 @@
   {{ if eq $view "cards" }}
     {{ partial "resource_card_view.html" (dict "resources" $data.resources) }}
   {{ else if eq $view "table" }}
-    {{ if or (eq .Params.resource_data "learning") (eq .Params.resource_data "tools") }}
     <div class="codes-toolbar dataset-toolbar">
-      <p class="codes-count" data-learning-count></p>
+      <p class="codes-count" data-resource-count data-resource-kind="{{ $kind }}"></p>
     </div>
-    <div class="codes-tag-filter dataset-category-filter" data-learning-tag-filter hidden>
+    <div class="codes-tag-filter dataset-tag-filter" data-resource-tag-filter hidden>
       <span class="codes-tag-filter-label">Tags</span>
-      <div class="codes-tag-filter-list" data-learning-tag-filter-list></div>
-      <button type="button" class="codes-tag-filter-clear" data-learning-tag-filter-clear hidden>Clear tags</button>
+      <div class="codes-tag-filter-list" data-resource-tag-filter-list></div>
+      <button type="button" class="codes-tag-filter-clear" data-resource-tag-filter-clear hidden>Clear tags</button>
     </div>
-    {{ partial "resource_table_view.html" (dict "kind" "learning" "resources" $data.resources "columns" .Params.columns "sortable_columns" .Params.sortable_columns) }}
-    {{ else if eq .Params.resource_data "dataset" }}
-    <div class="codes-toolbar dataset-toolbar">
-      <p class="codes-count" data-dataset-count></p>
-    </div>
-    <div class="codes-tag-filter dataset-tag-filter" data-dataset-tag-filter hidden>
-      <span class="codes-tag-filter-label">Tags</span>
-      <div class="codes-tag-filter-list" data-dataset-tag-filter-list></div>
-      <button type="button" class="codes-tag-filter-clear" data-dataset-tag-filter-clear hidden>Clear tags</button>
-    </div>
-    {{ partial "resource_table_view.html" (dict "kind" "dataset" "resources" $data.resources "columns" .Params.columns "sortable_columns" .Params.sortable_columns) }}
-    {{ end }}
+    {{ partial "resource_table_view.html" (dict "kind" $kind "resources" $data.resources "columns" .Params.columns "sortable_columns" .Params.sortable_columns) }}
   {{ end }}
   </div>
 </div>
