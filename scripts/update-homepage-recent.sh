@@ -9,21 +9,15 @@ commits=$(git -C "$repo_dir" log -50 --format='%H%x1f%cs%x1f%s' -- data/*.yaml |
 if [ -n "$commits" ]; then
   {
     printf '%s\n' 'recent_updates:'
-    count=0
-    printf '%s\n' "$commits" | while IFS="$(printf '\037')" read -r hash commit_date subject; do
-      [ -n "$hash" ] || continue
-      case $subject in
-        Add*|Remove*) ;;
-        *) continue ;;
-      esac
-      count=$((count + 1))
-      if [ "$count" -gt 3 ]; then
-        break
-      fi
-      printf '  - date: %s\n' "$commit_date"
-      printf '    message: %s\n' "$subject"
-      printf '    hash: %s\n' "$hash"
-    done
+    printf '%s\n' "$commits" |
+      awk -F "$(printf '\037')" '
+        $1 != "" && $3 ~ /^(Add|Remove)/ {
+          print "  - date: " $2
+          print "    message: " $3
+          print "    hash: " $1
+          if (++count == 3) exit
+        }
+      '
   } > "$output"
 else
   rm -f "$output"
