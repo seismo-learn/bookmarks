@@ -14,15 +14,11 @@ contribute_note = "This directory stays useful because people keep improving it.
 footer_title = "Help keep Seismo Bookmarks useful"
 
   [params.assets]
-  bootstrap_cdn = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap"
-  bootstrap_version = "4.6.2"
   bootswatch_cdn = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch"
   bootswatch_version = "4.6.2"
   bootswatch_theme = "cosmo"
   fontawesome_cdn = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome"
   fontawesome_version = "5.15.4"
-  jquery_cdn = "https://cdnjs.cloudflare.com/ajax/libs/jquery"
-  jquery_version = "3.7.1"
 
   [params.edit_page]
   repo_url = "https://github.com/seismo-learn/bookmarks"
