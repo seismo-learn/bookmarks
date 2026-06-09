@@ -41,7 +41,7 @@
   </div>
 
   <div data-resource-results>
-    {{ partial "resource_table_view.html" (dict "kind" "codes" "resources" $data.resources "columns" .Params.columns) }}
+    {{ partial "resource_table_view.html" (dict "kind" "codes" "resources" $data.resources "columns" .Params.columns "sortable_columns" .Params.sortable_columns) }}
   </div>
 </div>
 {{ with .Params.contribute_note }}

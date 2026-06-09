@@ -7,6 +7,9 @@ columns:
   - Description
   - Tags
   - Links
+sortable_columns:
+  - Name
+  - Tags
 resource_data: dataset
 edit_path: data/dataset.yaml
 contribute_note: Missing a dataset or broken link?

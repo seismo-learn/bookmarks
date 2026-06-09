@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var learningTagFilter = document.querySelector("[data-learning-tag-filter]");
   var learningTagFilterList = document.querySelector("[data-learning-tag-filter-list]");
   var learningTagFilterClear = document.querySelector("[data-learning-tag-filter-clear]");
+  var learningSortHeaders = Array.prototype.slice.call(document.querySelectorAll("[data-learning-sort-field]"));
   var datasetTable = document.querySelector(".resource-table");
   var datasetSortHeaders = Array.prototype.slice.call(document.querySelectorAll("[data-dataset-sort-field]"));
   var datasetTagFilter = document.querySelector("[data-dataset-tag-filter]");
@@ -25,6 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var datasetTagLabels = {};
   var learningTags = {};
   var learningTagLabels = {};
+  var activeLearningSort = (params.get("sort") || "name").toLowerCase();
+  var learningSortDir = (params.get("dir") || "asc").toLowerCase();
   var activeDatasetSort = (params.get("sort") || "tags").toLowerCase();
   var datasetSortDir = (params.get("dir") || "asc").toLowerCase();
   var activeDatasetTag = (params.get("tag") || "").toLowerCase();
@@ -53,6 +56,10 @@ document.addEventListener("DOMContentLoaded", function () {
     var next = new URL(window.location.href);
     if (query === "") next.searchParams.delete("q");
     else next.searchParams.set("q", query);
+    if (activeLearningSort === "name") next.searchParams.delete("sort");
+    else next.searchParams.set("sort", activeLearningSort);
+    if (learningSortDir === "asc") next.searchParams.delete("dir");
+    else next.searchParams.set("dir", learningSortDir);
     if (activeLearningTag === "") next.searchParams.delete("tag");
     else next.searchParams.set("tag", activeLearningTag);
     window.history.replaceState({}, "", next);
@@ -152,6 +159,34 @@ document.addEventListener("DOMContentLoaded", function () {
       if (matched) visibleCount += 1;
     });
 
+    if (learningSortHeaders.length) {
+      var tbody = document.querySelector(".resource-table tbody");
+      if (tbody) {
+        entries.slice().sort(function (a, b) {
+          var aVisible = a.dataset.matches === "1";
+          var bVisible = b.dataset.matches === "1";
+          if (aVisible !== bVisible) return aVisible ? -1 : 1;
+          var aKey = activeLearningSort === "tags" ? (a.dataset.tags || "") : (a.dataset.name || "");
+          var bKey = activeLearningSort === "tags" ? (b.dataset.tags || "") : (b.dataset.name || "");
+          aKey = aKey.toLowerCase();
+          bKey = bKey.toLowerCase();
+          if (aKey < bKey) return learningSortDir === "asc" ? -1 : 1;
+          if (aKey > bKey) return learningSortDir === "asc" ? 1 : -1;
+          return 0;
+        }).forEach(function (entry) {
+          tbody.appendChild(entry);
+        });
+      }
+      learningSortHeaders.forEach(function (header) {
+        var field = header.dataset.learningSortField;
+        header.classList.toggle("is-active", field === activeLearningSort);
+        header.setAttribute("aria-sort", field === activeLearningSort ? (learningSortDir === "asc" ? "ascending" : "descending") : "none");
+        var icon = header.querySelector("i");
+        if (!icon) return;
+        icon.className = field === activeLearningSort ? (learningSortDir === "asc" ? "fas fa-sort-up" : "fas fa-sort-down") : "fas fa-sort";
+      });
+    }
+
     emptyState.hidden = visibleCount !== 0;
     clearButton.hidden = rawQuery === "";
     if (learningCount) learningCount.textContent = visibleCount + " of " + entries.length + " resources shown";
@@ -184,6 +219,14 @@ document.addEventListener("DOMContentLoaded", function () {
       learningTagFilterList.appendChild(button);
     });
     learningTagFilter.hidden = Object.keys(learningTags).length === 0;
+    learningSortHeaders.forEach(function (header) {
+      header.addEventListener("click", function () {
+        var field = header.dataset.learningSortField || "name";
+        if (activeLearningSort === field) learningSortDir = learningSortDir === "asc" ? "desc" : "asc";
+        else { activeLearningSort = field; learningSortDir = "asc"; }
+        updateLearningResults();
+      });
+    });
     if (learningTagFilterClear) {
       learningTagFilterClear.addEventListener("click", function () {
         activeLearningTag = "";

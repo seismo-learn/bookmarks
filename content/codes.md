@@ -8,6 +8,10 @@ columns:
   - Tags
   - Languages
   - Related Links
+sortable_columns:
+  - Name
+  - Tags
+  - Languages
 resource_data: codes
 edit_path: data/codes.yaml
 contribute_note: Missing a code package or broken link?
