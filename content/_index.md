@@ -1,6 +1,6 @@
 ---
 title: Seismo Bookmarks
-intro: A curated directory for seismology and geoscience research, organized to help students, researchers, and practitioners reach useful journals, software, dataset, learning material, jobs, and practical tools faster.
+intro: A curated directory for seismology and geoscience research, organized to help students, researchers, and practitioners reach useful journals, software, dataset, learning material, and practical tools faster.
 contribute_note: This directory stays useful because people keep improving it. Missing links, outdated resources, and better references are all worth contributing.
 highlights:
   - title: Community-curated
@@ -27,10 +27,6 @@ cards:
     link: journals
     icon: fa-book-open
     description: Publishing venues, profiles, citation tools, and paper access resources.
-  - name: Jobs
-    link: jobs
-    icon: fa-ad
-    description: Academic positions, fellowships, institutes, and research career resources.
   - name: Tools
     link: tools
     icon: fa-tools
