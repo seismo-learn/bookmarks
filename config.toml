@@ -29,6 +29,19 @@ lastupdate = "Built by [Hugo](https://gohugo.io/) on {now}."
   repo_dir = "content"
   edit_text = ""
 
+  [params.footer_links]
+  [[params.footer_links.items]]
+  label = "Contribute links"
+  url = "https://github.com/seismo-learn/bookmarks#contributing"
+
+  [[params.footer_links.items]]
+  label = "Report broken links"
+  url = "https://github.com/seismo-learn/bookmarks/issues"
+
+  [[params.footer_links.items]]
+  label = "View source"
+  url = "https://github.com/seismo-learn/bookmarks"
+
 [markup.goldmark.renderer]
   unsafe = true
   [markup.tableOfContents]

@@ -11,9 +11,11 @@
       </p>
     </div>
     <div class="site-footer-actions">
-      <a href="https://github.com/seismo-learn/bookmarks#contributing">Contribute links</a>
-      <a href="https://github.com/seismo-learn/bookmarks/issues">Report broken links</a>
-      <a href="https://github.com/seismo-learn/bookmarks">View source</a>
+      {{ with .Site.Params.footer_links }}
+      {{ range .items }}
+      <a href="{{ .url }}">{{ .label }}</a>
+      {{ end }}
+      {{ end }}
     </div>
   </div>
   <div class="site-footer-meta">
