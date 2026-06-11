@@ -130,8 +130,8 @@ resources:
   - Tomography
 - name: EllipticiPy
   url: https://github.com/StuartJRussell/EllipticiPy
-  description: Python package for the calculation of ellipticity corrections for seismic
-    waves.
+  description: Python package for the calculation of ellipticity corrections for seismic waves.
+  doi: 10.1093/gji/ggac315
   languages:
   - Python
   tags:
@@ -139,14 +139,14 @@ resources:
 - name: EQcorrscan
   url: https://github.com/eqcorrscan/EQcorrscan
   description: Earthquake detection and analysis in Python.
+  doi: 10.1785/0220170151
   languages:
   - Python
   tags:
   - Earthquake Detection
 - name: FAST
   url: https://github.com/stanford-futuredata/FAST
-  description: End-to-end earthquake detection pipeline via efficient time series
-    similarity search
+  description: End-to-end earthquake detection pipeline via efficient time series similarity search
   languages:
   - Python
   tags:
