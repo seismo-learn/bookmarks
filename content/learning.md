@@ -6,6 +6,7 @@ columns:
   - Name
   - Description
   - Tags
+  - Links
 sortable_columns:
   - Name
   - Tags
