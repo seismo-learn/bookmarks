@@ -27,12 +27,6 @@ resources:
   tags:
   - Programming
   - Web
-- name: DevDocs
-  url: https://devdocs.io/
-  description: API documentation for multiple programming languages/tools in one place
-  tags:
-  - Programming
-  - Web
 - name: regex101
   url: https://regex101.com/
   description: Online regular expressions tester and debugger
@@ -57,7 +51,7 @@ resources:
   tags:
   - Document Conversion
 - name: WebPlotDigitizer
-  url: https://automeris.io/WebPlotDigitizer
+  url: https://automeris.io/
   description: Web based tool to extract data from plots, images, and maps
   tags:
   - Data Extraction
