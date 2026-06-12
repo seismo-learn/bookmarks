@@ -36,10 +36,6 @@ jobs:
         if: github.event_name == 'push'
         uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453
         with:
-          # personal token is needed here because it's pushing to an external repository.
-          # personal token can be generated at https://github.com/settings/tokens,
-          # and added to https://github.com/organizations/seismo-learn/settings/secrets/actions
-          personal_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           # Only keep the latest commit to avoid bloating the repository
           force_orphan: true
