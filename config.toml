@@ -39,6 +39,7 @@ footer_title = "Help keep Seismo Bookmarks useful"
   [[params.footer_links.items]]
   label = "View source"
   url = "https://github.com/seismo-learn/bookmarks"
+
 [markup.goldmark.renderer]
   unsafe = true
   [markup.tableOfContents]
