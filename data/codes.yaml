@@ -12,6 +12,7 @@ resources:
   url: http://www-solid.eps.s.u-tokyo.ac.jp/~dsm/anisotime.html
   description: Travel time computation software for laterally homogeneous, transversely
     isotropic, spherical media
+  doi: 10.1785/0220200306
   languages:
   - Java
   tags:
@@ -43,6 +44,7 @@ resources:
   url: https://github.com/jenndrei/BayHunter
   description: MCMC transdimensional Bayesian inversion of surface wave dispersion
     and receiver functions in Python
+  doi: 10.5880/GFZ.2.4.2019.001
   languages:
   - Python
   tags:
@@ -59,6 +61,7 @@ resources:
 - name: BurnMan
   url: https://github.com/geodynamics/burnman
   description: a Python toolkit for planetary geophysics, geochemistry and thermodynamics
+  doi: 10.21105/joss.05389
   languages:
   - Python
   tags:
@@ -67,6 +70,7 @@ resources:
   url: https://github.com/ColinLii/CC-FJpy
   description: A Python Package for seismic ambient noise cross-correlation and the
     frequency-Bessel transform method
+  doi: 10.1785/0220210042
   languages:
   - Python
   tags:
