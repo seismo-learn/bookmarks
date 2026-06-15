@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var tagSet = {};
   var tagLabels = {};
 
-  if (!input || !table || !countNode) return;
+  if (!input || entries.length === 0) return;
   if (params.has("q")) input.value = params.get("q");
 
   function defaultSort() {
@@ -108,9 +108,9 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
 
-    emptyState.hidden = visibleCount !== 0;
+    if (emptyState) emptyState.hidden = visibleCount !== 0;
     clearButton.hidden = rawQuery === "";
-    countNode.textContent = visibleCount + " of " + entries.length + " " + countLabel() + " shown";
+    if (countNode) countNode.textContent = visibleCount + " of " + entries.length + " " + countLabel() + " shown";
     updateSortUI();
     updateFilterUI();
     syncQueryParam(rawQuery);
