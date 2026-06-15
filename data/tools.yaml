@@ -1,7 +1,7 @@
 ---
 resources:
 - name: Periodic Table of Elements
-  url: https://www.ptable.com
+  url: https://ptable.com
   description: Interactive periodic table with detailed information about each element.
   tags:
   - Science
@@ -86,7 +86,7 @@ resources:
   - Image Compression
   - Web
 - name: IRIS citations
-  url: https://www.iris.edu/hq/iris_citations
+  url: https://www.earthscope.org/how-to-cite/
   description: How to cite/acknowledge IRIS data
   tags:
   - Science
