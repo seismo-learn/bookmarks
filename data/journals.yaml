@@ -172,3 +172,12 @@ resources:
     url: https://pubs.geoscienceworld.org/srl/issue
   - name: Archive
     url: https://pubs.geoscienceworld.org/srl/list-of-years
+- name: Earthquake Research Advances
+  homepage: https://www.sciencedirect.com/journal/earthquake-research-advances
+  abbeviations:
+  - ERA
+  links:
+  - name: Current Issue
+    url: https://www.sciencedirect.com/journal/earthquake-research-advances/latest
+  - name: Archive
+    url: https://www.sciencedirect.com/journal/earthquake-research-advances/issues
