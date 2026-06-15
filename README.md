@@ -14,7 +14,7 @@ the fastest static site generator [Hugo](https://gohugo.io/).
 
 To build it locally, you need to follow the steps below:
 
-1.  [Install Hugo](https://gohugo.io/getting-started/installing/)
+1.  [Install Hugo](https://gohugo.io/installation/)
 
 2.  Clone the repository
 
