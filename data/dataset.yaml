@@ -45,7 +45,7 @@ resources:
   tags:
   - Fault
 - name: 中国断层数据
-  url: https://docs.gmt-china.org/latest/dataset-CN/CN-faults/
+  url: https://docs.gmt-china.org/latest/dataset/CN-faults/
   description: Geological fault data for China.
   tags:
   - Fault
@@ -511,11 +511,6 @@ resources:
   description: Chinese Earthquake Science Experimental Field.
   tags:
   - Seismic Data Center
-- name: 台灣中央研究院地球科學研究所：强震和移动地震台网
-  url: https://www.earth.sinica.edu.tw/content/labs/slab/smdmc/index.htm
-  description: Strong-motion and mobile seismic network data.
-  tags:
-  - Seismic Data Center
 - name: 台灣地震科學中心
   url: https://tec.earth.sinica.edu.tw/index.php
   links:
@@ -530,8 +525,6 @@ resources:
   links:
   - name: 中国地震学科数据中心：国家测震台网数据备份中心
     url: http://www.seisdmc.ac.cn/
-  - name: 中国地震科学探测台站数据中心
-    url: http://www.chinarraydmc.cn/
   tags:
   - Seismic Data Center
 - name: 'European Facilities for Earthquake Hazard and Risk (EFEHR): Services and
