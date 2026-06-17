@@ -91,3 +91,15 @@ resources:
   tags:
   - Science
   - Writing
+- name: Carbon
+  url: https://carbon.now.sh/
+  description: Create and share beautiful images of your source code
+  tags:
+  - Programming
+  - Web
+- name: Devdocs
+  url: https://devdocs.io/
+  description: API documentation browser with a clean interface and offline support
+  tags:
+  - Programming
+  - Web
