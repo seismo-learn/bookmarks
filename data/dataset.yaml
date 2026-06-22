@@ -225,19 +225,6 @@ resources:
   description: Plate-boundary and block model data for China and surroundings.
   tags:
   - Plate Boundary Model
-- name: NNR-MORVEL56
-  url: http://geoscience.wisc.edu/~chuck/MORVEL/PltBoundaries.html
-  description: Plate motion model without net rotation.
-  tags:
-  - Plate Boundary Model
-- name: NUVEL
-  url: http://jules.unavco.org/GMT
-  links:
-  - name: Chinese Introduction
-    url: https://blog.seisman.info/plate-boundary-datasets
-  description: Plate motion model.
-  tags:
-  - Plate Boundary Model
 - name: PB2002
   url: http://peterbird.name/publications/2003_PB2002/2003_PB2002.htm
   links:
@@ -282,9 +269,6 @@ resources:
   - Reference Seismological Model
 - name: IRIS Earth Model Collaboration (EMC)
   url: https://ds.iris.edu/ds/products/emc/
-  links:
-  - name: Web Service
-    url: https://service.iris.edu/irisws/earth-model/1/
   description: Earth model data and services from IRIS EMC.
   tags:
   - Reference Seismological Model
@@ -527,12 +511,6 @@ resources:
     url: http://www.seisdmc.ac.cn/
   tags:
   - Seismic Data Center
-- name: 'European Facilities for Earthquake Hazard and Risk (EFEHR): Services and
-    Partners'
-  url: http://www.efehr.org/en/efehr/Services-and-Partners
-  description: Directory of earthquake-hazard services and partners.
-  tags:
-  - Seismic Data Products
 - name: 'IRIS Products: globalstacks'
   url: https://ds.iris.edu/ds/products/globalstacks
   description: Global stacks of millions of seismograms
