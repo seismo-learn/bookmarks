@@ -754,6 +754,14 @@ resources:
   - Python
   tags:
   - Ray Tracing
+- name: SDpy
+  url: https://github.com/yakunzhang87-ux/stress-drop-estimation
+  description: An open-source Python package for robust stress-drop estimation
+  doi: 10.1785/0220250296
+  languages:
+  - Python
+  tags:
+  - Earthquake Physics
 - name: SEC_C
   url: https://github.com/Naderss/SEC_C
   description: Super-Efficient Cross-Correlation
