@@ -683,6 +683,13 @@ resources:
   - Python
   tags:
   - Earthquake Detection
+- name: Requake
+  url: https://requake.seismicsource.org/
+  description: Repeating earthquakes search and analysis
+  languages:
+  - Python
+  tags:
+  - Earthquake Detection
 - name: rf
   url: https://github.com/trichter/rf
   description: Receiver function calculation in seismology
@@ -779,6 +786,13 @@ resources:
   - Python
   tags:
   - Data Request
+- name: SeisCat
+  url: https://seiscat.seismicsource.org/
+  description: Keep a local seismic catalog
+  languages:
+  - Python
+  tags:
+  - Data Request
 - name: seisDD
   url: https://github.com/yanhuay/seisDD
   description: Double-difference adjoint seismic tomography
@@ -868,6 +882,13 @@ resources:
   - C
   tags:
   - Waveform Modeling
+- name: SourceSpec
+  url: https://sourcespec.seismicsource.org/
+  description: Earthquake source parameters from P- or S-wave displacement spectra
+  languages:
+  - Python
+  tags:
+  - Earthquake Physics
 - name: SPECFEM1D
   url: https://github.com/SPECFEM/specfem1d
   description: Simulates seismic wave propagation in a one-dimensional heterogeneous
