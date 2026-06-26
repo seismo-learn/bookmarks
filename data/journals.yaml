@@ -172,6 +172,13 @@ resources:
     url: https://pubs.geoscienceworld.org/srl/issue
   - name: Archive
     url: https://pubs.geoscienceworld.org/srl/list-of-years
+- name: Seismica
+  homepage: https://seismica.library.mcgill.ca
+  links:
+  - name: Current Issue
+    url: https://seismica.library.mcgill.ca/issue/current
+  - name: Archive
+    url: https://seismica.library.mcgill.ca/issue/archive
 - name: Earthquake Research Advances
   homepage: https://www.sciencedirect.com/journal/earthquake-research-advances
   abbeviations:
