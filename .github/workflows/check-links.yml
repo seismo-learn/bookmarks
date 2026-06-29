@@ -34,7 +34,6 @@ jobs:
             './**/*.html'
             './**/*.yaml'
             './**/*.yml'
-            './config.toml'
           fail: false
           jobSummary: true
 
