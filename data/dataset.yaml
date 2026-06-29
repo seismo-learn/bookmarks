@@ -191,13 +191,8 @@ resources:
   tags:
   - Gravity
 - name: International Gravimetric Bureau (BGI)
-  url: https://bgi.obs-mip.fr/
+  url: https://bgi.obs-mip.fr/grids-and-models-2/
   description: Gravity grids and models including WGM2012 and EGM2008.
-  links:
-  - name: WGM2012
-    url: https://bgi.obs-mip.fr/data-products/grids-and-models/wgm2012-global-model/
-  - name: EGM2008
-    url: https://bgi.obs-mip.fr/data-products/grids-and-models/egm2008-global-model/
   tags:
   - Gravity
 - name: International Gravity Field Service (IGFS)
