@@ -734,7 +734,7 @@ resources:
   tags:
   - Earthquake Detection
 - name: SAC
-  url: https://www.iris.edu/ds/nodes/dmc/forms/sac/
+  url: https://github.com/EarthScope/sac-community
   description: Seismic Analysis Code
   languages:
   - C
