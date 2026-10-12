@@ -317,7 +317,7 @@ resources:
   - Receiver Function
   links:
   - name: Note (in Chinese)
-    url: https://blog.seisman.info/hk-install
+    url: https://blog.seisman.info/hk-install/
 - name: hvsrpy
   url: https://github.com/jpvantassel/hvsrpy
   description: A Python package for horizontal-to-vertical spectral ratio processing
@@ -475,7 +475,7 @@ resources:
   tags:
   - Attenuation
 - name: MUSTANG
-  url: https://service.iris.edu/mustang
+  url: https://service.iris.edu/mustang/
   description: A quality assurance system that provides metrics pertaining to seismic
     data quality
   languages:
@@ -543,8 +543,8 @@ resources:
   - Python
   tags:
   - Station Assessment
-- name: PAL
-  url: https://github.com/YijianZhou/PAL
+- name: PALM
+  url: https://github.com/YijianZhou/PALM
   description: An Earthquake Detection and Location Architecture for Continuous Seismograms,
     Phase Picking, Association, Location, and Matched Filter
   languages:
@@ -668,7 +668,7 @@ resources:
   - Format Conversion
   links:
   - name: Tutorial (in Chinese)
-    url: https://blog.seisman.info/tags/SEED
+    url: https://blog.seisman.info/tags/SEED/
 - name: REAL
   url: https://github.com/Dal-mzhang/REAL
   description: Rapid Earthquake Association and Location
@@ -857,7 +857,7 @@ resources:
   tags:
   - Signal Analysis
 - name: SOD
-  url: https://www.seis.sc.edu/sod
+  url: https://www.seis.sc.edu/sod/
   description: Standing Order for Data.
   languages:
   - Java
@@ -989,7 +989,7 @@ resources:
   tags:
   - Waveform Modeling
 - name: Tomoeye
-  url: https://www.iearth.edu.au/codes/Tomoeye
+  url: https://www.iearth.edu.au/codes/Tomoeye/
   description: A set of programs for tomographic model visualization written in MATLAB
     6.1 script
   languages:

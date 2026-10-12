@@ -56,7 +56,7 @@ resources:
   tags:
   - Data Extraction
 - name: cpdf
-  url: https://community.coherentpdf.com/
+  url: https://www.coherentpdf.com/
   description: Command line tool to manipulate existing PDF files
   tags:
   - Document Conversion
