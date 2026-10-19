@@ -34,7 +34,7 @@ resources:
   - Programming
   - Web
 - name: strftime
-  url: https://strftime.org/
+  url: https://www.bairesdev.com/tools/strftime/
   description: Python strftime reference
   tags:
   - Programming
