@@ -684,7 +684,7 @@ resources:
   tags:
   - Earthquake Detection
 - name: Requake
-  url: https://requake.seismicsource.org/
+  url: https://github.com/SeismicSource/requake
   description: Repeating earthquakes search and analysis
   languages:
   - Python
@@ -787,7 +787,7 @@ resources:
   tags:
   - Data Request
 - name: SeisCat
-  url: https://seiscat.seismicsource.org/
+  url: https://github.com/SeismicSource/seiscat
   description: Keep a local seismic catalog
   languages:
   - Python
@@ -883,7 +883,7 @@ resources:
   tags:
   - Waveform Modeling
 - name: SourceSpec
-  url: https://sourcespec.seismicsource.org/
+  url: https://github.com/SeismicSource/sourcespec
   description: Earthquake source parameters from P- or S-wave displacement spectra
   languages:
   - Python
