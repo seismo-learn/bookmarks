@@ -786,6 +786,14 @@ resources:
   - Python
   tags:
   - Data Request
+- name: SeismoStats
+  url: https://github.com/swiss-seismological-service/SeismoStats
+  description: A Python package for seismicity analysis
+  doi: 10.1785/0220250266
+  languages:
+  - Python
+  tags:
+  - Earthquake Statistics
 - name: SeisCat
   url: https://github.com/SeismicSource/seiscat
   description: Keep a local seismic catalog
